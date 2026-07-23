@@ -18,15 +18,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - run: pip install requests pandas
+
       - run: python update_routes.py
         env:
           FORCE_UPDATE: ${{ inputs.force_update || false }}
+
       - run: |
           git config user.name github-actions
           git config user.email actions@github.com
-          git add direct_timetable.json data
-          git diff --cached --quiet || (git commit -m "Update direct timetable" && git push)
+          git add direct_timetable.json station_locations.json unresolved_stations.json data
+          git diff --cached --quiet || (git commit -m "Update timetable and station locations" && git push)
