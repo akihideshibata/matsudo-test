@@ -28,5 +28,5 @@ jobs:
       - run: |
           git config user.name github-actions
           git config user.email actions@github.com
-          git add direct_routes.json data
-          git diff --cached --quiet || (git commit -m "Update direct routes" && git push)
+          git add direct_timetable.json data
+          git diff --cached --quiet || (git commit -m "Update direct timetable" && git push)
