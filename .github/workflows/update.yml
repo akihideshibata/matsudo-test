@@ -2,6 +2,11 @@ name: Update routes
 
 on:
   workflow_dispatch:
+    inputs:
+      force_update:
+        description: GTFSを強制的に再取得する
+        type: boolean
+        default: false
   schedule:
     - cron: "0 18 * * 0"
 
@@ -18,8 +23,10 @@ jobs:
           python-version: "3.12"
       - run: pip install requests pandas
       - run: python update_routes.py
+        env:
+          FORCE_UPDATE: ${{ inputs.force_update || false }}
       - run: |
           git config user.name github-actions
           git config user.email actions@github.com
-          git add departures.json
-          git diff --cached --quiet || (git commit -m "Update departures" && git push)
+          git add departures.json data
+          git diff --cached --quiet || (git commit -m "Update timetable data" && git push)
