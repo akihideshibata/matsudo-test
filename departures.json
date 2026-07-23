@@ -1,26 +1,583 @@
 {
   "station": "新橋",
-  "fetched_at": "2026-07-23T18:37+09:00",
+  "service_date": "2026-07-24",
+  "fetched_at": "2026-07-23T18:43+09:00",
+  "source": "東京都交通局・公共交通オープンデータセンター",
   "departures": [
-    "07:02",
-    "07:03",
-    "07:03",
-    "07:04",
-    "07:07",
-    "07:07",
-    "07:10",
-    "07:10",
-    "07:11",
-    "07:13",
-    "07:14",
-    "07:15",
-    "07:16",
-    "07:18",
-    "07:18",
-    "07:19",
-    "07:21",
-    "07:22",
-    "07:23",
-    "07:24"
+    {
+      "time": "07:03",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "07:03",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "07:07",
+      "route": "浅草線",
+      "destination": "押上"
+    },
+    {
+      "time": "07:10",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "07:10",
+      "route": "浅草線",
+      "destination": "成田空港"
+    },
+    {
+      "time": "07:14",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "07:15",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "07:18",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "07:19",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "07:21",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "07:24",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "07:26",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "07:27",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "07:30",
+      "route": "浅草線",
+      "destination": "印西牧の原"
+    },
+    {
+      "time": "07:31",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "07:33",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "07:34",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "07:37",
+      "route": "浅草線",
+      "destination": "成田空港"
+    },
+    {
+      "time": "07:37",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "07:40",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "07:41",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "07:43",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "07:45",
+      "route": "浅草線",
+      "destination": "京急久里浜"
+    },
+    {
+      "time": "07:46",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "07:49",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "07:50",
+      "route": "浅草線",
+      "destination": "京成佐倉"
+    },
+    {
+      "time": "07:51",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "07:53",
+      "route": "浅草線",
+      "destination": "印西牧の原"
+    },
+    {
+      "time": "07:54",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "07:56",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "07:56",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "07:59",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "07:59",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "08:01",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "08:02",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "08:04",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:05",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:07",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "08:08",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "08:10",
+      "route": "浅草線",
+      "destination": "印西牧の原"
+    },
+    {
+      "time": "08:10",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:12",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "08:13",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:15",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:16",
+      "route": "浅草線",
+      "destination": "成田空港"
+    },
+    {
+      "time": "08:17",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "08:19",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "08:20",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:21",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "08:22",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "08:24",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:25",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:27",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "08:27",
+      "route": "浅草線",
+      "destination": "印西牧の原"
+    },
+    {
+      "time": "08:30",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "08:30",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:32",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:32",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "08:35",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "08:35",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:38",
+      "route": "浅草線",
+      "destination": "京急久里浜"
+    },
+    {
+      "time": "08:38",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "08:40",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:41",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "08:43",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:44",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:46",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:47",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "08:48",
+      "route": "浅草線",
+      "destination": "押上"
+    },
+    {
+      "time": "08:49",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:51",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:52",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "08:53",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "08:55",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "08:56",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "08:58",
+      "route": "浅草線",
+      "destination": "京急久里浜"
+    },
+    {
+      "time": "09:00",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "09:00",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "09:03",
+      "route": "浅草線",
+      "destination": "印西牧の原"
+    },
+    {
+      "time": "09:03",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:05",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:06",
+      "route": "浅草線",
+      "destination": "成田空港"
+    },
+    {
+      "time": "09:08",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "09:09",
+      "route": "浅草線",
+      "destination": "押上"
+    },
+    {
+      "time": "09:10",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:11",
+      "route": "浅草線",
+      "destination": "京成佐倉"
+    },
+    {
+      "time": "09:13",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "09:14",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "09:16",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:17",
+      "route": "浅草線",
+      "destination": "印西牧の原"
+    },
+    {
+      "time": "09:19",
+      "route": "浅草線",
+      "destination": "押上"
+    },
+    {
+      "time": "09:19",
+      "route": "浅草線",
+      "destination": "京急久里浜"
+    },
+    {
+      "time": "09:21",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "09:23",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "09:24",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:27",
+      "route": "浅草線",
+      "destination": "成田空港"
+    },
+    {
+      "time": "09:28",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "09:30",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "09:31",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:34",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "09:34",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "09:37",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "09:37",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:39",
+      "route": "浅草線",
+      "destination": "京急久里浜"
+    },
+    {
+      "time": "09:39",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "time": "09:42",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:44",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "09:44",
+      "route": "浅草線",
+      "destination": "京成高砂"
+    },
+    {
+      "time": "09:48",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "09:49",
+      "route": "浅草線",
+      "destination": "西馬込"
+    },
+    {
+      "time": "09:52",
+      "route": "浅草線",
+      "destination": "青砥"
+    },
+    {
+      "time": "09:52",
+      "route": "浅草線",
+      "destination": "三崎口"
+    },
+    {
+      "time": "09:54",
+      "route": "浅草線",
+      "destination": "京成佐倉"
+    },
+    {
+      "time": "09:55",
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "time": "09:58",
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    }
   ]
 }
