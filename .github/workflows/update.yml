@@ -2,11 +2,6 @@ name: Update routes
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 18 * * 0"
-
-permissions:
-  contents: write
 
 jobs:
   update:
@@ -18,10 +13,3 @@ jobs:
           python-version: "3.12"
       - run: pip install requests
       - run: python update_routes.py
-        env:
-          EKISPERT_KEY: ${{ secrets.EKISPERT_KEY }}
-      - run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git add routes.json
-          git diff --cached --quiet || (git commit -m "Update routes" && git push)
