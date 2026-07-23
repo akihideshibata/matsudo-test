@@ -294,4 +294,6 @@ else:
 
         st.markdown(
             f'<div class="band-title">{band} '
-            f'<span class="band-count">{len(band_df)}駅</span
+            f'<span class="band-count">{len(band_df)}駅</span></div>',
+            unsafe_allow_html=True,
+        )
