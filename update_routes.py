@@ -100,7 +100,10 @@ def active_services(z, day):
 
 def get_municipalities(session):
     # 自治体コードと「都道府県＋市区町村」の対応表を取得
-    text = session.get(MUNI_URL, timeout=30).text
+    # muni.jsをUTF-8として明示的に読み込む
+    response = session.get(MUNI_URL, timeout=30)
+    response.raise_for_status()
+    text = response.content.decode("utf-8-sig")
     result = {}
 
     for code, value in re.findall(
