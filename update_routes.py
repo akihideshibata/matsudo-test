@@ -81,6 +81,12 @@ def main():
         stops, times = read(z, "stops.txt"), read(z, "stop_times.txt")
         trips, routes = read(z, "trips.txt"), read(z, "routes.txt")
 
+        # 時刻が空欄の行を除外してから分へ変換
+        times = times[
+            (times["departure_time"] != "")
+            & (times["arrival_time"] != "")
+        ].copy()
+        
         times["seq"] = times["stop_sequence"].astype(int)
         times["dep_min"] = times["departure_time"].map(minute)
         times["arr_min"] = times["arrival_time"].map(minute)
