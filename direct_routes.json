@@ -1,0 +1,161 @@
+{
+  "destination": "新橋",
+  "arrival_limit": "08:00",
+  "service_date": "2026-07-24",
+  "gtfs_fetched_at": "2026-07-23T18:58+09:00",
+  "generated_at": "2026-07-23T18:58+09:00",
+  "routes": [
+    {
+      "station": "東銀座",
+      "departure": "07:59",
+      "arrival": "08:00",
+      "minutes": 1,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "大門",
+      "departure": "07:57",
+      "arrival": "07:59",
+      "minutes": 2,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "宝町",
+      "departure": "07:57",
+      "arrival": "08:00",
+      "minutes": 3,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "日本橋",
+      "departure": "07:55",
+      "arrival": "08:00",
+      "minutes": 5,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "三田",
+      "departure": "07:54",
+      "arrival": "07:59",
+      "minutes": 5,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "人形町",
+      "departure": "07:53",
+      "arrival": "08:00",
+      "minutes": 7,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "泉岳寺",
+      "departure": "07:52",
+      "arrival": "07:59",
+      "minutes": 7,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "東日本橋",
+      "departure": "07:51",
+      "arrival": "08:00",
+      "minutes": 9,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "浅草橋",
+      "departure": "07:49",
+      "arrival": "08:00",
+      "minutes": 11,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "高輪台",
+      "departure": "07:49",
+      "arrival": "07:59",
+      "minutes": 10,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "五反田",
+      "departure": "07:47",
+      "arrival": "07:59",
+      "minutes": 12,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "蔵前",
+      "departure": "07:47",
+      "arrival": "08:00",
+      "minutes": 13,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "浅草",
+      "departure": "07:45",
+      "arrival": "08:00",
+      "minutes": 15,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "本所吾妻橋",
+      "departure": "07:43",
+      "arrival": "08:00",
+      "minutes": 17,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "戸越",
+      "departure": "07:43",
+      "arrival": "07:59",
+      "minutes": 16,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "押上",
+      "departure": "07:42",
+      "arrival": "08:00",
+      "minutes": 18,
+      "route": "浅草線",
+      "destination": "羽田空港"
+    },
+    {
+      "station": "中延",
+      "departure": "07:41",
+      "arrival": "07:59",
+      "minutes": 18,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "馬込",
+      "departure": "07:39",
+      "arrival": "07:59",
+      "minutes": 20,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    },
+    {
+      "station": "西馬込",
+      "departure": "07:37",
+      "arrival": "07:59",
+      "minutes": 22,
+      "route": "浅草線",
+      "destination": "印旛日本医大"
+    }
+  ]
+}
