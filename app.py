@@ -2,20 +2,19 @@ import json
 from pathlib import Path
 import streamlit as st
 
-# 保存済みJSONだけを読み、閲覧時には交通APIを呼ばない
-data = json.loads(Path("routes.json").read_text())
-st.set_page_config(page_title="松戸8時", page_icon="🚃", layout="wide")
-st.title("松戸駅に8時までに着くには？")
-st.caption(f'検索日：{data["searched_date"]}｜{data["version"]}')
+# 保存済みの発車時刻を表示
+data = json.loads(Path("departures.json").read_text(encoding="utf-8"))
 
-for x in data["routes"]:
-    transfer = "乗換なし" if not x["transfers"] else \
-        f'{"・".join(x["transfer_stations"])}で乗換'
+st.set_page_config(page_title="新橋駅 発車時刻", page_icon="🚇")
+st.title(f'{data["station"]}駅 朝の発車時刻')
+st.caption(f'データ取得：{data["fetched_at"]}')
+
+for time in data["departures"]:
     with st.container(border=True):
-        a, b, c = st.columns([2, 2, 3])
-        a.subheader(f'{x["station"]}駅')
-        b.markdown(f'## {x["departure"]}発')
-        b.caption(f'松戸 {x["arrival"]}着')
-        c.markdown(f'**{transfer}**')
-        c.write(" → ".join(x["route"]))
-        c.caption(f'所要 {x["minutes"]}分')
+        st.markdown(f"## {time}")
+
+st.divider()
+st.caption(
+    "東京都交通局が公共交通オープンデータセンターを通じて提供する"
+    "GTFSデータを加工して利用しています（CC BY 4.0）。"
+)
