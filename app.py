@@ -17,14 +17,14 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-data = json.loads(
-    Path("direct_timetable.json").read_text(encoding="utf-8")
-)
+data = json.loads(Path("direct_timetable.json").read_text(encoding="utf-8"))
 
 station_info = {
     x["name"]: {
         "routes": x["routes"],
         "location": x.get("location", "所在地未登録"),
+        "rent_per_sqm": x.get("rent_per_sqm"),
+        "rent_25sqm": x.get("rent_25sqm"),
     }
     for x in data["stations"]
 }
@@ -61,6 +61,11 @@ def time_band(minutes):
         (f"{x}分以内" for x in (15, 30, 45, 60) if minutes <= x),
         "60分超",
     )
+
+
+def rent_man(value):
+    # 円を万円単位の表示へ変換
+    return f"{value / 10000:.1f}万円" if value is not None else ""
 
 
 def compact_html(text):
@@ -131,10 +136,11 @@ def search_routes(destination, target):
                     continue
 
                 info = station_info.get(station, {})
-
                 candidate = {
                     "駅名": station,
                     "所在地": info.get("location", "所在地未登録"),
+                    "家賃25㎡": info.get("rent_25sqm"),
+                    "家賃㎡単価": info.get("rent_per_sqm"),
                     "出発": clock(departure),
                     "到着": clock(arrival),
                     "所要時間": arrival - departure,
@@ -144,17 +150,10 @@ def search_routes(destination, target):
                     "出発分": departure,
                 }
 
-                if (
-                    station not in latest
-                    or departure > latest[station]["出発分"]
-                ):
+                if station not in latest or departure > latest[station]["出発分"]:
                     latest[station] = candidate
 
-    return sorted(
-        latest.values(),
-        key=lambda x: x["出発分"],
-        reverse=True,
-    )
+    return sorted(latest.values(), key=lambda x: x["出発分"], reverse=True)
 
 
 # ============================================================
@@ -175,7 +174,7 @@ st.markdown(
     .band-count{color:#667085;font-size:.78rem;font-weight:500}
 
     .station-card{display:grid;
-        grid-template-columns:minmax(145px,.9fr) minmax(260px,1.35fr)
+        grid-template-columns:minmax(170px,.95fr) minmax(260px,1.35fr)
         minmax(230px,1.2fr);align-items:center;gap:clamp(.7rem,1.5vw,1.2rem);
         border:1px solid #98a2b380;border-radius:14px;padding:.9rem 1rem;
         margin-bottom:.65rem;min-width:0;overflow:hidden;
@@ -185,6 +184,11 @@ st.markdown(
         overflow-wrap:anywhere}
     .station-suffix{font-size:13px;margin-left:2px}
     .location{color:#667085;font-size:.78rem;margin-top:.3rem}
+
+    .rent-box{margin-top:.55rem;padding-top:.45rem;border-top:1px solid #98a2b340}
+    .rent-label{font-size:.68rem;font-weight:800;color:#667085}
+    .rent-value{font-size:.9rem;font-weight:850;color:#344054;margin-top:.08rem}
+    .rent-note{font-size:.61rem;color:#667085;margin-top:.08rem}
 
     .departure-area{display:flex;align-items:center;gap:.75rem}
     .departure-message{font-size:clamp(1rem,1.7vw,1.25rem);
@@ -223,7 +227,7 @@ st.markdown(
         border-radius:14px;color:#667085}
 
     @media(max-width:900px){
-        .station-card{grid-template-columns:minmax(140px,.75fr) minmax(240px,1.25fr)}
+        .station-card{grid-template-columns:minmax(160px,.8fr) minmax(240px,1.2fr)}
         .summary-area{grid-column:1/-1;border-top:1px solid #98a2b34d;padding-top:.55rem}
     }
     @media(max-width:620px){
@@ -325,11 +329,7 @@ if not df.empty:
 
     if keyword.strip():
         df = df[
-            df["駅名"].str.contains(
-                keyword.strip(),
-                na=False,
-                regex=False,
-            )
+            df["駅名"].str.contains(keyword.strip(), na=False, regex=False)
         ]
 
 
@@ -361,6 +361,35 @@ else:
             train_destination = escape(str(row["行先"]))
             lines = escape(" ／ ".join(row["路線一覧"]))
             line_count = len(row["路線一覧"])
+            rent = row["家賃25㎡"]
+
+            rent_box = ""
+            rent_detail = ""
+
+            if pd.notna(rent):
+                rent_value = escape(rent_man(float(rent)))
+                rent_box = f"""
+                    <div class="rent-box">
+                        <div class="rent-label">公的家賃水準</div>
+                        <div class="rent-value">25㎡換算 約{rent_value}</div>
+                        <div class="rent-note">現在の募集相場ではありません</div>
+                    </div>
+                """
+                rent_detail = f"""
+                    <div>
+                        <span class="detail-label">公的家賃水準：</span>
+                        25㎡換算 約{rent_value}
+                    </div>
+                    <div>
+                        <span class="detail-label">家賃データ：</span>
+                        {escape(str(data.get("rent_source_year", "2023")))}年
+                        住宅・土地統計調査
+                    </div>
+                    <div>
+                        <span class="detail-label">注意：</span>
+                        現在募集中の物件相場ではありません
+                    </div>
+                """
 
             card = f"""
             <div class="station-card"
@@ -371,6 +400,7 @@ else:
                         {station}<span class="station-suffix">駅</span>
                     </div>
                     <div class="location">{location}</div>
+                    {rent_box}
                 </div>
 
                 <div class="departure-area">
@@ -397,6 +427,7 @@ else:
                         <summary>経路の詳細を見る</summary>
                         <div class="details-body">
                             <div><span class="detail-label">所在地：</span>{location}</div>
+                            {rent_detail}
                             <div><span class="detail-label">所要時間：</span>{row["所要時間"]}分</div>
                             <div><span class="detail-label">到着：</span>{row["到着"]}</div>
                             <div><span class="detail-label">利用経路：</span>{route}</div>
@@ -421,12 +452,17 @@ with st.expander("検索結果を表で確認する"):
         output = df[[
             "駅名",
             "所在地",
+            "家賃25㎡",
             "出発",
             "到着",
             "所要時間",
             "経路",
             "行先",
         ]].copy()
+
+        output["家賃25㎡"] = output["家賃25㎡"].apply(
+            lambda x: rent_man(x) if pd.notna(x) else ""
+        )
 
         st.dataframe(output, use_container_width=True, hide_index=True)
         st.download_button(
@@ -442,6 +478,10 @@ st.caption(
 )
 st.caption(
     "所在地はGTFS座標と国土地理院の情報を基に自治体単位で表示しています。"
+)
+st.caption(
+    "家賃水準は住宅・土地統計調査の市区町村別1㎡当たり家賃を"
+    "25㎡に換算した参考値です。現在の募集物件相場ではありません。"
 )
 st.caption(
     "正確性・完全性は保証されません。表示内容について交通事業者へ"
