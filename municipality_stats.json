@@ -1,0 +1,6184 @@
+{
+  "source": "令和5年住宅・土地統計調査",
+  "source_year": 2023,
+  "stats_data_id": "0004021492",
+  "reference_area_sqm": 25,
+  "fetched_at": "2026-07-24T22:06+09:00",
+  "municipalities": {
+    "01100": {
+      "municipality": "札幌市",
+      "rent_per_sqm": 1149,
+      "rent_25sqm": 28725
+    },
+    "01101": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1393,
+      "rent_25sqm": 34825
+    },
+    "01102": {
+      "municipality": "北区",
+      "rent_per_sqm": 1141,
+      "rent_25sqm": 28525
+    },
+    "01103": {
+      "municipality": "東区",
+      "rent_per_sqm": 1094,
+      "rent_25sqm": 27350
+    },
+    "01104": {
+      "municipality": "白石区",
+      "rent_per_sqm": 1147,
+      "rent_25sqm": 28675
+    },
+    "01105": {
+      "municipality": "豊平区",
+      "rent_per_sqm": 1207,
+      "rent_25sqm": 30175
+    },
+    "01106": {
+      "municipality": "南区",
+      "rent_per_sqm": 981,
+      "rent_25sqm": 24525
+    },
+    "01107": {
+      "municipality": "西区",
+      "rent_per_sqm": 1144,
+      "rent_25sqm": 28600
+    },
+    "01108": {
+      "municipality": "厚別区",
+      "rent_per_sqm": 882,
+      "rent_25sqm": 22050
+    },
+    "01109": {
+      "municipality": "手稲区",
+      "rent_per_sqm": 977,
+      "rent_25sqm": 24425
+    },
+    "01110": {
+      "municipality": "清田区",
+      "rent_per_sqm": 921,
+      "rent_25sqm": 23025
+    },
+    "01202": {
+      "municipality": "函館市",
+      "rent_per_sqm": 868,
+      "rent_25sqm": 21700
+    },
+    "01203": {
+      "municipality": "小樽市",
+      "rent_per_sqm": 851,
+      "rent_25sqm": 21275
+    },
+    "01204": {
+      "municipality": "旭川市",
+      "rent_per_sqm": 791,
+      "rent_25sqm": 19775
+    },
+    "01205": {
+      "municipality": "室蘭市",
+      "rent_per_sqm": 865,
+      "rent_25sqm": 21625
+    },
+    "01206": {
+      "municipality": "釧路市",
+      "rent_per_sqm": 789,
+      "rent_25sqm": 19725
+    },
+    "01207": {
+      "municipality": "帯広市",
+      "rent_per_sqm": 850,
+      "rent_25sqm": 21250
+    },
+    "01208": {
+      "municipality": "北見市",
+      "rent_per_sqm": 791,
+      "rent_25sqm": 19775
+    },
+    "01209": {
+      "municipality": "夕張市",
+      "rent_per_sqm": 443,
+      "rent_25sqm": 11075
+    },
+    "01210": {
+      "municipality": "岩見沢市",
+      "rent_per_sqm": 755,
+      "rent_25sqm": 18875
+    },
+    "01211": {
+      "municipality": "網走市",
+      "rent_per_sqm": 732,
+      "rent_25sqm": 18300
+    },
+    "01212": {
+      "municipality": "留萌市",
+      "rent_per_sqm": 517,
+      "rent_25sqm": 12925
+    },
+    "01213": {
+      "municipality": "苫小牧市",
+      "rent_per_sqm": 792,
+      "rent_25sqm": 19800
+    },
+    "01214": {
+      "municipality": "稚内市",
+      "rent_per_sqm": 639,
+      "rent_25sqm": 15975
+    },
+    "01215": {
+      "municipality": "美唄市",
+      "rent_per_sqm": 546,
+      "rent_25sqm": 13650
+    },
+    "01216": {
+      "municipality": "芦別市",
+      "rent_per_sqm": 439,
+      "rent_25sqm": 10975
+    },
+    "01217": {
+      "municipality": "江別市",
+      "rent_per_sqm": 844,
+      "rent_25sqm": 21100
+    },
+    "01218": {
+      "municipality": "赤平市",
+      "rent_per_sqm": 338,
+      "rent_25sqm": 8450
+    },
+    "01219": {
+      "municipality": "紋別市",
+      "rent_per_sqm": 475,
+      "rent_25sqm": 11875
+    },
+    "01220": {
+      "municipality": "士別市",
+      "rent_per_sqm": 533,
+      "rent_25sqm": 13325
+    },
+    "01221": {
+      "municipality": "名寄市",
+      "rent_per_sqm": 787,
+      "rent_25sqm": 19675
+    },
+    "01222": {
+      "municipality": "三笠市",
+      "rent_per_sqm": 496,
+      "rent_25sqm": 12400
+    },
+    "01223": {
+      "municipality": "根室市",
+      "rent_per_sqm": 497,
+      "rent_25sqm": 12425
+    },
+    "01224": {
+      "municipality": "千歳市",
+      "rent_per_sqm": 973,
+      "rent_25sqm": 24325
+    },
+    "01225": {
+      "municipality": "滝川市",
+      "rent_per_sqm": 745,
+      "rent_25sqm": 18625
+    },
+    "01226": {
+      "municipality": "砂川市",
+      "rent_per_sqm": 542,
+      "rent_25sqm": 13550
+    },
+    "01227": {
+      "municipality": "歌志内市",
+      "rent_per_sqm": 368,
+      "rent_25sqm": 9200
+    },
+    "01228": {
+      "municipality": "深川市",
+      "rent_per_sqm": 672,
+      "rent_25sqm": 16800
+    },
+    "01229": {
+      "municipality": "富良野市",
+      "rent_per_sqm": 776,
+      "rent_25sqm": 19400
+    },
+    "01230": {
+      "municipality": "登別市",
+      "rent_per_sqm": 635,
+      "rent_25sqm": 15875
+    },
+    "01231": {
+      "municipality": "恵庭市",
+      "rent_per_sqm": 877,
+      "rent_25sqm": 21925
+    },
+    "01233": {
+      "municipality": "伊達市",
+      "rent_per_sqm": 690,
+      "rent_25sqm": 17250
+    },
+    "01234": {
+      "municipality": "北広島市",
+      "rent_per_sqm": 828,
+      "rent_25sqm": 20700
+    },
+    "01235": {
+      "municipality": "石狩市",
+      "rent_per_sqm": 801,
+      "rent_25sqm": 20025
+    },
+    "01236": {
+      "municipality": "北斗市",
+      "rent_per_sqm": 704,
+      "rent_25sqm": 17600
+    },
+    "01303": {
+      "municipality": "当別町",
+      "rent_per_sqm": 720,
+      "rent_25sqm": 18000
+    },
+    "01337": {
+      "municipality": "七飯町",
+      "rent_per_sqm": 809,
+      "rent_25sqm": 20225
+    },
+    "01346": {
+      "municipality": "八雲町",
+      "rent_per_sqm": 697,
+      "rent_25sqm": 17425
+    },
+    "01400": {
+      "municipality": "倶知安町",
+      "rent_per_sqm": 803,
+      "rent_25sqm": 20075
+    },
+    "01408": {
+      "municipality": "余市町",
+      "rent_per_sqm": 599,
+      "rent_25sqm": 14975
+    },
+    "01543": {
+      "municipality": "美幌町",
+      "rent_per_sqm": 584,
+      "rent_25sqm": 14600
+    },
+    "01555": {
+      "municipality": "遠軽町",
+      "rent_per_sqm": 577,
+      "rent_25sqm": 14425
+    },
+    "01578": {
+      "municipality": "白老町",
+      "rent_per_sqm": 436,
+      "rent_25sqm": 10900
+    },
+    "01610": {
+      "municipality": "新ひだか町",
+      "rent_per_sqm": 684,
+      "rent_25sqm": 17100
+    },
+    "01631": {
+      "municipality": "音更町",
+      "rent_per_sqm": 808,
+      "rent_25sqm": 20200
+    },
+    "01637": {
+      "municipality": "芽室町",
+      "rent_per_sqm": 556,
+      "rent_25sqm": 13900
+    },
+    "01643": {
+      "municipality": "幕別町",
+      "rent_per_sqm": 704,
+      "rent_25sqm": 17600
+    },
+    "01661": {
+      "municipality": "釧路町",
+      "rent_per_sqm": 989,
+      "rent_25sqm": 24725
+    },
+    "01692": {
+      "municipality": "中標津町",
+      "rent_per_sqm": 838,
+      "rent_25sqm": 20950
+    },
+    "02201": {
+      "municipality": "青森市",
+      "rent_per_sqm": 894,
+      "rent_25sqm": 22350
+    },
+    "02202": {
+      "municipality": "弘前市",
+      "rent_per_sqm": 954,
+      "rent_25sqm": 23850
+    },
+    "02203": {
+      "municipality": "八戸市",
+      "rent_per_sqm": 878,
+      "rent_25sqm": 21950
+    },
+    "02204": {
+      "municipality": "黒石市",
+      "rent_per_sqm": 639,
+      "rent_25sqm": 15975
+    },
+    "02205": {
+      "municipality": "五所川原市",
+      "rent_per_sqm": 666,
+      "rent_25sqm": 16650
+    },
+    "02206": {
+      "municipality": "十和田市",
+      "rent_per_sqm": 832,
+      "rent_25sqm": 20800
+    },
+    "02207": {
+      "municipality": "三沢市",
+      "rent_per_sqm": 733,
+      "rent_25sqm": 18325
+    },
+    "02208": {
+      "municipality": "むつ市",
+      "rent_per_sqm": 751,
+      "rent_25sqm": 18775
+    },
+    "02209": {
+      "municipality": "つがる市",
+      "rent_per_sqm": 552,
+      "rent_25sqm": 13800
+    },
+    "02210": {
+      "municipality": "平川市",
+      "rent_per_sqm": 740,
+      "rent_25sqm": 18500
+    },
+    "02408": {
+      "municipality": "東北町",
+      "rent_per_sqm": 543,
+      "rent_25sqm": 13575
+    },
+    "02412": {
+      "municipality": "おいらせ町",
+      "rent_per_sqm": 764,
+      "rent_25sqm": 19100
+    },
+    "02442": {
+      "municipality": "五戸町",
+      "rent_per_sqm": 389,
+      "rent_25sqm": 9725
+    },
+    "02445": {
+      "municipality": "南部町",
+      "rent_per_sqm": 294,
+      "rent_25sqm": 7350
+    },
+    "03201": {
+      "municipality": "盛岡市",
+      "rent_per_sqm": 1100,
+      "rent_25sqm": 27500
+    },
+    "03202": {
+      "municipality": "宮古市",
+      "rent_per_sqm": 647,
+      "rent_25sqm": 16175
+    },
+    "03203": {
+      "municipality": "大船渡市",
+      "rent_per_sqm": 686,
+      "rent_25sqm": 17150
+    },
+    "03205": {
+      "municipality": "花巻市",
+      "rent_per_sqm": 810,
+      "rent_25sqm": 20250
+    },
+    "03206": {
+      "municipality": "北上市",
+      "rent_per_sqm": 1076,
+      "rent_25sqm": 26900
+    },
+    "03207": {
+      "municipality": "久慈市",
+      "rent_per_sqm": 633,
+      "rent_25sqm": 15825
+    },
+    "03208": {
+      "municipality": "遠野市",
+      "rent_per_sqm": 577,
+      "rent_25sqm": 14425
+    },
+    "03209": {
+      "municipality": "一関市",
+      "rent_per_sqm": 851,
+      "rent_25sqm": 21275
+    },
+    "03210": {
+      "municipality": "陸前高田市",
+      "rent_per_sqm": 471,
+      "rent_25sqm": 11775
+    },
+    "03211": {
+      "municipality": "釜石市",
+      "rent_per_sqm": 642,
+      "rent_25sqm": 16050
+    },
+    "03213": {
+      "municipality": "二戸市",
+      "rent_per_sqm": 800,
+      "rent_25sqm": 20000
+    },
+    "03214": {
+      "municipality": "八幡平市",
+      "rent_per_sqm": 706,
+      "rent_25sqm": 17650
+    },
+    "03215": {
+      "municipality": "奥州市",
+      "rent_per_sqm": 843,
+      "rent_25sqm": 21075
+    },
+    "03216": {
+      "municipality": "滝沢市",
+      "rent_per_sqm": 1022,
+      "rent_25sqm": 25550
+    },
+    "03301": {
+      "municipality": "雫石町",
+      "rent_per_sqm": 475,
+      "rent_25sqm": 11875
+    },
+    "03321": {
+      "municipality": "紫波町",
+      "rent_per_sqm": 944,
+      "rent_25sqm": 23600
+    },
+    "03322": {
+      "municipality": "矢巾町",
+      "rent_per_sqm": 1173,
+      "rent_25sqm": 29325
+    },
+    "03381": {
+      "municipality": "金ケ崎町",
+      "rent_per_sqm": 933,
+      "rent_25sqm": 23325
+    },
+    "03507": {
+      "municipality": "洋野町",
+      "rent_per_sqm": 384,
+      "rent_25sqm": 9600
+    },
+    "04100": {
+      "municipality": "仙台市",
+      "rent_per_sqm": 1345,
+      "rent_25sqm": 33625
+    },
+    "04101": {
+      "municipality": "青葉区",
+      "rent_per_sqm": 1438,
+      "rent_25sqm": 35950
+    },
+    "04102": {
+      "municipality": "宮城野区",
+      "rent_per_sqm": 1289,
+      "rent_25sqm": 32225
+    },
+    "04103": {
+      "municipality": "若林区",
+      "rent_per_sqm": 1406,
+      "rent_25sqm": 35150
+    },
+    "04104": {
+      "municipality": "太白区",
+      "rent_per_sqm": 1198,
+      "rent_25sqm": 29950
+    },
+    "04105": {
+      "municipality": "泉区",
+      "rent_per_sqm": 1368,
+      "rent_25sqm": 34200
+    },
+    "04202": {
+      "municipality": "石巻市",
+      "rent_per_sqm": 761,
+      "rent_25sqm": 19025
+    },
+    "04203": {
+      "municipality": "塩竈市",
+      "rent_per_sqm": 869,
+      "rent_25sqm": 21725
+    },
+    "04205": {
+      "municipality": "気仙沼市",
+      "rent_per_sqm": 618,
+      "rent_25sqm": 15450
+    },
+    "04206": {
+      "municipality": "白石市",
+      "rent_per_sqm": 874,
+      "rent_25sqm": 21850
+    },
+    "04207": {
+      "municipality": "名取市",
+      "rent_per_sqm": 1020,
+      "rent_25sqm": 25500
+    },
+    "04208": {
+      "municipality": "角田市",
+      "rent_per_sqm": 794,
+      "rent_25sqm": 19850
+    },
+    "04209": {
+      "municipality": "多賀城市",
+      "rent_per_sqm": 1054,
+      "rent_25sqm": 26350
+    },
+    "04211": {
+      "municipality": "岩沼市",
+      "rent_per_sqm": 968,
+      "rent_25sqm": 24200
+    },
+    "04212": {
+      "municipality": "登米市",
+      "rent_per_sqm": 785,
+      "rent_25sqm": 19625
+    },
+    "04213": {
+      "municipality": "栗原市",
+      "rent_per_sqm": 720,
+      "rent_25sqm": 18000
+    },
+    "04214": {
+      "municipality": "東松島市",
+      "rent_per_sqm": 691,
+      "rent_25sqm": 17275
+    },
+    "04215": {
+      "municipality": "大崎市",
+      "rent_per_sqm": 882,
+      "rent_25sqm": 22050
+    },
+    "04216": {
+      "municipality": "富谷市",
+      "rent_per_sqm": 1066,
+      "rent_25sqm": 26650
+    },
+    "04321": {
+      "municipality": "大河原町",
+      "rent_per_sqm": 1007,
+      "rent_25sqm": 25175
+    },
+    "04323": {
+      "municipality": "柴田町",
+      "rent_per_sqm": 878,
+      "rent_25sqm": 21950
+    },
+    "04361": {
+      "municipality": "亘理町",
+      "rent_per_sqm": 656,
+      "rent_25sqm": 16400
+    },
+    "04404": {
+      "municipality": "七ヶ浜町",
+      "rent_per_sqm": 657,
+      "rent_25sqm": 16425
+    },
+    "04406": {
+      "municipality": "利府町",
+      "rent_per_sqm": 1019,
+      "rent_25sqm": 25475
+    },
+    "04421": {
+      "municipality": "大和町",
+      "rent_per_sqm": 964,
+      "rent_25sqm": 24100
+    },
+    "04445": {
+      "municipality": "加美町",
+      "rent_per_sqm": 538,
+      "rent_25sqm": 13450
+    },
+    "04501": {
+      "municipality": "涌谷町",
+      "rent_per_sqm": 797,
+      "rent_25sqm": 19925
+    },
+    "04505": {
+      "municipality": "美里町",
+      "rent_per_sqm": 709,
+      "rent_25sqm": 17725
+    },
+    "05201": {
+      "municipality": "秋田市",
+      "rent_per_sqm": 982,
+      "rent_25sqm": 24550
+    },
+    "05202": {
+      "municipality": "能代市",
+      "rent_per_sqm": 653,
+      "rent_25sqm": 16325
+    },
+    "05203": {
+      "municipality": "横手市",
+      "rent_per_sqm": 873,
+      "rent_25sqm": 21825
+    },
+    "05204": {
+      "municipality": "大館市",
+      "rent_per_sqm": 919,
+      "rent_25sqm": 22975
+    },
+    "05206": {
+      "municipality": "男鹿市",
+      "rent_per_sqm": 518,
+      "rent_25sqm": 12950
+    },
+    "05207": {
+      "municipality": "湯沢市",
+      "rent_per_sqm": 660,
+      "rent_25sqm": 16500
+    },
+    "05209": {
+      "municipality": "鹿角市",
+      "rent_per_sqm": 614,
+      "rent_25sqm": 15350
+    },
+    "05210": {
+      "municipality": "由利本荘市",
+      "rent_per_sqm": 839,
+      "rent_25sqm": 20975
+    },
+    "05211": {
+      "municipality": "潟上市",
+      "rent_per_sqm": 765,
+      "rent_25sqm": 19125
+    },
+    "05212": {
+      "municipality": "大仙市",
+      "rent_per_sqm": 807,
+      "rent_25sqm": 20175
+    },
+    "05213": {
+      "municipality": "北秋田市",
+      "rent_per_sqm": 565,
+      "rent_25sqm": 14125
+    },
+    "05214": {
+      "municipality": "にかほ市",
+      "rent_per_sqm": 665,
+      "rent_25sqm": 16625
+    },
+    "05215": {
+      "municipality": "仙北市",
+      "rent_per_sqm": 511,
+      "rent_25sqm": 12775
+    },
+    "05348": {
+      "municipality": "三種町",
+      "rent_per_sqm": 318,
+      "rent_25sqm": 7950
+    },
+    "05434": {
+      "municipality": "美郷町",
+      "rent_per_sqm": 478,
+      "rent_25sqm": 11950
+    },
+    "06201": {
+      "municipality": "山形市",
+      "rent_per_sqm": 1122,
+      "rent_25sqm": 28050
+    },
+    "06202": {
+      "municipality": "米沢市",
+      "rent_per_sqm": 945,
+      "rent_25sqm": 23625
+    },
+    "06203": {
+      "municipality": "鶴岡市",
+      "rent_per_sqm": 841,
+      "rent_25sqm": 21025
+    },
+    "06204": {
+      "municipality": "酒田市",
+      "rent_per_sqm": 854,
+      "rent_25sqm": 21350
+    },
+    "06205": {
+      "municipality": "新庄市",
+      "rent_per_sqm": 858,
+      "rent_25sqm": 21450
+    },
+    "06206": {
+      "municipality": "寒河江市",
+      "rent_per_sqm": 958,
+      "rent_25sqm": 23950
+    },
+    "06207": {
+      "municipality": "上山市",
+      "rent_per_sqm": 722,
+      "rent_25sqm": 18050
+    },
+    "06208": {
+      "municipality": "村山市",
+      "rent_per_sqm": 694,
+      "rent_25sqm": 17350
+    },
+    "06209": {
+      "municipality": "長井市",
+      "rent_per_sqm": 773,
+      "rent_25sqm": 19325
+    },
+    "06210": {
+      "municipality": "天童市",
+      "rent_per_sqm": 964,
+      "rent_25sqm": 24100
+    },
+    "06211": {
+      "municipality": "東根市",
+      "rent_per_sqm": 955,
+      "rent_25sqm": 23875
+    },
+    "06212": {
+      "municipality": "尾花沢市",
+      "rent_per_sqm": 556,
+      "rent_25sqm": 13900
+    },
+    "06213": {
+      "municipality": "南陽市",
+      "rent_per_sqm": 806,
+      "rent_25sqm": 20150
+    },
+    "06321": {
+      "municipality": "河北町",
+      "rent_per_sqm": 951,
+      "rent_25sqm": 23775
+    },
+    "06381": {
+      "municipality": "高畠町",
+      "rent_per_sqm": 677,
+      "rent_25sqm": 16925
+    },
+    "06428": {
+      "municipality": "庄内町",
+      "rent_per_sqm": 678,
+      "rent_25sqm": 16950
+    },
+    "07201": {
+      "municipality": "福島市",
+      "rent_per_sqm": 1012,
+      "rent_25sqm": 25300
+    },
+    "07202": {
+      "municipality": "会津若松市",
+      "rent_per_sqm": 866,
+      "rent_25sqm": 21650
+    },
+    "07203": {
+      "municipality": "郡山市",
+      "rent_per_sqm": 1131,
+      "rent_25sqm": 28275
+    },
+    "07204": {
+      "municipality": "いわき市",
+      "rent_per_sqm": 884,
+      "rent_25sqm": 22100
+    },
+    "07205": {
+      "municipality": "白河市",
+      "rent_per_sqm": 915,
+      "rent_25sqm": 22875
+    },
+    "07207": {
+      "municipality": "須賀川市",
+      "rent_per_sqm": 983,
+      "rent_25sqm": 24575
+    },
+    "07208": {
+      "municipality": "喜多方市",
+      "rent_per_sqm": 685,
+      "rent_25sqm": 17125
+    },
+    "07209": {
+      "municipality": "相馬市",
+      "rent_per_sqm": 842,
+      "rent_25sqm": 21050
+    },
+    "07210": {
+      "municipality": "二本松市",
+      "rent_per_sqm": 846,
+      "rent_25sqm": 21150
+    },
+    "07211": {
+      "municipality": "田村市",
+      "rent_per_sqm": 835,
+      "rent_25sqm": 20875
+    },
+    "07212": {
+      "municipality": "南相馬市",
+      "rent_per_sqm": 813,
+      "rent_25sqm": 20325
+    },
+    "07213": {
+      "municipality": "伊達市",
+      "rent_per_sqm": 842,
+      "rent_25sqm": 21050
+    },
+    "07214": {
+      "municipality": "本宮市",
+      "rent_per_sqm": 889,
+      "rent_25sqm": 22225
+    },
+    "07421": {
+      "municipality": "会津坂下町",
+      "rent_per_sqm": 571,
+      "rent_25sqm": 14275
+    },
+    "07447": {
+      "municipality": "会津美里町",
+      "rent_per_sqm": 775,
+      "rent_25sqm": 19375
+    },
+    "07461": {
+      "municipality": "西郷村",
+      "rent_per_sqm": 1086,
+      "rent_25sqm": 27150
+    },
+    "07466": {
+      "municipality": "矢吹町",
+      "rent_per_sqm": 818,
+      "rent_25sqm": 20450
+    },
+    "07521": {
+      "municipality": "三春町",
+      "rent_per_sqm": 578,
+      "rent_25sqm": 14450
+    },
+    "08201": {
+      "municipality": "水戸市",
+      "rent_per_sqm": 1086,
+      "rent_25sqm": 27150
+    },
+    "08202": {
+      "municipality": "日立市",
+      "rent_per_sqm": 933,
+      "rent_25sqm": 23325
+    },
+    "08203": {
+      "municipality": "土浦市",
+      "rent_per_sqm": 1054,
+      "rent_25sqm": 26350
+    },
+    "08204": {
+      "municipality": "古河市",
+      "rent_per_sqm": 965,
+      "rent_25sqm": 24125
+    },
+    "08205": {
+      "municipality": "石岡市",
+      "rent_per_sqm": 912,
+      "rent_25sqm": 22800
+    },
+    "08207": {
+      "municipality": "結城市",
+      "rent_per_sqm": 915,
+      "rent_25sqm": 22875
+    },
+    "08208": {
+      "municipality": "龍ケ崎市",
+      "rent_per_sqm": 942,
+      "rent_25sqm": 23550
+    },
+    "08210": {
+      "municipality": "下妻市",
+      "rent_per_sqm": 957,
+      "rent_25sqm": 23925
+    },
+    "08211": {
+      "municipality": "常総市",
+      "rent_per_sqm": 791,
+      "rent_25sqm": 19775
+    },
+    "08212": {
+      "municipality": "常陸太田市",
+      "rent_per_sqm": 739,
+      "rent_25sqm": 18475
+    },
+    "08214": {
+      "municipality": "高萩市",
+      "rent_per_sqm": 808,
+      "rent_25sqm": 20200
+    },
+    "08215": {
+      "municipality": "北茨城市",
+      "rent_per_sqm": 768,
+      "rent_25sqm": 19200
+    },
+    "08216": {
+      "municipality": "笠間市",
+      "rent_per_sqm": 848,
+      "rent_25sqm": 21200
+    },
+    "08217": {
+      "municipality": "取手市",
+      "rent_per_sqm": 1084,
+      "rent_25sqm": 27100
+    },
+    "08219": {
+      "municipality": "牛久市",
+      "rent_per_sqm": 1188,
+      "rent_25sqm": 29700
+    },
+    "08220": {
+      "municipality": "つくば市",
+      "rent_per_sqm": 1306,
+      "rent_25sqm": 32650
+    },
+    "08221": {
+      "municipality": "ひたちなか市",
+      "rent_per_sqm": 1093,
+      "rent_25sqm": 27325
+    },
+    "08222": {
+      "municipality": "鹿嶋市",
+      "rent_per_sqm": 893,
+      "rent_25sqm": 22325
+    },
+    "08223": {
+      "municipality": "潮来市",
+      "rent_per_sqm": 823,
+      "rent_25sqm": 20575
+    },
+    "08224": {
+      "municipality": "守谷市",
+      "rent_per_sqm": 1246,
+      "rent_25sqm": 31150
+    },
+    "08225": {
+      "municipality": "常陸大宮市",
+      "rent_per_sqm": 775,
+      "rent_25sqm": 19375
+    },
+    "08226": {
+      "municipality": "那珂市",
+      "rent_per_sqm": 1056,
+      "rent_25sqm": 26400
+    },
+    "08227": {
+      "municipality": "筑西市",
+      "rent_per_sqm": 919,
+      "rent_25sqm": 22975
+    },
+    "08228": {
+      "municipality": "坂東市",
+      "rent_per_sqm": 866,
+      "rent_25sqm": 21650
+    },
+    "08229": {
+      "municipality": "稲敷市",
+      "rent_per_sqm": 603,
+      "rent_25sqm": 15075
+    },
+    "08230": {
+      "municipality": "かすみがうら市",
+      "rent_per_sqm": 938,
+      "rent_25sqm": 23450
+    },
+    "08231": {
+      "municipality": "桜川市",
+      "rent_per_sqm": 726,
+      "rent_25sqm": 18150
+    },
+    "08232": {
+      "municipality": "神栖市",
+      "rent_per_sqm": 985,
+      "rent_25sqm": 24625
+    },
+    "08233": {
+      "municipality": "行方市",
+      "rent_per_sqm": 662,
+      "rent_25sqm": 16550
+    },
+    "08234": {
+      "municipality": "鉾田市",
+      "rent_per_sqm": 893,
+      "rent_25sqm": 22325
+    },
+    "08235": {
+      "municipality": "つくばみらい市",
+      "rent_per_sqm": 1196,
+      "rent_25sqm": 29900
+    },
+    "08236": {
+      "municipality": "小美玉市",
+      "rent_per_sqm": 890,
+      "rent_25sqm": 22250
+    },
+    "08302": {
+      "municipality": "茨城町",
+      "rent_per_sqm": 702,
+      "rent_25sqm": 17550
+    },
+    "08309": {
+      "municipality": "大洗町",
+      "rent_per_sqm": 649,
+      "rent_25sqm": 16225
+    },
+    "08310": {
+      "municipality": "城里町",
+      "rent_per_sqm": 486,
+      "rent_25sqm": 12150
+    },
+    "08341": {
+      "municipality": "東海村",
+      "rent_per_sqm": 1053,
+      "rent_25sqm": 26325
+    },
+    "08364": {
+      "municipality": "大子町",
+      "rent_per_sqm": 539,
+      "rent_25sqm": 13475
+    },
+    "08443": {
+      "municipality": "阿見町",
+      "rent_per_sqm": 1041,
+      "rent_25sqm": 26025
+    },
+    "08521": {
+      "municipality": "八千代町",
+      "rent_per_sqm": 929,
+      "rent_25sqm": 23225
+    },
+    "08546": {
+      "municipality": "境町",
+      "rent_per_sqm": 934,
+      "rent_25sqm": 23350
+    },
+    "08564": {
+      "municipality": "利根町",
+      "rent_per_sqm": 602,
+      "rent_25sqm": 15050
+    },
+    "09201": {
+      "municipality": "宇都宮市",
+      "rent_per_sqm": 1183,
+      "rent_25sqm": 29575
+    },
+    "09202": {
+      "municipality": "足利市",
+      "rent_per_sqm": 822,
+      "rent_25sqm": 20550
+    },
+    "09203": {
+      "municipality": "栃木市",
+      "rent_per_sqm": 919,
+      "rent_25sqm": 22975
+    },
+    "09204": {
+      "municipality": "佐野市",
+      "rent_per_sqm": 887,
+      "rent_25sqm": 22175
+    },
+    "09205": {
+      "municipality": "鹿沼市",
+      "rent_per_sqm": 866,
+      "rent_25sqm": 21650
+    },
+    "09206": {
+      "municipality": "日光市",
+      "rent_per_sqm": 793,
+      "rent_25sqm": 19825
+    },
+    "09208": {
+      "municipality": "小山市",
+      "rent_per_sqm": 1101,
+      "rent_25sqm": 27525
+    },
+    "09209": {
+      "municipality": "真岡市",
+      "rent_per_sqm": 961,
+      "rent_25sqm": 24025
+    },
+    "09210": {
+      "municipality": "大田原市",
+      "rent_per_sqm": 920,
+      "rent_25sqm": 23000
+    },
+    "09211": {
+      "municipality": "矢板市",
+      "rent_per_sqm": 764,
+      "rent_25sqm": 19100
+    },
+    "09213": {
+      "municipality": "那須塩原市",
+      "rent_per_sqm": 884,
+      "rent_25sqm": 22100
+    },
+    "09214": {
+      "municipality": "さくら市",
+      "rent_per_sqm": 968,
+      "rent_25sqm": 24200
+    },
+    "09215": {
+      "municipality": "那須烏山市",
+      "rent_per_sqm": 604,
+      "rent_25sqm": 15100
+    },
+    "09216": {
+      "municipality": "下野市",
+      "rent_per_sqm": 1068,
+      "rent_25sqm": 26700
+    },
+    "09301": {
+      "municipality": "上三川町",
+      "rent_per_sqm": 857,
+      "rent_25sqm": 21425
+    },
+    "09342": {
+      "municipality": "益子町",
+      "rent_per_sqm": 859,
+      "rent_25sqm": 21475
+    },
+    "09361": {
+      "municipality": "壬生町",
+      "rent_per_sqm": 995,
+      "rent_25sqm": 24875
+    },
+    "09364": {
+      "municipality": "野木町",
+      "rent_per_sqm": 1083,
+      "rent_25sqm": 27075
+    },
+    "09386": {
+      "municipality": "高根沢町",
+      "rent_per_sqm": 1006,
+      "rent_25sqm": 25150
+    },
+    "09407": {
+      "municipality": "那須町",
+      "rent_per_sqm": 252,
+      "rent_25sqm": 6300
+    },
+    "09411": {
+      "municipality": "那珂川町",
+      "rent_per_sqm": 687,
+      "rent_25sqm": 17175
+    },
+    "10201": {
+      "municipality": "前橋市",
+      "rent_per_sqm": 972,
+      "rent_25sqm": 24300
+    },
+    "10202": {
+      "municipality": "高崎市",
+      "rent_per_sqm": 1071,
+      "rent_25sqm": 26775
+    },
+    "10203": {
+      "municipality": "桐生市",
+      "rent_per_sqm": 773,
+      "rent_25sqm": 19325
+    },
+    "10204": {
+      "municipality": "伊勢崎市",
+      "rent_per_sqm": 964,
+      "rent_25sqm": 24100
+    },
+    "10205": {
+      "municipality": "太田市",
+      "rent_per_sqm": 936,
+      "rent_25sqm": 23400
+    },
+    "10206": {
+      "municipality": "沼田市",
+      "rent_per_sqm": 778,
+      "rent_25sqm": 19450
+    },
+    "10207": {
+      "municipality": "館林市",
+      "rent_per_sqm": 924,
+      "rent_25sqm": 23100
+    },
+    "10208": {
+      "municipality": "渋川市",
+      "rent_per_sqm": 741,
+      "rent_25sqm": 18525
+    },
+    "10209": {
+      "municipality": "藤岡市",
+      "rent_per_sqm": 816,
+      "rent_25sqm": 20400
+    },
+    "10210": {
+      "municipality": "富岡市",
+      "rent_per_sqm": 827,
+      "rent_25sqm": 20675
+    },
+    "10211": {
+      "municipality": "安中市",
+      "rent_per_sqm": 734,
+      "rent_25sqm": 18350
+    },
+    "10212": {
+      "municipality": "みどり市",
+      "rent_per_sqm": 869,
+      "rent_25sqm": 21725
+    },
+    "10345": {
+      "municipality": "吉岡町",
+      "rent_per_sqm": 1141,
+      "rent_25sqm": 28525
+    },
+    "10421": {
+      "municipality": "中之条町",
+      "rent_per_sqm": 756,
+      "rent_25sqm": 18900
+    },
+    "10449": {
+      "municipality": "みなかみ町",
+      "rent_per_sqm": 2521,
+      "rent_25sqm": 63025
+    },
+    "10464": {
+      "municipality": "玉村町",
+      "rent_per_sqm": 1241,
+      "rent_25sqm": 31025
+    },
+    "10524": {
+      "municipality": "大泉町",
+      "rent_per_sqm": 994,
+      "rent_25sqm": 24850
+    },
+    "10525": {
+      "municipality": "邑楽町",
+      "rent_per_sqm": 908,
+      "rent_25sqm": 22700
+    },
+    "11100": {
+      "municipality": "さいたま市",
+      "rent_per_sqm": 1576,
+      "rent_25sqm": 39400
+    },
+    "11101": {
+      "municipality": "西区",
+      "rent_per_sqm": 1400,
+      "rent_25sqm": 35000
+    },
+    "11102": {
+      "municipality": "北区",
+      "rent_per_sqm": 1494,
+      "rent_25sqm": 37350
+    },
+    "11103": {
+      "municipality": "大宮区",
+      "rent_per_sqm": 1684,
+      "rent_25sqm": 42100
+    },
+    "11104": {
+      "municipality": "見沼区",
+      "rent_per_sqm": 1300,
+      "rent_25sqm": 32500
+    },
+    "11105": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1757,
+      "rent_25sqm": 43925
+    },
+    "11106": {
+      "municipality": "桜区",
+      "rent_per_sqm": 1590,
+      "rent_25sqm": 39750
+    },
+    "11107": {
+      "municipality": "浦和区",
+      "rent_per_sqm": 1866,
+      "rent_25sqm": 46650
+    },
+    "11108": {
+      "municipality": "南区",
+      "rent_per_sqm": 1724,
+      "rent_25sqm": 43100
+    },
+    "11109": {
+      "municipality": "緑区",
+      "rent_per_sqm": 1384,
+      "rent_25sqm": 34600
+    },
+    "11110": {
+      "municipality": "岩槻区",
+      "rent_per_sqm": 1196,
+      "rent_25sqm": 29900
+    },
+    "11201": {
+      "municipality": "川越市",
+      "rent_per_sqm": 1386,
+      "rent_25sqm": 34650
+    },
+    "11202": {
+      "municipality": "熊谷市",
+      "rent_per_sqm": 1033,
+      "rent_25sqm": 25825
+    },
+    "11203": {
+      "municipality": "川口市",
+      "rent_per_sqm": 1714,
+      "rent_25sqm": 42850
+    },
+    "11206": {
+      "municipality": "行田市",
+      "rent_per_sqm": 1032,
+      "rent_25sqm": 25800
+    },
+    "11207": {
+      "municipality": "秩父市",
+      "rent_per_sqm": 868,
+      "rent_25sqm": 21700
+    },
+    "11208": {
+      "municipality": "所沢市",
+      "rent_per_sqm": 1468,
+      "rent_25sqm": 36700
+    },
+    "11209": {
+      "municipality": "飯能市",
+      "rent_per_sqm": 1266,
+      "rent_25sqm": 31650
+    },
+    "11210": {
+      "municipality": "加須市",
+      "rent_per_sqm": 1105,
+      "rent_25sqm": 27625
+    },
+    "11211": {
+      "municipality": "本庄市",
+      "rent_per_sqm": 1024,
+      "rent_25sqm": 25600
+    },
+    "11212": {
+      "municipality": "東松山市",
+      "rent_per_sqm": 1238,
+      "rent_25sqm": 30950
+    },
+    "11214": {
+      "municipality": "春日部市",
+      "rent_per_sqm": 1166,
+      "rent_25sqm": 29150
+    },
+    "11215": {
+      "municipality": "狭山市",
+      "rent_per_sqm": 1166,
+      "rent_25sqm": 29150
+    },
+    "11216": {
+      "municipality": "羽生市",
+      "rent_per_sqm": 1050,
+      "rent_25sqm": 26250
+    },
+    "11217": {
+      "municipality": "鴻巣市",
+      "rent_per_sqm": 1067,
+      "rent_25sqm": 26675
+    },
+    "11218": {
+      "municipality": "深谷市",
+      "rent_per_sqm": 1020,
+      "rent_25sqm": 25500
+    },
+    "11219": {
+      "municipality": "上尾市",
+      "rent_per_sqm": 1176,
+      "rent_25sqm": 29400
+    },
+    "11221": {
+      "municipality": "草加市",
+      "rent_per_sqm": 1553,
+      "rent_25sqm": 38825
+    },
+    "11222": {
+      "municipality": "越谷市",
+      "rent_per_sqm": 1402,
+      "rent_25sqm": 35050
+    },
+    "11223": {
+      "municipality": "蕨市",
+      "rent_per_sqm": 1761,
+      "rent_25sqm": 44025
+    },
+    "11224": {
+      "municipality": "戸田市",
+      "rent_per_sqm": 1764,
+      "rent_25sqm": 44100
+    },
+    "11225": {
+      "municipality": "入間市",
+      "rent_per_sqm": 1183,
+      "rent_25sqm": 29575
+    },
+    "11227": {
+      "municipality": "朝霞市",
+      "rent_per_sqm": 1745,
+      "rent_25sqm": 43625
+    },
+    "11228": {
+      "municipality": "志木市",
+      "rent_per_sqm": 1512,
+      "rent_25sqm": 37800
+    },
+    "11229": {
+      "municipality": "和光市",
+      "rent_per_sqm": 1858,
+      "rent_25sqm": 46450
+    },
+    "11230": {
+      "municipality": "新座市",
+      "rent_per_sqm": 1514,
+      "rent_25sqm": 37850
+    },
+    "11231": {
+      "municipality": "桶川市",
+      "rent_per_sqm": 1139,
+      "rent_25sqm": 28475
+    },
+    "11232": {
+      "municipality": "久喜市",
+      "rent_per_sqm": 1105,
+      "rent_25sqm": 27625
+    },
+    "11233": {
+      "municipality": "北本市",
+      "rent_per_sqm": 1103,
+      "rent_25sqm": 27575
+    },
+    "11234": {
+      "municipality": "八潮市",
+      "rent_per_sqm": 1669,
+      "rent_25sqm": 41725
+    },
+    "11235": {
+      "municipality": "富士見市",
+      "rent_per_sqm": 1571,
+      "rent_25sqm": 39275
+    },
+    "11237": {
+      "municipality": "三郷市",
+      "rent_per_sqm": 1331,
+      "rent_25sqm": 33275
+    },
+    "11238": {
+      "municipality": "蓮田市",
+      "rent_per_sqm": 1174,
+      "rent_25sqm": 29350
+    },
+    "11239": {
+      "municipality": "坂戸市",
+      "rent_per_sqm": 1243,
+      "rent_25sqm": 31075
+    },
+    "11240": {
+      "municipality": "幸手市",
+      "rent_per_sqm": 948,
+      "rent_25sqm": 23700
+    },
+    "11241": {
+      "municipality": "鶴ヶ島市",
+      "rent_per_sqm": 1285,
+      "rent_25sqm": 32125
+    },
+    "11242": {
+      "municipality": "日高市",
+      "rent_per_sqm": 1012,
+      "rent_25sqm": 25300
+    },
+    "11243": {
+      "municipality": "吉川市",
+      "rent_per_sqm": 1341,
+      "rent_25sqm": 33525
+    },
+    "11245": {
+      "municipality": "ふじみ野市",
+      "rent_per_sqm": 1472,
+      "rent_25sqm": 36800
+    },
+    "11246": {
+      "municipality": "白岡市",
+      "rent_per_sqm": 1247,
+      "rent_25sqm": 31175
+    },
+    "11301": {
+      "municipality": "伊奈町",
+      "rent_per_sqm": 1342,
+      "rent_25sqm": 33550
+    },
+    "11324": {
+      "municipality": "三芳町",
+      "rent_per_sqm": 1387,
+      "rent_25sqm": 34675
+    },
+    "11326": {
+      "municipality": "毛呂山町",
+      "rent_per_sqm": 1341,
+      "rent_25sqm": 33525
+    },
+    "11341": {
+      "municipality": "滑川町",
+      "rent_per_sqm": 1248,
+      "rent_25sqm": 31200
+    },
+    "11342": {
+      "municipality": "嵐山町",
+      "rent_per_sqm": 1035,
+      "rent_25sqm": 25875
+    },
+    "11343": {
+      "municipality": "小川町",
+      "rent_per_sqm": 994,
+      "rent_25sqm": 24850
+    },
+    "11346": {
+      "municipality": "川島町",
+      "rent_per_sqm": 961,
+      "rent_25sqm": 24025
+    },
+    "11347": {
+      "municipality": "吉見町",
+      "rent_per_sqm": 834,
+      "rent_25sqm": 20850
+    },
+    "11385": {
+      "municipality": "上里町",
+      "rent_per_sqm": 869,
+      "rent_25sqm": 21725
+    },
+    "11408": {
+      "municipality": "寄居町",
+      "rent_per_sqm": 722,
+      "rent_25sqm": 18050
+    },
+    "11442": {
+      "municipality": "宮代町",
+      "rent_per_sqm": 1298,
+      "rent_25sqm": 32450
+    },
+    "11464": {
+      "municipality": "杉戸町",
+      "rent_per_sqm": 815,
+      "rent_25sqm": 20375
+    },
+    "11465": {
+      "municipality": "松伏町",
+      "rent_per_sqm": 1132,
+      "rent_25sqm": 28300
+    },
+    "12100": {
+      "municipality": "千葉市",
+      "rent_per_sqm": 1380,
+      "rent_25sqm": 34500
+    },
+    "12101": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1643,
+      "rent_25sqm": 41075
+    },
+    "12102": {
+      "municipality": "花見川区",
+      "rent_per_sqm": 1430,
+      "rent_25sqm": 35750
+    },
+    "12103": {
+      "municipality": "稲毛区",
+      "rent_per_sqm": 1259,
+      "rent_25sqm": 31475
+    },
+    "12104": {
+      "municipality": "若葉区",
+      "rent_per_sqm": 1139,
+      "rent_25sqm": 28475
+    },
+    "12105": {
+      "municipality": "緑区",
+      "rent_per_sqm": 1159,
+      "rent_25sqm": 28975
+    },
+    "12106": {
+      "municipality": "美浜区",
+      "rent_per_sqm": 1328,
+      "rent_25sqm": 33200
+    },
+    "12202": {
+      "municipality": "銚子市",
+      "rent_per_sqm": 895,
+      "rent_25sqm": 22375
+    },
+    "12203": {
+      "municipality": "市川市",
+      "rent_per_sqm": 1754,
+      "rent_25sqm": 43850
+    },
+    "12204": {
+      "municipality": "船橋市",
+      "rent_per_sqm": 1694,
+      "rent_25sqm": 42350
+    },
+    "12205": {
+      "municipality": "館山市",
+      "rent_per_sqm": 966,
+      "rent_25sqm": 24150
+    },
+    "12206": {
+      "municipality": "木更津市",
+      "rent_per_sqm": 984,
+      "rent_25sqm": 24600
+    },
+    "12207": {
+      "municipality": "松戸市",
+      "rent_per_sqm": 1419,
+      "rent_25sqm": 35475
+    },
+    "12208": {
+      "municipality": "野田市",
+      "rent_per_sqm": 1095,
+      "rent_25sqm": 27375
+    },
+    "12210": {
+      "municipality": "茂原市",
+      "rent_per_sqm": 946,
+      "rent_25sqm": 23650
+    },
+    "12211": {
+      "municipality": "成田市",
+      "rent_per_sqm": 1308,
+      "rent_25sqm": 32700
+    },
+    "12212": {
+      "municipality": "佐倉市",
+      "rent_per_sqm": 1155,
+      "rent_25sqm": 28875
+    },
+    "12213": {
+      "municipality": "東金市",
+      "rent_per_sqm": 1050,
+      "rent_25sqm": 26250
+    },
+    "12215": {
+      "municipality": "旭市",
+      "rent_per_sqm": 920,
+      "rent_25sqm": 23000
+    },
+    "12216": {
+      "municipality": "習志野市",
+      "rent_per_sqm": 1437,
+      "rent_25sqm": 35925
+    },
+    "12217": {
+      "municipality": "柏市",
+      "rent_per_sqm": 1484,
+      "rent_25sqm": 37100
+    },
+    "12218": {
+      "municipality": "勝浦市",
+      "rent_per_sqm": 1063,
+      "rent_25sqm": 26575
+    },
+    "12219": {
+      "municipality": "市原市",
+      "rent_per_sqm": 1081,
+      "rent_25sqm": 27025
+    },
+    "12220": {
+      "municipality": "流山市",
+      "rent_per_sqm": 1642,
+      "rent_25sqm": 41050
+    },
+    "12221": {
+      "municipality": "八千代市",
+      "rent_per_sqm": 1258,
+      "rent_25sqm": 31450
+    },
+    "12222": {
+      "municipality": "我孫子市",
+      "rent_per_sqm": 1210,
+      "rent_25sqm": 30250
+    },
+    "12223": {
+      "municipality": "鴨川市",
+      "rent_per_sqm": 1024,
+      "rent_25sqm": 25600
+    },
+    "12224": {
+      "municipality": "鎌ケ谷市",
+      "rent_per_sqm": 1272,
+      "rent_25sqm": 31800
+    },
+    "12225": {
+      "municipality": "君津市",
+      "rent_per_sqm": 894,
+      "rent_25sqm": 22350
+    },
+    "12226": {
+      "municipality": "富津市",
+      "rent_per_sqm": 890,
+      "rent_25sqm": 22250
+    },
+    "12227": {
+      "municipality": "浦安市",
+      "rent_per_sqm": 2047,
+      "rent_25sqm": 51175
+    },
+    "12228": {
+      "municipality": "四街道市",
+      "rent_per_sqm": 1158,
+      "rent_25sqm": 28950
+    },
+    "12229": {
+      "municipality": "袖ケ浦市",
+      "rent_per_sqm": 1032,
+      "rent_25sqm": 25800
+    },
+    "12230": {
+      "municipality": "八街市",
+      "rent_per_sqm": 825,
+      "rent_25sqm": 20625
+    },
+    "12231": {
+      "municipality": "印西市",
+      "rent_per_sqm": 1032,
+      "rent_25sqm": 25800
+    },
+    "12232": {
+      "municipality": "白井市",
+      "rent_per_sqm": 1240,
+      "rent_25sqm": 31000
+    },
+    "12233": {
+      "municipality": "富里市",
+      "rent_per_sqm": 1166,
+      "rent_25sqm": 29150
+    },
+    "12234": {
+      "municipality": "南房総市",
+      "rent_per_sqm": 735,
+      "rent_25sqm": 18375
+    },
+    "12235": {
+      "municipality": "匝瑳市",
+      "rent_per_sqm": 810,
+      "rent_25sqm": 20250
+    },
+    "12236": {
+      "municipality": "香取市",
+      "rent_per_sqm": 941,
+      "rent_25sqm": 23525
+    },
+    "12237": {
+      "municipality": "山武市",
+      "rent_per_sqm": 690,
+      "rent_25sqm": 17250
+    },
+    "12238": {
+      "municipality": "いすみ市",
+      "rent_per_sqm": 689,
+      "rent_25sqm": 17225
+    },
+    "12239": {
+      "municipality": "大網白里市",
+      "rent_per_sqm": 1053,
+      "rent_25sqm": 26325
+    },
+    "12322": {
+      "municipality": "酒々井町",
+      "rent_per_sqm": 1107,
+      "rent_25sqm": 27675
+    },
+    "12329": {
+      "municipality": "栄町",
+      "rent_per_sqm": 1032,
+      "rent_25sqm": 25800
+    },
+    "12410": {
+      "municipality": "横芝光町",
+      "rent_per_sqm": 836,
+      "rent_25sqm": 20900
+    },
+    "13100": {
+      "municipality": "特別区部",
+      "rent_per_sqm": 2497,
+      "rent_25sqm": 62425
+    },
+    "13101": {
+      "municipality": "千代田区",
+      "rent_per_sqm": 3466,
+      "rent_25sqm": 86650
+    },
+    "13102": {
+      "municipality": "中央区",
+      "rent_per_sqm": 3452,
+      "rent_25sqm": 86300
+    },
+    "13103": {
+      "municipality": "港区",
+      "rent_per_sqm": 4064,
+      "rent_25sqm": 101600
+    },
+    "13104": {
+      "municipality": "新宿区",
+      "rent_per_sqm": 3155,
+      "rent_25sqm": 78875
+    },
+    "13105": {
+      "municipality": "文京区",
+      "rent_per_sqm": 3030,
+      "rent_25sqm": 75750
+    },
+    "13106": {
+      "municipality": "台東区",
+      "rent_per_sqm": 2865,
+      "rent_25sqm": 71625
+    },
+    "13107": {
+      "municipality": "墨田区",
+      "rent_per_sqm": 2518,
+      "rent_25sqm": 62950
+    },
+    "13108": {
+      "municipality": "江東区",
+      "rent_per_sqm": 2249,
+      "rent_25sqm": 56225
+    },
+    "13109": {
+      "municipality": "品川区",
+      "rent_per_sqm": 2897,
+      "rent_25sqm": 72425
+    },
+    "13110": {
+      "municipality": "目黒区",
+      "rent_per_sqm": 3155,
+      "rent_25sqm": 78875
+    },
+    "13111": {
+      "municipality": "大田区",
+      "rent_per_sqm": 2324,
+      "rent_25sqm": 58100
+    },
+    "13112": {
+      "municipality": "世田谷区",
+      "rent_per_sqm": 2521,
+      "rent_25sqm": 63025
+    },
+    "13113": {
+      "municipality": "渋谷区",
+      "rent_per_sqm": 3402,
+      "rent_25sqm": 85050
+    },
+    "13114": {
+      "municipality": "中野区",
+      "rent_per_sqm": 2622,
+      "rent_25sqm": 65550
+    },
+    "13115": {
+      "municipality": "杉並区",
+      "rent_per_sqm": 2561,
+      "rent_25sqm": 64025
+    },
+    "13116": {
+      "municipality": "豊島区",
+      "rent_per_sqm": 2740,
+      "rent_25sqm": 68500
+    },
+    "13117": {
+      "municipality": "北区",
+      "rent_per_sqm": 2120,
+      "rent_25sqm": 53000
+    },
+    "13118": {
+      "municipality": "荒川区",
+      "rent_per_sqm": 2290,
+      "rent_25sqm": 57250
+    },
+    "13119": {
+      "municipality": "板橋区",
+      "rent_per_sqm": 2116,
+      "rent_25sqm": 52900
+    },
+    "13120": {
+      "municipality": "練馬区",
+      "rent_per_sqm": 2053,
+      "rent_25sqm": 51325
+    },
+    "13121": {
+      "municipality": "足立区",
+      "rent_per_sqm": 1720,
+      "rent_25sqm": 43000
+    },
+    "13122": {
+      "municipality": "葛飾区",
+      "rent_per_sqm": 1742,
+      "rent_25sqm": 43550
+    },
+    "13123": {
+      "municipality": "江戸川区",
+      "rent_per_sqm": 1843,
+      "rent_25sqm": 46075
+    },
+    "13201": {
+      "municipality": "八王子市",
+      "rent_per_sqm": 1430,
+      "rent_25sqm": 35750
+    },
+    "13202": {
+      "municipality": "立川市",
+      "rent_per_sqm": 1593,
+      "rent_25sqm": 39825
+    },
+    "13203": {
+      "municipality": "武蔵野市",
+      "rent_per_sqm": 2376,
+      "rent_25sqm": 59400
+    },
+    "13204": {
+      "municipality": "三鷹市",
+      "rent_per_sqm": 2078,
+      "rent_25sqm": 51950
+    },
+    "13205": {
+      "municipality": "青梅市",
+      "rent_per_sqm": 1250,
+      "rent_25sqm": 31250
+    },
+    "13206": {
+      "municipality": "府中市",
+      "rent_per_sqm": 1861,
+      "rent_25sqm": 46525
+    },
+    "13207": {
+      "municipality": "昭島市",
+      "rent_per_sqm": 1286,
+      "rent_25sqm": 32150
+    },
+    "13208": {
+      "municipality": "調布市",
+      "rent_per_sqm": 2024,
+      "rent_25sqm": 50600
+    },
+    "13209": {
+      "municipality": "町田市",
+      "rent_per_sqm": 1406,
+      "rent_25sqm": 35150
+    },
+    "13210": {
+      "municipality": "小金井市",
+      "rent_per_sqm": 1945,
+      "rent_25sqm": 48625
+    },
+    "13211": {
+      "municipality": "小平市",
+      "rent_per_sqm": 1529,
+      "rent_25sqm": 38225
+    },
+    "13212": {
+      "municipality": "日野市",
+      "rent_per_sqm": 1493,
+      "rent_25sqm": 37325
+    },
+    "13213": {
+      "municipality": "東村山市",
+      "rent_per_sqm": 1329,
+      "rent_25sqm": 33225
+    },
+    "13214": {
+      "municipality": "国分寺市",
+      "rent_per_sqm": 1824,
+      "rent_25sqm": 45600
+    },
+    "13215": {
+      "municipality": "国立市",
+      "rent_per_sqm": 1700,
+      "rent_25sqm": 42500
+    },
+    "13218": {
+      "municipality": "福生市",
+      "rent_per_sqm": 1238,
+      "rent_25sqm": 30950
+    },
+    "13219": {
+      "municipality": "狛江市",
+      "rent_per_sqm": 1952,
+      "rent_25sqm": 48800
+    },
+    "13220": {
+      "municipality": "東大和市",
+      "rent_per_sqm": 1106,
+      "rent_25sqm": 27650
+    },
+    "13221": {
+      "municipality": "清瀬市",
+      "rent_per_sqm": 1185,
+      "rent_25sqm": 29625
+    },
+    "13222": {
+      "municipality": "東久留米市",
+      "rent_per_sqm": 1402,
+      "rent_25sqm": 35050
+    },
+    "13223": {
+      "municipality": "武蔵村山市",
+      "rent_per_sqm": 1070,
+      "rent_25sqm": 26750
+    },
+    "13224": {
+      "municipality": "多摩市",
+      "rent_per_sqm": 1439,
+      "rent_25sqm": 35975
+    },
+    "13225": {
+      "municipality": "稲城市",
+      "rent_per_sqm": 1581,
+      "rent_25sqm": 39525
+    },
+    "13227": {
+      "municipality": "羽村市",
+      "rent_per_sqm": 1339,
+      "rent_25sqm": 33475
+    },
+    "13228": {
+      "municipality": "あきる野市",
+      "rent_per_sqm": 1244,
+      "rent_25sqm": 31100
+    },
+    "13229": {
+      "municipality": "西東京市",
+      "rent_per_sqm": 1701,
+      "rent_25sqm": 42525
+    },
+    "13303": {
+      "municipality": "瑞穂町",
+      "rent_per_sqm": 1298,
+      "rent_25sqm": 32450
+    },
+    "13305": {
+      "municipality": "日の出町",
+      "rent_per_sqm": 1171,
+      "rent_25sqm": 29275
+    },
+    "14100": {
+      "municipality": "横浜市",
+      "rent_per_sqm": 1819,
+      "rent_25sqm": 45475
+    },
+    "14101": {
+      "municipality": "鶴見区",
+      "rent_per_sqm": 2040,
+      "rent_25sqm": 51000
+    },
+    "14102": {
+      "municipality": "神奈川区",
+      "rent_per_sqm": 2052,
+      "rent_25sqm": 51300
+    },
+    "14103": {
+      "municipality": "西区",
+      "rent_per_sqm": 2372,
+      "rent_25sqm": 59300
+    },
+    "14104": {
+      "municipality": "中区",
+      "rent_per_sqm": 2405,
+      "rent_25sqm": 60125
+    },
+    "14105": {
+      "municipality": "南区",
+      "rent_per_sqm": 1896,
+      "rent_25sqm": 47400
+    },
+    "14106": {
+      "municipality": "保土ケ谷区",
+      "rent_per_sqm": 1694,
+      "rent_25sqm": 42350
+    },
+    "14107": {
+      "municipality": "磯子区",
+      "rent_per_sqm": 1584,
+      "rent_25sqm": 39600
+    },
+    "14108": {
+      "municipality": "金沢区",
+      "rent_per_sqm": 1464,
+      "rent_25sqm": 36600
+    },
+    "14109": {
+      "municipality": "港北区",
+      "rent_per_sqm": 2187,
+      "rent_25sqm": 54675
+    },
+    "14110": {
+      "municipality": "戸塚区",
+      "rent_per_sqm": 1584,
+      "rent_25sqm": 39600
+    },
+    "14111": {
+      "municipality": "港南区",
+      "rent_per_sqm": 1576,
+      "rent_25sqm": 39400
+    },
+    "14112": {
+      "municipality": "旭区",
+      "rent_per_sqm": 1460,
+      "rent_25sqm": 36500
+    },
+    "14113": {
+      "municipality": "緑区",
+      "rent_per_sqm": 1526,
+      "rent_25sqm": 38150
+    },
+    "14114": {
+      "municipality": "瀬谷区",
+      "rent_per_sqm": 1225,
+      "rent_25sqm": 30625
+    },
+    "14115": {
+      "municipality": "栄区",
+      "rent_per_sqm": 1641,
+      "rent_25sqm": 41025
+    },
+    "14116": {
+      "municipality": "泉区",
+      "rent_per_sqm": 1441,
+      "rent_25sqm": 36025
+    },
+    "14117": {
+      "municipality": "青葉区",
+      "rent_per_sqm": 1750,
+      "rent_25sqm": 43750
+    },
+    "14118": {
+      "municipality": "都筑区",
+      "rent_per_sqm": 1836,
+      "rent_25sqm": 45900
+    },
+    "14130": {
+      "municipality": "川崎市",
+      "rent_per_sqm": 2030,
+      "rent_25sqm": 50750
+    },
+    "14131": {
+      "municipality": "川崎区",
+      "rent_per_sqm": 2142,
+      "rent_25sqm": 53550
+    },
+    "14132": {
+      "municipality": "幸区",
+      "rent_per_sqm": 2026,
+      "rent_25sqm": 50650
+    },
+    "14133": {
+      "municipality": "中原区",
+      "rent_per_sqm": 2352,
+      "rent_25sqm": 58800
+    },
+    "14134": {
+      "municipality": "高津区",
+      "rent_per_sqm": 2100,
+      "rent_25sqm": 52500
+    },
+    "14135": {
+      "municipality": "多摩区",
+      "rent_per_sqm": 1862,
+      "rent_25sqm": 46550
+    },
+    "14136": {
+      "municipality": "宮前区",
+      "rent_per_sqm": 1724,
+      "rent_25sqm": 43100
+    },
+    "14137": {
+      "municipality": "麻生区",
+      "rent_per_sqm": 1760,
+      "rent_25sqm": 44000
+    },
+    "14150": {
+      "municipality": "相模原市",
+      "rent_per_sqm": 1509,
+      "rent_25sqm": 37725
+    },
+    "14151": {
+      "municipality": "緑区",
+      "rent_per_sqm": 1371,
+      "rent_25sqm": 34275
+    },
+    "14152": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1462,
+      "rent_25sqm": 36550
+    },
+    "14153": {
+      "municipality": "南区",
+      "rent_per_sqm": 1595,
+      "rent_25sqm": 39875
+    },
+    "14201": {
+      "municipality": "横須賀市",
+      "rent_per_sqm": 1222,
+      "rent_25sqm": 30550
+    },
+    "14203": {
+      "municipality": "平塚市",
+      "rent_per_sqm": 1317,
+      "rent_25sqm": 32925
+    },
+    "14204": {
+      "municipality": "鎌倉市",
+      "rent_per_sqm": 1787,
+      "rent_25sqm": 44675
+    },
+    "14205": {
+      "municipality": "藤沢市",
+      "rent_per_sqm": 1681,
+      "rent_25sqm": 42025
+    },
+    "14206": {
+      "municipality": "小田原市",
+      "rent_per_sqm": 1169,
+      "rent_25sqm": 29225
+    },
+    "14207": {
+      "municipality": "茅ヶ崎市",
+      "rent_per_sqm": 1465,
+      "rent_25sqm": 36625
+    },
+    "14208": {
+      "municipality": "逗子市",
+      "rent_per_sqm": 1574,
+      "rent_25sqm": 39350
+    },
+    "14210": {
+      "municipality": "三浦市",
+      "rent_per_sqm": 1479,
+      "rent_25sqm": 36975
+    },
+    "14211": {
+      "municipality": "秦野市",
+      "rent_per_sqm": 1188,
+      "rent_25sqm": 29700
+    },
+    "14212": {
+      "municipality": "厚木市",
+      "rent_per_sqm": 1333,
+      "rent_25sqm": 33325
+    },
+    "14213": {
+      "municipality": "大和市",
+      "rent_per_sqm": 1482,
+      "rent_25sqm": 37050
+    },
+    "14214": {
+      "municipality": "伊勢原市",
+      "rent_per_sqm": 1318,
+      "rent_25sqm": 32950
+    },
+    "14215": {
+      "municipality": "海老名市",
+      "rent_per_sqm": 1590,
+      "rent_25sqm": 39750
+    },
+    "14216": {
+      "municipality": "座間市",
+      "rent_per_sqm": 1302,
+      "rent_25sqm": 32550
+    },
+    "14217": {
+      "municipality": "南足柄市",
+      "rent_per_sqm": 1021,
+      "rent_25sqm": 25525
+    },
+    "14218": {
+      "municipality": "綾瀬市",
+      "rent_per_sqm": 1191,
+      "rent_25sqm": 29775
+    },
+    "14301": {
+      "municipality": "葉山町",
+      "rent_per_sqm": 1369,
+      "rent_25sqm": 34225
+    },
+    "14321": {
+      "municipality": "寒川町",
+      "rent_per_sqm": 1231,
+      "rent_25sqm": 30775
+    },
+    "14341": {
+      "municipality": "大磯町",
+      "rent_per_sqm": 1245,
+      "rent_25sqm": 31125
+    },
+    "14342": {
+      "municipality": "二宮町",
+      "rent_per_sqm": 1042,
+      "rent_25sqm": 26050
+    },
+    "14362": {
+      "municipality": "大井町",
+      "rent_per_sqm": 1006,
+      "rent_25sqm": 25150
+    },
+    "14366": {
+      "municipality": "開成町",
+      "rent_per_sqm": 1320,
+      "rent_25sqm": 33000
+    },
+    "14384": {
+      "municipality": "湯河原町",
+      "rent_per_sqm": 1045,
+      "rent_25sqm": 26125
+    },
+    "14401": {
+      "municipality": "愛川町",
+      "rent_per_sqm": 1016,
+      "rent_25sqm": 25400
+    },
+    "15100": {
+      "municipality": "新潟市",
+      "rent_per_sqm": 1103,
+      "rent_25sqm": 27575
+    },
+    "15101": {
+      "municipality": "北区",
+      "rent_per_sqm": 995,
+      "rent_25sqm": 24875
+    },
+    "15102": {
+      "municipality": "東区",
+      "rent_per_sqm": 978,
+      "rent_25sqm": 24450
+    },
+    "15103": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1255,
+      "rent_25sqm": 31375
+    },
+    "15104": {
+      "municipality": "江南区",
+      "rent_per_sqm": 1006,
+      "rent_25sqm": 25150
+    },
+    "15105": {
+      "municipality": "秋葉区",
+      "rent_per_sqm": 999,
+      "rent_25sqm": 24975
+    },
+    "15106": {
+      "municipality": "南区",
+      "rent_per_sqm": 810,
+      "rent_25sqm": 20250
+    },
+    "15107": {
+      "municipality": "西区",
+      "rent_per_sqm": 1106,
+      "rent_25sqm": 27650
+    },
+    "15108": {
+      "municipality": "西蒲区",
+      "rent_per_sqm": 804,
+      "rent_25sqm": 20100
+    },
+    "15202": {
+      "municipality": "長岡市",
+      "rent_per_sqm": 1071,
+      "rent_25sqm": 26775
+    },
+    "15204": {
+      "municipality": "三条市",
+      "rent_per_sqm": 1013,
+      "rent_25sqm": 25325
+    },
+    "15205": {
+      "municipality": "柏崎市",
+      "rent_per_sqm": 969,
+      "rent_25sqm": 24225
+    },
+    "15206": {
+      "municipality": "新発田市",
+      "rent_per_sqm": 944,
+      "rent_25sqm": 23600
+    },
+    "15208": {
+      "municipality": "小千谷市",
+      "rent_per_sqm": 907,
+      "rent_25sqm": 22675
+    },
+    "15209": {
+      "municipality": "加茂市",
+      "rent_per_sqm": 678,
+      "rent_25sqm": 16950
+    },
+    "15210": {
+      "municipality": "十日町市",
+      "rent_per_sqm": 751,
+      "rent_25sqm": 18775
+    },
+    "15211": {
+      "municipality": "見附市",
+      "rent_per_sqm": 833,
+      "rent_25sqm": 20825
+    },
+    "15212": {
+      "municipality": "村上市",
+      "rent_per_sqm": 690,
+      "rent_25sqm": 17250
+    },
+    "15213": {
+      "municipality": "燕市",
+      "rent_per_sqm": 914,
+      "rent_25sqm": 22850
+    },
+    "15216": {
+      "municipality": "糸魚川市",
+      "rent_per_sqm": 775,
+      "rent_25sqm": 19375
+    },
+    "15217": {
+      "municipality": "妙高市",
+      "rent_per_sqm": 696,
+      "rent_25sqm": 17400
+    },
+    "15218": {
+      "municipality": "五泉市",
+      "rent_per_sqm": 639,
+      "rent_25sqm": 15975
+    },
+    "15222": {
+      "municipality": "上越市",
+      "rent_per_sqm": 1021,
+      "rent_25sqm": 25525
+    },
+    "15223": {
+      "municipality": "阿賀野市",
+      "rent_per_sqm": 838,
+      "rent_25sqm": 20950
+    },
+    "15224": {
+      "municipality": "佐渡市",
+      "rent_per_sqm": 584,
+      "rent_25sqm": 14600
+    },
+    "15225": {
+      "municipality": "魚沼市",
+      "rent_per_sqm": 688,
+      "rent_25sqm": 17200
+    },
+    "15226": {
+      "municipality": "南魚沼市",
+      "rent_per_sqm": 812,
+      "rent_25sqm": 20300
+    },
+    "15227": {
+      "municipality": "胎内市",
+      "rent_per_sqm": 904,
+      "rent_25sqm": 22600
+    },
+    "16201": {
+      "municipality": "富山市",
+      "rent_per_sqm": 1011,
+      "rent_25sqm": 25275
+    },
+    "16202": {
+      "municipality": "高岡市",
+      "rent_per_sqm": 938,
+      "rent_25sqm": 23450
+    },
+    "16204": {
+      "municipality": "魚津市",
+      "rent_per_sqm": 969,
+      "rent_25sqm": 24225
+    },
+    "16205": {
+      "municipality": "氷見市",
+      "rent_per_sqm": 690,
+      "rent_25sqm": 17250
+    },
+    "16206": {
+      "municipality": "滑川市",
+      "rent_per_sqm": 925,
+      "rent_25sqm": 23125
+    },
+    "16207": {
+      "municipality": "黒部市",
+      "rent_per_sqm": 882,
+      "rent_25sqm": 22050
+    },
+    "16208": {
+      "municipality": "砺波市",
+      "rent_per_sqm": 1041,
+      "rent_25sqm": 26025
+    },
+    "16209": {
+      "municipality": "小矢部市",
+      "rent_per_sqm": 846,
+      "rent_25sqm": 21150
+    },
+    "16210": {
+      "municipality": "南砺市",
+      "rent_per_sqm": 576,
+      "rent_25sqm": 14400
+    },
+    "16211": {
+      "municipality": "射水市",
+      "rent_per_sqm": 937,
+      "rent_25sqm": 23425
+    },
+    "16322": {
+      "municipality": "上市町",
+      "rent_per_sqm": 681,
+      "rent_25sqm": 17025
+    },
+    "16323": {
+      "municipality": "立山町",
+      "rent_per_sqm": 628,
+      "rent_25sqm": 15700
+    },
+    "16342": {
+      "municipality": "入善町",
+      "rent_per_sqm": 713,
+      "rent_25sqm": 17825
+    },
+    "17201": {
+      "municipality": "金沢市",
+      "rent_per_sqm": 1071,
+      "rent_25sqm": 26775
+    },
+    "17202": {
+      "municipality": "七尾市",
+      "rent_per_sqm": 987,
+      "rent_25sqm": 24675
+    },
+    "17203": {
+      "municipality": "小松市",
+      "rent_per_sqm": 843,
+      "rent_25sqm": 21075
+    },
+    "17204": {
+      "municipality": "輪島市",
+      "rent_per_sqm": 636,
+      "rent_25sqm": 15900
+    },
+    "17205": {
+      "municipality": "珠洲市",
+      "rent_per_sqm": 577,
+      "rent_25sqm": 14425
+    },
+    "17206": {
+      "municipality": "加賀市",
+      "rent_per_sqm": 686,
+      "rent_25sqm": 17150
+    },
+    "17207": {
+      "municipality": "羽咋市",
+      "rent_per_sqm": 785,
+      "rent_25sqm": 19625
+    },
+    "17209": {
+      "municipality": "かほく市",
+      "rent_per_sqm": 827,
+      "rent_25sqm": 20675
+    },
+    "17210": {
+      "municipality": "白山市",
+      "rent_per_sqm": 942,
+      "rent_25sqm": 23550
+    },
+    "17211": {
+      "municipality": "能美市",
+      "rent_per_sqm": 812,
+      "rent_25sqm": 20300
+    },
+    "17212": {
+      "municipality": "野々市市",
+      "rent_per_sqm": 1188,
+      "rent_25sqm": 29700
+    },
+    "17361": {
+      "municipality": "津幡町",
+      "rent_per_sqm": 966,
+      "rent_25sqm": 24150
+    },
+    "17365": {
+      "municipality": "内灘町",
+      "rent_per_sqm": 911,
+      "rent_25sqm": 22775
+    },
+    "17384": {
+      "municipality": "志賀町",
+      "rent_per_sqm": 660,
+      "rent_25sqm": 16500
+    },
+    "17407": {
+      "municipality": "中能登町",
+      "rent_per_sqm": 706,
+      "rent_25sqm": 17650
+    },
+    "17463": {
+      "municipality": "能登町",
+      "rent_per_sqm": 382,
+      "rent_25sqm": 9550
+    },
+    "18201": {
+      "municipality": "福井市",
+      "rent_per_sqm": 977,
+      "rent_25sqm": 24425
+    },
+    "18202": {
+      "municipality": "敦賀市",
+      "rent_per_sqm": 921,
+      "rent_25sqm": 23025
+    },
+    "18204": {
+      "municipality": "小浜市",
+      "rent_per_sqm": 937,
+      "rent_25sqm": 23425
+    },
+    "18205": {
+      "municipality": "大野市",
+      "rent_per_sqm": 447,
+      "rent_25sqm": 11175
+    },
+    "18206": {
+      "municipality": "勝山市",
+      "rent_per_sqm": 706,
+      "rent_25sqm": 17650
+    },
+    "18207": {
+      "municipality": "鯖江市",
+      "rent_per_sqm": 1009,
+      "rent_25sqm": 25225
+    },
+    "18208": {
+      "municipality": "あわら市",
+      "rent_per_sqm": 770,
+      "rent_25sqm": 19250
+    },
+    "18209": {
+      "municipality": "越前市",
+      "rent_per_sqm": 939,
+      "rent_25sqm": 23475
+    },
+    "18210": {
+      "municipality": "坂井市",
+      "rent_per_sqm": 780,
+      "rent_25sqm": 19500
+    },
+    "18322": {
+      "municipality": "永平寺町",
+      "rent_per_sqm": 1374,
+      "rent_25sqm": 34350
+    },
+    "18423": {
+      "municipality": "越前町",
+      "rent_per_sqm": 334,
+      "rent_25sqm": 8350
+    },
+    "19201": {
+      "municipality": "甲府市",
+      "rent_per_sqm": 1009,
+      "rent_25sqm": 25225
+    },
+    "19202": {
+      "municipality": "富士吉田市",
+      "rent_per_sqm": 874,
+      "rent_25sqm": 21850
+    },
+    "19204": {
+      "municipality": "都留市",
+      "rent_per_sqm": 1070,
+      "rent_25sqm": 26750
+    },
+    "19205": {
+      "municipality": "山梨市",
+      "rent_per_sqm": 805,
+      "rent_25sqm": 20125
+    },
+    "19206": {
+      "municipality": "大月市",
+      "rent_per_sqm": 728,
+      "rent_25sqm": 18200
+    },
+    "19207": {
+      "municipality": "韮崎市",
+      "rent_per_sqm": 952,
+      "rent_25sqm": 23800
+    },
+    "19208": {
+      "municipality": "南アルプス市",
+      "rent_per_sqm": 902,
+      "rent_25sqm": 22550
+    },
+    "19209": {
+      "municipality": "北杜市",
+      "rent_per_sqm": 679,
+      "rent_25sqm": 16975
+    },
+    "19210": {
+      "municipality": "甲斐市",
+      "rent_per_sqm": 1028,
+      "rent_25sqm": 25700
+    },
+    "19211": {
+      "municipality": "笛吹市",
+      "rent_per_sqm": 1062,
+      "rent_25sqm": 26550
+    },
+    "19212": {
+      "municipality": "上野原市",
+      "rent_per_sqm": 1065,
+      "rent_25sqm": 26625
+    },
+    "19213": {
+      "municipality": "甲州市",
+      "rent_per_sqm": 883,
+      "rent_25sqm": 22075
+    },
+    "19214": {
+      "municipality": "中央市",
+      "rent_per_sqm": 1161,
+      "rent_25sqm": 29025
+    },
+    "19384": {
+      "municipality": "昭和町",
+      "rent_per_sqm": 1218,
+      "rent_25sqm": 30450
+    },
+    "19430": {
+      "municipality": "富士河口湖町",
+      "rent_per_sqm": 857,
+      "rent_25sqm": 21425
+    },
+    "20201": {
+      "municipality": "長野市",
+      "rent_per_sqm": 1054,
+      "rent_25sqm": 26350
+    },
+    "20202": {
+      "municipality": "松本市",
+      "rent_per_sqm": 1118,
+      "rent_25sqm": 27950
+    },
+    "20203": {
+      "municipality": "上田市",
+      "rent_per_sqm": 943,
+      "rent_25sqm": 23575
+    },
+    "20204": {
+      "municipality": "岡谷市",
+      "rent_per_sqm": 979,
+      "rent_25sqm": 24475
+    },
+    "20205": {
+      "municipality": "飯田市",
+      "rent_per_sqm": 874,
+      "rent_25sqm": 21850
+    },
+    "20206": {
+      "municipality": "諏訪市",
+      "rent_per_sqm": 1049,
+      "rent_25sqm": 26225
+    },
+    "20207": {
+      "municipality": "須坂市",
+      "rent_per_sqm": 914,
+      "rent_25sqm": 22850
+    },
+    "20208": {
+      "municipality": "小諸市",
+      "rent_per_sqm": 881,
+      "rent_25sqm": 22025
+    },
+    "20209": {
+      "municipality": "伊那市",
+      "rent_per_sqm": 901,
+      "rent_25sqm": 22525
+    },
+    "20210": {
+      "municipality": "駒ヶ根市",
+      "rent_per_sqm": 857,
+      "rent_25sqm": 21425
+    },
+    "20211": {
+      "municipality": "中野市",
+      "rent_per_sqm": 932,
+      "rent_25sqm": 23300
+    },
+    "20212": {
+      "municipality": "大町市",
+      "rent_per_sqm": 577,
+      "rent_25sqm": 14425
+    },
+    "20213": {
+      "municipality": "飯山市",
+      "rent_per_sqm": 682,
+      "rent_25sqm": 17050
+    },
+    "20214": {
+      "municipality": "茅野市",
+      "rent_per_sqm": 1001,
+      "rent_25sqm": 25025
+    },
+    "20215": {
+      "municipality": "塩尻市",
+      "rent_per_sqm": 1111,
+      "rent_25sqm": 27775
+    },
+    "20217": {
+      "municipality": "佐久市",
+      "rent_per_sqm": 935,
+      "rent_25sqm": 23375
+    },
+    "20218": {
+      "municipality": "千曲市",
+      "rent_per_sqm": 803,
+      "rent_25sqm": 20075
+    },
+    "20219": {
+      "municipality": "東御市",
+      "rent_per_sqm": 816,
+      "rent_25sqm": 20400
+    },
+    "20220": {
+      "municipality": "安曇野市",
+      "rent_per_sqm": 948,
+      "rent_25sqm": 23700
+    },
+    "20321": {
+      "municipality": "軽井沢町",
+      "rent_per_sqm": 667,
+      "rent_25sqm": 16675
+    },
+    "20323": {
+      "municipality": "御代田町",
+      "rent_per_sqm": 1088,
+      "rent_25sqm": 27200
+    },
+    "20361": {
+      "municipality": "下諏訪町",
+      "rent_per_sqm": 966,
+      "rent_25sqm": 24150
+    },
+    "20382": {
+      "municipality": "辰野町",
+      "rent_per_sqm": 551,
+      "rent_25sqm": 13775
+    },
+    "20383": {
+      "municipality": "箕輪町",
+      "rent_per_sqm": 965,
+      "rent_25sqm": 24125
+    },
+    "20385": {
+      "municipality": "南箕輪村",
+      "rent_per_sqm": 1106,
+      "rent_25sqm": 27650
+    },
+    "21201": {
+      "municipality": "岐阜市",
+      "rent_per_sqm": 992,
+      "rent_25sqm": 24800
+    },
+    "21202": {
+      "municipality": "大垣市",
+      "rent_per_sqm": 1025,
+      "rent_25sqm": 25625
+    },
+    "21203": {
+      "municipality": "高山市",
+      "rent_per_sqm": 883,
+      "rent_25sqm": 22075
+    },
+    "21204": {
+      "municipality": "多治見市",
+      "rent_per_sqm": 985,
+      "rent_25sqm": 24625
+    },
+    "21205": {
+      "municipality": "関市",
+      "rent_per_sqm": 858,
+      "rent_25sqm": 21450
+    },
+    "21206": {
+      "municipality": "中津川市",
+      "rent_per_sqm": 753,
+      "rent_25sqm": 18825
+    },
+    "21207": {
+      "municipality": "美濃市",
+      "rent_per_sqm": 780,
+      "rent_25sqm": 19500
+    },
+    "21208": {
+      "municipality": "瑞浪市",
+      "rent_per_sqm": 1008,
+      "rent_25sqm": 25200
+    },
+    "21209": {
+      "municipality": "羽島市",
+      "rent_per_sqm": 1023,
+      "rent_25sqm": 25575
+    },
+    "21210": {
+      "municipality": "恵那市",
+      "rent_per_sqm": 815,
+      "rent_25sqm": 20375
+    },
+    "21211": {
+      "municipality": "美濃加茂市",
+      "rent_per_sqm": 908,
+      "rent_25sqm": 22700
+    },
+    "21212": {
+      "municipality": "土岐市",
+      "rent_per_sqm": 886,
+      "rent_25sqm": 22150
+    },
+    "21213": {
+      "municipality": "各務原市",
+      "rent_per_sqm": 998,
+      "rent_25sqm": 24950
+    },
+    "21214": {
+      "municipality": "可児市",
+      "rent_per_sqm": 1120,
+      "rent_25sqm": 28000
+    },
+    "21215": {
+      "municipality": "山県市",
+      "rent_per_sqm": 480,
+      "rent_25sqm": 12000
+    },
+    "21216": {
+      "municipality": "瑞穂市",
+      "rent_per_sqm": 999,
+      "rent_25sqm": 24975
+    },
+    "21217": {
+      "municipality": "飛騨市",
+      "rent_per_sqm": 585,
+      "rent_25sqm": 14625
+    },
+    "21218": {
+      "municipality": "本巣市",
+      "rent_per_sqm": 866,
+      "rent_25sqm": 21650
+    },
+    "21219": {
+      "municipality": "郡上市",
+      "rent_per_sqm": 531,
+      "rent_25sqm": 13275
+    },
+    "21220": {
+      "municipality": "下呂市",
+      "rent_per_sqm": 588,
+      "rent_25sqm": 14700
+    },
+    "21221": {
+      "municipality": "海津市",
+      "rent_per_sqm": 755,
+      "rent_25sqm": 18875
+    },
+    "21302": {
+      "municipality": "岐南町",
+      "rent_per_sqm": 933,
+      "rent_25sqm": 23325
+    },
+    "21303": {
+      "municipality": "笠松町",
+      "rent_per_sqm": 860,
+      "rent_25sqm": 21500
+    },
+    "21341": {
+      "municipality": "養老町",
+      "rent_per_sqm": 654,
+      "rent_25sqm": 16350
+    },
+    "21361": {
+      "municipality": "垂井町",
+      "rent_per_sqm": 851,
+      "rent_25sqm": 21275
+    },
+    "21381": {
+      "municipality": "神戸町",
+      "rent_per_sqm": 798,
+      "rent_25sqm": 19950
+    },
+    "21401": {
+      "municipality": "揖斐川町",
+      "rent_per_sqm": 570,
+      "rent_25sqm": 14250
+    },
+    "21403": {
+      "municipality": "大野町",
+      "rent_per_sqm": 804,
+      "rent_25sqm": 20100
+    },
+    "21404": {
+      "municipality": "池田町",
+      "rent_per_sqm": 760,
+      "rent_25sqm": 19000
+    },
+    "21421": {
+      "municipality": "北方町",
+      "rent_per_sqm": 825,
+      "rent_25sqm": 20625
+    },
+    "21521": {
+      "municipality": "御嵩町",
+      "rent_per_sqm": 632,
+      "rent_25sqm": 15800
+    },
+    "22100": {
+      "municipality": "静岡市",
+      "rent_per_sqm": 1266,
+      "rent_25sqm": 31650
+    },
+    "22101": {
+      "municipality": "葵区",
+      "rent_per_sqm": 1284,
+      "rent_25sqm": 32100
+    },
+    "22102": {
+      "municipality": "駿河区",
+      "rent_per_sqm": 1309,
+      "rent_25sqm": 32725
+    },
+    "22103": {
+      "municipality": "清水区",
+      "rent_per_sqm": 1172,
+      "rent_25sqm": 29300
+    },
+    "22130": {
+      "municipality": "浜松市",
+      "rent_per_sqm": 1127,
+      "rent_25sqm": 28175
+    },
+    "22131": {
+      "municipality": "中区",
+      "rent_per_sqm": 1185,
+      "rent_25sqm": 29625
+    },
+    "22132": {
+      "municipality": "東区",
+      "rent_per_sqm": 1132,
+      "rent_25sqm": 28300
+    },
+    "22133": {
+      "municipality": "西区",
+      "rent_per_sqm": 975,
+      "rent_25sqm": 24375
+    },
+    "22134": {
+      "municipality": "南区",
+      "rent_per_sqm": 1044,
+      "rent_25sqm": 26100
+    },
+    "22135": {
+      "municipality": "北区",
+      "rent_per_sqm": 1233,
+      "rent_25sqm": 30825
+    },
+    "22136": {
+      "municipality": "浜北区",
+      "rent_per_sqm": 1120,
+      "rent_25sqm": 28000
+    },
+    "22137": {
+      "municipality": "天竜区",
+      "rent_per_sqm": 404,
+      "rent_25sqm": 10100
+    },
+    "22203": {
+      "municipality": "沼津市",
+      "rent_per_sqm": 1080,
+      "rent_25sqm": 27000
+    },
+    "22205": {
+      "municipality": "熱海市",
+      "rent_per_sqm": 1160,
+      "rent_25sqm": 29000
+    },
+    "22206": {
+      "municipality": "三島市",
+      "rent_per_sqm": 1134,
+      "rent_25sqm": 28350
+    },
+    "22207": {
+      "municipality": "富士宮市",
+      "rent_per_sqm": 907,
+      "rent_25sqm": 22675
+    },
+    "22208": {
+      "municipality": "伊東市",
+      "rent_per_sqm": 998,
+      "rent_25sqm": 24950
+    },
+    "22209": {
+      "municipality": "島田市",
+      "rent_per_sqm": 1089,
+      "rent_25sqm": 27225
+    },
+    "22210": {
+      "municipality": "富士市",
+      "rent_per_sqm": 1017,
+      "rent_25sqm": 25425
+    },
+    "22211": {
+      "municipality": "磐田市",
+      "rent_per_sqm": 1068,
+      "rent_25sqm": 26700
+    },
+    "22212": {
+      "municipality": "焼津市",
+      "rent_per_sqm": 1063,
+      "rent_25sqm": 26575
+    },
+    "22213": {
+      "municipality": "掛川市",
+      "rent_per_sqm": 1043,
+      "rent_25sqm": 26075
+    },
+    "22214": {
+      "municipality": "藤枝市",
+      "rent_per_sqm": 1083,
+      "rent_25sqm": 27075
+    },
+    "22215": {
+      "municipality": "御殿場市",
+      "rent_per_sqm": 1101,
+      "rent_25sqm": 27525
+    },
+    "22216": {
+      "municipality": "袋井市",
+      "rent_per_sqm": 1037,
+      "rent_25sqm": 25925
+    },
+    "22219": {
+      "municipality": "下田市",
+      "rent_per_sqm": 884,
+      "rent_25sqm": 22100
+    },
+    "22220": {
+      "municipality": "裾野市",
+      "rent_per_sqm": 980,
+      "rent_25sqm": 24500
+    },
+    "22221": {
+      "municipality": "湖西市",
+      "rent_per_sqm": 1025,
+      "rent_25sqm": 25625
+    },
+    "22222": {
+      "municipality": "伊豆市",
+      "rent_per_sqm": 802,
+      "rent_25sqm": 20050
+    },
+    "22223": {
+      "municipality": "御前崎市",
+      "rent_per_sqm": 1046,
+      "rent_25sqm": 26150
+    },
+    "22224": {
+      "municipality": "菊川市",
+      "rent_per_sqm": 1123,
+      "rent_25sqm": 28075
+    },
+    "22225": {
+      "municipality": "伊豆の国市",
+      "rent_per_sqm": 1079,
+      "rent_25sqm": 26975
+    },
+    "22226": {
+      "municipality": "牧之原市",
+      "rent_per_sqm": 840,
+      "rent_25sqm": 21000
+    },
+    "22325": {
+      "municipality": "函南町",
+      "rent_per_sqm": 1161,
+      "rent_25sqm": 29025
+    },
+    "22341": {
+      "municipality": "清水町",
+      "rent_per_sqm": 1084,
+      "rent_25sqm": 27100
+    },
+    "22342": {
+      "municipality": "長泉町",
+      "rent_per_sqm": 1272,
+      "rent_25sqm": 31800
+    },
+    "22344": {
+      "municipality": "小山町",
+      "rent_per_sqm": 688,
+      "rent_25sqm": 17200
+    },
+    "22424": {
+      "municipality": "吉田町",
+      "rent_per_sqm": 922,
+      "rent_25sqm": 23050
+    },
+    "22461": {
+      "municipality": "森町",
+      "rent_per_sqm": 1057,
+      "rent_25sqm": 26425
+    },
+    "23100": {
+      "municipality": "名古屋市",
+      "rent_per_sqm": 1339,
+      "rent_25sqm": 33475
+    },
+    "23101": {
+      "municipality": "千種区",
+      "rent_per_sqm": 1492,
+      "rent_25sqm": 37300
+    },
+    "23102": {
+      "municipality": "東区",
+      "rent_per_sqm": 1639,
+      "rent_25sqm": 40975
+    },
+    "23103": {
+      "municipality": "北区",
+      "rent_per_sqm": 1172,
+      "rent_25sqm": 29300
+    },
+    "23104": {
+      "municipality": "西区",
+      "rent_per_sqm": 1389,
+      "rent_25sqm": 34725
+    },
+    "23105": {
+      "municipality": "中村区",
+      "rent_per_sqm": 1527,
+      "rent_25sqm": 38175
+    },
+    "23106": {
+      "municipality": "中区",
+      "rent_per_sqm": 1910,
+      "rent_25sqm": 47750
+    },
+    "23107": {
+      "municipality": "昭和区",
+      "rent_per_sqm": 1592,
+      "rent_25sqm": 39800
+    },
+    "23108": {
+      "municipality": "瑞穂区",
+      "rent_per_sqm": 1457,
+      "rent_25sqm": 36425
+    },
+    "23109": {
+      "municipality": "熱田区",
+      "rent_per_sqm": 1389,
+      "rent_25sqm": 34725
+    },
+    "23110": {
+      "municipality": "中川区",
+      "rent_per_sqm": 1137,
+      "rent_25sqm": 28425
+    },
+    "23111": {
+      "municipality": "港区",
+      "rent_per_sqm": 951,
+      "rent_25sqm": 23775
+    },
+    "23112": {
+      "municipality": "南区",
+      "rent_per_sqm": 1192,
+      "rent_25sqm": 29800
+    },
+    "23113": {
+      "municipality": "守山区",
+      "rent_per_sqm": 1098,
+      "rent_25sqm": 27450
+    },
+    "23114": {
+      "municipality": "緑区",
+      "rent_per_sqm": 1158,
+      "rent_25sqm": 28950
+    },
+    "23115": {
+      "municipality": "名東区",
+      "rent_per_sqm": 1216,
+      "rent_25sqm": 30400
+    },
+    "23116": {
+      "municipality": "天白区",
+      "rent_per_sqm": 1243,
+      "rent_25sqm": 31075
+    },
+    "23201": {
+      "municipality": "豊橋市",
+      "rent_per_sqm": 1038,
+      "rent_25sqm": 25950
+    },
+    "23202": {
+      "municipality": "岡崎市",
+      "rent_per_sqm": 1156,
+      "rent_25sqm": 28900
+    },
+    "23203": {
+      "municipality": "一宮市",
+      "rent_per_sqm": 1032,
+      "rent_25sqm": 25800
+    },
+    "23204": {
+      "municipality": "瀬戸市",
+      "rent_per_sqm": 959,
+      "rent_25sqm": 23975
+    },
+    "23205": {
+      "municipality": "半田市",
+      "rent_per_sqm": 1077,
+      "rent_25sqm": 26925
+    },
+    "23206": {
+      "municipality": "春日井市",
+      "rent_per_sqm": 1109,
+      "rent_25sqm": 27725
+    },
+    "23207": {
+      "municipality": "豊川市",
+      "rent_per_sqm": 1026,
+      "rent_25sqm": 25650
+    },
+    "23208": {
+      "municipality": "津島市",
+      "rent_per_sqm": 827,
+      "rent_25sqm": 20675
+    },
+    "23209": {
+      "municipality": "碧南市",
+      "rent_per_sqm": 979,
+      "rent_25sqm": 24475
+    },
+    "23210": {
+      "municipality": "刈谷市",
+      "rent_per_sqm": 1271,
+      "rent_25sqm": 31775
+    },
+    "23211": {
+      "municipality": "豊田市",
+      "rent_per_sqm": 1255,
+      "rent_25sqm": 31375
+    },
+    "23212": {
+      "municipality": "安城市",
+      "rent_per_sqm": 1257,
+      "rent_25sqm": 31425
+    },
+    "23213": {
+      "municipality": "西尾市",
+      "rent_per_sqm": 1042,
+      "rent_25sqm": 26050
+    },
+    "23214": {
+      "municipality": "蒲郡市",
+      "rent_per_sqm": 1038,
+      "rent_25sqm": 25950
+    },
+    "23215": {
+      "municipality": "犬山市",
+      "rent_per_sqm": 1014,
+      "rent_25sqm": 25350
+    },
+    "23216": {
+      "municipality": "常滑市",
+      "rent_per_sqm": 1091,
+      "rent_25sqm": 27275
+    },
+    "23217": {
+      "municipality": "江南市",
+      "rent_per_sqm": 946,
+      "rent_25sqm": 23650
+    },
+    "23219": {
+      "municipality": "小牧市",
+      "rent_per_sqm": 1129,
+      "rent_25sqm": 28225
+    },
+    "23220": {
+      "municipality": "稲沢市",
+      "rent_per_sqm": 1063,
+      "rent_25sqm": 26575
+    },
+    "23221": {
+      "municipality": "新城市",
+      "rent_per_sqm": 747,
+      "rent_25sqm": 18675
+    },
+    "23222": {
+      "municipality": "東海市",
+      "rent_per_sqm": 1150,
+      "rent_25sqm": 28750
+    },
+    "23223": {
+      "municipality": "大府市",
+      "rent_per_sqm": 1236,
+      "rent_25sqm": 30900
+    },
+    "23224": {
+      "municipality": "知多市",
+      "rent_per_sqm": 1002,
+      "rent_25sqm": 25050
+    },
+    "23225": {
+      "municipality": "知立市",
+      "rent_per_sqm": 1265,
+      "rent_25sqm": 31625
+    },
+    "23226": {
+      "municipality": "尾張旭市",
+      "rent_per_sqm": 1139,
+      "rent_25sqm": 28475
+    },
+    "23227": {
+      "municipality": "高浜市",
+      "rent_per_sqm": 998,
+      "rent_25sqm": 24950
+    },
+    "23228": {
+      "municipality": "岩倉市",
+      "rent_per_sqm": 1105,
+      "rent_25sqm": 27625
+    },
+    "23229": {
+      "municipality": "豊明市",
+      "rent_per_sqm": 1196,
+      "rent_25sqm": 29900
+    },
+    "23230": {
+      "municipality": "日進市",
+      "rent_per_sqm": 1282,
+      "rent_25sqm": 32050
+    },
+    "23231": {
+      "municipality": "田原市",
+      "rent_per_sqm": 908,
+      "rent_25sqm": 22700
+    },
+    "23232": {
+      "municipality": "愛西市",
+      "rent_per_sqm": 967,
+      "rent_25sqm": 24175
+    },
+    "23233": {
+      "municipality": "清須市",
+      "rent_per_sqm": 1214,
+      "rent_25sqm": 30350
+    },
+    "23234": {
+      "municipality": "北名古屋市",
+      "rent_per_sqm": 1201,
+      "rent_25sqm": 30025
+    },
+    "23235": {
+      "municipality": "弥富市",
+      "rent_per_sqm": 1108,
+      "rent_25sqm": 27700
+    },
+    "23236": {
+      "municipality": "みよし市",
+      "rent_per_sqm": 1119,
+      "rent_25sqm": 27975
+    },
+    "23237": {
+      "municipality": "あま市",
+      "rent_per_sqm": 1066,
+      "rent_25sqm": 26650
+    },
+    "23238": {
+      "municipality": "長久手市",
+      "rent_per_sqm": 1353,
+      "rent_25sqm": 33825
+    },
+    "23302": {
+      "municipality": "東郷町",
+      "rent_per_sqm": 1184,
+      "rent_25sqm": 29600
+    },
+    "23342": {
+      "municipality": "豊山町",
+      "rent_per_sqm": 1085,
+      "rent_25sqm": 27125
+    },
+    "23361": {
+      "municipality": "大口町",
+      "rent_per_sqm": 925,
+      "rent_25sqm": 23125
+    },
+    "23362": {
+      "municipality": "扶桑町",
+      "rent_per_sqm": 960,
+      "rent_25sqm": 24000
+    },
+    "23424": {
+      "municipality": "大治町",
+      "rent_per_sqm": 1180,
+      "rent_25sqm": 29500
+    },
+    "23425": {
+      "municipality": "蟹江町",
+      "rent_per_sqm": 1159,
+      "rent_25sqm": 28975
+    },
+    "23441": {
+      "municipality": "阿久比町",
+      "rent_per_sqm": 907,
+      "rent_25sqm": 22675
+    },
+    "23442": {
+      "municipality": "東浦町",
+      "rent_per_sqm": 1090,
+      "rent_25sqm": 27250
+    },
+    "23445": {
+      "municipality": "南知多町",
+      "rent_per_sqm": 690,
+      "rent_25sqm": 17250
+    },
+    "23446": {
+      "municipality": "美浜町",
+      "rent_per_sqm": 997,
+      "rent_25sqm": 24925
+    },
+    "23447": {
+      "municipality": "武豊町",
+      "rent_per_sqm": 913,
+      "rent_25sqm": 22825
+    },
+    "23501": {
+      "municipality": "幸田町",
+      "rent_per_sqm": 1096,
+      "rent_25sqm": 27400
+    },
+    "24201": {
+      "municipality": "津市",
+      "rent_per_sqm": 1023,
+      "rent_25sqm": 25575
+    },
+    "24202": {
+      "municipality": "四日市市",
+      "rent_per_sqm": 1126,
+      "rent_25sqm": 28150
+    },
+    "24203": {
+      "municipality": "伊勢市",
+      "rent_per_sqm": 963,
+      "rent_25sqm": 24075
+    },
+    "24204": {
+      "municipality": "松阪市",
+      "rent_per_sqm": 866,
+      "rent_25sqm": 21650
+    },
+    "24205": {
+      "municipality": "桑名市",
+      "rent_per_sqm": 1050,
+      "rent_25sqm": 26250
+    },
+    "24207": {
+      "municipality": "鈴鹿市",
+      "rent_per_sqm": 1079,
+      "rent_25sqm": 26975
+    },
+    "24208": {
+      "municipality": "名張市",
+      "rent_per_sqm": 967,
+      "rent_25sqm": 24175
+    },
+    "24209": {
+      "municipality": "尾鷲市",
+      "rent_per_sqm": 497,
+      "rent_25sqm": 12425
+    },
+    "24210": {
+      "municipality": "亀山市",
+      "rent_per_sqm": 847,
+      "rent_25sqm": 21175
+    },
+    "24211": {
+      "municipality": "鳥羽市",
+      "rent_per_sqm": 453,
+      "rent_25sqm": 11325
+    },
+    "24212": {
+      "municipality": "熊野市",
+      "rent_per_sqm": 564,
+      "rent_25sqm": 14100
+    },
+    "24214": {
+      "municipality": "いなべ市",
+      "rent_per_sqm": 1014,
+      "rent_25sqm": 25350
+    },
+    "24215": {
+      "municipality": "志摩市",
+      "rent_per_sqm": 657,
+      "rent_25sqm": 16425
+    },
+    "24216": {
+      "municipality": "伊賀市",
+      "rent_per_sqm": 903,
+      "rent_25sqm": 22575
+    },
+    "24324": {
+      "municipality": "東員町",
+      "rent_per_sqm": 1003,
+      "rent_25sqm": 25075
+    },
+    "24341": {
+      "municipality": "菰野町",
+      "rent_per_sqm": 1004,
+      "rent_25sqm": 25100
+    },
+    "24344": {
+      "municipality": "川越町",
+      "rent_per_sqm": 1028,
+      "rent_25sqm": 25700
+    },
+    "24442": {
+      "municipality": "明和町",
+      "rent_per_sqm": 998,
+      "rent_25sqm": 24950
+    },
+    "24461": {
+      "municipality": "玉城町",
+      "rent_per_sqm": 928,
+      "rent_25sqm": 23200
+    },
+    "25201": {
+      "municipality": "大津市",
+      "rent_per_sqm": 1095,
+      "rent_25sqm": 27375
+    },
+    "25202": {
+      "municipality": "彦根市",
+      "rent_per_sqm": 1130,
+      "rent_25sqm": 28250
+    },
+    "25203": {
+      "municipality": "長浜市",
+      "rent_per_sqm": 968,
+      "rent_25sqm": 24200
+    },
+    "25204": {
+      "municipality": "近江八幡市",
+      "rent_per_sqm": 1117,
+      "rent_25sqm": 27925
+    },
+    "25206": {
+      "municipality": "草津市",
+      "rent_per_sqm": 1366,
+      "rent_25sqm": 34150
+    },
+    "25207": {
+      "municipality": "守山市",
+      "rent_per_sqm": 1111,
+      "rent_25sqm": 27775
+    },
+    "25208": {
+      "municipality": "栗東市",
+      "rent_per_sqm": 1048,
+      "rent_25sqm": 26200
+    },
+    "25209": {
+      "municipality": "甲賀市",
+      "rent_per_sqm": 915,
+      "rent_25sqm": 22875
+    },
+    "25210": {
+      "municipality": "野洲市",
+      "rent_per_sqm": 1101,
+      "rent_25sqm": 27525
+    },
+    "25211": {
+      "municipality": "湖南市",
+      "rent_per_sqm": 1057,
+      "rent_25sqm": 26425
+    },
+    "25212": {
+      "municipality": "高島市",
+      "rent_per_sqm": 689,
+      "rent_25sqm": 17225
+    },
+    "25213": {
+      "municipality": "東近江市",
+      "rent_per_sqm": 1001,
+      "rent_25sqm": 25025
+    },
+    "25214": {
+      "municipality": "米原市",
+      "rent_per_sqm": 1003,
+      "rent_25sqm": 25075
+    },
+    "25383": {
+      "municipality": "日野町",
+      "rent_per_sqm": 971,
+      "rent_25sqm": 24275
+    },
+    "25425": {
+      "municipality": "愛荘町",
+      "rent_per_sqm": 1054,
+      "rent_25sqm": 26350
+    },
+    "26100": {
+      "municipality": "京都市",
+      "rent_per_sqm": 1590,
+      "rent_25sqm": 39750
+    },
+    "26101": {
+      "municipality": "北区",
+      "rent_per_sqm": 1610,
+      "rent_25sqm": 40250
+    },
+    "26102": {
+      "municipality": "上京区",
+      "rent_per_sqm": 1886,
+      "rent_25sqm": 47150
+    },
+    "26103": {
+      "municipality": "左京区",
+      "rent_per_sqm": 1881,
+      "rent_25sqm": 47025
+    },
+    "26104": {
+      "municipality": "中京区",
+      "rent_per_sqm": 2104,
+      "rent_25sqm": 52600
+    },
+    "26105": {
+      "municipality": "東山区",
+      "rent_per_sqm": 1694,
+      "rent_25sqm": 42350
+    },
+    "26106": {
+      "municipality": "下京区",
+      "rent_per_sqm": 1978,
+      "rent_25sqm": 49450
+    },
+    "26107": {
+      "municipality": "南区",
+      "rent_per_sqm": 1610,
+      "rent_25sqm": 40250
+    },
+    "26108": {
+      "municipality": "右京区",
+      "rent_per_sqm": 1546,
+      "rent_25sqm": 38650
+    },
+    "26109": {
+      "municipality": "伏見区",
+      "rent_per_sqm": 1185,
+      "rent_25sqm": 29625
+    },
+    "26110": {
+      "municipality": "山科区",
+      "rent_per_sqm": 1386,
+      "rent_25sqm": 34650
+    },
+    "26111": {
+      "municipality": "西京区",
+      "rent_per_sqm": 1294,
+      "rent_25sqm": 32350
+    },
+    "26201": {
+      "municipality": "福知山市",
+      "rent_per_sqm": 995,
+      "rent_25sqm": 24875
+    },
+    "26202": {
+      "municipality": "舞鶴市",
+      "rent_per_sqm": 854,
+      "rent_25sqm": 21350
+    },
+    "26203": {
+      "municipality": "綾部市",
+      "rent_per_sqm": 1069,
+      "rent_25sqm": 26725
+    },
+    "26204": {
+      "municipality": "宇治市",
+      "rent_per_sqm": 1129,
+      "rent_25sqm": 28225
+    },
+    "26205": {
+      "municipality": "宮津市",
+      "rent_per_sqm": 532,
+      "rent_25sqm": 13300
+    },
+    "26206": {
+      "municipality": "亀岡市",
+      "rent_per_sqm": 977,
+      "rent_25sqm": 24425
+    },
+    "26207": {
+      "municipality": "城陽市",
+      "rent_per_sqm": 1177,
+      "rent_25sqm": 29425
+    },
+    "26208": {
+      "municipality": "向日市",
+      "rent_per_sqm": 1348,
+      "rent_25sqm": 33700
+    },
+    "26209": {
+      "municipality": "長岡京市",
+      "rent_per_sqm": 1460,
+      "rent_25sqm": 36500
+    },
+    "26210": {
+      "municipality": "八幡市",
+      "rent_per_sqm": 1087,
+      "rent_25sqm": 27175
+    },
+    "26211": {
+      "municipality": "京田辺市",
+      "rent_per_sqm": 1282,
+      "rent_25sqm": 32050
+    },
+    "26212": {
+      "municipality": "京丹後市",
+      "rent_per_sqm": 706,
+      "rent_25sqm": 17650
+    },
+    "26213": {
+      "municipality": "南丹市",
+      "rent_per_sqm": 1083,
+      "rent_25sqm": 27075
+    },
+    "26214": {
+      "municipality": "木津川市",
+      "rent_per_sqm": 1017,
+      "rent_25sqm": 25425
+    },
+    "26303": {
+      "municipality": "大山崎町",
+      "rent_per_sqm": 1234,
+      "rent_25sqm": 30850
+    },
+    "26322": {
+      "municipality": "久御山町",
+      "rent_per_sqm": 1145,
+      "rent_25sqm": 28625
+    },
+    "26366": {
+      "municipality": "精華町",
+      "rent_per_sqm": 1084,
+      "rent_25sqm": 27100
+    },
+    "26465": {
+      "municipality": "与謝野町",
+      "rent_per_sqm": 607,
+      "rent_25sqm": 15175
+    },
+    "27100": {
+      "municipality": "大阪市",
+      "rent_per_sqm": 1619,
+      "rent_25sqm": 40475
+    },
+    "27102": {
+      "municipality": "都島区",
+      "rent_per_sqm": 1827,
+      "rent_25sqm": 45675
+    },
+    "27103": {
+      "municipality": "福島区",
+      "rent_per_sqm": 2066,
+      "rent_25sqm": 51650
+    },
+    "27104": {
+      "municipality": "此花区",
+      "rent_per_sqm": 1287,
+      "rent_25sqm": 32175
+    },
+    "27106": {
+      "municipality": "西区",
+      "rent_per_sqm": 2072,
+      "rent_25sqm": 51800
+    },
+    "27107": {
+      "municipality": "港区",
+      "rent_per_sqm": 1498,
+      "rent_25sqm": 37450
+    },
+    "27108": {
+      "municipality": "大正区",
+      "rent_per_sqm": 1072,
+      "rent_25sqm": 26800
+    },
+    "27109": {
+      "municipality": "天王寺区",
+      "rent_per_sqm": 1850,
+      "rent_25sqm": 46250
+    },
+    "27111": {
+      "municipality": "浪速区",
+      "rent_per_sqm": 2022,
+      "rent_25sqm": 50550
+    },
+    "27113": {
+      "municipality": "西淀川区",
+      "rent_per_sqm": 1509,
+      "rent_25sqm": 37725
+    },
+    "27114": {
+      "municipality": "東淀川区",
+      "rent_per_sqm": 1456,
+      "rent_25sqm": 36400
+    },
+    "27115": {
+      "municipality": "東成区",
+      "rent_per_sqm": 1773,
+      "rent_25sqm": 44325
+    },
+    "27116": {
+      "municipality": "生野区",
+      "rent_per_sqm": 1460,
+      "rent_25sqm": 36500
+    },
+    "27117": {
+      "municipality": "旭区",
+      "rent_per_sqm": 1461,
+      "rent_25sqm": 36525
+    },
+    "27118": {
+      "municipality": "城東区",
+      "rent_per_sqm": 1426,
+      "rent_25sqm": 35650
+    },
+    "27119": {
+      "municipality": "阿倍野区",
+      "rent_per_sqm": 1650,
+      "rent_25sqm": 41250
+    },
+    "27120": {
+      "municipality": "住吉区",
+      "rent_per_sqm": 1364,
+      "rent_25sqm": 34100
+    },
+    "27121": {
+      "municipality": "東住吉区",
+      "rent_per_sqm": 1405,
+      "rent_25sqm": 35125
+    },
+    "27122": {
+      "municipality": "西成区",
+      "rent_per_sqm": 1620,
+      "rent_25sqm": 40500
+    },
+    "27123": {
+      "municipality": "淀川区",
+      "rent_per_sqm": 1727,
+      "rent_25sqm": 43175
+    },
+    "27124": {
+      "municipality": "鶴見区",
+      "rent_per_sqm": 1267,
+      "rent_25sqm": 31675
+    },
+    "27125": {
+      "municipality": "住之江区",
+      "rent_per_sqm": 1323,
+      "rent_25sqm": 33075
+    },
+    "27126": {
+      "municipality": "平野区",
+      "rent_per_sqm": 1135,
+      "rent_25sqm": 28375
+    },
+    "27127": {
+      "municipality": "北区",
+      "rent_per_sqm": 2141,
+      "rent_25sqm": 53525
+    },
+    "27128": {
+      "municipality": "中央区",
+      "rent_per_sqm": 2154,
+      "rent_25sqm": 53850
+    },
+    "27140": {
+      "municipality": "堺市",
+      "rent_per_sqm": 1132,
+      "rent_25sqm": 28300
+    },
+    "27141": {
+      "municipality": "堺区",
+      "rent_per_sqm": 1290,
+      "rent_25sqm": 32250
+    },
+    "27142": {
+      "municipality": "中区",
+      "rent_per_sqm": 1087,
+      "rent_25sqm": 27175
+    },
+    "27143": {
+      "municipality": "東区",
+      "rent_per_sqm": 1096,
+      "rent_25sqm": 27400
+    },
+    "27144": {
+      "municipality": "西区",
+      "rent_per_sqm": 1197,
+      "rent_25sqm": 29925
+    },
+    "27145": {
+      "municipality": "南区",
+      "rent_per_sqm": 776,
+      "rent_25sqm": 19400
+    },
+    "27146": {
+      "municipality": "北区",
+      "rent_per_sqm": 1296,
+      "rent_25sqm": 32400
+    },
+    "27147": {
+      "municipality": "美原区",
+      "rent_per_sqm": 864,
+      "rent_25sqm": 21600
+    },
+    "27202": {
+      "municipality": "岸和田市",
+      "rent_per_sqm": 1002,
+      "rent_25sqm": 25050
+    },
+    "27203": {
+      "municipality": "豊中市",
+      "rent_per_sqm": 1494,
+      "rent_25sqm": 37350
+    },
+    "27204": {
+      "municipality": "池田市",
+      "rent_per_sqm": 1511,
+      "rent_25sqm": 37775
+    },
+    "27205": {
+      "municipality": "吹田市",
+      "rent_per_sqm": 1515,
+      "rent_25sqm": 37875
+    },
+    "27206": {
+      "municipality": "泉大津市",
+      "rent_per_sqm": 1118,
+      "rent_25sqm": 27950
+    },
+    "27207": {
+      "municipality": "高槻市",
+      "rent_per_sqm": 1342,
+      "rent_25sqm": 33550
+    },
+    "27208": {
+      "municipality": "貝塚市",
+      "rent_per_sqm": 885,
+      "rent_25sqm": 22125
+    },
+    "27209": {
+      "municipality": "守口市",
+      "rent_per_sqm": 1242,
+      "rent_25sqm": 31050
+    },
+    "27210": {
+      "municipality": "枚方市",
+      "rent_per_sqm": 1157,
+      "rent_25sqm": 28925
+    },
+    "27211": {
+      "municipality": "茨木市",
+      "rent_per_sqm": 1455,
+      "rent_25sqm": 36375
+    },
+    "27212": {
+      "municipality": "八尾市",
+      "rent_per_sqm": 1181,
+      "rent_25sqm": 29525
+    },
+    "27213": {
+      "municipality": "泉佐野市",
+      "rent_per_sqm": 1057,
+      "rent_25sqm": 26425
+    },
+    "27214": {
+      "municipality": "富田林市",
+      "rent_per_sqm": 998,
+      "rent_25sqm": 24950
+    },
+    "27215": {
+      "municipality": "寝屋川市",
+      "rent_per_sqm": 1122,
+      "rent_25sqm": 28050
+    },
+    "27216": {
+      "municipality": "河内長野市",
+      "rent_per_sqm": 923,
+      "rent_25sqm": 23075
+    },
+    "27217": {
+      "municipality": "松原市",
+      "rent_per_sqm": 1099,
+      "rent_25sqm": 27475
+    },
+    "27218": {
+      "municipality": "大東市",
+      "rent_per_sqm": 1152,
+      "rent_25sqm": 28800
+    },
+    "27219": {
+      "municipality": "和泉市",
+      "rent_per_sqm": 1006,
+      "rent_25sqm": 25150
+    },
+    "27220": {
+      "municipality": "箕面市",
+      "rent_per_sqm": 1375,
+      "rent_25sqm": 34375
+    },
+    "27221": {
+      "municipality": "柏原市",
+      "rent_per_sqm": 1087,
+      "rent_25sqm": 27175
+    },
+    "27222": {
+      "municipality": "羽曳野市",
+      "rent_per_sqm": 994,
+      "rent_25sqm": 24850
+    },
+    "27223": {
+      "municipality": "門真市",
+      "rent_per_sqm": 1039,
+      "rent_25sqm": 25975
+    },
+    "27224": {
+      "municipality": "摂津市",
+      "rent_per_sqm": 1304,
+      "rent_25sqm": 32600
+    },
+    "27225": {
+      "municipality": "高石市",
+      "rent_per_sqm": 1076,
+      "rent_25sqm": 26900
+    },
+    "27226": {
+      "municipality": "藤井寺市",
+      "rent_per_sqm": 1118,
+      "rent_25sqm": 27950
+    },
+    "27227": {
+      "municipality": "東大阪市",
+      "rent_per_sqm": 1307,
+      "rent_25sqm": 32675
+    },
+    "27228": {
+      "municipality": "泉南市",
+      "rent_per_sqm": 811,
+      "rent_25sqm": 20275
+    },
+    "27229": {
+      "municipality": "四條畷市",
+      "rent_per_sqm": 1213,
+      "rent_25sqm": 30325
+    },
+    "27230": {
+      "municipality": "交野市",
+      "rent_per_sqm": 1042,
+      "rent_25sqm": 26050
+    },
+    "27231": {
+      "municipality": "大阪狭山市",
+      "rent_per_sqm": 1058,
+      "rent_25sqm": 26450
+    },
+    "27232": {
+      "municipality": "阪南市",
+      "rent_per_sqm": 776,
+      "rent_25sqm": 19400
+    },
+    "27301": {
+      "municipality": "島本町",
+      "rent_per_sqm": 1056,
+      "rent_25sqm": 26400
+    },
+    "27321": {
+      "municipality": "豊能町",
+      "rent_per_sqm": 574,
+      "rent_25sqm": 14350
+    },
+    "27341": {
+      "municipality": "忠岡町",
+      "rent_per_sqm": 1026,
+      "rent_25sqm": 25650
+    },
+    "27361": {
+      "municipality": "熊取町",
+      "rent_per_sqm": 1022,
+      "rent_25sqm": 25550
+    },
+    "27382": {
+      "municipality": "河南町",
+      "rent_per_sqm": 1132,
+      "rent_25sqm": 28300
+    },
+    "28100": {
+      "municipality": "神戸市",
+      "rent_per_sqm": 1348,
+      "rent_25sqm": 33700
+    },
+    "28101": {
+      "municipality": "東灘区",
+      "rent_per_sqm": 1548,
+      "rent_25sqm": 38700
+    },
+    "28102": {
+      "municipality": "灘区",
+      "rent_per_sqm": 1692,
+      "rent_25sqm": 42300
+    },
+    "28105": {
+      "municipality": "兵庫区",
+      "rent_per_sqm": 1455,
+      "rent_25sqm": 36375
+    },
+    "28106": {
+      "municipality": "長田区",
+      "rent_per_sqm": 1207,
+      "rent_25sqm": 30175
+    },
+    "28107": {
+      "municipality": "須磨区",
+      "rent_per_sqm": 1157,
+      "rent_25sqm": 28925
+    },
+    "28108": {
+      "municipality": "垂水区",
+      "rent_per_sqm": 1004,
+      "rent_25sqm": 25100
+    },
+    "28109": {
+      "municipality": "北区",
+      "rent_per_sqm": 993,
+      "rent_25sqm": 24825
+    },
+    "28110": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1694,
+      "rent_25sqm": 42350
+    },
+    "28111": {
+      "municipality": "西区",
+      "rent_per_sqm": 1029,
+      "rent_25sqm": 25725
+    },
+    "28201": {
+      "municipality": "姫路市",
+      "rent_per_sqm": 1002,
+      "rent_25sqm": 25050
+    },
+    "28202": {
+      "municipality": "尼崎市",
+      "rent_per_sqm": 1366,
+      "rent_25sqm": 34150
+    },
+    "28203": {
+      "municipality": "明石市",
+      "rent_per_sqm": 1271,
+      "rent_25sqm": 31775
+    },
+    "28204": {
+      "municipality": "西宮市",
+      "rent_per_sqm": 1416,
+      "rent_25sqm": 35400
+    },
+    "28205": {
+      "municipality": "洲本市",
+      "rent_per_sqm": 881,
+      "rent_25sqm": 22025
+    },
+    "28206": {
+      "municipality": "芦屋市",
+      "rent_per_sqm": 1391,
+      "rent_25sqm": 34775
+    },
+    "28207": {
+      "municipality": "伊丹市",
+      "rent_per_sqm": 1254,
+      "rent_25sqm": 31350
+    },
+    "28208": {
+      "municipality": "相生市",
+      "rent_per_sqm": 870,
+      "rent_25sqm": 21750
+    },
+    "28209": {
+      "municipality": "豊岡市",
+      "rent_per_sqm": 942,
+      "rent_25sqm": 23550
+    },
+    "28210": {
+      "municipality": "加古川市",
+      "rent_per_sqm": 1042,
+      "rent_25sqm": 26050
+    },
+    "28212": {
+      "municipality": "赤穂市",
+      "rent_per_sqm": 855,
+      "rent_25sqm": 21375
+    },
+    "28213": {
+      "municipality": "西脇市",
+      "rent_per_sqm": 722,
+      "rent_25sqm": 18050
+    },
+    "28214": {
+      "municipality": "宝塚市",
+      "rent_per_sqm": 1267,
+      "rent_25sqm": 31675
+    },
+    "28215": {
+      "municipality": "三木市",
+      "rent_per_sqm": 972,
+      "rent_25sqm": 24300
+    },
+    "28216": {
+      "municipality": "高砂市",
+      "rent_per_sqm": 840,
+      "rent_25sqm": 21000
+    },
+    "28217": {
+      "municipality": "川西市",
+      "rent_per_sqm": 1123,
+      "rent_25sqm": 28075
+    },
+    "28218": {
+      "municipality": "小野市",
+      "rent_per_sqm": 861,
+      "rent_25sqm": 21525
+    },
+    "28219": {
+      "municipality": "三田市",
+      "rent_per_sqm": 1192,
+      "rent_25sqm": 29800
+    },
+    "28220": {
+      "municipality": "加西市",
+      "rent_per_sqm": 926,
+      "rent_25sqm": 23150
+    },
+    "28221": {
+      "municipality": "丹波篠山市",
+      "rent_per_sqm": 836,
+      "rent_25sqm": 20900
+    },
+    "28222": {
+      "municipality": "養父市",
+      "rent_per_sqm": 539,
+      "rent_25sqm": 13475
+    },
+    "28223": {
+      "municipality": "丹波市",
+      "rent_per_sqm": 873,
+      "rent_25sqm": 21825
+    },
+    "28224": {
+      "municipality": "南あわじ市",
+      "rent_per_sqm": 899,
+      "rent_25sqm": 22475
+    },
+    "28225": {
+      "municipality": "朝来市",
+      "rent_per_sqm": 683,
+      "rent_25sqm": 17075
+    },
+    "28226": {
+      "municipality": "淡路市",
+      "rent_per_sqm": 838,
+      "rent_25sqm": 20950
+    },
+    "28227": {
+      "municipality": "宍粟市",
+      "rent_per_sqm": 767,
+      "rent_25sqm": 19175
+    },
+    "28228": {
+      "municipality": "加東市",
+      "rent_per_sqm": 947,
+      "rent_25sqm": 23675
+    },
+    "28229": {
+      "municipality": "たつの市",
+      "rent_per_sqm": 818,
+      "rent_25sqm": 20450
+    },
+    "28301": {
+      "municipality": "猪名川町",
+      "rent_per_sqm": 667,
+      "rent_25sqm": 16675
+    },
+    "28365": {
+      "municipality": "多可町",
+      "rent_per_sqm": 369,
+      "rent_25sqm": 9225
+    },
+    "28381": {
+      "municipality": "稲美町",
+      "rent_per_sqm": 902,
+      "rent_25sqm": 22550
+    },
+    "28382": {
+      "municipality": "播磨町",
+      "rent_per_sqm": 1047,
+      "rent_25sqm": 26175
+    },
+    "28443": {
+      "municipality": "福崎町",
+      "rent_per_sqm": 1098,
+      "rent_25sqm": 27450
+    },
+    "28464": {
+      "municipality": "太子町",
+      "rent_per_sqm": 984,
+      "rent_25sqm": 24600
+    },
+    "28501": {
+      "municipality": "佐用町",
+      "rent_per_sqm": 610,
+      "rent_25sqm": 15250
+    },
+    "28585": {
+      "municipality": "香美町",
+      "rent_per_sqm": 402,
+      "rent_25sqm": 10050
+    },
+    "29201": {
+      "municipality": "奈良市",
+      "rent_per_sqm": 1162,
+      "rent_25sqm": 29050
+    },
+    "29202": {
+      "municipality": "大和高田市",
+      "rent_per_sqm": 996,
+      "rent_25sqm": 24900
+    },
+    "29203": {
+      "municipality": "大和郡山市",
+      "rent_per_sqm": 979,
+      "rent_25sqm": 24475
+    },
+    "29204": {
+      "municipality": "天理市",
+      "rent_per_sqm": 870,
+      "rent_25sqm": 21750
+    },
+    "29205": {
+      "municipality": "橿原市",
+      "rent_per_sqm": 1026,
+      "rent_25sqm": 25650
+    },
+    "29206": {
+      "municipality": "桜井市",
+      "rent_per_sqm": 881,
+      "rent_25sqm": 22025
+    },
+    "29207": {
+      "municipality": "五條市",
+      "rent_per_sqm": 549,
+      "rent_25sqm": 13725
+    },
+    "29208": {
+      "municipality": "御所市",
+      "rent_per_sqm": 471,
+      "rent_25sqm": 11775
+    },
+    "29209": {
+      "municipality": "生駒市",
+      "rent_per_sqm": 1132,
+      "rent_25sqm": 28300
+    },
+    "29210": {
+      "municipality": "香芝市",
+      "rent_per_sqm": 1061,
+      "rent_25sqm": 26525
+    },
+    "29211": {
+      "municipality": "葛城市",
+      "rent_per_sqm": 958,
+      "rent_25sqm": 23950
+    },
+    "29212": {
+      "municipality": "宇陀市",
+      "rent_per_sqm": 547,
+      "rent_25sqm": 13675
+    },
+    "29342": {
+      "municipality": "平群町",
+      "rent_per_sqm": 730,
+      "rent_25sqm": 18250
+    },
+    "29343": {
+      "municipality": "三郷町",
+      "rent_per_sqm": 866,
+      "rent_25sqm": 21650
+    },
+    "29344": {
+      "municipality": "斑鳩町",
+      "rent_per_sqm": 914,
+      "rent_25sqm": 22850
+    },
+    "29363": {
+      "municipality": "田原本町",
+      "rent_per_sqm": 963,
+      "rent_25sqm": 24075
+    },
+    "29424": {
+      "municipality": "上牧町",
+      "rent_per_sqm": 772,
+      "rent_25sqm": 19300
+    },
+    "29425": {
+      "municipality": "王寺町",
+      "rent_per_sqm": 978,
+      "rent_25sqm": 24450
+    },
+    "29426": {
+      "municipality": "広陵町",
+      "rent_per_sqm": 780,
+      "rent_25sqm": 19500
+    },
+    "29427": {
+      "municipality": "河合町",
+      "rent_per_sqm": 1014,
+      "rent_25sqm": 25350
+    },
+    "29442": {
+      "municipality": "大淀町",
+      "rent_per_sqm": 429,
+      "rent_25sqm": 10725
+    },
+    "30201": {
+      "municipality": "和歌山市",
+      "rent_per_sqm": 956,
+      "rent_25sqm": 23900
+    },
+    "30202": {
+      "municipality": "海南市",
+      "rent_per_sqm": 692,
+      "rent_25sqm": 17300
+    },
+    "30203": {
+      "municipality": "橋本市",
+      "rent_per_sqm": 813,
+      "rent_25sqm": 20325
+    },
+    "30204": {
+      "municipality": "有田市",
+      "rent_per_sqm": 699,
+      "rent_25sqm": 17475
+    },
+    "30205": {
+      "municipality": "御坊市",
+      "rent_per_sqm": 788,
+      "rent_25sqm": 19700
+    },
+    "30206": {
+      "municipality": "田辺市",
+      "rent_per_sqm": 745,
+      "rent_25sqm": 18625
+    },
+    "30207": {
+      "municipality": "新宮市",
+      "rent_per_sqm": 726,
+      "rent_25sqm": 18150
+    },
+    "30208": {
+      "municipality": "紀の川市",
+      "rent_per_sqm": 719,
+      "rent_25sqm": 17975
+    },
+    "30209": {
+      "municipality": "岩出市",
+      "rent_per_sqm": 948,
+      "rent_25sqm": 23700
+    },
+    "30341": {
+      "municipality": "かつらぎ町",
+      "rent_per_sqm": 588,
+      "rent_25sqm": 14700
+    },
+    "30366": {
+      "municipality": "有田川町",
+      "rent_per_sqm": 879,
+      "rent_25sqm": 21975
+    },
+    "30401": {
+      "municipality": "白浜町",
+      "rent_per_sqm": 938,
+      "rent_25sqm": 23450
+    },
+    "30404": {
+      "municipality": "上富田町",
+      "rent_per_sqm": 918,
+      "rent_25sqm": 22950
+    },
+    "31201": {
+      "municipality": "鳥取市",
+      "rent_per_sqm": 975,
+      "rent_25sqm": 24375
+    },
+    "31202": {
+      "municipality": "米子市",
+      "rent_per_sqm": 918,
+      "rent_25sqm": 22950
+    },
+    "31203": {
+      "municipality": "倉吉市",
+      "rent_per_sqm": 852,
+      "rent_25sqm": 21300
+    },
+    "31204": {
+      "municipality": "境港市",
+      "rent_per_sqm": 595,
+      "rent_25sqm": 14875
+    },
+    "31329": {
+      "municipality": "八頭町",
+      "rent_per_sqm": 487,
+      "rent_25sqm": 12175
+    },
+    "31370": {
+      "municipality": "湯梨浜町",
+      "rent_per_sqm": 868,
+      "rent_25sqm": 21700
+    },
+    "31371": {
+      "municipality": "琴浦町",
+      "rent_per_sqm": 564,
+      "rent_25sqm": 14100
+    },
+    "31386": {
+      "municipality": "大山町",
+      "rent_per_sqm": 349,
+      "rent_25sqm": 8725
+    },
+    "32201": {
+      "municipality": "松江市",
+      "rent_per_sqm": 1017,
+      "rent_25sqm": 25425
+    },
+    "32202": {
+      "municipality": "浜田市",
+      "rent_per_sqm": 727,
+      "rent_25sqm": 18175
+    },
+    "32203": {
+      "municipality": "出雲市",
+      "rent_per_sqm": 1012,
+      "rent_25sqm": 25300
+    },
+    "32204": {
+      "municipality": "益田市",
+      "rent_per_sqm": 667,
+      "rent_25sqm": 16675
+    },
+    "32205": {
+      "municipality": "大田市",
+      "rent_per_sqm": 702,
+      "rent_25sqm": 17550
+    },
+    "32206": {
+      "municipality": "安来市",
+      "rent_per_sqm": 655,
+      "rent_25sqm": 16375
+    },
+    "32207": {
+      "municipality": "江津市",
+      "rent_per_sqm": 698,
+      "rent_25sqm": 17450
+    },
+    "32209": {
+      "municipality": "雲南市",
+      "rent_per_sqm": 574,
+      "rent_25sqm": 14350
+    },
+    "33100": {
+      "municipality": "岡山市",
+      "rent_per_sqm": 1201,
+      "rent_25sqm": 30025
+    },
+    "33101": {
+      "municipality": "北区",
+      "rent_per_sqm": 1376,
+      "rent_25sqm": 34400
+    },
+    "33102": {
+      "municipality": "中区",
+      "rent_per_sqm": 1007,
+      "rent_25sqm": 25175
+    },
+    "33103": {
+      "municipality": "東区",
+      "rent_per_sqm": 941,
+      "rent_25sqm": 23525
+    },
+    "33104": {
+      "municipality": "南区",
+      "rent_per_sqm": 1020,
+      "rent_25sqm": 25500
+    },
+    "33202": {
+      "municipality": "倉敷市",
+      "rent_per_sqm": 1028,
+      "rent_25sqm": 25700
+    },
+    "33203": {
+      "municipality": "津山市",
+      "rent_per_sqm": 893,
+      "rent_25sqm": 22325
+    },
+    "33204": {
+      "municipality": "玉野市",
+      "rent_per_sqm": 693,
+      "rent_25sqm": 17325
+    },
+    "33205": {
+      "municipality": "笠岡市",
+      "rent_per_sqm": 780,
+      "rent_25sqm": 19500
+    },
+    "33207": {
+      "municipality": "井原市",
+      "rent_per_sqm": 651,
+      "rent_25sqm": 16275
+    },
+    "33208": {
+      "municipality": "総社市",
+      "rent_per_sqm": 987,
+      "rent_25sqm": 24675
+    },
+    "33209": {
+      "municipality": "高梁市",
+      "rent_per_sqm": 710,
+      "rent_25sqm": 17750
+    },
+    "33210": {
+      "municipality": "新見市",
+      "rent_per_sqm": 810,
+      "rent_25sqm": 20250
+    },
+    "33211": {
+      "municipality": "備前市",
+      "rent_per_sqm": 637,
+      "rent_25sqm": 15925
+    },
+    "33212": {
+      "municipality": "瀬戸内市",
+      "rent_per_sqm": 844,
+      "rent_25sqm": 21100
+    },
+    "33213": {
+      "municipality": "赤磐市",
+      "rent_per_sqm": 587,
+      "rent_25sqm": 14675
+    },
+    "33214": {
+      "municipality": "真庭市",
+      "rent_per_sqm": 768,
+      "rent_25sqm": 19200
+    },
+    "33215": {
+      "municipality": "美作市",
+      "rent_per_sqm": 697,
+      "rent_25sqm": 17425
+    },
+    "33216": {
+      "municipality": "浅口市",
+      "rent_per_sqm": 781,
+      "rent_25sqm": 19525
+    },
+    "34100": {
+      "municipality": "広島市",
+      "rent_per_sqm": 1273,
+      "rent_25sqm": 31825
+    },
+    "34101": {
+      "municipality": "中区",
+      "rent_per_sqm": 1549,
+      "rent_25sqm": 38725
+    },
+    "34102": {
+      "municipality": "東区",
+      "rent_per_sqm": 1232,
+      "rent_25sqm": 30800
+    },
+    "34103": {
+      "municipality": "南区",
+      "rent_per_sqm": 1435,
+      "rent_25sqm": 35875
+    },
+    "34104": {
+      "municipality": "西区",
+      "rent_per_sqm": 1214,
+      "rent_25sqm": 30350
+    },
+    "34105": {
+      "municipality": "安佐南区",
+      "rent_per_sqm": 1230,
+      "rent_25sqm": 30750
+    },
+    "34106": {
+      "municipality": "安佐北区",
+      "rent_per_sqm": 856,
+      "rent_25sqm": 21400
+    },
+    "34107": {
+      "municipality": "安芸区",
+      "rent_per_sqm": 1092,
+      "rent_25sqm": 27300
+    },
+    "34108": {
+      "municipality": "佐伯区",
+      "rent_per_sqm": 1112,
+      "rent_25sqm": 27800
+    },
+    "34202": {
+      "municipality": "呉市",
+      "rent_per_sqm": 1012,
+      "rent_25sqm": 25300
+    },
+    "34203": {
+      "municipality": "竹原市",
+      "rent_per_sqm": 767,
+      "rent_25sqm": 19175
+    },
+    "34204": {
+      "municipality": "三原市",
+      "rent_per_sqm": 822,
+      "rent_25sqm": 20550
+    },
+    "34205": {
+      "municipality": "尾道市",
+      "rent_per_sqm": 875,
+      "rent_25sqm": 21875
+    },
+    "34207": {
+      "municipality": "福山市",
+      "rent_per_sqm": 1068,
+      "rent_25sqm": 26700
+    },
+    "34208": {
+      "municipality": "府中市",
+      "rent_per_sqm": 763,
+      "rent_25sqm": 19075
+    },
+    "34209": {
+      "municipality": "三次市",
+      "rent_per_sqm": 884,
+      "rent_25sqm": 22100
+    },
+    "34210": {
+      "municipality": "庄原市",
+      "rent_per_sqm": 868,
+      "rent_25sqm": 21700
+    },
+    "34211": {
+      "municipality": "大竹市",
+      "rent_per_sqm": 767,
+      "rent_25sqm": 19175
+    },
+    "34212": {
+      "municipality": "東広島市",
+      "rent_per_sqm": 1134,
+      "rent_25sqm": 28350
+    },
+    "34213": {
+      "municipality": "廿日市市",
+      "rent_per_sqm": 958,
+      "rent_25sqm": 23950
+    },
+    "34214": {
+      "municipality": "安芸高田市",
+      "rent_per_sqm": 586,
+      "rent_25sqm": 14650
+    },
+    "34215": {
+      "municipality": "江田島市",
+      "rent_per_sqm": 592,
+      "rent_25sqm": 14800
+    },
+    "34302": {
+      "municipality": "府中町",
+      "rent_per_sqm": 1353,
+      "rent_25sqm": 33825
+    },
+    "34304": {
+      "municipality": "海田町",
+      "rent_per_sqm": 1242,
+      "rent_25sqm": 31050
+    },
+    "34307": {
+      "municipality": "熊野町",
+      "rent_per_sqm": 734,
+      "rent_25sqm": 18350
+    },
+    "34369": {
+      "municipality": "北広島町",
+      "rent_per_sqm": 476,
+      "rent_25sqm": 11900
+    },
+    "34462": {
+      "municipality": "世羅町",
+      "rent_per_sqm": 653,
+      "rent_25sqm": 16325
+    },
+    "35201": {
+      "municipality": "下関市",
+      "rent_per_sqm": 840,
+      "rent_25sqm": 21000
+    },
+    "35202": {
+      "municipality": "宇部市",
+      "rent_per_sqm": 935,
+      "rent_25sqm": 23375
+    },
+    "35203": {
+      "municipality": "山口市",
+      "rent_per_sqm": 989,
+      "rent_25sqm": 24725
+    },
+    "35204": {
+      "municipality": "萩市",
+      "rent_per_sqm": 663,
+      "rent_25sqm": 16575
+    },
+    "35206": {
+      "municipality": "防府市",
+      "rent_per_sqm": 851,
+      "rent_25sqm": 21275
+    },
+    "35207": {
+      "municipality": "下松市",
+      "rent_per_sqm": 1003,
+      "rent_25sqm": 25075
+    },
+    "35208": {
+      "municipality": "岩国市",
+      "rent_per_sqm": 883,
+      "rent_25sqm": 22075
+    },
+    "35210": {
+      "municipality": "光市",
+      "rent_per_sqm": 753,
+      "rent_25sqm": 18825
+    },
+    "35211": {
+      "municipality": "長門市",
+      "rent_per_sqm": 693,
+      "rent_25sqm": 17325
+    },
+    "35212": {
+      "municipality": "柳井市",
+      "rent_per_sqm": 685,
+      "rent_25sqm": 17125
+    },
+    "35213": {
+      "municipality": "美祢市",
+      "rent_per_sqm": 510,
+      "rent_25sqm": 12750
+    },
+    "35215": {
+      "municipality": "周南市",
+      "rent_per_sqm": 845,
+      "rent_25sqm": 21125
+    },
+    "35216": {
+      "municipality": "山陽小野田市",
+      "rent_per_sqm": 848,
+      "rent_25sqm": 21200
+    },
+    "36201": {
+      "municipality": "徳島市",
+      "rent_per_sqm": 1022,
+      "rent_25sqm": 25550
+    },
+    "36202": {
+      "municipality": "鳴門市",
+      "rent_per_sqm": 769,
+      "rent_25sqm": 19225
+    },
+    "36203": {
+      "municipality": "小松島市",
+      "rent_per_sqm": 840,
+      "rent_25sqm": 21000
+    },
+    "36204": {
+      "municipality": "阿南市",
+      "rent_per_sqm": 802,
+      "rent_25sqm": 20050
+    },
+    "36205": {
+      "municipality": "吉野川市",
+      "rent_per_sqm": 742,
+      "rent_25sqm": 18550
+    },
+    "36206": {
+      "municipality": "阿波市",
+      "rent_per_sqm": 508,
+      "rent_25sqm": 12700
+    },
+    "36207": {
+      "municipality": "美馬市",
+      "rent_per_sqm": 542,
+      "rent_25sqm": 13550
+    },
+    "36208": {
+      "municipality": "三好市",
+      "rent_per_sqm": 504,
+      "rent_25sqm": 12600
+    },
+    "36341": {
+      "municipality": "石井町",
+      "rent_per_sqm": 836,
+      "rent_25sqm": 20900
+    },
+    "36402": {
+      "municipality": "北島町",
+      "rent_per_sqm": 1051,
+      "rent_25sqm": 26275
+    },
+    "36403": {
+      "municipality": "藍住町",
+      "rent_per_sqm": 953,
+      "rent_25sqm": 23825
+    },
+    "37201": {
+      "municipality": "高松市",
+      "rent_per_sqm": 1051,
+      "rent_25sqm": 26275
+    },
+    "37202": {
+      "municipality": "丸亀市",
+      "rent_per_sqm": 912,
+      "rent_25sqm": 22800
+    },
+    "37203": {
+      "municipality": "坂出市",
+      "rent_per_sqm": 764,
+      "rent_25sqm": 19100
+    },
+    "37204": {
+      "municipality": "善通寺市",
+      "rent_per_sqm": 873,
+      "rent_25sqm": 21825
+    },
+    "37205": {
+      "municipality": "観音寺市",
+      "rent_per_sqm": 879,
+      "rent_25sqm": 21975
+    },
+    "37206": {
+      "municipality": "さぬき市",
+      "rent_per_sqm": 735,
+      "rent_25sqm": 18375
+    },
+    "37207": {
+      "municipality": "東かがわ市",
+      "rent_per_sqm": 571,
+      "rent_25sqm": 14275
+    },
+    "37208": {
+      "municipality": "三豊市",
+      "rent_per_sqm": 698,
+      "rent_25sqm": 17450
+    },
+    "37341": {
+      "municipality": "三木町",
+      "rent_per_sqm": 795,
+      "rent_25sqm": 19875
+    },
+    "37386": {
+      "municipality": "宇多津町",
+      "rent_per_sqm": 1000,
+      "rent_25sqm": 25000
+    },
+    "37387": {
+      "municipality": "綾川町",
+      "rent_per_sqm": 631,
+      "rent_25sqm": 15775
+    },
+    "37404": {
+      "municipality": "多度津町",
+      "rent_per_sqm": 742,
+      "rent_25sqm": 18550
+    },
+    "37406": {
+      "municipality": "まんのう町",
+      "rent_per_sqm": 726,
+      "rent_25sqm": 18150
+    },
+    "38201": {
+      "municipality": "松山市",
+      "rent_per_sqm": 989,
+      "rent_25sqm": 24725
+    },
+    "38202": {
+      "municipality": "今治市",
+      "rent_per_sqm": 792,
+      "rent_25sqm": 19800
+    },
+    "38203": {
+      "municipality": "宇和島市",
+      "rent_per_sqm": 743,
+      "rent_25sqm": 18575
+    },
+    "38204": {
+      "municipality": "八幡浜市",
+      "rent_per_sqm": 539,
+      "rent_25sqm": 13475
+    },
+    "38205": {
+      "municipality": "新居浜市",
+      "rent_per_sqm": 855,
+      "rent_25sqm": 21375
+    },
+    "38206": {
+      "municipality": "西条市",
+      "rent_per_sqm": 780,
+      "rent_25sqm": 19500
+    },
+    "38207": {
+      "municipality": "大洲市",
+      "rent_per_sqm": 697,
+      "rent_25sqm": 17425
+    },
+    "38210": {
+      "municipality": "伊予市",
+      "rent_per_sqm": 683,
+      "rent_25sqm": 17075
+    },
+    "38213": {
+      "municipality": "四国中央市",
+      "rent_per_sqm": 774,
+      "rent_25sqm": 19350
+    },
+    "38214": {
+      "municipality": "西予市",
+      "rent_per_sqm": 654,
+      "rent_25sqm": 16350
+    },
+    "38215": {
+      "municipality": "東温市",
+      "rent_per_sqm": 839,
+      "rent_25sqm": 20975
+    },
+    "38401": {
+      "municipality": "松前町",
+      "rent_per_sqm": 680,
+      "rent_25sqm": 17000
+    },
+    "38402": {
+      "municipality": "砥部町",
+      "rent_per_sqm": 746,
+      "rent_25sqm": 18650
+    },
+    "38422": {
+      "municipality": "内子町",
+      "rent_per_sqm": 623,
+      "rent_25sqm": 15575
+    },
+    "38506": {
+      "municipality": "愛南町",
+      "rent_per_sqm": 469,
+      "rent_25sqm": 11725
+    },
+    "39201": {
+      "municipality": "高知市",
+      "rent_per_sqm": 976,
+      "rent_25sqm": 24400
+    },
+    "39202": {
+      "municipality": "室戸市",
+      "rent_per_sqm": 316,
+      "rent_25sqm": 7900
+    },
+    "39203": {
+      "municipality": "安芸市",
+      "rent_per_sqm": 761,
+      "rent_25sqm": 19025
+    },
+    "39204": {
+      "municipality": "南国市",
+      "rent_per_sqm": 912,
+      "rent_25sqm": 22800
+    },
+    "39205": {
+      "municipality": "土佐市",
+      "rent_per_sqm": 631,
+      "rent_25sqm": 15775
+    },
+    "39206": {
+      "municipality": "須崎市",
+      "rent_per_sqm": 608,
+      "rent_25sqm": 15200
+    },
+    "39208": {
+      "municipality": "宿毛市",
+      "rent_per_sqm": 667,
+      "rent_25sqm": 16675
+    },
+    "39209": {
+      "municipality": "土佐清水市",
+      "rent_per_sqm": 351,
+      "rent_25sqm": 8775
+    },
+    "39210": {
+      "municipality": "四万十市",
+      "rent_per_sqm": 745,
+      "rent_25sqm": 18625
+    },
+    "39211": {
+      "municipality": "香南市",
+      "rent_per_sqm": 769,
+      "rent_25sqm": 19225
+    },
+    "39212": {
+      "municipality": "香美市",
+      "rent_per_sqm": 804,
+      "rent_25sqm": 20100
+    },
+    "39386": {
+      "municipality": "いの町",
+      "rent_per_sqm": 836,
+      "rent_25sqm": 20900
+    },
+    "39412": {
+      "municipality": "四万十町",
+      "rent_per_sqm": 456,
+      "rent_25sqm": 11400
+    },
+    "40100": {
+      "municipality": "北九州市",
+      "rent_per_sqm": 1020,
+      "rent_25sqm": 25500
+    },
+    "40101": {
+      "municipality": "門司区",
+      "rent_per_sqm": 870,
+      "rent_25sqm": 21750
+    },
+    "40103": {
+      "municipality": "若松区",
+      "rent_per_sqm": 831,
+      "rent_25sqm": 20775
+    },
+    "40105": {
+      "municipality": "戸畑区",
+      "rent_per_sqm": 1017,
+      "rent_25sqm": 25425
+    },
+    "40106": {
+      "municipality": "小倉北区",
+      "rent_per_sqm": 1141,
+      "rent_25sqm": 28525
+    },
+    "40107": {
+      "municipality": "小倉南区",
+      "rent_per_sqm": 1000,
+      "rent_25sqm": 25000
+    },
+    "40108": {
+      "municipality": "八幡東区",
+      "rent_per_sqm": 963,
+      "rent_25sqm": 24075
+    },
+    "40109": {
+      "municipality": "八幡西区",
+      "rent_per_sqm": 996,
+      "rent_25sqm": 24900
+    },
+    "40130": {
+      "municipality": "福岡市",
+      "rent_per_sqm": 1368,
+      "rent_25sqm": 34200
+    },
+    "40131": {
+      "municipality": "東区",
+      "rent_per_sqm": 1191,
+      "rent_25sqm": 29775
+    },
+    "40132": {
+      "municipality": "博多区",
+      "rent_per_sqm": 1480,
+      "rent_25sqm": 37000
+    },
+    "40133": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1711,
+      "rent_25sqm": 42775
+    },
+    "40134": {
+      "municipality": "南区",
+      "rent_per_sqm": 1317,
+      "rent_25sqm": 32925
+    },
+    "40135": {
+      "municipality": "西区",
+      "rent_per_sqm": 1190,
+      "rent_25sqm": 29750
+    },
+    "40136": {
+      "municipality": "城南区",
+      "rent_per_sqm": 1247,
+      "rent_25sqm": 31175
+    },
+    "40137": {
+      "municipality": "早良区",
+      "rent_per_sqm": 1279,
+      "rent_25sqm": 31975
+    },
+    "40202": {
+      "municipality": "大牟田市",
+      "rent_per_sqm": 759,
+      "rent_25sqm": 18975
+    },
+    "40203": {
+      "municipality": "久留米市",
+      "rent_per_sqm": 1000,
+      "rent_25sqm": 25000
+    },
+    "40204": {
+      "municipality": "直方市",
+      "rent_per_sqm": 727,
+      "rent_25sqm": 18175
+    },
+    "40205": {
+      "municipality": "飯塚市",
+      "rent_per_sqm": 901,
+      "rent_25sqm": 22525
+    },
+    "40206": {
+      "municipality": "田川市",
+      "rent_per_sqm": 608,
+      "rent_25sqm": 15200
+    },
+    "40207": {
+      "municipality": "柳川市",
+      "rent_per_sqm": 860,
+      "rent_25sqm": 21500
+    },
+    "40210": {
+      "municipality": "八女市",
+      "rent_per_sqm": 792,
+      "rent_25sqm": 19800
+    },
+    "40211": {
+      "municipality": "筑後市",
+      "rent_per_sqm": 902,
+      "rent_25sqm": 22550
+    },
+    "40212": {
+      "municipality": "大川市",
+      "rent_per_sqm": 823,
+      "rent_25sqm": 20575
+    },
+    "40213": {
+      "municipality": "行橋市",
+      "rent_per_sqm": 909,
+      "rent_25sqm": 22725
+    },
+    "40214": {
+      "municipality": "豊前市",
+      "rent_per_sqm": 708,
+      "rent_25sqm": 17700
+    },
+    "40215": {
+      "municipality": "中間市",
+      "rent_per_sqm": 659,
+      "rent_25sqm": 16475
+    },
+    "40216": {
+      "municipality": "小郡市",
+      "rent_per_sqm": 897,
+      "rent_25sqm": 22425
+    },
+    "40217": {
+      "municipality": "筑紫野市",
+      "rent_per_sqm": 1070,
+      "rent_25sqm": 26750
+    },
+    "40218": {
+      "municipality": "春日市",
+      "rent_per_sqm": 1066,
+      "rent_25sqm": 26650
+    },
+    "40219": {
+      "municipality": "大野城市",
+      "rent_per_sqm": 1153,
+      "rent_25sqm": 28825
+    },
+    "40220": {
+      "municipality": "宗像市",
+      "rent_per_sqm": 1045,
+      "rent_25sqm": 26125
+    },
+    "40221": {
+      "municipality": "太宰府市",
+      "rent_per_sqm": 1095,
+      "rent_25sqm": 27375
+    },
+    "40223": {
+      "municipality": "古賀市",
+      "rent_per_sqm": 1031,
+      "rent_25sqm": 25775
+    },
+    "40224": {
+      "municipality": "福津市",
+      "rent_per_sqm": 1033,
+      "rent_25sqm": 25825
+    },
+    "40225": {
+      "municipality": "うきは市",
+      "rent_per_sqm": 697,
+      "rent_25sqm": 17425
+    },
+    "40226": {
+      "municipality": "宮若市",
+      "rent_per_sqm": 704,
+      "rent_25sqm": 17600
+    },
+    "40227": {
+      "municipality": "嘉麻市",
+      "rent_per_sqm": 381,
+      "rent_25sqm": 9525
+    },
+    "40228": {
+      "municipality": "朝倉市",
+      "rent_per_sqm": 758,
+      "rent_25sqm": 18950
+    },
+    "40229": {
+      "municipality": "みやま市",
+      "rent_per_sqm": 640,
+      "rent_25sqm": 16000
+    },
+    "40230": {
+      "municipality": "糸島市",
+      "rent_per_sqm": 926,
+      "rent_25sqm": 23150
+    },
+    "40231": {
+      "municipality": "那珂川市",
+      "rent_per_sqm": 1022,
+      "rent_25sqm": 25550
+    },
+    "40341": {
+      "municipality": "宇美町",
+      "rent_per_sqm": 1021,
+      "rent_25sqm": 25525
+    },
+    "40342": {
+      "municipality": "篠栗町",
+      "rent_per_sqm": 1003,
+      "rent_25sqm": 25075
+    },
+    "40343": {
+      "municipality": "志免町",
+      "rent_per_sqm": 1081,
+      "rent_25sqm": 27025
+    },
+    "40344": {
+      "municipality": "須恵町",
+      "rent_per_sqm": 993,
+      "rent_25sqm": 24825
+    },
+    "40345": {
+      "municipality": "新宮町",
+      "rent_per_sqm": 1174,
+      "rent_25sqm": 29350
+    },
+    "40349": {
+      "municipality": "粕屋町",
+      "rent_per_sqm": 1186,
+      "rent_25sqm": 29650
+    },
+    "40382": {
+      "municipality": "水巻町",
+      "rent_per_sqm": 735,
+      "rent_25sqm": 18375
+    },
+    "40383": {
+      "municipality": "岡垣町",
+      "rent_per_sqm": 726,
+      "rent_25sqm": 18150
+    },
+    "40384": {
+      "municipality": "遠賀町",
+      "rent_per_sqm": 835,
+      "rent_25sqm": 20875
+    },
+    "40402": {
+      "municipality": "鞍手町",
+      "rent_per_sqm": 417,
+      "rent_25sqm": 10425
+    },
+    "40447": {
+      "municipality": "筑前町",
+      "rent_per_sqm": 847,
+      "rent_25sqm": 21175
+    },
+    "40503": {
+      "municipality": "大刀洗町",
+      "rent_per_sqm": 808,
+      "rent_25sqm": 20200
+    },
+    "40544": {
+      "municipality": "広川町",
+      "rent_per_sqm": 953,
+      "rent_25sqm": 23825
+    },
+    "40605": {
+      "municipality": "川崎町",
+      "rent_per_sqm": 328,
+      "rent_25sqm": 8200
+    },
+    "40610": {
+      "municipality": "福智町",
+      "rent_per_sqm": 494,
+      "rent_25sqm": 12350
+    },
+    "40621": {
+      "municipality": "苅田町",
+      "rent_per_sqm": 943,
+      "rent_25sqm": 23575
+    },
+    "40625": {
+      "municipality": "みやこ町",
+      "rent_per_sqm": 343,
+      "rent_25sqm": 8575
+    },
+    "40647": {
+      "municipality": "築上町",
+      "rent_per_sqm": 673,
+      "rent_25sqm": 16825
+    },
+    "41201": {
+      "municipality": "佐賀市",
+      "rent_per_sqm": 973,
+      "rent_25sqm": 24325
+    },
+    "41202": {
+      "municipality": "唐津市",
+      "rent_per_sqm": 761,
+      "rent_25sqm": 19025
+    },
+    "41203": {
+      "municipality": "鳥栖市",
+      "rent_per_sqm": 1009,
+      "rent_25sqm": 25225
+    },
+    "41204": {
+      "municipality": "多久市",
+      "rent_per_sqm": 534,
+      "rent_25sqm": 13350
+    },
+    "41205": {
+      "municipality": "伊万里市",
+      "rent_per_sqm": 779,
+      "rent_25sqm": 19475
+    },
+    "41206": {
+      "municipality": "武雄市",
+      "rent_per_sqm": 850,
+      "rent_25sqm": 21250
+    },
+    "41207": {
+      "municipality": "鹿島市",
+      "rent_per_sqm": 732,
+      "rent_25sqm": 18300
+    },
+    "41208": {
+      "municipality": "小城市",
+      "rent_per_sqm": 831,
+      "rent_25sqm": 20775
+    },
+    "41209": {
+      "municipality": "嬉野市",
+      "rent_per_sqm": 746,
+      "rent_25sqm": 18650
+    },
+    "41210": {
+      "municipality": "神埼市",
+      "rent_per_sqm": 807,
+      "rent_25sqm": 20175
+    },
+    "41327": {
+      "municipality": "吉野ヶ里町",
+      "rent_per_sqm": 717,
+      "rent_25sqm": 17925
+    },
+    "41341": {
+      "municipality": "基山町",
+      "rent_per_sqm": 1043,
+      "rent_25sqm": 26075
+    },
+    "41346": {
+      "municipality": "みやき町",
+      "rent_per_sqm": 662,
+      "rent_25sqm": 16550
+    },
+    "41401": {
+      "municipality": "有田町",
+      "rent_per_sqm": 736,
+      "rent_25sqm": 18400
+    },
+    "41425": {
+      "municipality": "白石町",
+      "rent_per_sqm": 838,
+      "rent_25sqm": 20950
+    },
+    "42201": {
+      "municipality": "長崎市",
+      "rent_per_sqm": 1037,
+      "rent_25sqm": 25925
+    },
+    "42202": {
+      "municipality": "佐世保市",
+      "rent_per_sqm": 894,
+      "rent_25sqm": 22350
+    },
+    "42203": {
+      "municipality": "島原市",
+      "rent_per_sqm": 705,
+      "rent_25sqm": 17625
+    },
+    "42204": {
+      "municipality": "諫早市",
+      "rent_per_sqm": 922,
+      "rent_25sqm": 23050
+    },
+    "42205": {
+      "municipality": "大村市",
+      "rent_per_sqm": 905,
+      "rent_25sqm": 22625
+    },
+    "42207": {
+      "municipality": "平戸市",
+      "rent_per_sqm": 548,
+      "rent_25sqm": 13700
+    },
+    "42208": {
+      "municipality": "松浦市",
+      "rent_per_sqm": 511,
+      "rent_25sqm": 12775
+    },
+    "42209": {
+      "municipality": "対馬市",
+      "rent_per_sqm": 557,
+      "rent_25sqm": 13925
+    },
+    "42210": {
+      "municipality": "壱岐市",
+      "rent_per_sqm": 369,
+      "rent_25sqm": 9225
+    },
+    "42211": {
+      "municipality": "五島市",
+      "rent_per_sqm": 618,
+      "rent_25sqm": 15450
+    },
+    "42212": {
+      "municipality": "西海市",
+      "rent_per_sqm": 438,
+      "rent_25sqm": 10950
+    },
+    "42213": {
+      "municipality": "雲仙市",
+      "rent_per_sqm": 635,
+      "rent_25sqm": 15875
+    },
+    "42214": {
+      "municipality": "南島原市",
+      "rent_per_sqm": 463,
+      "rent_25sqm": 11575
+    },
+    "42307": {
+      "municipality": "長与町",
+      "rent_per_sqm": 943,
+      "rent_25sqm": 23575
+    },
+    "42308": {
+      "municipality": "時津町",
+      "rent_per_sqm": 1065,
+      "rent_25sqm": 26625
+    },
+    "42411": {
+      "municipality": "新上五島町",
+      "rent_per_sqm": 321,
+      "rent_25sqm": 8025
+    },
+    "43100": {
+      "municipality": "熊本市",
+      "rent_per_sqm": 1052,
+      "rent_25sqm": 26300
+    },
+    "43101": {
+      "municipality": "中央区",
+      "rent_per_sqm": 1216,
+      "rent_25sqm": 30400
+    },
+    "43102": {
+      "municipality": "東区",
+      "rent_per_sqm": 972,
+      "rent_25sqm": 24300
+    },
+    "43103": {
+      "municipality": "西区",
+      "rent_per_sqm": 1034,
+      "rent_25sqm": 25850
+    },
+    "43104": {
+      "municipality": "南区",
+      "rent_per_sqm": 973,
+      "rent_25sqm": 24325
+    },
+    "43105": {
+      "municipality": "北区",
+      "rent_per_sqm": 897,
+      "rent_25sqm": 22425
+    },
+    "43202": {
+      "municipality": "八代市",
+      "rent_per_sqm": 815,
+      "rent_25sqm": 20375
+    },
+    "43203": {
+      "municipality": "人吉市",
+      "rent_per_sqm": 727,
+      "rent_25sqm": 18175
+    },
+    "43204": {
+      "municipality": "荒尾市",
+      "rent_per_sqm": 715,
+      "rent_25sqm": 17875
+    },
+    "43205": {
+      "municipality": "水俣市",
+      "rent_per_sqm": 564,
+      "rent_25sqm": 14100
+    },
+    "43206": {
+      "municipality": "玉名市",
+      "rent_per_sqm": 700,
+      "rent_25sqm": 17500
+    },
+    "43208": {
+      "municipality": "山鹿市",
+      "rent_per_sqm": 609,
+      "rent_25sqm": 15225
+    },
+    "43210": {
+      "municipality": "菊池市",
+      "rent_per_sqm": 760,
+      "rent_25sqm": 19000
+    },
+    "43211": {
+      "municipality": "宇土市",
+      "rent_per_sqm": 786,
+      "rent_25sqm": 19650
+    },
+    "43212": {
+      "municipality": "上天草市",
+      "rent_per_sqm": 594,
+      "rent_25sqm": 14850
+    },
+    "43213": {
+      "municipality": "宇城市",
+      "rent_per_sqm": 742,
+      "rent_25sqm": 18550
+    },
+    "43214": {
+      "municipality": "阿蘇市",
+      "rent_per_sqm": 627,
+      "rent_25sqm": 15675
+    },
+    "43215": {
+      "municipality": "天草市",
+      "rent_per_sqm": 649,
+      "rent_25sqm": 16225
+    },
+    "43216": {
+      "municipality": "合志市",
+      "rent_per_sqm": 1013,
+      "rent_25sqm": 25325
+    },
+    "43368": {
+      "municipality": "長洲町",
+      "rent_per_sqm": 647,
+      "rent_25sqm": 16175
+    },
+    "43403": {
+      "municipality": "大津町",
+      "rent_per_sqm": 934,
+      "rent_25sqm": 23350
+    },
+    "43404": {
+      "municipality": "菊陽町",
+      "rent_per_sqm": 1017,
+      "rent_25sqm": 25425
+    },
+    "43441": {
+      "municipality": "御船町",
+      "rent_per_sqm": 812,
+      "rent_25sqm": 20300
+    },
+    "43443": {
+      "municipality": "益城町",
+      "rent_per_sqm": 755,
+      "rent_25sqm": 18875
+    },
+    "43482": {
+      "municipality": "芦北町",
+      "rent_per_sqm": 473,
+      "rent_25sqm": 11825
+    },
+    "44201": {
+      "municipality": "大分市",
+      "rent_per_sqm": 1036,
+      "rent_25sqm": 25900
+    },
+    "44202": {
+      "municipality": "別府市",
+      "rent_per_sqm": 891,
+      "rent_25sqm": 22275
+    },
+    "44203": {
+      "municipality": "中津市",
+      "rent_per_sqm": 901,
+      "rent_25sqm": 22525
+    },
+    "44204": {
+      "municipality": "日田市",
+      "rent_per_sqm": 762,
+      "rent_25sqm": 19050
+    },
+    "44205": {
+      "municipality": "佐伯市",
+      "rent_per_sqm": 659,
+      "rent_25sqm": 16475
+    },
+    "44206": {
+      "municipality": "臼杵市",
+      "rent_per_sqm": 733,
+      "rent_25sqm": 18325
+    },
+    "44207": {
+      "municipality": "津久見市",
+      "rent_per_sqm": 522,
+      "rent_25sqm": 13050
+    },
+    "44208": {
+      "municipality": "竹田市",
+      "rent_per_sqm": 545,
+      "rent_25sqm": 13625
+    },
+    "44209": {
+      "municipality": "豊後高田市",
+      "rent_per_sqm": 661,
+      "rent_25sqm": 16525
+    },
+    "44210": {
+      "municipality": "杵築市",
+      "rent_per_sqm": 765,
+      "rent_25sqm": 19125
+    },
+    "44211": {
+      "municipality": "宇佐市",
+      "rent_per_sqm": 741,
+      "rent_25sqm": 18525
+    },
+    "44212": {
+      "municipality": "豊後大野市",
+      "rent_per_sqm": 692,
+      "rent_25sqm": 17300
+    },
+    "44213": {
+      "municipality": "由布市",
+      "rent_per_sqm": 886,
+      "rent_25sqm": 22150
+    },
+    "44214": {
+      "municipality": "国東市",
+      "rent_per_sqm": 566,
+      "rent_25sqm": 14150
+    },
+    "44341": {
+      "municipality": "日出町",
+      "rent_per_sqm": 837,
+      "rent_25sqm": 20925
+    },
+    "45201": {
+      "municipality": "宮崎市",
+      "rent_per_sqm": 1006,
+      "rent_25sqm": 25150
+    },
+    "45202": {
+      "municipality": "都城市",
+      "rent_per_sqm": 772,
+      "rent_25sqm": 19300
+    },
+    "45203": {
+      "municipality": "延岡市",
+      "rent_per_sqm": 788,
+      "rent_25sqm": 19700
+    },
+    "45204": {
+      "municipality": "日南市",
+      "rent_per_sqm": 603,
+      "rent_25sqm": 15075
+    },
+    "45205": {
+      "municipality": "小林市",
+      "rent_per_sqm": 647,
+      "rent_25sqm": 16175
+    },
+    "45206": {
+      "municipality": "日向市",
+      "rent_per_sqm": 729,
+      "rent_25sqm": 18225
+    },
+    "45207": {
+      "municipality": "串間市",
+      "rent_per_sqm": 551,
+      "rent_25sqm": 13775
+    },
+    "45208": {
+      "municipality": "西都市",
+      "rent_per_sqm": 583,
+      "rent_25sqm": 14575
+    },
+    "45209": {
+      "municipality": "えびの市",
+      "rent_per_sqm": 486,
+      "rent_25sqm": 12150
+    },
+    "45341": {
+      "municipality": "三股町",
+      "rent_per_sqm": 601,
+      "rent_25sqm": 15025
+    },
+    "45382": {
+      "municipality": "国富町",
+      "rent_per_sqm": 483,
+      "rent_25sqm": 12075
+    },
+    "45401": {
+      "municipality": "高鍋町",
+      "rent_per_sqm": 707,
+      "rent_25sqm": 17675
+    },
+    "45402": {
+      "municipality": "新富町",
+      "rent_per_sqm": 558,
+      "rent_25sqm": 13950
+    },
+    "45405": {
+      "municipality": "川南町",
+      "rent_per_sqm": 644,
+      "rent_25sqm": 16100
+    },
+    "45421": {
+      "municipality": "門川町",
+      "rent_per_sqm": 659,
+      "rent_25sqm": 16475
+    },
+    "46201": {
+      "municipality": "鹿児島市",
+      "rent_per_sqm": 1040,
+      "rent_25sqm": 26000
+    },
+    "46203": {
+      "municipality": "鹿屋市",
+      "rent_per_sqm": 677,
+      "rent_25sqm": 16925
+    },
+    "46204": {
+      "municipality": "枕崎市",
+      "rent_per_sqm": 499,
+      "rent_25sqm": 12475
+    },
+    "46206": {
+      "municipality": "阿久根市",
+      "rent_per_sqm": 565,
+      "rent_25sqm": 14125
+    },
+    "46208": {
+      "municipality": "出水市",
+      "rent_per_sqm": 628,
+      "rent_25sqm": 15700
+    },
+    "46210": {
+      "municipality": "指宿市",
+      "rent_per_sqm": 573,
+      "rent_25sqm": 14325
+    },
+    "46213": {
+      "municipality": "西之表市",
+      "rent_per_sqm": 681,
+      "rent_25sqm": 17025
+    },
+    "46214": {
+      "municipality": "垂水市",
+      "rent_per_sqm": 560,
+      "rent_25sqm": 14000
+    },
+    "46215": {
+      "municipality": "薩摩川内市",
+      "rent_per_sqm": 682,
+      "rent_25sqm": 17050
+    },
+    "46216": {
+      "municipality": "日置市",
+      "rent_per_sqm": 659,
+      "rent_25sqm": 16475
+    },
+    "46217": {
+      "municipality": "曽於市",
+      "rent_per_sqm": 499,
+      "rent_25sqm": 12475
+    },
+    "46218": {
+      "municipality": "霧島市",
+      "rent_per_sqm": 710,
+      "rent_25sqm": 17750
+    },
+    "46219": {
+      "municipality": "いちき串木野市",
+      "rent_per_sqm": 623,
+      "rent_25sqm": 15575
+    },
+    "46220": {
+      "municipality": "南さつま市",
+      "rent_per_sqm": 657,
+      "rent_25sqm": 16425
+    },
+    "46221": {
+      "municipality": "志布志市",
+      "rent_per_sqm": 651,
+      "rent_25sqm": 16275
+    },
+    "46222": {
+      "municipality": "奄美市",
+      "rent_per_sqm": 664,
+      "rent_25sqm": 16600
+    },
+    "46223": {
+      "municipality": "南九州市",
+      "rent_per_sqm": 504,
+      "rent_25sqm": 12600
+    },
+    "46224": {
+      "municipality": "伊佐市",
+      "rent_per_sqm": 527,
+      "rent_25sqm": 13175
+    },
+    "46225": {
+      "municipality": "姶良市",
+      "rent_per_sqm": 824,
+      "rent_25sqm": 20600
+    },
+    "46392": {
+      "municipality": "さつま町",
+      "rent_per_sqm": 433,
+      "rent_25sqm": 10825
+    },
+    "47201": {
+      "municipality": "那覇市",
+      "rent_per_sqm": 1241,
+      "rent_25sqm": 31025
+    },
+    "47205": {
+      "municipality": "宜野湾市",
+      "rent_per_sqm": 1139,
+      "rent_25sqm": 28475
+    },
+    "47207": {
+      "municipality": "石垣市",
+      "rent_per_sqm": 1078,
+      "rent_25sqm": 26950
+    },
+    "47208": {
+      "municipality": "浦添市",
+      "rent_per_sqm": 1118,
+      "rent_25sqm": 27950
+    },
+    "47209": {
+      "municipality": "名護市",
+      "rent_per_sqm": 949,
+      "rent_25sqm": 23725
+    },
+    "47210": {
+      "municipality": "糸満市",
+      "rent_per_sqm": 942,
+      "rent_25sqm": 23550
+    },
+    "47211": {
+      "municipality": "沖縄市",
+      "rent_per_sqm": 962,
+      "rent_25sqm": 24050
+    },
+    "47212": {
+      "municipality": "豊見城市",
+      "rent_per_sqm": 1020,
+      "rent_25sqm": 25500
+    },
+    "47213": {
+      "municipality": "うるま市",
+      "rent_per_sqm": 948,
+      "rent_25sqm": 23700
+    },
+    "47214": {
+      "municipality": "宮古島市",
+      "rent_per_sqm": 948,
+      "rent_25sqm": 23700
+    },
+    "47215": {
+      "municipality": "南城市",
+      "rent_per_sqm": 942,
+      "rent_25sqm": 23550
+    },
+    "47324": {
+      "municipality": "読谷村",
+      "rent_per_sqm": 946,
+      "rent_25sqm": 23650
+    },
+    "47326": {
+      "municipality": "北谷町",
+      "rent_per_sqm": 1236,
+      "rent_25sqm": 30900
+    },
+    "47327": {
+      "municipality": "北中城村",
+      "rent_per_sqm": 1090,
+      "rent_25sqm": 27250
+    },
+    "47328": {
+      "municipality": "中城村",
+      "rent_per_sqm": 1220,
+      "rent_25sqm": 30500
+    },
+    "47329": {
+      "municipality": "西原町",
+      "rent_per_sqm": 1030,
+      "rent_25sqm": 25750
+    },
+    "47348": {
+      "municipality": "与那原町",
+      "rent_per_sqm": 1060,
+      "rent_25sqm": 26500
+    },
+    "47350": {
+      "municipality": "南風原町",
+      "rent_per_sqm": 1130,
+      "rent_25sqm": 28250
+    },
+    "47362": {
+      "municipality": "八重瀬町",
+      "rent_per_sqm": 1087,
+      "rent_25sqm": 27175
+    }
+  }
+}
