@@ -14,7 +14,9 @@ MUNI_URL = "https://maps.gsi.go.jp/js/muni.js"
 ESTAT_URL = "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"
 
 # 2023年住宅・土地統計調査：延べ面積1㎡当たり家賃
-RENT_STATS_ID = "0004021521"
+# 2023年住宅・土地統計調査 122-4-2
+# 市区町村別・延べ面積1㎡当たり家賃
+RENT_STATS_ID = "0004021492"
 RENT_SOURCE_YEAR = 2023
 RENT_REFERENCE_AREA = 25
 
