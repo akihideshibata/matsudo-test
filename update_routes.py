@@ -1,4 +1,4 @@
-import gzip, json, math, os, re, time, zipfile
+import gzip, json, math, os, re, shutil, time, zipfile
 from datetime import date, datetime, timedelta, timezone
 from io import BytesIO
 from pathlib import Path
@@ -7,31 +7,36 @@ import pandas as pd
 import requests
 
 # ============================================================
-# データソース
+# 1. GTFSデータソース
 # ============================================================
 BASIC_SOURCES = {
     "toei": {
-        "name": "東京都交通局", "label": "都営",
+        "name": "東京都交通局",
+        "label": "都営",
         "url": "https://api.odpt.org/api/v4/files/Toei/data/Toei-Train-GTFS.zip",
         "token_env": "ODPT_API_KEY",
     },
     "tokyometro": {
-        "name": "東京メトロ", "label": "東京メトロ",
+        "name": "東京メトロ",
+        "label": "東京メトロ",
         "url": "https://api.odpt.org/api/v4/files/TokyoMetro/data/TokyoMetro-Train-GTFS.zip",
         "token_env": "ODPT_API_KEY",
     },
     "twr": {
-        "name": "東京臨海高速鉄道", "label": "りんかい線",
+        "name": "東京臨海高速鉄道",
+        "label": "りんかい線",
         "url": "https://api.odpt.org/api/v4/files/TWR/data/TWR-Train-GTFS.zip",
         "token_env": "ODPT_API_KEY",
     },
     "mir": {
-        "name": "首都圏新都市鉄道", "label": "つくばエクスプレス",
+        "name": "首都圏新都市鉄道",
+        "label": "つくばエクスプレス",
         "url": "https://api.odpt.org/api/v4/files/MIR/data/MIR-Train-GTFS.zip",
         "token_env": "ODPT_API_KEY",
     },
     "tamamonorail": {
-        "name": "多摩都市モノレール", "label": "多摩モノレール",
+        "name": "多摩都市モノレール",
+        "label": "多摩モノレール",
         "url": "https://api.odpt.org/api/v4/files/TamaMonorail/data/TamaMonorail-Train-GTFS.zip",
         "token_env": "ODPT_API_KEY",
     },
@@ -39,7 +44,8 @@ BASIC_SOURCES = {
 
 CHALLENGE_SOURCES = {
     "jreast": {
-        "name": "JR東日本", "label": "JR東日本",
+        "name": "JR東日本",
+        "label": "JR東日本",
         "url": (
             "https://api-challenge.odpt.org/api/v4/files/"
             "JR-East/data/JR-East-Train-GTFS.zip"
@@ -49,7 +55,7 @@ CHALLENGE_SOURCES = {
 }
 
 # ============================================================
-# 保存先・外部API
+# 2. 保存先・外部API
 # ============================================================
 DATA = Path("data")
 BASIC_DIR = DATA / "gtfs/basic"
@@ -80,14 +86,14 @@ MERGE_DISTANCE_M = 500
 
 
 # ============================================================
-# 共通処理
+# 3. 共通処理
 # ============================================================
 def now():
     return datetime.now(JST)
 
 
 def env_bool(name):
-    return os.getenv(name, "false").lower() == "true"
+    return os.getenv(name, "false").strip().lower() == "true"
 
 
 def load_json(path, default=None):
@@ -99,13 +105,15 @@ def load_json(path, default=None):
 def save_json(path, value, compact=False):
     path.parent.mkdir(parents=True, exist_ok=True)
     text = json.dumps(
-        value, ensure_ascii=False,
+        value,
+        ensure_ascii=False,
         indent=None if compact else 2,
         separators=(",", ":") if compact else None,
     )
+
     if path.suffix == ".gz":
-        with gzip.open(path, "wt", encoding="utf-8", compresslevel=9) as file:
-            file.write(text)
+        with gzip.open(path, "wt", encoding="utf-8", compresslevel=9) as f:
+            f.write(text)
     else:
         path.write_text(text, encoding="utf-8")
 
@@ -119,17 +127,25 @@ def as_list(value):
 
 
 def normalize(text):
-    return str(text).replace("平方メートル", "㎡").replace(
-        "ｍ2", "㎡").replace("m2", "㎡").replace(
-        "１", "1").replace("０", "0").replace(
-        "　", "").replace(" ", "")
+    return (
+        str(text)
+        .replace("平方メートル", "㎡")
+        .replace("ｍ2", "㎡")
+        .replace("m2", "㎡")
+        .replace("１", "1")
+        .replace("０", "0")
+        .replace("　", "")
+        .replace(" ", "")
+    )
 
 
 def station_base(name):
+    # 「東京駅」と「東京」を同一視
     return re.sub(r"駅$", "", str(name).strip())
 
 
 def representative_days():
+    # 明日以降の平日・土曜・日曜を1日ずつ選ぶ
     start = date.today() + timedelta(days=1)
 
     def find(predicate):
@@ -146,7 +162,8 @@ def representative_days():
 
 
 def distance_m(lat1, lon1, lat2, lon2):
-    radius = 6371000
+    # 2地点間の直線距離
+    radius = 6_371_000
     lat1, lat2 = math.radians(float(lat1)), math.radians(float(lat2))
     dlat = lat2 - lat1
     dlon = math.radians(float(lon2) - float(lon1))
@@ -158,14 +175,14 @@ def distance_m(lat1, lon1, lat2, lon2):
 
 
 def safe_error(error):
-    # アクセストークンをActionsログへ出さない
+    # アクセストークンをログへ出さず、エラー種別だけ表示
     response = getattr(error, "response", None)
     status = getattr(response, "status_code", "")
-    return f"{type(error).__name__}{f' HTTP {status}' if status else ''}"
+    return f"{type(error).__name__}{f'（HTTP {status}）' if status else ''}"
 
 
 # ============================================================
-# GTFS取得
+# 4. GTFS取得
 # ============================================================
 def download_sources(sources, directory, state_path):
     directory.mkdir(parents=True, exist_ok=True)
@@ -176,18 +193,21 @@ def download_sources(sources, directory, state_path):
         token = os.getenv(source["token_env"], "").strip()
         if not token:
             raise RuntimeError(
-                f'GitHub Secretの{source["token_env"]}が設定されていません'
+                f'GitHub Secret「{source["token_env"]}」が設定されていません'
             )
 
         cache = directory / f"{key}.zip"
         state = states.get(key, {})
         checked = (
             datetime.fromisoformat(state["checked_at"])
-            if state.get("checked_at") else None
+            if state.get("checked_at")
+            else None
         )
 
         if (
-            cache.exists() and checked and not force
+            cache.exists()
+            and checked
+            and not force
             and now() - checked < timedelta(days=CHECK_DAYS)
         ):
             print(f'{source["name"]}：保存済みGTFSを使用')
@@ -245,22 +265,26 @@ def download_sources(sources, directory, state_path):
 
 
 def active_services(z, day):
+    # 指定日に有効なservice_idを取得
     ymd = day.strftime("%Y%m%d")
     weekday = day.strftime("%A").lower()
     service_ids = set()
 
     if "calendar.txt" in z.namelist():
         calendar = read(z, "calendar.txt")
-        service_ids = set(calendar.loc[
-            (calendar["start_date"] <= ymd)
-            & (calendar["end_date"] >= ymd)
-            & (calendar[weekday] == "1"),
-            "service_id",
-        ])
+        service_ids = set(
+            calendar.loc[
+                (calendar["start_date"] <= ymd)
+                & (calendar["end_date"] >= ymd)
+                & (calendar[weekday] == "1"),
+                "service_id",
+            ]
+        )
 
     if "calendar_dates.txt" in z.namelist():
         special = read(z, "calendar_dates.txt")
         special = special[special["date"] == ymd]
+
         service_ids |= set(
             special.loc[special["exception_type"] == "1", "service_id"]
         )
@@ -272,10 +296,10 @@ def active_services(z, day):
 
 
 # ============================================================
-# GTFS読込
+# 5. GTFS読込
 # ============================================================
 def add_prefix(frame, columns, prefix):
-    # 事業者間のID衝突を防ぐ
+    # 事業者間で同じIDがあっても衝突しないようにする
     for column in columns:
         if column in frame.columns:
             frame[column] = frame[column].apply(
@@ -288,14 +312,17 @@ def load_feeds(sources, directory):
 
     for key, source in sources.items():
         cache = directory / f"{key}.zip"
+
         if not cache.exists():
             print(f'::warning::{source["name"]}のGTFSがありません')
             continue
 
         with zipfile.ZipFile(cache) as z:
             required = {
-                "stops.txt", "stop_times.txt",
-                "trips.txt", "routes.txt",
+                "stops.txt",
+                "stop_times.txt",
+                "trips.txt",
+                "routes.txt",
             }
             missing = required - set(z.namelist())
 
@@ -332,7 +359,6 @@ def load_feeds(sources, directory):
             & (stops["stop_lon"] != "")
         ][["stop_id", "stop_name", "stop_lat", "stop_lon"]].copy()
 
-        valid["source_key"] = key
         valid["operator"] = source["label"]
         stop_frames.append(valid)
 
@@ -343,10 +369,10 @@ def load_feeds(sources, directory):
 
 
 # ============================================================
-# 駅統合
+# 6. 駅統合
 # ============================================================
 def build_station_map(stops):
-    # 同名かつ500m以内なら同一駅として扱う
+    # 同名かつ500m以内の停留所を同一駅として扱う
     groups, mapping = {}, {}
 
     for row in stops.itertuples(index=False):
@@ -354,10 +380,15 @@ def build_station_map(stops):
         matched = None
 
         for group in groups.get(base, []):
-            if distance_m(
-                row.stop_lat, row.stop_lon,
-                group["lat"], group["lon"],
-            ) <= MERGE_DISTANCE_M:
+            if (
+                distance_m(
+                    row.stop_lat,
+                    row.stop_lon,
+                    group["lat"],
+                    group["lon"],
+                )
+                <= MERGE_DISTANCE_M
+            ):
                 matched = group
                 break
 
@@ -376,9 +407,11 @@ def build_station_map(stops):
     for base, clusters in groups.items():
         for cluster in clusters:
             name = (
-                base if len(clusters) == 1
+                base
+                if len(clusters) == 1
                 else f'{base}（{"・".join(sorted(cluster["operators"]))}）'
             )
+
             for stop_id in cluster["stop_ids"]:
                 mapping[stop_id] = name
 
@@ -386,7 +419,7 @@ def build_station_map(stops):
 
 
 # ============================================================
-# 所在地
+# 7. 所在地
 # ============================================================
 def get_municipalities(session):
     response = session.get(MUNI_URL, timeout=30)
@@ -410,7 +443,8 @@ def update_locations(stops):
     stations = stops.drop_duplicates("stop_id")
 
     rows = [
-        row for row in stations.itertuples(index=False)
+        row
+        for row in stations.itertuples(index=False)
         if row.stop_id not in locations
         or locations[row.stop_id].get("lat") != row.stop_lat
         or locations[row.stop_id].get("lon") != row.stop_lon
@@ -430,7 +464,10 @@ def update_locations(stops):
         try:
             response = session.get(
                 REVERSE_URL,
-                params={"lat": row.stop_lat, "lon": row.stop_lon},
+                params={
+                    "lat": row.stop_lat,
+                    "lon": row.stop_lon,
+                },
                 timeout=20,
             )
             response.raise_for_status()
@@ -451,16 +488,18 @@ def update_locations(stops):
             }
 
         except Exception as error:
-            unresolved.append({
-                "stop_id": row.stop_id,
-                "name": row.stop_name,
-                "lat": row.stop_lat,
-                "lon": row.stop_lon,
-                "error": str(error),
-            })
+            unresolved.append(
+                {
+                    "stop_id": row.stop_id,
+                    "name": row.stop_name,
+                    "lat": row.stop_lat,
+                    "lon": row.stop_lon,
+                    "error": str(error),
+                }
+            )
             print(f"::warning::住所未判定：{row.stop_name}")
 
-        time.sleep(.15)
+        time.sleep(0.15)
 
     save_json(LOCATIONS, locations)
     save_json(UNRESOLVED, unresolved)
@@ -468,7 +507,7 @@ def update_locations(stops):
 
 
 # ============================================================
-# e-Stat家賃データ
+# 8. e-Stat家賃データ
 # ============================================================
 def estat_classes(data):
     result = {}
@@ -546,7 +585,7 @@ def fetch_rent_stats():
     app_id = os.getenv("ESTAT_APP_ID", "").strip()
 
     if not app_id:
-        raise RuntimeError("GitHub SecretのESTAT_APP_IDが設定されていません")
+        raise RuntimeError("GitHub Secret「ESTAT_APP_ID」が設定されていません")
 
     print("e-Statから全国の家賃データを取得")
 
@@ -617,11 +656,14 @@ def fetch_rent_stats():
     }
 
     save_json(MUNICIPALITY_STATS, output)
-    save_json(MUNICIPALITY_STATE, {
-        "rent_source_year": RENT_SOURCE_YEAR,
-        "stats_data_id": RENT_STATS_ID,
-        "checked_at": now().isoformat(timespec="minutes"),
-    })
+    save_json(
+        MUNICIPALITY_STATE,
+        {
+            "rent_source_year": RENT_SOURCE_YEAR,
+            "stats_data_id": RENT_STATS_ID,
+            "checked_at": now().isoformat(timespec="minutes"),
+        },
+    )
 
     print(f"家賃データ：{len(municipalities)}自治体")
     return output
@@ -642,10 +684,9 @@ def update_municipality_stats():
 
 
 # ============================================================
-# 時刻表生成
+# 9. 時刻表生成
 # ============================================================
 def route_name(row, fallback):
-    # 路線名はlong_nameを優先
     return (
         str(row.route_long_name)
         or str(row.route_short_name)
@@ -681,43 +722,54 @@ def build_timetable(key, feed, station_map, day):
     ].copy()
 
     stop_times["stop_sequence"] = pd.to_numeric(
-        stop_times["stop_sequence"], errors="coerce"
+        stop_times["stop_sequence"],
+        errors="coerce",
     )
     stop_times = stop_times.dropna(subset=["stop_sequence"])
 
     day_trips = trips[
         trips["service_id"].isin(services)
     ].merge(
-        routes[[
-            "route_id",
-            "route_short_name",
-            "route_long_name",
-        ]],
+        routes[
+            [
+                "route_id",
+                "route_short_name",
+                "route_long_name",
+            ]
+        ],
         on="route_id",
         how="left",
     )
 
-    joined = stop_times.merge(
-        day_trips[[
-            "trip_id",
-            "trip_headsign",
-            "route_short_name",
-            "route_long_name",
-        ]],
-        on="trip_id",
-    ).merge(
-        stops[["stop_id", "stop_name"]],
-        on="stop_id",
-    ).sort_values(["trip_id", "stop_sequence"])
-
-    joined["stop_name"] = (
-        joined["stop_id"].map(station_map).fillna(joined["stop_name"])
+    joined = (
+        stop_times.merge(
+            day_trips[
+                [
+                    "trip_id",
+                    "trip_headsign",
+                    "route_short_name",
+                    "route_long_name",
+                ]
+            ],
+            on="trip_id",
+        )
+        .merge(
+            stops[["stop_id", "stop_name"]],
+            on="stop_id",
+        )
+        .sort_values(["trip_id", "stop_sequence"])
     )
 
+    joined["stop_name"] = (
+        joined["stop_id"]
+        .map(station_map)
+        .fillna(joined["stop_name"])
+    )
     joined["route"] = joined.apply(
         lambda row: route_name(row, feed["source"]["label"]),
         axis=1,
     )
+    joined["operator"] = feed["source"]["name"]
 
     output = []
 
@@ -726,19 +778,21 @@ def build_timetable(key, feed, station_map, day):
             continue
 
         first = group.iloc[0]
-        output.append({
-            "operator": feed["source"]["name"],
-            "route": first["route"],
-            "destination": first["trip_headsign"] or "行先情報なし",
-            "stops": [
-                [
-                    row.stop_name,
-                    row.arrival_time[:5],
-                    row.departure_time[:5],
-                ]
-                for row in group.itertuples()
-            ],
-        })
+        output.append(
+            {
+                "operator": feed["source"]["name"],
+                "route": first["route"],
+                "destination": first["trip_headsign"] or "行先情報なし",
+                "stops": [
+                    [
+                        row.stop_name,
+                        row.arrival_time[:5],
+                        row.departure_time[:5],
+                    ]
+                    for row in group.itertuples()
+                ],
+            }
+        )
 
     return joined, output
 
@@ -755,7 +809,10 @@ def build_output(sources, directory, state, stats, days, output_path):
     for key, feed in feeds.items():
         for day_type, day in days.items():
             frame, trips = build_timetable(
-                key, feed, station_map, day
+                key,
+                feed,
+                station_map,
+                day,
             )
 
             if not frame.empty:
@@ -779,19 +836,23 @@ def build_output(sources, directory, state, stats, days, output_path):
 
     combined = pd.concat(all_frames, ignore_index=True)
 
-    station_routes = combined.groupby("stop_name")["route"].agg(
-        lambda values: sorted(set(values))
-    ).to_dict()
-
-    station_operators = combined.groupby("stop_name")["operator"].agg(
-        lambda values: sorted(set(values))
-    ).to_dict() if "operator" in combined.columns else {}
+    station_routes = (
+        combined.groupby("stop_name")["route"]
+        .agg(lambda values: sorted(set(values)))
+        .to_dict()
+    )
+    station_operators = (
+        combined.groupby("stop_name")["operator"]
+        .agg(lambda values: sorted(set(values)))
+        .to_dict()
+    )
 
     details = {}
 
     for row in all_stops.itertuples(index=False):
         name = station_map.get(
-            row.stop_id, station_base(row.stop_name)
+            row.stop_id,
+            station_base(row.stop_name),
         )
         location = locations.get(row.stop_id, {})
         code = str(location.get("municipality_code", ""))
@@ -800,7 +861,8 @@ def build_output(sources, directory, state, stats, days, output_path):
         if name not in details or location.get("location"):
             details[name] = {
                 "location": location.get(
-                    "location", "所在地未登録"
+                    "location",
+                    "所在地未登録",
                 ),
                 "municipality_code": code,
                 "rent_per_sqm": rent.get("rent_per_sqm"),
@@ -823,7 +885,8 @@ def build_output(sources, directory, state, stats, days, output_path):
                 "id": key,
                 "name": source["name"],
                 "fetched_at": state.get(key, {}).get(
-                    "fetched_at", ""
+                    "fetched_at",
+                    "",
                 ),
             }
             for key, source in sources.items()
@@ -833,12 +896,15 @@ def build_output(sources, directory, state, stats, days, output_path):
                 "name": name,
                 "routes": routes,
                 "operators": station_operators.get(name, []),
-                **details.get(name, {
-                    "location": "所在地未登録",
-                    "municipality_code": "",
-                    "rent_per_sqm": None,
-                    "rent_25sqm": None,
-                }),
+                **details.get(
+                    name,
+                    {
+                        "location": "所在地未登録",
+                        "municipality_code": "",
+                        "rent_per_sqm": None,
+                        "rent_25sqm": None,
+                    },
+                ),
             }
             for name, routes in sorted(station_routes.items())
         ],
@@ -855,34 +921,46 @@ def build_output(sources, directory, state, stats, days, output_path):
 
 
 # ============================================================
-# 実行
+# 10. 実行
 # ============================================================
+def purge_challenge_data():
+    # JR由来のキャッシュ・状態・公開データを削除
+    if CHALLENGE_DIR.exists():
+        shutil.rmtree(CHALLENGE_DIR)
+
+    for path in (CHALLENGE_STATE, CHALLENGE_OUT):
+        if path.exists():
+            path.unlink()
+
+    print("JR東日本のチャレンジ由来データを削除")
+
+
 def main():
     enable_jr = env_bool("ENABLE_JR")
-    purge = env_bool("PURGE_CHALLENGE_DATA")
 
-    if purge:
-        if CHALLENGE_OUT.exists():
-            CHALLENGE_OUT.unlink()
-        if CHALLENGE_STATE.exists():
-            CHALLENGE_STATE.unlink()
-        if CHALLENGE_DIR.exists():
-            for path in CHALLENGE_DIR.glob("*"):
-                path.unlink()
+    if env_bool("PURGE_CHALLENGE_DATA"):
+        purge_challenge_data()
         enable_jr = False
-        print("JR東日本のチャレンジ由来データを削除")
 
     stats = update_municipality_stats()
     days = representative_days()
 
+    # 通常5社は常に生成
     basic_state = download_sources(
-        BASIC_SOURCES, BASIC_DIR, BASIC_STATE
+        BASIC_SOURCES,
+        BASIC_DIR,
+        BASIC_STATE,
     )
     build_output(
-        BASIC_SOURCES, BASIC_DIR, basic_state,
-        stats, days, BASIC_OUT,
+        BASIC_SOURCES,
+        BASIC_DIR,
+        basic_state,
+        stats,
+        days,
+        BASIC_OUT,
     )
 
+    # JRは設定がONのときだけ生成
     if enable_jr:
         challenge_state = download_sources(
             CHALLENGE_SOURCES,
@@ -897,25 +975,26 @@ def main():
             days,
             CHALLENGE_OUT,
         )
+
     elif CHALLENGE_OUT.exists():
-        # OFF時は公開用JRデータを削除する
+        # OFF時はアプリが読むJR公開データを削除
         CHALLENGE_OUT.unlink()
         print("JR東日本をOFF：公開用JRデータを削除")
 
-    save_json(BUILD_CONFIG, {
-        "jr_enabled": enable_jr,
-        "challenge_data_enabled": enable_jr,
-        "generated_at": now().isoformat(timespec="minutes"),
-        "basic_output": BASIC_OUT.name,
-        "challenge_output": (
-            CHALLENGE_OUT.name if enable_jr else None
-        ),
-    })
-
-    print(
-        "生成完了："
-        f'JR東日本 {"ON" if enable_jr else "OFF"}'
+    save_json(
+        BUILD_CONFIG,
+        {
+            "jr_enabled": enable_jr,
+            "challenge_data_enabled": enable_jr,
+            "generated_at": now().isoformat(timespec="minutes"),
+            "basic_output": BASIC_OUT.name,
+            "challenge_output": (
+                CHALLENGE_OUT.name if enable_jr else None
+            ),
+        },
     )
+
+    print(f'生成完了：JR東日本 {"ON" if enable_jr else "OFF"}')
 
 
 if __name__ == "__main__":
