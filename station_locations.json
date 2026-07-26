@@ -4190,5 +4190,5429 @@
     "municipality_code": "13220",
     "location": "東京都東大和市",
     "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "jreast:1001": {
+    "name": "渋川",
+    "lat": "36.49123",
+    "lon": "139.00879",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1002": {
+    "name": "金島",
+    "lat": "36.52958",
+    "lon": "138.97642",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1003": {
+    "name": "祖母島",
+    "lat": "36.54074",
+    "lon": "138.95706",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1004": {
+    "name": "小野上",
+    "lat": "36.55249",
+    "lon": "138.92224",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1005": {
+    "name": "小野上温泉",
+    "lat": "36.55690",
+    "lon": "138.90431",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1006": {
+    "name": "市城",
+    "lat": "36.57064",
+    "lon": "138.88228",
+    "municipality_code": "10421",
+    "location": "群馬県中之条町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1007": {
+    "name": "中之条",
+    "lat": "36.58541",
+    "lon": "138.85148",
+    "municipality_code": "10421",
+    "location": "群馬県中之条町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1008": {
+    "name": "群馬原町",
+    "lat": "36.57170",
+    "lon": "138.82416",
+    "municipality_code": "10429",
+    "location": "群馬県東吾妻町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1009": {
+    "name": "郷原",
+    "lat": "36.54873",
+    "lon": "138.80110",
+    "municipality_code": "10429",
+    "location": "群馬県東吾妻町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1010": {
+    "name": "矢倉",
+    "lat": "36.55276",
+    "lon": "138.78426",
+    "municipality_code": "10429",
+    "location": "群馬県東吾妻町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1011": {
+    "name": "岩島",
+    "lat": "36.56324",
+    "lon": "138.75994",
+    "municipality_code": "10429",
+    "location": "群馬県東吾妻町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1012": {
+    "name": "川原湯温泉",
+    "lat": "36.54509",
+    "lon": "138.69723",
+    "municipality_code": "10424",
+    "location": "群馬県長野原町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1013": {
+    "name": "長野原草津口",
+    "lat": "36.54650",
+    "lon": "138.64964",
+    "municipality_code": "10424",
+    "location": "群馬県長野原町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1014": {
+    "name": "群馬大津",
+    "lat": "36.55381",
+    "lon": "138.62809",
+    "municipality_code": "10424",
+    "location": "群馬県長野原町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1015": {
+    "name": "羽根尾",
+    "lat": "36.55016",
+    "lon": "138.60550",
+    "municipality_code": "10424",
+    "location": "群馬県長野原町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1016": {
+    "name": "袋倉",
+    "lat": "36.54402",
+    "lon": "138.57918",
+    "municipality_code": "10425",
+    "location": "群馬県嬬恋村",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1017": {
+    "name": "万座・鹿沢口",
+    "lat": "36.53202",
+    "lon": "138.55140",
+    "municipality_code": "10425",
+    "location": "群馬県嬬恋村",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1018": {
+    "name": "大前",
+    "lat": "36.51358",
+    "lon": "138.52902",
+    "municipality_code": "10425",
+    "location": "群馬県嬬恋村",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1101": {
+    "name": "東京",
+    "lat": "35.68116",
+    "lon": "139.76713",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1102": {
+    "name": "神田",
+    "lat": "35.69177",
+    "lon": "139.77088",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1103": {
+    "name": "御茶ノ水",
+    "lat": "35.69960",
+    "lon": "139.76503",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1104": {
+    "name": "四ツ谷",
+    "lat": "35.68565",
+    "lon": "139.73054",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1105": {
+    "name": "新宿",
+    "lat": "35.69019",
+    "lon": "139.70062",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1106": {
+    "name": "中野",
+    "lat": "35.70580",
+    "lon": "139.66572",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1107": {
+    "name": "高円寺",
+    "lat": "35.70532",
+    "lon": "139.64970",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1108": {
+    "name": "阿佐ケ谷",
+    "lat": "35.70488",
+    "lon": "139.63586",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1109": {
+    "name": "荻窪",
+    "lat": "35.70443",
+    "lon": "139.62024",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1110": {
+    "name": "西荻窪",
+    "lat": "35.70378",
+    "lon": "139.59945",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1111": {
+    "name": "吉祥寺",
+    "lat": "35.70314",
+    "lon": "139.57981",
+    "municipality_code": "13203",
+    "location": "東京都武蔵野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1112": {
+    "name": "三鷹",
+    "lat": "35.70270",
+    "lon": "139.56064",
+    "municipality_code": "13204",
+    "location": "東京都三鷹市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1113": {
+    "name": "武蔵境",
+    "lat": "35.70209",
+    "lon": "139.54356",
+    "municipality_code": "13203",
+    "location": "東京都武蔵野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1114": {
+    "name": "東小金井",
+    "lat": "35.70156",
+    "lon": "139.52376",
+    "municipality_code": "13210",
+    "location": "東京都小金井市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1115": {
+    "name": "武蔵小金井",
+    "lat": "35.70104",
+    "lon": "139.50593",
+    "municipality_code": "13210",
+    "location": "東京都小金井市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1116": {
+    "name": "国分寺",
+    "lat": "35.70014",
+    "lon": "139.48086",
+    "municipality_code": "13214",
+    "location": "東京都国分寺市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1117": {
+    "name": "西国分寺",
+    "lat": "35.69973",
+    "lon": "139.46592",
+    "municipality_code": "13214",
+    "location": "東京都国分寺市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1118": {
+    "name": "国立",
+    "lat": "35.69920",
+    "lon": "139.44642",
+    "municipality_code": "13215",
+    "location": "東京都国立市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1119": {
+    "name": "立川",
+    "lat": "35.69790",
+    "lon": "139.41377",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1120": {
+    "name": "日野",
+    "lat": "35.67854",
+    "lon": "139.39343",
+    "municipality_code": "13212",
+    "location": "東京都日野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1121": {
+    "name": "豊田",
+    "lat": "35.65945",
+    "lon": "139.38146",
+    "municipality_code": "13212",
+    "location": "東京都日野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1122": {
+    "name": "八王子",
+    "lat": "35.65550",
+    "lon": "139.33882",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1123": {
+    "name": "西八王子",
+    "lat": "35.65628",
+    "lon": "139.31200",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1124": {
+    "name": "高尾",
+    "lat": "35.64238",
+    "lon": "139.28264",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1201": {
+    "name": "千葉",
+    "lat": "35.61360",
+    "lon": "140.11355",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1202": {
+    "name": "西千葉",
+    "lat": "35.62263",
+    "lon": "140.10332",
+    "municipality_code": "12103",
+    "location": "千葉県千葉市　稲毛区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1203": {
+    "name": "稲毛",
+    "lat": "35.63731",
+    "lon": "140.09256",
+    "municipality_code": "12103",
+    "location": "千葉県千葉市　稲毛区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1204": {
+    "name": "新検見川",
+    "lat": "35.65180",
+    "lon": "140.07334",
+    "municipality_code": "12102",
+    "location": "千葉県千葉市　花見川区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1205": {
+    "name": "幕張",
+    "lat": "35.65954",
+    "lon": "140.05782",
+    "municipality_code": "12102",
+    "location": "千葉県千葉市　花見川区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1206": {
+    "name": "幕張本郷",
+    "lat": "35.67290",
+    "lon": "140.04208",
+    "municipality_code": "12102",
+    "location": "千葉県千葉市　花見川区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1207": {
+    "name": "津田沼",
+    "lat": "35.69137",
+    "lon": "140.02022",
+    "municipality_code": "12216",
+    "location": "千葉県習志野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1208": {
+    "name": "東船橋",
+    "lat": "35.69983",
+    "lon": "140.00407",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1209": {
+    "name": "船橋",
+    "lat": "35.70174",
+    "lon": "139.98468",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1210": {
+    "name": "西船橋",
+    "lat": "35.70771",
+    "lon": "139.95858",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1211": {
+    "name": "下総中山",
+    "lat": "35.71428",
+    "lon": "139.94307",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1212": {
+    "name": "本八幡",
+    "lat": "35.72085",
+    "lon": "139.92740",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1213": {
+    "name": "市川",
+    "lat": "35.72887",
+    "lon": "139.90817",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1214": {
+    "name": "小岩",
+    "lat": "35.73333",
+    "lon": "139.88185",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1215": {
+    "name": "新小岩",
+    "lat": "35.71678",
+    "lon": "139.85765",
+    "municipality_code": "13122",
+    "location": "東京都葛飾区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1216": {
+    "name": "平井",
+    "lat": "35.70645",
+    "lon": "139.84238",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1217": {
+    "name": "亀戸",
+    "lat": "35.69734",
+    "lon": "139.82661",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1218": {
+    "name": "錦糸町",
+    "lat": "35.69672",
+    "lon": "139.81432",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1219": {
+    "name": "両国",
+    "lat": "35.69576",
+    "lon": "139.79335",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1220": {
+    "name": "浅草橋",
+    "lat": "35.69739",
+    "lon": "139.78449",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1221": {
+    "name": "秋葉原",
+    "lat": "35.69832",
+    "lon": "139.77322",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1222": {
+    "name": "御茶ノ水",
+    "lat": "35.69960",
+    "lon": "139.76503",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1223": {
+    "name": "水道橋",
+    "lat": "35.70200",
+    "lon": "139.75374",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1224": {
+    "name": "飯田橋",
+    "lat": "35.70016",
+    "lon": "139.74362",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1225": {
+    "name": "市ケ谷",
+    "lat": "35.69116",
+    "lon": "139.73532",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1226": {
+    "name": "四ツ谷",
+    "lat": "35.68565",
+    "lon": "139.73054",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1227": {
+    "name": "信濃町",
+    "lat": "35.67996",
+    "lon": "139.72110",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1228": {
+    "name": "千駄ケ谷",
+    "lat": "35.68120",
+    "lon": "139.71153",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1229": {
+    "name": "代々木",
+    "lat": "35.68380",
+    "lon": "139.70221",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1230": {
+    "name": "新宿",
+    "lat": "35.69019",
+    "lon": "139.70062",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1231": {
+    "name": "大久保",
+    "lat": "35.70064",
+    "lon": "139.69744",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1232": {
+    "name": "東中野",
+    "lat": "35.70625",
+    "lon": "139.68508",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1233": {
+    "name": "中野",
+    "lat": "35.70580",
+    "lon": "139.66572",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1234": {
+    "name": "高円寺",
+    "lat": "35.70532",
+    "lon": "139.64970",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1235": {
+    "name": "阿佐ケ谷",
+    "lat": "35.70488",
+    "lon": "139.63586",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1236": {
+    "name": "荻窪",
+    "lat": "35.70443",
+    "lon": "139.62024",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1237": {
+    "name": "西荻窪",
+    "lat": "35.70378",
+    "lon": "139.59945",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1238": {
+    "name": "吉祥寺",
+    "lat": "35.70314",
+    "lon": "139.57981",
+    "municipality_code": "13203",
+    "location": "東京都武蔵野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1239": {
+    "name": "三鷹",
+    "lat": "35.70270",
+    "lon": "139.56064",
+    "municipality_code": "13204",
+    "location": "東京都三鷹市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1301": {
+    "name": "八王子",
+    "lat": "35.65550",
+    "lon": "139.33882",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1302": {
+    "name": "北八王子",
+    "lat": "35.66928",
+    "lon": "139.36340",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1303": {
+    "name": "小宮",
+    "lat": "35.68591",
+    "lon": "139.36843",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1304": {
+    "name": "拝島",
+    "lat": "35.72134",
+    "lon": "139.34373",
+    "municipality_code": "13218",
+    "location": "東京都福生市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1305": {
+    "name": "東福生",
+    "lat": "35.74583",
+    "lon": "139.33590",
+    "municipality_code": "13218",
+    "location": "東京都福生市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1306": {
+    "name": "箱根ケ崎",
+    "lat": "35.77170",
+    "lon": "139.34674",
+    "municipality_code": "13303",
+    "location": "東京都瑞穂町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1307": {
+    "name": "金子",
+    "lat": "35.81082",
+    "lon": "139.32861",
+    "municipality_code": "11225",
+    "location": "埼玉県入間市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1308": {
+    "name": "東飯能",
+    "lat": "35.85302",
+    "lon": "139.32613",
+    "municipality_code": "11209",
+    "location": "埼玉県飯能市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1309": {
+    "name": "高麗川",
+    "lat": "35.89637",
+    "lon": "139.33813",
+    "municipality_code": "11242",
+    "location": "埼玉県日高市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1310": {
+    "name": "毛呂",
+    "lat": "35.94074",
+    "lon": "139.30934",
+    "municipality_code": "11326",
+    "location": "埼玉県毛呂山町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1311": {
+    "name": "越生",
+    "lat": "35.96286",
+    "lon": "139.29925",
+    "municipality_code": "11327",
+    "location": "埼玉県越生町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1312": {
+    "name": "明覚",
+    "lat": "36.00356",
+    "lon": "139.28922",
+    "municipality_code": "11349",
+    "location": "埼玉県ときがわ町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1313": {
+    "name": "小川町",
+    "lat": "36.05900",
+    "lon": "139.26069",
+    "municipality_code": "11343",
+    "location": "埼玉県小川町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1314": {
+    "name": "竹沢",
+    "lat": "36.07550",
+    "lon": "139.22995",
+    "municipality_code": "11343",
+    "location": "埼玉県小川町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1315": {
+    "name": "折原",
+    "lat": "36.09618",
+    "lon": "139.19532",
+    "municipality_code": "11408",
+    "location": "埼玉県寄居町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1316": {
+    "name": "寄居",
+    "lat": "36.11786",
+    "lon": "139.19352",
+    "municipality_code": "11408",
+    "location": "埼玉県寄居町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1317": {
+    "name": "用土",
+    "lat": "36.15385",
+    "lon": "139.20064",
+    "municipality_code": "11408",
+    "location": "埼玉県寄居町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1318": {
+    "name": "松久",
+    "lat": "36.17306",
+    "lon": "139.18210",
+    "municipality_code": "11381",
+    "location": "埼玉県美里町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1319": {
+    "name": "児玉",
+    "lat": "36.19284",
+    "lon": "139.13572",
+    "municipality_code": "11211",
+    "location": "埼玉県本庄市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1320": {
+    "name": "丹荘",
+    "lat": "36.21646",
+    "lon": "139.10258",
+    "municipality_code": "11383",
+    "location": "埼玉県神川町",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1321": {
+    "name": "群馬藤岡",
+    "lat": "36.25032",
+    "lon": "139.08346",
+    "municipality_code": "10209",
+    "location": "群馬県藤岡市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1322": {
+    "name": "北藤岡",
+    "lat": "36.28212",
+    "lon": "139.08145",
+    "municipality_code": "10209",
+    "location": "群馬県藤岡市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1323": {
+    "name": "倉賀野",
+    "lat": "36.30030",
+    "lon": "139.04944",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1324": {
+    "name": "高崎",
+    "lat": "36.32227",
+    "lon": "139.01234",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1401": {
+    "name": "熱海",
+    "lat": "35.10356",
+    "lon": "139.07783",
+    "municipality_code": "22205",
+    "location": "静岡県熱海市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1402": {
+    "name": "来宮",
+    "lat": "35.09872",
+    "lon": "139.06557",
+    "municipality_code": "22205",
+    "location": "静岡県熱海市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1403": {
+    "name": "伊豆多賀",
+    "lat": "35.05944",
+    "lon": "139.06690",
+    "municipality_code": "22205",
+    "location": "静岡県熱海市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1404": {
+    "name": "網代",
+    "lat": "35.04346",
+    "lon": "139.08100",
+    "municipality_code": "22205",
+    "location": "静岡県熱海市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1405": {
+    "name": "宇佐美",
+    "lat": "35.00564",
+    "lon": "139.07978",
+    "municipality_code": "22208",
+    "location": "静岡県伊東市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1406": {
+    "name": "伊東",
+    "lat": "34.97484",
+    "lon": "139.09210",
+    "municipality_code": "22208",
+    "location": "静岡県伊東市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1501": {
+    "name": "拝島",
+    "lat": "35.72120",
+    "lon": "139.34347",
+    "municipality_code": "13207",
+    "location": "東京都昭島市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1502": {
+    "name": "熊川",
+    "lat": "35.72829",
+    "lon": "139.33573",
+    "municipality_code": "13218",
+    "location": "東京都福生市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1503": {
+    "name": "東秋留",
+    "lat": "35.72594",
+    "lon": "139.31168",
+    "municipality_code": "13228",
+    "location": "東京都あきる野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1504": {
+    "name": "秋川",
+    "lat": "35.72805",
+    "lon": "139.28675",
+    "municipality_code": "13228",
+    "location": "東京都あきる野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1505": {
+    "name": "武蔵引田",
+    "lat": "35.72969",
+    "lon": "139.27008",
+    "municipality_code": "13228",
+    "location": "東京都あきる野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1506": {
+    "name": "武蔵増戸",
+    "lat": "35.73096",
+    "lon": "139.25630",
+    "municipality_code": "13228",
+    "location": "東京都あきる野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1507": {
+    "name": "武蔵五日市",
+    "lat": "35.73214",
+    "lon": "139.22812",
+    "municipality_code": "13228",
+    "location": "東京都あきる野市",
+    "updated_at": "2026-07-26T15:01+09:00"
+  },
+  "jreast:1701": {
+    "name": "綾瀬",
+    "lat": "35.76216",
+    "lon": "139.82494",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1702": {
+    "name": "亀有",
+    "lat": "35.76653",
+    "lon": "139.84756",
+    "municipality_code": "13122",
+    "location": "東京都葛飾区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1703": {
+    "name": "金町",
+    "lat": "35.76951",
+    "lon": "139.87039",
+    "municipality_code": "13122",
+    "location": "東京都葛飾区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1704": {
+    "name": "松戸",
+    "lat": "35.78462",
+    "lon": "139.90076",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1705": {
+    "name": "北松戸",
+    "lat": "35.80036",
+    "lon": "139.91162",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1706": {
+    "name": "馬橋",
+    "lat": "35.81168",
+    "lon": "139.91732",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1707": {
+    "name": "新松戸",
+    "lat": "35.82541",
+    "lon": "139.92120",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1708": {
+    "name": "北小金",
+    "lat": "35.83317",
+    "lon": "139.93075",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1709": {
+    "name": "南柏",
+    "lat": "35.84470",
+    "lon": "139.95428",
+    "municipality_code": "12217",
+    "location": "千葉県柏市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1710": {
+    "name": "柏",
+    "lat": "35.86210",
+    "lon": "139.97096",
+    "municipality_code": "12217",
+    "location": "千葉県柏市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1711": {
+    "name": "北柏",
+    "lat": "35.87566",
+    "lon": "139.98804",
+    "municipality_code": "12217",
+    "location": "千葉県柏市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1712": {
+    "name": "我孫子",
+    "lat": "35.87280",
+    "lon": "140.01042",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1713": {
+    "name": "天王台",
+    "lat": "35.87247",
+    "lon": "140.04232",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1801": {
+    "name": "品川",
+    "lat": "35.62866",
+    "lon": "139.73919",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1802": {
+    "name": "新橋",
+    "lat": "35.66630",
+    "lon": "139.75846",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1803": {
+    "name": "東京",
+    "lat": "35.68122",
+    "lon": "139.76653",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1804": {
+    "name": "上野",
+    "lat": "35.71376",
+    "lon": "139.77706",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1805": {
+    "name": "日暮里",
+    "lat": "35.72787",
+    "lon": "139.77132",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1806": {
+    "name": "三河島",
+    "lat": "35.73338",
+    "lon": "139.77708",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1807": {
+    "name": "南千住",
+    "lat": "35.73464",
+    "lon": "139.79978",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1808": {
+    "name": "北千住",
+    "lat": "35.74884",
+    "lon": "139.80464",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1809": {
+    "name": "松戸",
+    "lat": "35.78462",
+    "lon": "139.90076",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1810": {
+    "name": "柏",
+    "lat": "35.86210",
+    "lon": "139.97096",
+    "municipality_code": "12217",
+    "location": "千葉県柏市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1811": {
+    "name": "我孫子",
+    "lat": "35.87280",
+    "lon": "140.01042",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1812": {
+    "name": "天王台",
+    "lat": "35.87247",
+    "lon": "140.04232",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1901": {
+    "name": "高崎",
+    "lat": "36.32227",
+    "lon": "139.01234",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1902": {
+    "name": "高崎問屋町",
+    "lat": "36.34614",
+    "lon": "139.01723",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1903": {
+    "name": "井野",
+    "lat": "36.35744",
+    "lon": "139.02327",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1904": {
+    "name": "新前橋",
+    "lat": "36.37900",
+    "lon": "139.04700",
+    "municipality_code": "10201",
+    "location": "群馬県前橋市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1905": {
+    "name": "群馬総社",
+    "lat": "36.41551",
+    "lon": "139.03228",
+    "municipality_code": "10201",
+    "location": "群馬県前橋市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1906": {
+    "name": "八木原",
+    "lat": "36.46379",
+    "lon": "139.01925",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1907": {
+    "name": "渋川",
+    "lat": "36.49123",
+    "lon": "139.00879",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1908": {
+    "name": "敷島",
+    "lat": "36.53756",
+    "lon": "139.03394",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1909": {
+    "name": "津久田",
+    "lat": "36.56103",
+    "lon": "139.04286",
+    "municipality_code": "10208",
+    "location": "群馬県渋川市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1910": {
+    "name": "岩本",
+    "lat": "36.60216",
+    "lon": "139.04753",
+    "municipality_code": "10206",
+    "location": "群馬県沼田市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1911": {
+    "name": "沼田",
+    "lat": "36.64230",
+    "lon": "139.03564",
+    "municipality_code": "10206",
+    "location": "群馬県沼田市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1912": {
+    "name": "後閑",
+    "lat": "36.67955",
+    "lon": "139.00012",
+    "municipality_code": "10449",
+    "location": "群馬県みなかみ町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1913": {
+    "name": "上牧",
+    "lat": "36.73563",
+    "lon": "138.98456",
+    "municipality_code": "10449",
+    "location": "群馬県みなかみ町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1914": {
+    "name": "水上",
+    "lat": "36.77908",
+    "lon": "138.96930",
+    "municipality_code": "10449",
+    "location": "群馬県みなかみ町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1915": {
+    "name": "湯檜曽",
+    "lat": "36.80289",
+    "lon": "138.98585",
+    "municipality_code": "10449",
+    "location": "群馬県みなかみ町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1916": {
+    "name": "土合",
+    "lat": "36.83036",
+    "lon": "138.96506",
+    "municipality_code": "10449",
+    "location": "群馬県みなかみ町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1917": {
+    "name": "土樽",
+    "lat": "36.87528",
+    "lon": "138.86159",
+    "municipality_code": "15461",
+    "location": "新潟県湯沢町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1918": {
+    "name": "越後中里",
+    "lat": "36.91032",
+    "lon": "138.84852",
+    "municipality_code": "15461",
+    "location": "新潟県湯沢町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1919": {
+    "name": "岩原スキー場前",
+    "lat": "36.92428",
+    "lon": "138.83936",
+    "municipality_code": "15461",
+    "location": "新潟県湯沢町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1920": {
+    "name": "越後湯沢",
+    "lat": "36.93582",
+    "lon": "138.80962",
+    "municipality_code": "15461",
+    "location": "新潟県湯沢町",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1921": {
+    "name": "石打",
+    "lat": "36.98892",
+    "lon": "138.80418",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1922": {
+    "name": "大沢",
+    "lat": "37.02123",
+    "lon": "138.82133",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1923": {
+    "name": "上越国際スキー場前",
+    "lat": "37.02875",
+    "lon": "138.82801",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1924": {
+    "name": "塩沢",
+    "lat": "37.04148",
+    "lon": "138.84843",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1925": {
+    "name": "六日町",
+    "lat": "37.06668",
+    "lon": "138.87566",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1926": {
+    "name": "五日町",
+    "lat": "37.11994",
+    "lon": "138.90844",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1927": {
+    "name": "浦佐",
+    "lat": "37.16737",
+    "lon": "138.92304",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1928": {
+    "name": "八色",
+    "lat": "37.19176",
+    "lon": "138.93511",
+    "municipality_code": "15226",
+    "location": "新潟県南魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1929": {
+    "name": "小出",
+    "lat": "37.23357",
+    "lon": "138.95361",
+    "municipality_code": "15225",
+    "location": "新潟県魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1930": {
+    "name": "越後堀之内",
+    "lat": "37.23896",
+    "lon": "138.92828",
+    "municipality_code": "15225",
+    "location": "新潟県魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1931": {
+    "name": "北堀之内",
+    "lat": "37.25574",
+    "lon": "138.89632",
+    "municipality_code": "15225",
+    "location": "新潟県魚沼市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1932": {
+    "name": "越後川口",
+    "lat": "37.27286",
+    "lon": "138.86156",
+    "municipality_code": "15202",
+    "location": "新潟県長岡市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1933": {
+    "name": "小千谷",
+    "lat": "37.30968",
+    "lon": "138.81348",
+    "municipality_code": "15208",
+    "location": "新潟県小千谷市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1934": {
+    "name": "越後滝谷",
+    "lat": "37.36864",
+    "lon": "138.83498",
+    "municipality_code": "15202",
+    "location": "新潟県長岡市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1935": {
+    "name": "宮内",
+    "lat": "37.42214",
+    "lon": "138.84012",
+    "municipality_code": "15202",
+    "location": "新潟県長岡市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:1936": {
+    "name": "長岡",
+    "lat": "37.44776",
+    "lon": "138.85398",
+    "municipality_code": "15202",
+    "location": "新潟県長岡市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2001": {
+    "name": "佐原",
+    "lat": "35.89493",
+    "lon": "140.49377",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2002": {
+    "name": "香取",
+    "lat": "35.89788",
+    "lon": "140.53241",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2003": {
+    "name": "十二橋",
+    "lat": "35.91702",
+    "lon": "140.54583",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2101": {
+    "name": "川越",
+    "lat": "35.90668",
+    "lon": "139.48320",
+    "municipality_code": "11201",
+    "location": "埼玉県川越市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2102": {
+    "name": "西川越",
+    "lat": "35.91910",
+    "lon": "139.45994",
+    "municipality_code": "11201",
+    "location": "埼玉県川越市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2103": {
+    "name": "的場",
+    "lat": "35.91754",
+    "lon": "139.43541",
+    "municipality_code": "11201",
+    "location": "埼玉県川越市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2104": {
+    "name": "笠幡",
+    "lat": "35.90758",
+    "lon": "139.40626",
+    "municipality_code": "11201",
+    "location": "埼玉県川越市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2105": {
+    "name": "武蔵高萩",
+    "lat": "35.90168",
+    "lon": "139.37112",
+    "municipality_code": "11242",
+    "location": "埼玉県日高市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2106": {
+    "name": "高麗川",
+    "lat": "35.89637",
+    "lon": "139.33813",
+    "municipality_code": "11242",
+    "location": "埼玉県日高市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2201": {
+    "name": "大宮",
+    "lat": "35.90626",
+    "lon": "139.62396",
+    "municipality_code": "11103",
+    "location": "埼玉県さいたま市　大宮区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2202": {
+    "name": "さいたま新都心",
+    "lat": "35.89360",
+    "lon": "139.63390",
+    "municipality_code": "11105",
+    "location": "埼玉県さいたま市　中央区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2203": {
+    "name": "与野",
+    "lat": "35.88438",
+    "lon": "139.63899",
+    "municipality_code": "11107",
+    "location": "埼玉県さいたま市　浦和区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2204": {
+    "name": "北浦和",
+    "lat": "35.87220",
+    "lon": "139.64575",
+    "municipality_code": "11107",
+    "location": "埼玉県さいたま市　浦和区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2205": {
+    "name": "浦和",
+    "lat": "35.85856",
+    "lon": "139.65714",
+    "municipality_code": "11107",
+    "location": "埼玉県さいたま市　浦和区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2206": {
+    "name": "南浦和",
+    "lat": "35.84834",
+    "lon": "139.66862",
+    "municipality_code": "11108",
+    "location": "埼玉県さいたま市　南区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2207": {
+    "name": "蕨",
+    "lat": "35.82793",
+    "lon": "139.69042",
+    "municipality_code": "11223",
+    "location": "埼玉県蕨市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2208": {
+    "name": "西川口",
+    "lat": "35.81552",
+    "lon": "139.70436",
+    "municipality_code": "11203",
+    "location": "埼玉県川口市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2209": {
+    "name": "川口",
+    "lat": "35.80180",
+    "lon": "139.71746",
+    "municipality_code": "11203",
+    "location": "埼玉県川口市",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2210": {
+    "name": "赤羽",
+    "lat": "35.77765",
+    "lon": "139.72099",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2211": {
+    "name": "東十条",
+    "lat": "35.76386",
+    "lon": "139.72676",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2212": {
+    "name": "王子",
+    "lat": "35.75232",
+    "lon": "139.73821",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2213": {
+    "name": "上中里",
+    "lat": "35.74709",
+    "lon": "139.74593",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2214": {
+    "name": "田端",
+    "lat": "35.73748",
+    "lon": "139.76158",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2215": {
+    "name": "西日暮里",
+    "lat": "35.73208",
+    "lon": "139.76678",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2216": {
+    "name": "日暮里",
+    "lat": "35.72760",
+    "lon": "139.77117",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2217": {
+    "name": "鶯谷",
+    "lat": "35.72146",
+    "lon": "139.77803",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2218": {
+    "name": "上野",
+    "lat": "35.71376",
+    "lon": "139.77706",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2219": {
+    "name": "御徒町",
+    "lat": "35.70720",
+    "lon": "139.77472",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2220": {
+    "name": "秋葉原",
+    "lat": "35.69854",
+    "lon": "139.77304",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2221": {
+    "name": "神田",
+    "lat": "35.69177",
+    "lon": "139.77088",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2222": {
+    "name": "東京",
+    "lat": "35.68122",
+    "lon": "139.76653",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2223": {
+    "name": "有楽町",
+    "lat": "35.67504",
+    "lon": "139.76326",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2224": {
+    "name": "新橋",
+    "lat": "35.66630",
+    "lon": "139.75846",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2225": {
+    "name": "浜松町",
+    "lat": "35.65541",
+    "lon": "139.75712",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2226": {
+    "name": "田町",
+    "lat": "35.64574",
+    "lon": "139.74760",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2227": {
+    "name": "高輪ゲートウェイ",
+    "lat": "35.63538",
+    "lon": "139.74064",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2228": {
+    "name": "品川",
+    "lat": "35.62866",
+    "lon": "139.73919",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2229": {
+    "name": "大井町",
+    "lat": "35.60681",
+    "lon": "139.73499",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:02+09:00"
+  },
+  "jreast:2230": {
+    "name": "大森",
+    "lat": "35.58892",
+    "lon": "139.72815",
+    "municipality_code": "13111",
+    "location": "東京都大田区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2231": {
+    "name": "蒲田",
+    "lat": "35.56248",
+    "lon": "139.71603",
+    "municipality_code": "13111",
+    "location": "東京都大田区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2232": {
+    "name": "川崎",
+    "lat": "35.53136",
+    "lon": "139.69681",
+    "municipality_code": "14132",
+    "location": "神奈川県川崎市　幸区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2233": {
+    "name": "鶴見",
+    "lat": "35.50849",
+    "lon": "139.67624",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2234": {
+    "name": "新子安",
+    "lat": "35.48682",
+    "lon": "139.65402",
+    "municipality_code": "14102",
+    "location": "神奈川県横浜市　神奈川区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2235": {
+    "name": "東神奈川",
+    "lat": "35.47788",
+    "lon": "139.63316",
+    "municipality_code": "14102",
+    "location": "神奈川県横浜市　神奈川区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2236": {
+    "name": "横浜",
+    "lat": "35.46574",
+    "lon": "139.62252",
+    "municipality_code": "14103",
+    "location": "神奈川県横浜市　西区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2237": {
+    "name": "桜木町",
+    "lat": "35.45110",
+    "lon": "139.63088",
+    "municipality_code": "14104",
+    "location": "神奈川県横浜市　中区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2238": {
+    "name": "関内",
+    "lat": "35.44419",
+    "lon": "139.63606",
+    "municipality_code": "14104",
+    "location": "神奈川県横浜市　中区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2239": {
+    "name": "石川町",
+    "lat": "35.43874",
+    "lon": "139.64300",
+    "municipality_code": "14104",
+    "location": "神奈川県横浜市　中区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2240": {
+    "name": "山手",
+    "lat": "35.42680",
+    "lon": "139.64647",
+    "municipality_code": "14104",
+    "location": "神奈川県横浜市　中区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2241": {
+    "name": "根岸",
+    "lat": "35.41586",
+    "lon": "139.63610",
+    "municipality_code": "14107",
+    "location": "神奈川県横浜市　磯子区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2242": {
+    "name": "磯子",
+    "lat": "35.40058",
+    "lon": "139.61847",
+    "municipality_code": "14107",
+    "location": "神奈川県横浜市　磯子区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2243": {
+    "name": "新杉田",
+    "lat": "35.38680",
+    "lon": "139.61944",
+    "municipality_code": "14107",
+    "location": "神奈川県横浜市　磯子区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2244": {
+    "name": "洋光台",
+    "lat": "35.37878",
+    "lon": "139.59684",
+    "municipality_code": "14107",
+    "location": "神奈川県横浜市　磯子区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2245": {
+    "name": "港南台",
+    "lat": "35.37516",
+    "lon": "139.57624",
+    "municipality_code": "14111",
+    "location": "神奈川県横浜市　港南区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2246": {
+    "name": "本郷台",
+    "lat": "35.36786",
+    "lon": "139.55012",
+    "municipality_code": "14115",
+    "location": "神奈川県横浜市　栄区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2247": {
+    "name": "大船",
+    "lat": "35.35410",
+    "lon": "139.53151",
+    "municipality_code": "14204",
+    "location": "神奈川県鎌倉市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2301": {
+    "name": "東京",
+    "lat": "35.67768",
+    "lon": "139.76524",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2302": {
+    "name": "八丁堀",
+    "lat": "35.67462",
+    "lon": "139.77799",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2303": {
+    "name": "越中島",
+    "lat": "35.66800",
+    "lon": "139.79250",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2304": {
+    "name": "潮見",
+    "lat": "35.65886",
+    "lon": "139.81717",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2305": {
+    "name": "新木場",
+    "lat": "35.64600",
+    "lon": "139.82684",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2306": {
+    "name": "葛西臨海公園",
+    "lat": "35.64417",
+    "lon": "139.86148",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2307": {
+    "name": "舞浜",
+    "lat": "35.63616",
+    "lon": "139.88372",
+    "municipality_code": "12227",
+    "location": "千葉県浦安市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2308": {
+    "name": "新浦安",
+    "lat": "35.64952",
+    "lon": "139.91253",
+    "municipality_code": "12227",
+    "location": "千葉県浦安市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2309": {
+    "name": "市川塩浜",
+    "lat": "35.66648",
+    "lon": "139.92365",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2310": {
+    "name": "西船橋",
+    "lat": "35.70722",
+    "lon": "139.95952",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2311": {
+    "name": "二俣新町",
+    "lat": "35.69132",
+    "lon": "139.95956",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2312": {
+    "name": "南船橋",
+    "lat": "35.68166",
+    "lon": "139.99570",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2313": {
+    "name": "新習志野",
+    "lat": "35.66740",
+    "lon": "140.01298",
+    "municipality_code": "12216",
+    "location": "千葉県習志野市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2314": {
+    "name": "幕張豊砂",
+    "lat": "35.65816",
+    "lon": "140.02707",
+    "municipality_code": "12106",
+    "location": "千葉県千葉市　美浜区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2315": {
+    "name": "海浜幕張",
+    "lat": "35.64840",
+    "lon": "140.04200",
+    "municipality_code": "12106",
+    "location": "千葉県千葉市　美浜区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2316": {
+    "name": "検見川浜",
+    "lat": "35.63717",
+    "lon": "140.05908",
+    "municipality_code": "12106",
+    "location": "千葉県千葉市　美浜区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2317": {
+    "name": "稲毛海岸",
+    "lat": "35.62952",
+    "lon": "140.07385",
+    "municipality_code": "12106",
+    "location": "千葉県千葉市　美浜区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2318": {
+    "name": "千葉みなと",
+    "lat": "35.60671",
+    "lon": "140.10280",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2319": {
+    "name": "蘇我",
+    "lat": "35.58216",
+    "lon": "140.13074",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2401": {
+    "name": "木更津",
+    "lat": "35.38162",
+    "lon": "139.92613",
+    "municipality_code": "12206",
+    "location": "千葉県木更津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2402": {
+    "name": "祇園",
+    "lat": "35.39162",
+    "lon": "139.94838",
+    "municipality_code": "12206",
+    "location": "千葉県木更津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2403": {
+    "name": "上総清川",
+    "lat": "35.39084",
+    "lon": "139.96564",
+    "municipality_code": "12206",
+    "location": "千葉県木更津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2404": {
+    "name": "東清川",
+    "lat": "35.39000",
+    "lon": "139.98590",
+    "municipality_code": "12206",
+    "location": "千葉県木更津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2405": {
+    "name": "横田",
+    "lat": "35.38620",
+    "lon": "140.02013",
+    "municipality_code": "12229",
+    "location": "千葉県袖ケ浦市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2406": {
+    "name": "東横田",
+    "lat": "35.38616",
+    "lon": "140.03594",
+    "municipality_code": "12229",
+    "location": "千葉県袖ケ浦市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2407": {
+    "name": "馬来田",
+    "lat": "35.36682",
+    "lon": "140.05852",
+    "municipality_code": "12206",
+    "location": "千葉県木更津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2408": {
+    "name": "下郡",
+    "lat": "35.35499",
+    "lon": "140.05541",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2409": {
+    "name": "小櫃",
+    "lat": "35.32824",
+    "lon": "140.05978",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2410": {
+    "name": "俵田",
+    "lat": "35.31462",
+    "lon": "140.06142",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2411": {
+    "name": "久留里",
+    "lat": "35.29580",
+    "lon": "140.07560",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2412": {
+    "name": "平山",
+    "lat": "35.27430",
+    "lon": "140.06466",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2413": {
+    "name": "上総松丘",
+    "lat": "35.25820",
+    "lon": "140.06403",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2414": {
+    "name": "上総亀山",
+    "lat": "35.23318",
+    "lon": "140.08950",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2501": {
+    "name": "府中本町",
+    "lat": "35.66584",
+    "lon": "139.47710",
+    "municipality_code": "13206",
+    "location": "東京都府中市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2502": {
+    "name": "北府中",
+    "lat": "35.68086",
+    "lon": "139.47180",
+    "municipality_code": "13206",
+    "location": "東京都府中市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2503": {
+    "name": "西国分寺",
+    "lat": "35.69991",
+    "lon": "139.46598",
+    "municipality_code": "13214",
+    "location": "東京都国分寺市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2504": {
+    "name": "新小平",
+    "lat": "35.73092",
+    "lon": "139.47050",
+    "municipality_code": "13211",
+    "location": "東京都小平市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2505": {
+    "name": "新秋津",
+    "lat": "35.77831",
+    "lon": "139.49376",
+    "municipality_code": "13213",
+    "location": "東京都東村山市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2506": {
+    "name": "東所沢",
+    "lat": "35.79489",
+    "lon": "139.51454",
+    "municipality_code": "11208",
+    "location": "埼玉県所沢市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2507": {
+    "name": "新座",
+    "lat": "35.80378",
+    "lon": "139.55629",
+    "municipality_code": "11230",
+    "location": "埼玉県新座市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2508": {
+    "name": "北朝霞",
+    "lat": "35.81547",
+    "lon": "139.58723",
+    "municipality_code": "11227",
+    "location": "埼玉県朝霞市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2509": {
+    "name": "西浦和",
+    "lat": "35.84418",
+    "lon": "139.62776",
+    "municipality_code": "11106",
+    "location": "埼玉県さいたま市　桜区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2510": {
+    "name": "武蔵浦和",
+    "lat": "35.84604",
+    "lon": "139.64794",
+    "municipality_code": "11108",
+    "location": "埼玉県さいたま市　南区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2511": {
+    "name": "南浦和",
+    "lat": "35.84758",
+    "lon": "139.66894",
+    "municipality_code": "11108",
+    "location": "埼玉県さいたま市　南区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2512": {
+    "name": "東浦和",
+    "lat": "35.86404",
+    "lon": "139.70447",
+    "municipality_code": "11109",
+    "location": "埼玉県さいたま市　緑区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2513": {
+    "name": "東川口",
+    "lat": "35.87516",
+    "lon": "139.74403",
+    "municipality_code": "11203",
+    "location": "埼玉県川口市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2514": {
+    "name": "南越谷",
+    "lat": "35.87604",
+    "lon": "139.79115",
+    "municipality_code": "11222",
+    "location": "埼玉県越谷市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2515": {
+    "name": "越谷レイクタウン",
+    "lat": "35.87610",
+    "lon": "139.82226",
+    "municipality_code": "11222",
+    "location": "埼玉県越谷市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2516": {
+    "name": "吉川",
+    "lat": "35.87662",
+    "lon": "139.84324",
+    "municipality_code": "11243",
+    "location": "埼玉県吉川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2517": {
+    "name": "吉川美南",
+    "lat": "35.86809",
+    "lon": "139.85812",
+    "municipality_code": "11243",
+    "location": "埼玉県吉川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2518": {
+    "name": "新三郷",
+    "lat": "35.85839",
+    "lon": "139.86954",
+    "municipality_code": "11237",
+    "location": "埼玉県三郷市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2519": {
+    "name": "三郷",
+    "lat": "35.84484",
+    "lon": "139.88684",
+    "municipality_code": "11237",
+    "location": "埼玉県三郷市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2520": {
+    "name": "南流山",
+    "lat": "35.83784",
+    "lon": "139.90423",
+    "municipality_code": "12220",
+    "location": "千葉県流山市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2521": {
+    "name": "新松戸",
+    "lat": "35.82556",
+    "lon": "139.92098",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2522": {
+    "name": "新八柱",
+    "lat": "35.79129",
+    "lon": "139.93856",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2523": {
+    "name": "東松戸",
+    "lat": "35.77049",
+    "lon": "139.94386",
+    "municipality_code": "12207",
+    "location": "千葉県松戸市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2524": {
+    "name": "市川大野",
+    "lat": "35.75540",
+    "lon": "139.95128",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2525": {
+    "name": "船橋法典",
+    "lat": "35.73046",
+    "lon": "139.96671",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2526": {
+    "name": "西船橋",
+    "lat": "35.70722",
+    "lon": "139.95952",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2601": {
+    "name": "川崎",
+    "lat": "35.53136",
+    "lon": "139.69681",
+    "municipality_code": "14132",
+    "location": "神奈川県川崎市　幸区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2602": {
+    "name": "浜川崎",
+    "lat": "35.51038",
+    "lon": "139.71378",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2603": {
+    "name": "小田栄",
+    "lat": "35.51442",
+    "lon": "139.70508",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2604": {
+    "name": "川崎新町",
+    "lat": "35.51832",
+    "lon": "139.69926",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2605": {
+    "name": "八丁畷",
+    "lat": "35.52307",
+    "lon": "139.69138",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2606": {
+    "name": "尻手",
+    "lat": "35.53098",
+    "lon": "139.68430",
+    "municipality_code": "14132",
+    "location": "神奈川県川崎市　幸区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2607": {
+    "name": "矢向",
+    "lat": "35.53936",
+    "lon": "139.68042",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2608": {
+    "name": "鹿島田",
+    "lat": "35.55146",
+    "lon": "139.67498",
+    "municipality_code": "14132",
+    "location": "神奈川県川崎市　幸区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2609": {
+    "name": "平間",
+    "lat": "35.56056",
+    "lon": "139.67110",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2610": {
+    "name": "向河原",
+    "lat": "35.57218",
+    "lon": "139.66730",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2611": {
+    "name": "武蔵小杉",
+    "lat": "35.57656",
+    "lon": "139.65970",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2612": {
+    "name": "武蔵中原",
+    "lat": "35.58056",
+    "lon": "139.64214",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2613": {
+    "name": "武蔵新城",
+    "lat": "35.58742",
+    "lon": "139.62909",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2614": {
+    "name": "武蔵溝ノ口",
+    "lat": "35.59882",
+    "lon": "139.61138",
+    "municipality_code": "14134",
+    "location": "神奈川県川崎市　高津区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2615": {
+    "name": "津田山",
+    "lat": "35.60365",
+    "lon": "139.60072",
+    "municipality_code": "14134",
+    "location": "神奈川県川崎市　高津区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2616": {
+    "name": "久地",
+    "lat": "35.61010",
+    "lon": "139.59308",
+    "municipality_code": "14134",
+    "location": "神奈川県川崎市　高津区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2617": {
+    "name": "宿河原",
+    "lat": "35.61542",
+    "lon": "139.57954",
+    "municipality_code": "14135",
+    "location": "神奈川県川崎市　多摩区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2618": {
+    "name": "登戸",
+    "lat": "35.62068",
+    "lon": "139.57026",
+    "municipality_code": "14135",
+    "location": "神奈川県川崎市　多摩区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2619": {
+    "name": "中野島",
+    "lat": "35.63002",
+    "lon": "139.55108",
+    "municipality_code": "14135",
+    "location": "神奈川県川崎市　多摩区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2620": {
+    "name": "稲田堤",
+    "lat": "35.63341",
+    "lon": "139.53594",
+    "municipality_code": "14135",
+    "location": "神奈川県川崎市　多摩区",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2621": {
+    "name": "矢野口",
+    "lat": "35.64174",
+    "lon": "139.52044",
+    "municipality_code": "13225",
+    "location": "東京都稲城市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2622": {
+    "name": "稲城長沼",
+    "lat": "35.64428",
+    "lon": "139.50261",
+    "municipality_code": "13225",
+    "location": "東京都稲城市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2623": {
+    "name": "南多摩",
+    "lat": "35.64922",
+    "lon": "139.48954",
+    "municipality_code": "13225",
+    "location": "東京都稲城市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2624": {
+    "name": "府中本町",
+    "lat": "35.66586",
+    "lon": "139.47723",
+    "municipality_code": "13206",
+    "location": "東京都府中市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2625": {
+    "name": "分倍河原",
+    "lat": "35.66842",
+    "lon": "139.46892",
+    "municipality_code": "13206",
+    "location": "東京都府中市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2626": {
+    "name": "西府",
+    "lat": "35.67094",
+    "lon": "139.45739",
+    "municipality_code": "13206",
+    "location": "東京都府中市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2627": {
+    "name": "谷保",
+    "lat": "35.68138",
+    "lon": "139.44678",
+    "municipality_code": "13215",
+    "location": "東京都国立市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2628": {
+    "name": "矢川",
+    "lat": "35.68508",
+    "lon": "139.43159",
+    "municipality_code": "13215",
+    "location": "東京都国立市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2629": {
+    "name": "西国立",
+    "lat": "35.69379",
+    "lon": "139.42390",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2630": {
+    "name": "立川",
+    "lat": "35.69754",
+    "lon": "139.41430",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2701": {
+    "name": "佐倉",
+    "lat": "35.70974",
+    "lon": "140.22678",
+    "municipality_code": "12212",
+    "location": "千葉県佐倉市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2702": {
+    "name": "酒々井",
+    "lat": "35.73185",
+    "lon": "140.27540",
+    "municipality_code": "12322",
+    "location": "千葉県酒々井町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2703": {
+    "name": "我孫子",
+    "lat": "35.87280",
+    "lon": "140.01042",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2704": {
+    "name": "東我孫子",
+    "lat": "35.86898",
+    "lon": "140.04760",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2705": {
+    "name": "湖北",
+    "lat": "35.86720",
+    "lon": "140.07794",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2706": {
+    "name": "新木",
+    "lat": "35.86240",
+    "lon": "140.10705",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2707": {
+    "name": "布佐",
+    "lat": "35.84935",
+    "lon": "140.13298",
+    "municipality_code": "12222",
+    "location": "千葉県我孫子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2708": {
+    "name": "木下",
+    "lat": "35.83888",
+    "lon": "140.14799",
+    "municipality_code": "12231",
+    "location": "千葉県印西市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2709": {
+    "name": "小林",
+    "lat": "35.83074",
+    "lon": "140.19310",
+    "municipality_code": "12231",
+    "location": "千葉県印西市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2710": {
+    "name": "安食",
+    "lat": "35.83572",
+    "lon": "140.24228",
+    "municipality_code": "12329",
+    "location": "千葉県栄町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2711": {
+    "name": "下総松崎",
+    "lat": "35.80778",
+    "lon": "140.27755",
+    "municipality_code": "12211",
+    "location": "千葉県成田市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2712": {
+    "name": "成田",
+    "lat": "35.77726",
+    "lon": "140.31354",
+    "municipality_code": "12211",
+    "location": "千葉県成田市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2713": {
+    "name": "空港第２ビル",
+    "lat": "35.77296",
+    "lon": "140.38761",
+    "municipality_code": "12211",
+    "location": "千葉県成田市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2714": {
+    "name": "成田空港",
+    "lat": "35.76572",
+    "lon": "140.38630",
+    "municipality_code": "12211",
+    "location": "千葉県成田市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2716": {
+    "name": "久住",
+    "lat": "35.83218",
+    "lon": "140.33887",
+    "municipality_code": "12211",
+    "location": "千葉県成田市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2717": {
+    "name": "滑河",
+    "lat": "35.87706",
+    "lon": "140.34786",
+    "municipality_code": "12211",
+    "location": "千葉県成田市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2718": {
+    "name": "下総神崎",
+    "lat": "35.89484",
+    "lon": "140.41067",
+    "municipality_code": "12342",
+    "location": "千葉県神崎町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2719": {
+    "name": "大戸",
+    "lat": "35.88993",
+    "lon": "140.45773",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2720": {
+    "name": "佐原",
+    "lat": "35.89493",
+    "lon": "140.49377",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2721": {
+    "name": "香取",
+    "lat": "35.89788",
+    "lon": "140.53241",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2722": {
+    "name": "水郷",
+    "lat": "35.88546",
+    "lon": "140.57018",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2723": {
+    "name": "小見川",
+    "lat": "35.84998",
+    "lon": "140.60460",
+    "municipality_code": "12236",
+    "location": "千葉県香取市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2724": {
+    "name": "笹川",
+    "lat": "35.83943",
+    "lon": "140.65582",
+    "municipality_code": "12349",
+    "location": "千葉県東庄町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2725": {
+    "name": "下総橘",
+    "lat": "35.81878",
+    "lon": "140.70215",
+    "municipality_code": "12349",
+    "location": "千葉県東庄町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2726": {
+    "name": "下総豊里",
+    "lat": "35.79300",
+    "lon": "140.72090",
+    "municipality_code": "12202",
+    "location": "千葉県銚子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2727": {
+    "name": "椎柴",
+    "lat": "35.76518",
+    "lon": "140.75890",
+    "municipality_code": "12202",
+    "location": "千葉県銚子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2728": {
+    "name": "松岸",
+    "lat": "35.73938",
+    "lon": "140.79520",
+    "municipality_code": "12202",
+    "location": "千葉県銚子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2729": {
+    "name": "銚子",
+    "lat": "35.72932",
+    "lon": "140.82746",
+    "municipality_code": "12202",
+    "location": "千葉県銚子市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2801": {
+    "name": "立川",
+    "lat": "35.69815",
+    "lon": "139.41396",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2802": {
+    "name": "西立川",
+    "lat": "35.70362",
+    "lon": "139.39316",
+    "municipality_code": "13207",
+    "location": "東京都昭島市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2803": {
+    "name": "東中神",
+    "lat": "35.70628",
+    "lon": "139.38460",
+    "municipality_code": "13207",
+    "location": "東京都昭島市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2804": {
+    "name": "中神",
+    "lat": "35.70900",
+    "lon": "139.37571",
+    "municipality_code": "13207",
+    "location": "東京都昭島市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2805": {
+    "name": "昭島",
+    "lat": "35.71322",
+    "lon": "139.36164",
+    "municipality_code": "13207",
+    "location": "東京都昭島市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2806": {
+    "name": "拝島",
+    "lat": "35.72120",
+    "lon": "139.34347",
+    "municipality_code": "13207",
+    "location": "東京都昭島市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2807": {
+    "name": "牛浜",
+    "lat": "35.73434",
+    "lon": "139.33379",
+    "municipality_code": "13218",
+    "location": "東京都福生市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2808": {
+    "name": "福生",
+    "lat": "35.74248",
+    "lon": "139.32774",
+    "municipality_code": "13218",
+    "location": "東京都福生市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2809": {
+    "name": "羽村",
+    "lat": "35.75794",
+    "lon": "139.31630",
+    "municipality_code": "13227",
+    "location": "東京都羽村市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2810": {
+    "name": "小作",
+    "lat": "35.77606",
+    "lon": "139.30228",
+    "municipality_code": "13227",
+    "location": "東京都羽村市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2811": {
+    "name": "河辺",
+    "lat": "35.78478",
+    "lon": "139.28406",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2812": {
+    "name": "東青梅",
+    "lat": "35.78982",
+    "lon": "139.27280",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2813": {
+    "name": "青梅",
+    "lat": "35.79054",
+    "lon": "139.25812",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2814": {
+    "name": "宮ノ平",
+    "lat": "35.78759",
+    "lon": "139.23732",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2815": {
+    "name": "日向和田",
+    "lat": "35.78864",
+    "lon": "139.22954",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2816": {
+    "name": "石神前",
+    "lat": "35.79683",
+    "lon": "139.22514",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2817": {
+    "name": "二俣尾",
+    "lat": "35.80394",
+    "lon": "139.21614",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2818": {
+    "name": "軍畑",
+    "lat": "35.80758",
+    "lon": "139.20765",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2819": {
+    "name": "沢井",
+    "lat": "35.80595",
+    "lon": "139.19340",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2820": {
+    "name": "御嶽",
+    "lat": "35.80142",
+    "lon": "139.18263",
+    "municipality_code": "13205",
+    "location": "東京都青梅市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2821": {
+    "name": "川井",
+    "lat": "35.81376",
+    "lon": "139.16422",
+    "municipality_code": "13308",
+    "location": "東京都奥多摩町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2822": {
+    "name": "古里",
+    "lat": "35.81632",
+    "lon": "139.15114",
+    "municipality_code": "13308",
+    "location": "東京都奥多摩町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2823": {
+    "name": "鳩ノ巣",
+    "lat": "35.81510",
+    "lon": "139.12894",
+    "municipality_code": "13308",
+    "location": "東京都奥多摩町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2824": {
+    "name": "白丸",
+    "lat": "35.81172",
+    "lon": "139.11483",
+    "municipality_code": "13308",
+    "location": "東京都奥多摩町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2825": {
+    "name": "奥多摩",
+    "lat": "35.80942",
+    "lon": "139.09694",
+    "municipality_code": "13308",
+    "location": "東京都奥多摩町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2901": {
+    "name": "茅ケ崎",
+    "lat": "35.33068",
+    "lon": "139.40702",
+    "municipality_code": "14207",
+    "location": "神奈川県茅ヶ崎市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2902": {
+    "name": "北茅ケ崎",
+    "lat": "35.33968",
+    "lon": "139.40747",
+    "municipality_code": "14207",
+    "location": "神奈川県茅ヶ崎市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2903": {
+    "name": "香川",
+    "lat": "35.35660",
+    "lon": "139.39983",
+    "municipality_code": "14207",
+    "location": "神奈川県茅ヶ崎市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2904": {
+    "name": "寒川",
+    "lat": "35.36770",
+    "lon": "139.38732",
+    "municipality_code": "14321",
+    "location": "神奈川県寒川町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2905": {
+    "name": "宮山",
+    "lat": "35.38222",
+    "lon": "139.37966",
+    "municipality_code": "14321",
+    "location": "神奈川県寒川町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2906": {
+    "name": "倉見",
+    "lat": "35.39506",
+    "lon": "139.37838",
+    "municipality_code": "14321",
+    "location": "神奈川県寒川町",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2907": {
+    "name": "門沢橋",
+    "lat": "35.40670",
+    "lon": "139.38006",
+    "municipality_code": "14215",
+    "location": "神奈川県海老名市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2908": {
+    "name": "社家",
+    "lat": "35.42041",
+    "lon": "139.37718",
+    "municipality_code": "14215",
+    "location": "神奈川県海老名市",
+    "updated_at": "2026-07-26T15:03+09:00"
+  },
+  "jreast:2909": {
+    "name": "厚木",
+    "lat": "35.44382",
+    "lon": "139.37860",
+    "municipality_code": "14215",
+    "location": "神奈川県海老名市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2910": {
+    "name": "海老名",
+    "lat": "35.45423",
+    "lon": "139.38930",
+    "municipality_code": "14215",
+    "location": "神奈川県海老名市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2911": {
+    "name": "入谷",
+    "lat": "35.47838",
+    "lon": "139.39187",
+    "municipality_code": "14216",
+    "location": "神奈川県座間市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2912": {
+    "name": "相武台下",
+    "lat": "35.49278",
+    "lon": "139.38632",
+    "municipality_code": "14153",
+    "location": "神奈川県相模原市　南区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2913": {
+    "name": "下溝",
+    "lat": "35.51832",
+    "lon": "139.38051",
+    "municipality_code": "14153",
+    "location": "神奈川県相模原市　南区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2914": {
+    "name": "原当麻",
+    "lat": "35.52900",
+    "lon": "139.37536",
+    "municipality_code": "14153",
+    "location": "神奈川県相模原市　南区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2915": {
+    "name": "番田",
+    "lat": "35.54536",
+    "lon": "139.36313",
+    "municipality_code": "14152",
+    "location": "神奈川県相模原市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2916": {
+    "name": "上溝",
+    "lat": "35.55764",
+    "lon": "139.36314",
+    "municipality_code": "14152",
+    "location": "神奈川県相模原市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2917": {
+    "name": "南橋本",
+    "lat": "35.58040",
+    "lon": "139.35242",
+    "municipality_code": "14152",
+    "location": "神奈川県相模原市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:2918": {
+    "name": "橋本",
+    "lat": "35.59484",
+    "lon": "139.34510",
+    "municipality_code": "14151",
+    "location": "神奈川県相模原市　緑区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3001": {
+    "name": "大崎",
+    "lat": "35.61994",
+    "lon": "139.72824",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3002": {
+    "name": "恵比寿",
+    "lat": "35.64668",
+    "lon": "139.71012",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3003": {
+    "name": "渋谷",
+    "lat": "35.65815",
+    "lon": "139.70175",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3004": {
+    "name": "新宿",
+    "lat": "35.68950",
+    "lon": "139.70090",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3005": {
+    "name": "池袋",
+    "lat": "35.73020",
+    "lon": "139.71134",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3006": {
+    "name": "板橋",
+    "lat": "35.74499",
+    "lon": "139.71918",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3007": {
+    "name": "十条",
+    "lat": "35.76039",
+    "lon": "139.72225",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3008": {
+    "name": "赤羽",
+    "lat": "35.77771",
+    "lon": "139.72082",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3009": {
+    "name": "北赤羽",
+    "lat": "35.78703",
+    "lon": "139.70580",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3010": {
+    "name": "浮間舟渡",
+    "lat": "35.79134",
+    "lon": "139.69141",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3011": {
+    "name": "戸田公園",
+    "lat": "35.80776",
+    "lon": "139.67835",
+    "municipality_code": "11224",
+    "location": "埼玉県戸田市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3012": {
+    "name": "戸田",
+    "lat": "35.81760",
+    "lon": "139.66961",
+    "municipality_code": "11224",
+    "location": "埼玉県戸田市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3013": {
+    "name": "北戸田",
+    "lat": "35.82676",
+    "lon": "139.66144",
+    "municipality_code": "11224",
+    "location": "埼玉県戸田市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3014": {
+    "name": "武蔵浦和",
+    "lat": "35.84540",
+    "lon": "139.64684",
+    "municipality_code": "11108",
+    "location": "埼玉県さいたま市　南区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3015": {
+    "name": "中浦和",
+    "lat": "35.85382",
+    "lon": "139.63740",
+    "municipality_code": "11108",
+    "location": "埼玉県さいたま市　南区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3016": {
+    "name": "南与野",
+    "lat": "35.86736",
+    "lon": "139.63106",
+    "municipality_code": "11105",
+    "location": "埼玉県さいたま市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3017": {
+    "name": "与野本町",
+    "lat": "35.88092",
+    "lon": "139.62600",
+    "municipality_code": "11105",
+    "location": "埼玉県さいたま市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3018": {
+    "name": "北与野",
+    "lat": "35.89070",
+    "lon": "139.62848",
+    "municipality_code": "11105",
+    "location": "埼玉県さいたま市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3019": {
+    "name": "大宮",
+    "lat": "35.90626",
+    "lon": "139.62396",
+    "municipality_code": "11103",
+    "location": "埼玉県さいたま市　大宮区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3020": {
+    "name": "日進",
+    "lat": "35.93153",
+    "lon": "139.60606",
+    "municipality_code": "11102",
+    "location": "埼玉県さいたま市　北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3021": {
+    "name": "西大宮",
+    "lat": "35.92196",
+    "lon": "139.57890",
+    "municipality_code": "11101",
+    "location": "埼玉県さいたま市　西区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3022": {
+    "name": "指扇",
+    "lat": "35.91696",
+    "lon": "139.56497",
+    "municipality_code": "11101",
+    "location": "埼玉県さいたま市　西区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3023": {
+    "name": "南古谷",
+    "lat": "35.90318",
+    "lon": "139.51916",
+    "municipality_code": "11201",
+    "location": "埼玉県川越市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3024": {
+    "name": "川越",
+    "lat": "35.90668",
+    "lon": "139.48320",
+    "municipality_code": "11201",
+    "location": "埼玉県川越市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3101": {
+    "name": "大船",
+    "lat": "35.35416",
+    "lon": "139.53116",
+    "municipality_code": "14115",
+    "location": "神奈川県横浜市　栄区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3102": {
+    "name": "戸塚",
+    "lat": "35.40044",
+    "lon": "139.53431",
+    "municipality_code": "14110",
+    "location": "神奈川県横浜市　戸塚区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3103": {
+    "name": "東戸塚",
+    "lat": "35.42996",
+    "lon": "139.55650",
+    "municipality_code": "14110",
+    "location": "神奈川県横浜市　戸塚区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3104": {
+    "name": "保土ケ谷",
+    "lat": "35.44722",
+    "lon": "139.60037",
+    "municipality_code": "14106",
+    "location": "神奈川県横浜市　保土ケ谷区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3105": {
+    "name": "横浜",
+    "lat": "35.46579",
+    "lon": "139.62240",
+    "municipality_code": "14103",
+    "location": "神奈川県横浜市　西区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3106": {
+    "name": "新川崎",
+    "lat": "35.55172",
+    "lon": "139.67153",
+    "municipality_code": "14132",
+    "location": "神奈川県川崎市　幸区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3107": {
+    "name": "武蔵小杉",
+    "lat": "35.57468",
+    "lon": "139.66350",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3108": {
+    "name": "西大井",
+    "lat": "35.60170",
+    "lon": "139.72160",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3109": {
+    "name": "大崎",
+    "lat": "35.61994",
+    "lon": "139.72824",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3110": {
+    "name": "恵比寿",
+    "lat": "35.64668",
+    "lon": "139.71012",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3111": {
+    "name": "渋谷",
+    "lat": "35.65815",
+    "lon": "139.70175",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3112": {
+    "name": "新宿",
+    "lat": "35.68950",
+    "lon": "139.70090",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3113": {
+    "name": "池袋",
+    "lat": "35.73028",
+    "lon": "139.71108",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3114": {
+    "name": "赤羽",
+    "lat": "35.77765",
+    "lon": "139.72099",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3115": {
+    "name": "浦和",
+    "lat": "35.85856",
+    "lon": "139.65714",
+    "municipality_code": "11107",
+    "location": "埼玉県さいたま市　浦和区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3116": {
+    "name": "大宮",
+    "lat": "35.90626",
+    "lon": "139.62396",
+    "municipality_code": "11103",
+    "location": "埼玉県さいたま市　大宮区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3201": {
+    "name": "千葉",
+    "lat": "35.61360",
+    "lon": "140.11355",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3202": {
+    "name": "東千葉",
+    "lat": "35.61712",
+    "lon": "140.12242",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3203": {
+    "name": "都賀",
+    "lat": "35.63602",
+    "lon": "140.14918",
+    "municipality_code": "12104",
+    "location": "千葉県千葉市　若葉区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3204": {
+    "name": "四街道",
+    "lat": "35.66279",
+    "lon": "140.16490",
+    "municipality_code": "12228",
+    "location": "千葉県四街道市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3205": {
+    "name": "物井",
+    "lat": "35.68572",
+    "lon": "140.20032",
+    "municipality_code": "12228",
+    "location": "千葉県四街道市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3206": {
+    "name": "佐倉",
+    "lat": "35.70974",
+    "lon": "140.22678",
+    "municipality_code": "12212",
+    "location": "千葉県佐倉市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3207": {
+    "name": "南酒々井",
+    "lat": "35.70430",
+    "lon": "140.26794",
+    "municipality_code": "12322",
+    "location": "千葉県酒々井町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3208": {
+    "name": "榎戸",
+    "lat": "35.68408",
+    "lon": "140.28812",
+    "municipality_code": "12230",
+    "location": "千葉県八街市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3209": {
+    "name": "八街",
+    "lat": "35.66318",
+    "lon": "140.31742",
+    "municipality_code": "12230",
+    "location": "千葉県八街市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3210": {
+    "name": "日向",
+    "lat": "35.62830",
+    "lon": "140.36243",
+    "municipality_code": "12237",
+    "location": "千葉県山武市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3211": {
+    "name": "成東",
+    "lat": "35.60854",
+    "lon": "140.41028",
+    "municipality_code": "12237",
+    "location": "千葉県山武市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3212": {
+    "name": "松尾",
+    "lat": "35.63636",
+    "lon": "140.45808",
+    "municipality_code": "12237",
+    "location": "千葉県山武市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3213": {
+    "name": "横芝",
+    "lat": "35.66178",
+    "lon": "140.49078",
+    "municipality_code": "12410",
+    "location": "千葉県横芝光町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3214": {
+    "name": "飯倉",
+    "lat": "35.68509",
+    "lon": "140.52142",
+    "municipality_code": "12235",
+    "location": "千葉県匝瑳市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3215": {
+    "name": "八日市場",
+    "lat": "35.69930",
+    "lon": "140.55240",
+    "municipality_code": "12235",
+    "location": "千葉県匝瑳市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3216": {
+    "name": "干潟",
+    "lat": "35.71834",
+    "lon": "140.60331",
+    "municipality_code": "12215",
+    "location": "千葉県旭市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3217": {
+    "name": "旭",
+    "lat": "35.72184",
+    "lon": "140.65469",
+    "municipality_code": "12215",
+    "location": "千葉県旭市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3218": {
+    "name": "飯岡",
+    "lat": "35.72938",
+    "lon": "140.68335",
+    "municipality_code": "12215",
+    "location": "千葉県旭市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3219": {
+    "name": "倉橋",
+    "lat": "35.73776",
+    "lon": "140.71399",
+    "municipality_code": "12215",
+    "location": "千葉県旭市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3220": {
+    "name": "猿田",
+    "lat": "35.74735",
+    "lon": "140.73736",
+    "municipality_code": "12202",
+    "location": "千葉県銚子市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3221": {
+    "name": "松岸",
+    "lat": "35.73938",
+    "lon": "140.79520",
+    "municipality_code": "12202",
+    "location": "千葉県銚子市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3222": {
+    "name": "銚子",
+    "lat": "35.72932",
+    "lon": "140.82746",
+    "municipality_code": "12202",
+    "location": "千葉県銚子市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3301": {
+    "name": "東京",
+    "lat": "35.68172",
+    "lon": "139.76541",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3302": {
+    "name": "新日本橋",
+    "lat": "35.68904",
+    "lon": "139.77430",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3303": {
+    "name": "馬喰町",
+    "lat": "35.69337",
+    "lon": "139.78244",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3304": {
+    "name": "錦糸町",
+    "lat": "35.69672",
+    "lon": "139.81432",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3305": {
+    "name": "新小岩",
+    "lat": "35.71678",
+    "lon": "139.85765",
+    "municipality_code": "13122",
+    "location": "東京都葛飾区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3306": {
+    "name": "市川",
+    "lat": "35.72887",
+    "lon": "139.90817",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3307": {
+    "name": "船橋",
+    "lat": "35.70174",
+    "lon": "139.98468",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3308": {
+    "name": "津田沼",
+    "lat": "35.69137",
+    "lon": "140.02022",
+    "municipality_code": "12216",
+    "location": "千葉県習志野市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3309": {
+    "name": "稲毛",
+    "lat": "35.63731",
+    "lon": "140.09256",
+    "municipality_code": "12103",
+    "location": "千葉県千葉市　稲毛区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3310": {
+    "name": "千葉",
+    "lat": "35.61360",
+    "lon": "140.11355",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3401": {
+    "name": "大崎",
+    "lat": "35.61994",
+    "lon": "139.72824",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3402": {
+    "name": "西大井",
+    "lat": "35.60170",
+    "lon": "139.72160",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3403": {
+    "name": "武蔵小杉",
+    "lat": "35.57468",
+    "lon": "139.66350",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3404": {
+    "name": "羽沢横浜国大",
+    "lat": "35.48123",
+    "lon": "139.58613",
+    "municipality_code": "14102",
+    "location": "神奈川県横浜市　神奈川区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3501": {
+    "name": "千葉",
+    "lat": "35.61315",
+    "lon": "140.11308",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3502": {
+    "name": "本千葉",
+    "lat": "35.60062",
+    "lon": "140.12143",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3503": {
+    "name": "蘇我",
+    "lat": "35.58216",
+    "lon": "140.13074",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3504": {
+    "name": "鎌取",
+    "lat": "35.56266",
+    "lon": "140.17875",
+    "municipality_code": "12105",
+    "location": "千葉県千葉市　緑区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3505": {
+    "name": "誉田",
+    "lat": "35.54700",
+    "lon": "140.21378",
+    "municipality_code": "12105",
+    "location": "千葉県千葉市　緑区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3506": {
+    "name": "土気",
+    "lat": "35.53092",
+    "lon": "140.26977",
+    "municipality_code": "12105",
+    "location": "千葉県千葉市　緑区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3507": {
+    "name": "大網",
+    "lat": "35.52230",
+    "lon": "140.31101",
+    "municipality_code": "12239",
+    "location": "千葉県大網白里市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3508": {
+    "name": "永田",
+    "lat": "35.50324",
+    "lon": "140.31127",
+    "municipality_code": "12239",
+    "location": "千葉県大網白里市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3509": {
+    "name": "本納",
+    "lat": "35.48216",
+    "lon": "140.30757",
+    "municipality_code": "12210",
+    "location": "千葉県茂原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3510": {
+    "name": "新茂原",
+    "lat": "35.44943",
+    "lon": "140.29972",
+    "municipality_code": "12210",
+    "location": "千葉県茂原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3511": {
+    "name": "茂原",
+    "lat": "35.42683",
+    "lon": "140.30407",
+    "municipality_code": "12210",
+    "location": "千葉県茂原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3512": {
+    "name": "八積",
+    "lat": "35.40396",
+    "lon": "140.34536",
+    "municipality_code": "12423",
+    "location": "千葉県長生村",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3513": {
+    "name": "上総一ノ宮",
+    "lat": "35.37468",
+    "lon": "140.36552",
+    "municipality_code": "12421",
+    "location": "千葉県一宮町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3514": {
+    "name": "東浪見",
+    "lat": "35.34677",
+    "lon": "140.37665",
+    "municipality_code": "12421",
+    "location": "千葉県一宮町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3515": {
+    "name": "太東",
+    "lat": "35.32010",
+    "lon": "140.38129",
+    "municipality_code": "12238",
+    "location": "千葉県いすみ市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3516": {
+    "name": "長者町",
+    "lat": "35.29626",
+    "lon": "140.38481",
+    "municipality_code": "12238",
+    "location": "千葉県いすみ市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3517": {
+    "name": "三門",
+    "lat": "35.28292",
+    "lon": "140.39144",
+    "municipality_code": "12238",
+    "location": "千葉県いすみ市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3518": {
+    "name": "大原",
+    "lat": "35.25101",
+    "lon": "140.39102",
+    "municipality_code": "12238",
+    "location": "千葉県いすみ市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3519": {
+    "name": "浪花",
+    "lat": "35.22264",
+    "lon": "140.37914",
+    "municipality_code": "12238",
+    "location": "千葉県いすみ市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3520": {
+    "name": "御宿",
+    "lat": "35.18754",
+    "lon": "140.35144",
+    "municipality_code": "12443",
+    "location": "千葉県御宿町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3521": {
+    "name": "勝浦",
+    "lat": "35.15262",
+    "lon": "140.31197",
+    "municipality_code": "12218",
+    "location": "千葉県勝浦市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3522": {
+    "name": "鵜原",
+    "lat": "35.14125",
+    "lon": "140.27896",
+    "municipality_code": "12218",
+    "location": "千葉県勝浦市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3523": {
+    "name": "上総興津",
+    "lat": "35.13722",
+    "lon": "140.25047",
+    "municipality_code": "12218",
+    "location": "千葉県勝浦市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3524": {
+    "name": "行川アイランド",
+    "lat": "35.11826",
+    "lon": "140.22571",
+    "municipality_code": "12218",
+    "location": "千葉県勝浦市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3525": {
+    "name": "安房小湊",
+    "lat": "35.12864",
+    "lon": "140.18977",
+    "municipality_code": "12223",
+    "location": "千葉県鴨川市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3526": {
+    "name": "安房天津",
+    "lat": "35.12579",
+    "lon": "140.15474",
+    "municipality_code": "12223",
+    "location": "千葉県鴨川市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3527": {
+    "name": "安房鴨川",
+    "lat": "35.10762",
+    "lon": "140.10371",
+    "municipality_code": "12223",
+    "location": "千葉県鴨川市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3601": {
+    "name": "東京",
+    "lat": "35.68116",
+    "lon": "139.76713",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3602": {
+    "name": "上野",
+    "lat": "35.71376",
+    "lon": "139.77706",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3603": {
+    "name": "尾久",
+    "lat": "35.74680",
+    "lon": "139.75387",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3604": {
+    "name": "赤羽",
+    "lat": "35.77765",
+    "lon": "139.72099",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3605": {
+    "name": "浦和",
+    "lat": "35.85856",
+    "lon": "139.65714",
+    "municipality_code": "11107",
+    "location": "埼玉県さいたま市　浦和区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3606": {
+    "name": "さいたま新都心",
+    "lat": "35.89360",
+    "lon": "139.63390",
+    "municipality_code": "11105",
+    "location": "埼玉県さいたま市　中央区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3607": {
+    "name": "大宮",
+    "lat": "35.90644",
+    "lon": "139.62437",
+    "municipality_code": "11103",
+    "location": "埼玉県さいたま市　大宮区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3608": {
+    "name": "宮原",
+    "lat": "35.94053",
+    "lon": "139.60952",
+    "municipality_code": "11102",
+    "location": "埼玉県さいたま市　北区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3609": {
+    "name": "上尾",
+    "lat": "35.97302",
+    "lon": "139.58881",
+    "municipality_code": "11219",
+    "location": "埼玉県上尾市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3610": {
+    "name": "北上尾",
+    "lat": "35.98515",
+    "lon": "139.57758",
+    "municipality_code": "11219",
+    "location": "埼玉県上尾市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3611": {
+    "name": "桶川",
+    "lat": "35.99844",
+    "lon": "139.56422",
+    "municipality_code": "11231",
+    "location": "埼玉県桶川市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3612": {
+    "name": "北本",
+    "lat": "36.03218",
+    "lon": "139.53354",
+    "municipality_code": "11233",
+    "location": "埼玉県北本市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3613": {
+    "name": "鴻巣",
+    "lat": "36.05924",
+    "lon": "139.50958",
+    "municipality_code": "11217",
+    "location": "埼玉県鴻巣市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3614": {
+    "name": "北鴻巣",
+    "lat": "36.08550",
+    "lon": "139.47696",
+    "municipality_code": "11217",
+    "location": "埼玉県鴻巣市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3615": {
+    "name": "吹上",
+    "lat": "36.10289",
+    "lon": "139.45360",
+    "municipality_code": "11217",
+    "location": "埼玉県鴻巣市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3616": {
+    "name": "行田",
+    "lat": "36.11390",
+    "lon": "139.43208",
+    "municipality_code": "11206",
+    "location": "埼玉県行田市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3617": {
+    "name": "熊谷",
+    "lat": "36.13981",
+    "lon": "139.38992",
+    "municipality_code": "11202",
+    "location": "埼玉県熊谷市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3618": {
+    "name": "籠原",
+    "lat": "36.17442",
+    "lon": "139.33026",
+    "municipality_code": "11202",
+    "location": "埼玉県熊谷市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3619": {
+    "name": "深谷",
+    "lat": "36.19134",
+    "lon": "139.28134",
+    "municipality_code": "11218",
+    "location": "埼玉県深谷市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3620": {
+    "name": "岡部",
+    "lat": "36.20574",
+    "lon": "139.23749",
+    "municipality_code": "11218",
+    "location": "埼玉県深谷市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3621": {
+    "name": "本庄",
+    "lat": "36.23630",
+    "lon": "139.18814",
+    "municipality_code": "11211",
+    "location": "埼玉県本庄市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3622": {
+    "name": "神保原",
+    "lat": "36.25362",
+    "lon": "139.14902",
+    "municipality_code": "11385",
+    "location": "埼玉県上里町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3623": {
+    "name": "新町",
+    "lat": "36.27310",
+    "lon": "139.10532",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3624": {
+    "name": "倉賀野",
+    "lat": "36.30030",
+    "lon": "139.04944",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3625": {
+    "name": "高崎",
+    "lat": "36.32227",
+    "lon": "139.01234",
+    "municipality_code": "10202",
+    "location": "群馬県高崎市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3701": {
+    "name": "大網",
+    "lat": "35.52302",
+    "lon": "140.31143",
+    "municipality_code": "12239",
+    "location": "千葉県大網白里市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3702": {
+    "name": "福俵",
+    "lat": "35.54616",
+    "lon": "140.34188",
+    "municipality_code": "12213",
+    "location": "千葉県東金市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3703": {
+    "name": "東金",
+    "lat": "35.56010",
+    "lon": "140.36360",
+    "municipality_code": "12213",
+    "location": "千葉県東金市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3704": {
+    "name": "求名",
+    "lat": "35.57984",
+    "lon": "140.39618",
+    "municipality_code": "12213",
+    "location": "千葉県東金市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3705": {
+    "name": "成東",
+    "lat": "35.60854",
+    "lon": "140.41028",
+    "municipality_code": "12237",
+    "location": "千葉県山武市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3801": {
+    "name": "東京",
+    "lat": "35.68122",
+    "lon": "139.76653",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3802": {
+    "name": "新橋",
+    "lat": "35.66630",
+    "lon": "139.75846",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3803": {
+    "name": "品川",
+    "lat": "35.62866",
+    "lon": "139.73919",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3804": {
+    "name": "川崎",
+    "lat": "35.53136",
+    "lon": "139.69681",
+    "municipality_code": "14132",
+    "location": "神奈川県川崎市　幸区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3805": {
+    "name": "横浜",
+    "lat": "35.46579",
+    "lon": "139.62240",
+    "municipality_code": "14103",
+    "location": "神奈川県横浜市　西区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3806": {
+    "name": "戸塚",
+    "lat": "35.40044",
+    "lon": "139.53431",
+    "municipality_code": "14110",
+    "location": "神奈川県横浜市　戸塚区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3807": {
+    "name": "大船",
+    "lat": "35.35416",
+    "lon": "139.53116",
+    "municipality_code": "14115",
+    "location": "神奈川県横浜市　栄区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3808": {
+    "name": "藤沢",
+    "lat": "35.33883",
+    "lon": "139.48642",
+    "municipality_code": "14205",
+    "location": "神奈川県藤沢市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3809": {
+    "name": "辻堂",
+    "lat": "35.33684",
+    "lon": "139.44590",
+    "municipality_code": "14205",
+    "location": "神奈川県藤沢市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3810": {
+    "name": "茅ケ崎",
+    "lat": "35.33064",
+    "lon": "139.40800",
+    "municipality_code": "14207",
+    "location": "神奈川県茅ヶ崎市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3811": {
+    "name": "平塚",
+    "lat": "35.32755",
+    "lon": "139.34900",
+    "municipality_code": "14203",
+    "location": "神奈川県平塚市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3812": {
+    "name": "大磯",
+    "lat": "35.31146",
+    "lon": "139.31328",
+    "municipality_code": "14341",
+    "location": "神奈川県大磯町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3813": {
+    "name": "二宮",
+    "lat": "35.29867",
+    "lon": "139.25675",
+    "municipality_code": "14342",
+    "location": "神奈川県二宮町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3814": {
+    "name": "国府津",
+    "lat": "35.28140",
+    "lon": "139.21496",
+    "municipality_code": "14206",
+    "location": "神奈川県小田原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3815": {
+    "name": "鴨宮",
+    "lat": "35.27573",
+    "lon": "139.18016",
+    "municipality_code": "14206",
+    "location": "神奈川県小田原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3816": {
+    "name": "小田原",
+    "lat": "35.25610",
+    "lon": "139.15577",
+    "municipality_code": "14206",
+    "location": "神奈川県小田原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3817": {
+    "name": "早川",
+    "lat": "35.23872",
+    "lon": "139.14500",
+    "municipality_code": "14206",
+    "location": "神奈川県小田原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3818": {
+    "name": "根府川",
+    "lat": "35.20258",
+    "lon": "139.13863",
+    "municipality_code": "14206",
+    "location": "神奈川県小田原市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3819": {
+    "name": "真鶴",
+    "lat": "35.15692",
+    "lon": "139.13225",
+    "municipality_code": "14383",
+    "location": "神奈川県真鶴町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3820": {
+    "name": "湯河原",
+    "lat": "35.14612",
+    "lon": "139.10220",
+    "municipality_code": "14384",
+    "location": "神奈川県湯河原町",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3821": {
+    "name": "熱海",
+    "lat": "35.10372",
+    "lon": "139.07788",
+    "municipality_code": "22205",
+    "location": "静岡県熱海市",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3901": {
+    "name": "鶴見",
+    "lat": "35.50794",
+    "lon": "139.67579",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3902": {
+    "name": "国道",
+    "lat": "35.50077",
+    "lon": "139.67571",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3903": {
+    "name": "鶴見小野",
+    "lat": "35.49702",
+    "lon": "139.68128",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3904": {
+    "name": "弁天橋",
+    "lat": "35.49580",
+    "lon": "139.68948",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:04+09:00"
+  },
+  "jreast:3905": {
+    "name": "浅野",
+    "lat": "35.49744",
+    "lon": "139.69571",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3906": {
+    "name": "新芝浦",
+    "lat": "35.49192",
+    "lon": "139.70012",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3907": {
+    "name": "海芝浦",
+    "lat": "35.48613",
+    "lon": "139.70068",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3908": {
+    "name": "安善",
+    "lat": "35.49984",
+    "lon": "139.70124",
+    "municipality_code": "14101",
+    "location": "神奈川県横浜市　鶴見区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3909": {
+    "name": "大川",
+    "lat": "35.49540",
+    "lon": "139.71138",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3910": {
+    "name": "武蔵白石",
+    "lat": "35.50193",
+    "lon": "139.70653",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3911": {
+    "name": "浜川崎",
+    "lat": "35.50966",
+    "lon": "139.71354",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3912": {
+    "name": "昭和",
+    "lat": "35.50685",
+    "lon": "139.72392",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:3913": {
+    "name": "扇町",
+    "lat": "35.50174",
+    "lon": "139.72242",
+    "municipality_code": "14131",
+    "location": "神奈川県川崎市　川崎区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4001": {
+    "name": "千葉",
+    "lat": "35.61315",
+    "lon": "140.11308",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4002": {
+    "name": "本千葉",
+    "lat": "35.60062",
+    "lon": "140.12143",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4003": {
+    "name": "蘇我",
+    "lat": "35.58216",
+    "lon": "140.13074",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4004": {
+    "name": "浜野",
+    "lat": "35.55210",
+    "lon": "140.13218",
+    "municipality_code": "12101",
+    "location": "千葉県千葉市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4005": {
+    "name": "八幡宿",
+    "lat": "35.53616",
+    "lon": "140.12004",
+    "municipality_code": "12219",
+    "location": "千葉県市原市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4006": {
+    "name": "五井",
+    "lat": "35.51312",
+    "lon": "140.08974",
+    "municipality_code": "12219",
+    "location": "千葉県市原市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4007": {
+    "name": "姉ケ崎",
+    "lat": "35.47863",
+    "lon": "140.04190",
+    "municipality_code": "12219",
+    "location": "千葉県市原市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4008": {
+    "name": "長浦",
+    "lat": "35.45028",
+    "lon": "139.99542",
+    "municipality_code": "12229",
+    "location": "千葉県袖ケ浦市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4009": {
+    "name": "袖ケ浦",
+    "lat": "35.43190",
+    "lon": "139.95721",
+    "municipality_code": "12229",
+    "location": "千葉県袖ケ浦市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4010": {
+    "name": "巌根",
+    "lat": "35.41478",
+    "lon": "139.93380",
+    "municipality_code": "12206",
+    "location": "千葉県木更津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4011": {
+    "name": "木更津",
+    "lat": "35.38162",
+    "lon": "139.92613",
+    "municipality_code": "12206",
+    "location": "千葉県木更津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4012": {
+    "name": "君津",
+    "lat": "35.33359",
+    "lon": "139.89572",
+    "municipality_code": "12225",
+    "location": "千葉県君津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4013": {
+    "name": "青堀",
+    "lat": "35.33056",
+    "lon": "139.85888",
+    "municipality_code": "12226",
+    "location": "千葉県富津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4014": {
+    "name": "大貫",
+    "lat": "35.29162",
+    "lon": "139.85562",
+    "municipality_code": "12226",
+    "location": "千葉県富津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4015": {
+    "name": "佐貫町",
+    "lat": "35.25998",
+    "lon": "139.87614",
+    "municipality_code": "12226",
+    "location": "千葉県富津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4016": {
+    "name": "上総湊",
+    "lat": "35.22183",
+    "lon": "139.87100",
+    "municipality_code": "12226",
+    "location": "千葉県富津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4017": {
+    "name": "竹岡",
+    "lat": "35.19759",
+    "lon": "139.83003",
+    "municipality_code": "12226",
+    "location": "千葉県富津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4018": {
+    "name": "浜金谷",
+    "lat": "35.16820",
+    "lon": "139.82226",
+    "municipality_code": "12226",
+    "location": "千葉県富津市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4019": {
+    "name": "保田",
+    "lat": "35.14146",
+    "lon": "139.83816",
+    "municipality_code": "12463",
+    "location": "千葉県鋸南町",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4020": {
+    "name": "安房勝山",
+    "lat": "35.11406",
+    "lon": "139.83341",
+    "municipality_code": "12463",
+    "location": "千葉県鋸南町",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4021": {
+    "name": "岩井",
+    "lat": "35.09305",
+    "lon": "139.84987",
+    "municipality_code": "12234",
+    "location": "千葉県南房総市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4022": {
+    "name": "富浦",
+    "lat": "35.04623",
+    "lon": "139.83776",
+    "municipality_code": "12234",
+    "location": "千葉県南房総市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4023": {
+    "name": "那古船形",
+    "lat": "35.02904",
+    "lon": "139.85140",
+    "municipality_code": "12205",
+    "location": "千葉県館山市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4024": {
+    "name": "館山",
+    "lat": "34.99592",
+    "lon": "139.86199",
+    "municipality_code": "12205",
+    "location": "千葉県館山市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4025": {
+    "name": "九重",
+    "lat": "34.99752",
+    "lon": "139.91140",
+    "municipality_code": "12205",
+    "location": "千葉県館山市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4026": {
+    "name": "千倉",
+    "lat": "34.97686",
+    "lon": "139.95452",
+    "municipality_code": "12234",
+    "location": "千葉県南房総市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4027": {
+    "name": "千歳",
+    "lat": "34.99135",
+    "lon": "139.96628",
+    "municipality_code": "12234",
+    "location": "千葉県南房総市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4028": {
+    "name": "南三原",
+    "lat": "35.02120",
+    "lon": "139.97907",
+    "municipality_code": "12234",
+    "location": "千葉県南房総市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4029": {
+    "name": "和田浦",
+    "lat": "35.04171",
+    "lon": "140.01961",
+    "municipality_code": "12234",
+    "location": "千葉県南房総市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4030": {
+    "name": "江見",
+    "lat": "35.06250",
+    "lon": "140.06114",
+    "municipality_code": "12223",
+    "location": "千葉県鴨川市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4031": {
+    "name": "太海",
+    "lat": "35.08148",
+    "lon": "140.09623",
+    "municipality_code": "12223",
+    "location": "千葉県鴨川市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4032": {
+    "name": "安房鴨川",
+    "lat": "35.10762",
+    "lon": "140.10371",
+    "municipality_code": "12223",
+    "location": "千葉県鴨川市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4101": {
+    "name": "東京",
+    "lat": "35.68116",
+    "lon": "139.76713",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4102": {
+    "name": "上野",
+    "lat": "35.71376",
+    "lon": "139.77706",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4103": {
+    "name": "尾久",
+    "lat": "35.74680",
+    "lon": "139.75387",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4104": {
+    "name": "赤羽",
+    "lat": "35.77765",
+    "lon": "139.72099",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4105": {
+    "name": "浦和",
+    "lat": "35.85856",
+    "lon": "139.65714",
+    "municipality_code": "11107",
+    "location": "埼玉県さいたま市　浦和区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4106": {
+    "name": "さいたま新都心",
+    "lat": "35.89360",
+    "lon": "139.63390",
+    "municipality_code": "11105",
+    "location": "埼玉県さいたま市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4107": {
+    "name": "大宮",
+    "lat": "35.90626",
+    "lon": "139.62396",
+    "municipality_code": "11103",
+    "location": "埼玉県さいたま市　大宮区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4108": {
+    "name": "土呂",
+    "lat": "35.93192",
+    "lon": "139.63220",
+    "municipality_code": "11102",
+    "location": "埼玉県さいたま市　北区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4109": {
+    "name": "東大宮",
+    "lat": "35.94836",
+    "lon": "139.64026",
+    "municipality_code": "11104",
+    "location": "埼玉県さいたま市　見沼区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4110": {
+    "name": "蓮田",
+    "lat": "35.98116",
+    "lon": "139.65296",
+    "municipality_code": "11238",
+    "location": "埼玉県蓮田市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4111": {
+    "name": "白岡",
+    "lat": "36.01778",
+    "lon": "139.66688",
+    "municipality_code": "11246",
+    "location": "埼玉県白岡市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4112": {
+    "name": "新白岡",
+    "lat": "36.03825",
+    "lon": "139.67189",
+    "municipality_code": "11246",
+    "location": "埼玉県白岡市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4113": {
+    "name": "久喜",
+    "lat": "36.06581",
+    "lon": "139.67738",
+    "municipality_code": "11232",
+    "location": "埼玉県久喜市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4114": {
+    "name": "東鷲宮",
+    "lat": "36.08964",
+    "lon": "139.67970",
+    "municipality_code": "11232",
+    "location": "埼玉県久喜市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4115": {
+    "name": "栗橋",
+    "lat": "36.13572",
+    "lon": "139.69404",
+    "municipality_code": "11232",
+    "location": "埼玉県久喜市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4201": {
+    "name": "大崎",
+    "lat": "35.61994",
+    "lon": "139.72824",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4202": {
+    "name": "五反田",
+    "lat": "35.62626",
+    "lon": "139.72349",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4203": {
+    "name": "目黒",
+    "lat": "35.63294",
+    "lon": "139.71590",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4204": {
+    "name": "恵比寿",
+    "lat": "35.64668",
+    "lon": "139.71012",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4205": {
+    "name": "渋谷",
+    "lat": "35.65815",
+    "lon": "139.70175",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4206": {
+    "name": "原宿",
+    "lat": "35.67131",
+    "lon": "139.70273",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4207": {
+    "name": "代々木",
+    "lat": "35.68380",
+    "lon": "139.70221",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4208": {
+    "name": "新宿",
+    "lat": "35.68950",
+    "lon": "139.70090",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4209": {
+    "name": "新大久保",
+    "lat": "35.70093",
+    "lon": "139.70026",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4210": {
+    "name": "高田馬場",
+    "lat": "35.71290",
+    "lon": "139.70382",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4211": {
+    "name": "目白",
+    "lat": "35.72039",
+    "lon": "139.70628",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4212": {
+    "name": "池袋",
+    "lat": "35.73028",
+    "lon": "139.71108",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4213": {
+    "name": "大塚",
+    "lat": "35.73178",
+    "lon": "139.72794",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4214": {
+    "name": "巣鴨",
+    "lat": "35.73372",
+    "lon": "139.74035",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4215": {
+    "name": "駒込",
+    "lat": "35.73686",
+    "lon": "139.74806",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4216": {
+    "name": "田端",
+    "lat": "35.73748",
+    "lon": "139.76158",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4217": {
+    "name": "西日暮里",
+    "lat": "35.73208",
+    "lon": "139.76678",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4218": {
+    "name": "日暮里",
+    "lat": "35.72760",
+    "lon": "139.77117",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4219": {
+    "name": "鶯谷",
+    "lat": "35.72146",
+    "lon": "139.77803",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4220": {
+    "name": "上野",
+    "lat": "35.71376",
+    "lon": "139.77706",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4221": {
+    "name": "御徒町",
+    "lat": "35.70720",
+    "lon": "139.77472",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4222": {
+    "name": "秋葉原",
+    "lat": "35.69854",
+    "lon": "139.77304",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4223": {
+    "name": "神田",
+    "lat": "35.69177",
+    "lon": "139.77088",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4224": {
+    "name": "東京",
+    "lat": "35.68116",
+    "lon": "139.76713",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4225": {
+    "name": "有楽町",
+    "lat": "35.67504",
+    "lon": "139.76326",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4226": {
+    "name": "新橋",
+    "lat": "35.66630",
+    "lon": "139.75846",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4227": {
+    "name": "浜松町",
+    "lat": "35.65541",
+    "lon": "139.75712",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4228": {
+    "name": "田町",
+    "lat": "35.64574",
+    "lon": "139.74760",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4229": {
+    "name": "高輪ゲートウェイ",
+    "lat": "35.63538",
+    "lon": "139.74064",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4230": {
+    "name": "品川",
+    "lat": "35.62814",
+    "lon": "139.73854",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4301": {
+    "name": "東神奈川",
+    "lat": "35.47788",
+    "lon": "139.63316",
+    "municipality_code": "14102",
+    "location": "神奈川県横浜市　神奈川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4302": {
+    "name": "大口",
+    "lat": "35.49230",
+    "lon": "139.64634",
+    "municipality_code": "14102",
+    "location": "神奈川県横浜市　神奈川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4303": {
+    "name": "菊名",
+    "lat": "35.50963",
+    "lon": "139.63010",
+    "municipality_code": "14109",
+    "location": "神奈川県横浜市　港北区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4304": {
+    "name": "新横浜",
+    "lat": "35.50676",
+    "lon": "139.61742",
+    "municipality_code": "14109",
+    "location": "神奈川県横浜市　港北区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4305": {
+    "name": "小机",
+    "lat": "35.50864",
+    "lon": "139.59962",
+    "municipality_code": "14109",
+    "location": "神奈川県横浜市　港北区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4306": {
+    "name": "鴨居",
+    "lat": "35.51085",
+    "lon": "139.56695",
+    "municipality_code": "14113",
+    "location": "神奈川県横浜市　緑区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4307": {
+    "name": "中山",
+    "lat": "35.51477",
+    "lon": "139.53922",
+    "municipality_code": "14113",
+    "location": "神奈川県横浜市　緑区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4308": {
+    "name": "十日市場",
+    "lat": "35.52626",
+    "lon": "139.51650",
+    "municipality_code": "14113",
+    "location": "神奈川県横浜市　緑区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4309": {
+    "name": "長津田",
+    "lat": "35.53163",
+    "lon": "139.49528",
+    "municipality_code": "14113",
+    "location": "神奈川県横浜市　緑区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4310": {
+    "name": "成瀬",
+    "lat": "35.53541",
+    "lon": "139.47290",
+    "municipality_code": "13209",
+    "location": "東京都町田市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4311": {
+    "name": "町田",
+    "lat": "35.54154",
+    "lon": "139.44659",
+    "municipality_code": "13209",
+    "location": "東京都町田市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4312": {
+    "name": "古淵",
+    "lat": "35.55598",
+    "lon": "139.41924",
+    "municipality_code": "14153",
+    "location": "神奈川県相模原市　南区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4313": {
+    "name": "淵野辺",
+    "lat": "35.56836",
+    "lon": "139.39560",
+    "municipality_code": "14152",
+    "location": "神奈川県相模原市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4314": {
+    "name": "矢部",
+    "lat": "35.57310",
+    "lon": "139.38654",
+    "municipality_code": "14152",
+    "location": "神奈川県相模原市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4315": {
+    "name": "相模原",
+    "lat": "35.58148",
+    "lon": "139.37064",
+    "municipality_code": "14152",
+    "location": "神奈川県相模原市　中央区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4316": {
+    "name": "橋本",
+    "lat": "35.59484",
+    "lon": "139.34510",
+    "municipality_code": "14151",
+    "location": "神奈川県相模原市　緑区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4317": {
+    "name": "相原",
+    "lat": "35.60693",
+    "lon": "139.33168",
+    "municipality_code": "13209",
+    "location": "東京都町田市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4318": {
+    "name": "八王子みなみ野",
+    "lat": "35.63129",
+    "lon": "139.33098",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4319": {
+    "name": "片倉",
+    "lat": "35.63968",
+    "lon": "139.34116",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4320": {
+    "name": "八王子",
+    "lat": "35.65504",
+    "lon": "139.34025",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4401": {
+    "name": "東京",
+    "lat": "35.68122",
+    "lon": "139.76653",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4402": {
+    "name": "新橋",
+    "lat": "35.66630",
+    "lon": "139.75846",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4403": {
+    "name": "品川",
+    "lat": "35.62866",
+    "lon": "139.73919",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4404": {
+    "name": "西大井",
+    "lat": "35.60170",
+    "lon": "139.72160",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4405": {
+    "name": "武蔵小杉",
+    "lat": "35.57468",
+    "lon": "139.66350",
+    "municipality_code": "14133",
+    "location": "神奈川県川崎市　中原区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4406": {
+    "name": "新川崎",
+    "lat": "35.55172",
+    "lon": "139.67153",
+    "municipality_code": "14132",
+    "location": "神奈川県川崎市　幸区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4407": {
+    "name": "横浜",
+    "lat": "35.46579",
+    "lon": "139.62240",
+    "municipality_code": "14103",
+    "location": "神奈川県横浜市　西区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4408": {
+    "name": "保土ケ谷",
+    "lat": "35.44722",
+    "lon": "139.60037",
+    "municipality_code": "14106",
+    "location": "神奈川県横浜市　保土ケ谷区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4409": {
+    "name": "東戸塚",
+    "lat": "35.42996",
+    "lon": "139.55650",
+    "municipality_code": "14110",
+    "location": "神奈川県横浜市　戸塚区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4410": {
+    "name": "戸塚",
+    "lat": "35.40044",
+    "lon": "139.53431",
+    "municipality_code": "14110",
+    "location": "神奈川県横浜市　戸塚区",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4411": {
+    "name": "大船",
+    "lat": "35.35401",
+    "lon": "139.53133",
+    "municipality_code": "14204",
+    "location": "神奈川県鎌倉市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4412": {
+    "name": "北鎌倉",
+    "lat": "35.33794",
+    "lon": "139.54456",
+    "municipality_code": "14204",
+    "location": "神奈川県鎌倉市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4413": {
+    "name": "鎌倉",
+    "lat": "35.31931",
+    "lon": "139.55044",
+    "municipality_code": "14204",
+    "location": "神奈川県鎌倉市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4414": {
+    "name": "逗子",
+    "lat": "35.29744",
+    "lon": "139.57836",
+    "municipality_code": "14208",
+    "location": "神奈川県逗子市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4415": {
+    "name": "東逗子",
+    "lat": "35.29876",
+    "lon": "139.60182",
+    "municipality_code": "14208",
+    "location": "神奈川県逗子市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4416": {
+    "name": "田浦",
+    "lat": "35.29284",
+    "lon": "139.63752",
+    "municipality_code": "14201",
+    "location": "神奈川県横須賀市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4417": {
+    "name": "横須賀",
+    "lat": "35.28422",
+    "lon": "139.65490",
+    "municipality_code": "14201",
+    "location": "神奈川県横須賀市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4418": {
+    "name": "衣笠",
+    "lat": "35.25711",
+    "lon": "139.66099",
+    "municipality_code": "14201",
+    "location": "神奈川県横須賀市",
+    "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "jreast:4419": {
+    "name": "久里浜",
+    "lat": "35.23318",
+    "lon": "139.70090",
+    "municipality_code": "14201",
+    "location": "神奈川県横須賀市",
+    "updated_at": "2026-07-26T15:05+09:00"
   }
 }
