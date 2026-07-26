@@ -1,7 +1,7 @@
 {
   "jr_enabled": true,
   "challenge_data_enabled": true,
-  "generated_at": "2026-07-26T15:06+09:00",
+  "generated_at": "2026-07-27T04:15+09:00",
   "basic_output": "direct_timetable_basic.json.gz",
   "challenge_output": "direct_timetable_challenge.json.gz"
 }
