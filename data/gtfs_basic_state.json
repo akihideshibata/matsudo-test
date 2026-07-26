@@ -1,0 +1,37 @@
+{
+  "toei": {
+    "name": "東京都交通局",
+    "checked_at": "2026-07-26T14:38+09:00",
+    "fetched_at": "2026-07-26T14:38+09:00",
+    "etag": "\"0x8DE81B17244D8F4\"",
+    "last_modified": "Sat, 14 Mar 2026 10:07:05 GMT"
+  },
+  "tokyometro": {
+    "name": "東京メトロ",
+    "checked_at": "2026-07-26T14:38+09:00",
+    "fetched_at": "2026-07-26T14:38+09:00",
+    "etag": "\"0x8DEBC892F1C5814\"",
+    "last_modified": "Thu, 28 May 2026 07:17:32 GMT"
+  },
+  "twr": {
+    "name": "東京臨海高速鉄道",
+    "checked_at": "2026-07-26T14:38+09:00",
+    "fetched_at": "2026-07-26T14:38+09:00",
+    "etag": "\"0x8DE81B122863F20\"",
+    "last_modified": "Sat, 14 Mar 2026 10:04:52 GMT"
+  },
+  "mir": {
+    "name": "首都圏新都市鉄道",
+    "checked_at": "2026-07-26T14:39+09:00",
+    "fetched_at": "2026-07-26T14:39+09:00",
+    "etag": "\"0x8DE7336EFA4E328\"",
+    "last_modified": "Mon, 23 Feb 2026 23:54:51 GMT"
+  },
+  "tamamonorail": {
+    "name": "多摩都市モノレール",
+    "checked_at": "2026-07-26T14:39+09:00",
+    "fetched_at": "2026-07-26T14:39+09:00",
+    "etag": "\"0x8DE7336A3C0C8F6\"",
+    "last_modified": "Mon, 23 Feb 2026 23:52:44 GMT"
+  }
+}
