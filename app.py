@@ -67,6 +67,13 @@ def rent_man(value):
     return f"{float(value) / 10000:.1f}万円" if pd.notna(value) else ""
 
 
+def relative_rent(rent, destination_rent):
+    # 目的駅の家賃を100とした割合
+    if pd.isna(rent) or pd.isna(destination_rent) or not destination_rent:
+        return None
+    return round(float(rent) / float(destination_rent) * 100)
+
+
 def compact_html(text):
     # HTML内の余分な改行を除く
     return " ".join(x.strip() for x in text.splitlines())
@@ -81,9 +88,8 @@ def line_style(route):
 
 
 def station_label(name):
-    # 検索候補を「路線｜駅名｜所在地」で表示
-    info = station_info[name]
-    return f"{'・'.join(info['routes'])}｜{name}｜{info['location']}"
+    # 検索候補は「路線｜駅名」
+    return f"{'・'.join(station_info[name]['routes'])}｜{name}"
 
 
 def clock_html(text):
@@ -166,7 +172,6 @@ st.markdown(
         padding:3.25rem 1rem 3rem!important;
     }
 
-    /* 上部入力 */
     .selector-label{
         color:var(--text-color);
         opacity:.68;
@@ -174,6 +179,7 @@ st.markdown(
         font-weight:750;
         margin-bottom:.16rem;
     }
+
     .heading-row{
         display:flex;
         align-items:baseline;
@@ -196,7 +202,7 @@ st.markdown(
         white-space:nowrap;
     }
 
-    /* カード */
+    /* PC版カード */
     .station-card{
         position:relative;
         display:grid;
@@ -268,9 +274,10 @@ st.markdown(
         color:#475467!important;
         font-size:.72rem;
         font-weight:800;
+        white-space:nowrap;
     }
 
-    /* PC用時計 */
+    /* PC版時計 */
     .clock{
         position:relative;
         width:52px;
@@ -311,7 +318,7 @@ st.markdown(
         background:#344054;
     }
 
-    /* 詳細ボタン */
+    /* 詳細 */
     .details-area{
         grid-area:info;
         text-align:center;
@@ -338,7 +345,7 @@ st.markdown(
         z-index:10;
         right:.8rem;
         top:3.2rem;
-        width:min(340px,calc(100vw - 3rem));
+        width:min(355px,calc(100vw - 3rem));
         padding:.65rem .75rem;
         border:1px solid #d0d5dd;
         border-radius:9px;
@@ -362,7 +369,6 @@ st.markdown(
         border-radius:12px;
     }
 
-    /* 条件ボタンを正方形に近づける */
     div[data-testid="stPopover"] button{
         min-height:38px!important;
         padding:.25rem!important;
@@ -374,7 +380,6 @@ st.markdown(
             padding:2.9rem .55rem 2.5rem!important;
         }
 
-        /* 入力欄を横並びに固定 */
         div[data-testid="stHorizontalBlock"]{
             display:flex!important;
             flex-direction:row!important;
@@ -394,9 +399,7 @@ st.markdown(
             display:block;
             margin:.4rem 0 .5rem;
         }
-        .page-title{
-            font-size:1rem;
-        }
+        .page-title{font-size:1rem}
         .page-note{
             margin-top:.12rem;
             font-size:.56rem;
@@ -404,29 +407,29 @@ st.markdown(
             white-space:normal;
         }
 
-        /* 3列×2段に圧縮 */
+        /* 左：駅、中：時刻、右：相対家賃と路線 */
         .station-card{
-            grid-template-columns:minmax(0,1.15fr) minmax(92px,.85fr)
-                minmax(90px,.78fr);
+            grid-template-columns:minmax(0,1.2fr) minmax(100px,.88fr)
+                minmax(112px,.9fr);
             grid-template-areas:
                 "station departure rent"
                 "location arrival route";
-            gap:.12rem .45rem;
+            gap:.1rem .32rem;
             min-height:0;
             border-left-width:5px!important;
             border-radius:10px;
-            padding:.52rem .55rem;
-            margin-bottom:.36rem;
+            padding:.48rem .5rem;
+            margin-bottom:.34rem;
         }
 
         .station-name{
-            font-size:1.22rem;
+            font-size:1.2rem;
             white-space:nowrap;
             overflow:hidden;
             text-overflow:ellipsis;
         }
         .location{
-            font-size:.59rem;
+            font-size:.57rem;
             white-space:nowrap;
             overflow:hidden;
             text-overflow:ellipsis;
@@ -434,38 +437,36 @@ st.markdown(
 
         .departure-wrap{
             display:block;
-            text-align:right;
+            text-align:left;
         }
         .clock{display:none}
         .departure{
-            font-size:1.28rem;
+            font-size:1.25rem;
             line-height:1;
         }
         .arrival{
             padding:0;
-            font-size:.56rem;
-            text-align:right;
+            font-size:.54rem;
+            text-align:left;
         }
 
         .rent{
             position:relative;
-            padding-right:23px;
-            font-size:.62rem;
-            text-align:right;
-            white-space:nowrap;
+            padding-right:22px;
+            font-size:.58rem;
+            text-align:left;
         }
         .route{
-            font-size:.58rem;
-            text-align:right;
+            font-size:.57rem;
+            text-align:left;
             white-space:nowrap;
             overflow:hidden;
             text-overflow:ellipsis;
         }
 
-        /* iボタンを右上に重ね、専用行を使わない */
         .details-area{
             position:absolute;
-            top:.35rem;
+            top:.31rem;
             right:.3rem;
         }
         summary{
@@ -493,14 +494,9 @@ st.markdown(
 # ============================================================
 stations = sorted(
     station_info,
-    key=lambda name: (
-        "・".join(station_info[name]["routes"]),
-        station_info[name]["location"],
-        name,
-    ),
+    key=lambda name: ("・".join(station_info[name]["routes"]), name),
 )
 
-# 選択欄は空の検索状態、未選択時は神保町を使用
 destination_column, time_column, filter_column = st.columns([2.5, 1.05, .38])
 
 with destination_column:
@@ -509,7 +505,7 @@ with destination_column:
         "目的駅",
         stations,
         index=None,
-        placeholder="神保町（駅名・路線・所在地で検索）",
+        placeholder="神保町（駅名・路線で検索）",
         format_func=station_label,
         label_visibility="collapsed",
     )
@@ -528,22 +524,33 @@ with time_column:
     )
 
 target = arrival_time.strftime("%H:%M")
+destination_rent = station_info.get(destination, {}).get("rent")
 df = pd.DataFrame(search_routes(destination, target))
 bands = ["15分以内", "30分以内", "45分以内", "60分以内", "60分超"]
 
 if not df.empty:
     df["時間圏"] = df["所要時間"].apply(time_band)
+    df["相対家賃"] = df["家賃"].apply(
+        lambda value: relative_rent(value, destination_rent)
+    )
 
 with filter_column:
     st.markdown('<div class="selector-label">条件</div>', unsafe_allow_html=True)
 
     with st.popover("⚙"):
+        show_nearby = st.checkbox(
+            "10分未満の駅も表示",
+            value=False,
+        )
         selected_bands = st.multiselect(
             f"{destination}までの所要時間",
             bands,
             default=bands,
         )
-        keyword = st.text_input("駅名検索", placeholder="例：浅草、新宿")
+        keyword = st.text_input(
+            "駅名検索",
+            placeholder="例：浅草、新宿",
+        )
         route_options = sorted(df["経路"].unique()) if not df.empty else []
         selected_routes = st.multiselect(
             "利用路線",
@@ -562,7 +569,8 @@ st.markdown(
                 {escape(destination)}に{target}までに着くには？
             </div>
             <div class="page-note">
-                直通のみ｜対象ダイヤ {escape(data["service_date"])}
+                直通のみ｜10分以上を表示｜
+                対象ダイヤ {escape(data["service_date"])}
             </div>
         </div>
     """),
@@ -570,6 +578,9 @@ st.markdown(
 )
 
 if not df.empty:
+    if not show_nearby:
+        df = df[df["所要時間"] >= 10]
+
     df = df[
         df["時間圏"].isin(selected_bands)
         & df["経路"].isin(selected_routes)
@@ -577,7 +588,11 @@ if not df.empty:
 
     if keyword.strip():
         df = df[
-            df["駅名"].str.contains(keyword.strip(), na=False, regex=False)
+            df["駅名"].str.contains(
+                keyword.strip(),
+                na=False,
+                regex=False,
+            )
         ]
 
 
@@ -598,26 +613,28 @@ else:
         lines = escape(" ／ ".join(row["路線一覧"]))
         accent, background = line_style(str(row["経路"]))
         rent = row["家賃"]
+        ratio = row["相対家賃"]
 
         rent_text = (
-            escape(rent_man(rent))
-            if pd.notna(rent)
-            else "家賃不明"
+            f"相対家賃 {int(ratio)}%"
+            if pd.notna(ratio)
+            else "相対家賃 不明"
         )
-        rent_detail = (
-            f"""
-            <div>
-                <span class="detail-label">家賃目安：</span>
-                25㎡換算 約{escape(rent_man(rent))}
-            </div>
-            <div>
-                <span class="detail-label">統計：</span>
-                {escape(str(data.get("rent_source_year", "2023")))}年
-                住宅・土地統計調査
-            </div>
-            """
+
+        candidate_rent_detail = (
+            f"25㎡換算 約{escape(rent_man(rent))}"
             if pd.notna(rent)
-            else ""
+            else "情報なし"
+        )
+        destination_rent_detail = (
+            f"25㎡換算 約{escape(rent_man(destination_rent))}"
+            if pd.notna(destination_rent)
+            else "情報なし"
+        )
+        ratio_detail = (
+            f"{int(ratio)}%"
+            if pd.notna(ratio)
+            else "算出不可"
         )
 
         card = f"""
@@ -642,9 +659,28 @@ else:
                     <summary>i</summary>
                     <div class="details-body">
                         <div>
-                            <span class="detail-label">所在地：</span>{location}
+                            <span class="detail-label">所在地：</span>
+                            {location}
                         </div>
-                        {rent_detail}
+                        <div>
+                            <span class="detail-label">相対家賃：</span>
+                            {ratio_detail}
+                        </div>
+                        <div>
+                            <span class="detail-label">{station}の家賃目安：</span>
+                            {candidate_rent_detail}
+                        </div>
+                        <div>
+                            <span class="detail-label">
+                                {escape(destination)}の家賃目安：
+                            </span>
+                            {destination_rent_detail}
+                        </div>
+                        <div>
+                            <span class="detail-label">家賃統計：</span>
+                            {escape(str(data.get("rent_source_year", "2023")))}年
+                            住宅・土地統計調査
+                        </div>
                         <div>
                             <span class="detail-label">所要時間：</span>
                             {row["所要時間"]}分
@@ -688,6 +724,7 @@ with st.expander("検索結果を表で確認する"):
         output = df[[
             "駅名",
             "所在地",
+            "相対家賃",
             "家賃",
             "出発",
             "到着",
@@ -696,6 +733,9 @@ with st.expander("検索結果を表で確認する"):
             "行先",
         ]].copy()
 
+        output["相対家賃"] = output["相対家賃"].apply(
+            lambda x: f"{int(x)}%" if pd.notna(x) else ""
+        )
         output["家賃"] = output["家賃"].apply(
             lambda x: rent_man(x) if pd.notna(x) else ""
         )
@@ -708,6 +748,9 @@ with st.expander("検索結果を表で確認する"):
             "text/csv",
         )
 
+st.caption(
+    "相対家賃は、目的駅が属する自治体の公的家賃目安を100%として算出しています。"
+)
 st.caption(
     "家賃目安は住宅・土地統計調査の市区町村別1㎡当たり家賃を"
     "25㎡に換算した参考値です。"
