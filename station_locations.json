@@ -1190,5 +1190,3005 @@
     "municipality_code": "13104",
     "location": "東京都新宿区",
     "updated_at": "2026-07-23T19:42+09:00"
+  },
+  "toei:101": {
+    "name": "西馬込",
+    "lat": "35.587050",
+    "lon": "139.706086",
+    "municipality_code": "13111",
+    "location": "東京都大田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:102": {
+    "name": "馬込",
+    "lat": "35.596773",
+    "lon": "139.711884",
+    "municipality_code": "13111",
+    "location": "東京都大田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:103": {
+    "name": "中延",
+    "lat": "35.605274",
+    "lon": "139.713645",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:104": {
+    "name": "戸越",
+    "lat": "35.614421",
+    "lon": "139.716315",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:105": {
+    "name": "五反田",
+    "lat": "35.626878",
+    "lon": "139.723965",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:106": {
+    "name": "高輪台",
+    "lat": "35.631751",
+    "lon": "139.730384",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:107": {
+    "name": "泉岳寺",
+    "lat": "35.638715",
+    "lon": "139.739993",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:108": {
+    "name": "三田",
+    "lat": "35.646749",
+    "lon": "139.746877",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:109": {
+    "name": "大門",
+    "lat": "35.65687",
+    "lon": "139.754679",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:110": {
+    "name": "新橋",
+    "lat": "35.665386",
+    "lon": "139.759338",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:111": {
+    "name": "東銀座",
+    "lat": "35.669915",
+    "lon": "139.76735",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:112": {
+    "name": "宝町",
+    "lat": "35.675606",
+    "lon": "139.771966",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:113": {
+    "name": "日本橋",
+    "lat": "35.681796",
+    "lon": "139.775814",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:114": {
+    "name": "人形町",
+    "lat": "35.686345",
+    "lon": "139.782276",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:115": {
+    "name": "東日本橋",
+    "lat": "35.692123",
+    "lon": "139.784886",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:116": {
+    "name": "浅草橋",
+    "lat": "35.697494",
+    "lon": "139.786335",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:117": {
+    "name": "蔵前",
+    "lat": "35.703128",
+    "lon": "139.790858",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:118": {
+    "name": "浅草",
+    "lat": "35.708920",
+    "lon": "139.796542",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:119": {
+    "name": "本所吾妻橋",
+    "lat": "35.708565",
+    "lon": "139.804397",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:120": {
+    "name": "押上",
+    "lat": "35.710824",
+    "lon": "139.812993",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:201": {
+    "name": "目黒",
+    "lat": "35.633635",
+    "lon": "139.715444",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:202": {
+    "name": "白金台",
+    "lat": "35.637851",
+    "lon": "139.726007",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:203": {
+    "name": "白金高輪",
+    "lat": "35.643283",
+    "lon": "139.734344",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:204": {
+    "name": "三田",
+    "lat": "35.648650",
+    "lon": "139.748998",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:205": {
+    "name": "芝公園",
+    "lat": "35.654186",
+    "lon": "139.749850",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:206": {
+    "name": "御成門",
+    "lat": "35.660774",
+    "lon": "139.751366",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:207": {
+    "name": "内幸町",
+    "lat": "35.669344",
+    "lon": "139.755330",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:208": {
+    "name": "日比谷",
+    "lat": "35.676585",
+    "lon": "139.760274",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:209": {
+    "name": "大手町",
+    "lat": "35.684093",
+    "lon": "139.762798",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:210": {
+    "name": "神保町",
+    "lat": "35.695331",
+    "lon": "139.758213",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:211": {
+    "name": "水道橋",
+    "lat": "35.70346",
+    "lon": "139.755147",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:212": {
+    "name": "春日",
+    "lat": "35.709532",
+    "lon": "139.753287",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:213": {
+    "name": "白山",
+    "lat": "35.721682",
+    "lon": "139.752134",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:214": {
+    "name": "千石",
+    "lat": "35.727772",
+    "lon": "139.744984",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:215": {
+    "name": "巣鴨",
+    "lat": "35.733793",
+    "lon": "139.738154",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:216": {
+    "name": "西巣鴨",
+    "lat": "35.743568",
+    "lon": "139.728703",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:217": {
+    "name": "新板橋",
+    "lat": "35.748772",
+    "lon": "139.719808",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:218": {
+    "name": "板橋区役所前",
+    "lat": "35.751372",
+    "lon": "139.710120",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:219": {
+    "name": "板橋本町",
+    "lat": "35.761309",
+    "lon": "139.705544",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:220": {
+    "name": "本蓮沼",
+    "lat": "35.768566",
+    "lon": "139.702410",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:221": {
+    "name": "志村坂上",
+    "lat": "35.776082",
+    "lon": "139.695097",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:222": {
+    "name": "志村三丁目",
+    "lat": "35.777468",
+    "lon": "139.685751",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:223": {
+    "name": "蓮根",
+    "lat": "35.784262",
+    "lon": "139.678947",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:224": {
+    "name": "西台",
+    "lat": "35.787074",
+    "lon": "139.672867",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:225": {
+    "name": "高島平",
+    "lat": "35.788908",
+    "lon": "139.661361",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:226": {
+    "name": "新高島平",
+    "lat": "35.790289",
+    "lon": "139.654050",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:227": {
+    "name": "西高島平",
+    "lat": "35.791965",
+    "lon": "139.645421",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:301": {
+    "name": "新宿",
+    "lat": "35.688433",
+    "lon": "139.698418",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:302": {
+    "name": "新宿三丁目",
+    "lat": "35.691016",
+    "lon": "139.706794",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:303": {
+    "name": "曙橋",
+    "lat": "35.692402",
+    "lon": "139.722317",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:304": {
+    "name": "市ヶ谷",
+    "lat": "35.691530",
+    "lon": "139.737588",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:305": {
+    "name": "九段下",
+    "lat": "35.695546",
+    "lon": "139.751738",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:306": {
+    "name": "神保町",
+    "lat": "35.695972",
+    "lon": "139.757981",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:307": {
+    "name": "小川町",
+    "lat": "35.695005",
+    "lon": "139.766449",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:308": {
+    "name": "岩本町",
+    "lat": "35.695607",
+    "lon": "139.775115",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:309": {
+    "name": "馬喰横山",
+    "lat": "35.691930",
+    "lon": "139.783006",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:310": {
+    "name": "浜町",
+    "lat": "35.688601",
+    "lon": "139.787725",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:311": {
+    "name": "森下",
+    "lat": "35.687982",
+    "lon": "139.796623",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:312": {
+    "name": "菊川",
+    "lat": "35.688399",
+    "lon": "139.806057",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:313": {
+    "name": "住吉",
+    "lat": "35.689040",
+    "lon": "139.815723",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:314": {
+    "name": "西大島",
+    "lat": "35.689391",
+    "lon": "139.826231",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:315": {
+    "name": "大島",
+    "lat": "35.689752",
+    "lon": "139.834705",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:316": {
+    "name": "東大島",
+    "lat": "35.689959",
+    "lon": "139.847255",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:317": {
+    "name": "船堀",
+    "lat": "35.683760",
+    "lon": "139.863955",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:318": {
+    "name": "一之江",
+    "lat": "35.685987",
+    "lon": "139.882586",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:319": {
+    "name": "瑞江",
+    "lat": "35.69351",
+    "lon": "139.89770",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:320": {
+    "name": "篠崎",
+    "lat": "35.706022",
+    "lon": "139.903796",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:321": {
+    "name": "本八幡",
+    "lat": "35.722819",
+    "lon": "139.926613",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:402": {
+    "name": "新宿西口",
+    "lat": "35.693367",
+    "lon": "139.699121",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:403": {
+    "name": "東新宿",
+    "lat": "35.697957",
+    "lon": "139.707434",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:404": {
+    "name": "若松河田",
+    "lat": "35.699188",
+    "lon": "139.718043",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:405": {
+    "name": "牛込柳町",
+    "lat": "35.699501",
+    "lon": "139.725040",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:406": {
+    "name": "牛込神楽坂",
+    "lat": "35.700911",
+    "lon": "139.735894",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:407": {
+    "name": "飯田橋",
+    "lat": "35.702952",
+    "lon": "139.745257",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:408": {
+    "name": "春日",
+    "lat": "35.708493",
+    "lon": "139.752487",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:409": {
+    "name": "本郷三丁目",
+    "lat": "35.70751",
+    "lon": "139.760524",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:410": {
+    "name": "上野御徒町",
+    "lat": "35.707949",
+    "lon": "139.773351",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:411": {
+    "name": "新御徒町",
+    "lat": "35.707009",
+    "lon": "139.782166",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:412": {
+    "name": "蔵前",
+    "lat": "35.705587",
+    "lon": "139.792244",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:413": {
+    "name": "両国",
+    "lat": "35.696807",
+    "lon": "139.797469",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:414": {
+    "name": "森下",
+    "lat": "35.687926",
+    "lon": "139.798251",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:415": {
+    "name": "清澄白河",
+    "lat": "35.682355",
+    "lon": "139.798758",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:416": {
+    "name": "門前仲町",
+    "lat": "35.672772",
+    "lon": "139.795124",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:417": {
+    "name": "月島",
+    "lat": "35.663757",
+    "lon": "139.783912",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:418": {
+    "name": "勝どき",
+    "lat": "35.658934",
+    "lon": "139.777138",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:419": {
+    "name": "築地市場",
+    "lat": "35.664919",
+    "lon": "139.766929",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:420": {
+    "name": "汐留",
+    "lat": "35.663193",
+    "lon": "139.760225",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:421": {
+    "name": "大門",
+    "lat": "35.656671",
+    "lon": "139.755696",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:422": {
+    "name": "赤羽橋",
+    "lat": "35.654985",
+    "lon": "139.743989",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:423": {
+    "name": "麻布十番",
+    "lat": "35.656448",
+    "lon": "139.736330",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:424": {
+    "name": "六本木",
+    "lat": "35.664106",
+    "lon": "139.731354",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:425": {
+    "name": "青山一丁目",
+    "lat": "35.673067",
+    "lon": "139.723925",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:426": {
+    "name": "国立競技場",
+    "lat": "35.679896",
+    "lon": "139.714667",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:427": {
+    "name": "代々木",
+    "lat": "35.683505",
+    "lon": "139.701603",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:428": {
+    "name": "新宿",
+    "lat": "35.688462",
+    "lon": "139.699019",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:429": {
+    "name": "都庁前",
+    "lat": "35.690607",
+    "lon": "139.692677",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:430": {
+    "name": "西新宿五丁目",
+    "lat": "35.689892",
+    "lon": "139.684545",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:431": {
+    "name": "中野坂上",
+    "lat": "35.697887",
+    "lon": "139.682899",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:432": {
+    "name": "東中野",
+    "lat": "35.707160",
+    "lon": "139.683112",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:433": {
+    "name": "中井",
+    "lat": "35.713935",
+    "lon": "139.686296",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:434": {
+    "name": "落合南長崎",
+    "lat": "35.723435",
+    "lon": "139.683389",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:435": {
+    "name": "新江古田",
+    "lat": "35.732579",
+    "lon": "139.670498",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:436": {
+    "name": "練馬",
+    "lat": "35.737411",
+    "lon": "139.654762",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:437": {
+    "name": "豊島園",
+    "lat": "35.741711",
+    "lon": "139.649116",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:438": {
+    "name": "練馬春日町",
+    "lat": "35.751410",
+    "lon": "139.640300",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:439": {
+    "name": "光が丘",
+    "lat": "35.758527",
+    "lon": "139.628901",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:501": {
+    "name": "日暮里",
+    "lat": "35.728793",
+    "lon": "139.771121",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:502": {
+    "name": "西日暮里",
+    "lat": "35.733739",
+    "lon": "139.768169",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:503": {
+    "name": "赤土小学校前",
+    "lat": "35.742868",
+    "lon": "139.769025",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:504": {
+    "name": "熊野前",
+    "lat": "35.748513",
+    "lon": "139.769828",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:505": {
+    "name": "足立小台",
+    "lat": "35.754655",
+    "lon": "139.770376",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:506": {
+    "name": "扇大橋",
+    "lat": "35.763906",
+    "lon": "139.770798",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:507": {
+    "name": "高野",
+    "lat": "35.768351",
+    "lon": "139.770692",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:508": {
+    "name": "江北",
+    "lat": "35.773954",
+    "lon": "139.770290",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:509": {
+    "name": "西新井大師西",
+    "lat": "35.781510",
+    "lon": "139.770077",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:510": {
+    "name": "谷在家",
+    "lat": "35.788787",
+    "lon": "139.770036",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:511": {
+    "name": "舎人公園",
+    "lat": "35.796384",
+    "lon": "139.770159",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:512": {
+    "name": "舎人",
+    "lat": "35.805690",
+    "lon": "139.770069",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:513": {
+    "name": "見沼代親水公園",
+    "lat": "35.814541",
+    "lon": "139.770707",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:601": {
+    "name": "三ノ輪橋",
+    "lat": "35.732207",
+    "lon": "139.791509",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:602": {
+    "name": "荒川一中前",
+    "lat": "35.733768",
+    "lon": "139.788841",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:603": {
+    "name": "荒川区役所前",
+    "lat": "35.734913",
+    "lon": "139.786416",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:604": {
+    "name": "荒川二丁目",
+    "lat": "35.738573",
+    "lon": "139.784704",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:605": {
+    "name": "荒川七丁目",
+    "lat": "35.741923",
+    "lon": "139.784210",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:606": {
+    "name": "町屋駅前",
+    "lat": "35.742783",
+    "lon": "139.780891",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:607": {
+    "name": "町屋二丁目",
+    "lat": "35.743919",
+    "lon": "139.776416",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:608": {
+    "name": "東尾久三丁目",
+    "lat": "35.745626",
+    "lon": "139.773867",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:609": {
+    "name": "熊野前",
+    "lat": "35.748487",
+    "lon": "139.769859",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:610": {
+    "name": "宮ノ前",
+    "lat": "35.749811",
+    "lon": "139.766190",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:611": {
+    "name": "小台",
+    "lat": "35.750477",
+    "lon": "139.761739",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:612": {
+    "name": "荒川遊園地前",
+    "lat": "35.750646",
+    "lon": "139.757517",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:613": {
+    "name": "荒川車庫前",
+    "lat": "35.750865",
+    "lon": "139.752461",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:614": {
+    "name": "梶原",
+    "lat": "35.751070",
+    "lon": "139.747268",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:615": {
+    "name": "栄町",
+    "lat": "35.750865",
+    "lon": "139.742186",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:616": {
+    "name": "王子駅前",
+    "lat": "35.752982",
+    "lon": "139.738045",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:617": {
+    "name": "飛鳥山",
+    "lat": "35.750109",
+    "lon": "139.737333",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:618": {
+    "name": "滝野川一丁目",
+    "lat": "35.747283",
+    "lon": "139.735420",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:00+09:00"
+  },
+  "toei:619": {
+    "name": "西ヶ原四丁目",
+    "lat": "35.744222",
+    "lon": "139.732665",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:620": {
+    "name": "新庚申塚",
+    "lat": "35.741070",
+    "lon": "139.730344",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:621": {
+    "name": "庚申塚",
+    "lat": "35.739504",
+    "lon": "139.729625",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:622": {
+    "name": "巣鴨新田",
+    "lat": "35.735682",
+    "lon": "139.727684",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:623": {
+    "name": "大塚駅前",
+    "lat": "35.731188",
+    "lon": "139.729098",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:624": {
+    "name": "向原",
+    "lat": "35.728775",
+    "lon": "139.724759",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:625": {
+    "name": "東池袋四丁目",
+    "lat": "35.725398",
+    "lon": "139.720404",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:626": {
+    "name": "都電雑司ヶ谷",
+    "lat": "35.724081",
+    "lon": "139.717835",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:627": {
+    "name": "鬼子母神前",
+    "lat": "35.720569",
+    "lon": "139.715160",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:628": {
+    "name": "学習院下",
+    "lat": "35.716347",
+    "lon": "139.712529",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:629": {
+    "name": "面影橋",
+    "lat": "35.713012",
+    "lon": "139.714199",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "toei:630": {
+    "name": "早稲田",
+    "lat": "35.711760",
+    "lon": "139.719003",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:101": {
+    "name": "渋谷",
+    "lat": "35.659097",
+    "lon": "139.702673",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:102": {
+    "name": "表参道",
+    "lat": "35.665042",
+    "lon": "139.712473",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:103": {
+    "name": "外苑前",
+    "lat": "35.670375",
+    "lon": "139.717825",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:104": {
+    "name": "青山一丁目",
+    "lat": "35.67279",
+    "lon": "139.724145",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:105": {
+    "name": "赤坂見附",
+    "lat": "35.676845",
+    "lon": "139.737347",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:106": {
+    "name": "溜池山王",
+    "lat": "35.671511",
+    "lon": "139.741943",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:107": {
+    "name": "虎ノ門",
+    "lat": "35.67016",
+    "lon": "139.75012",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:108": {
+    "name": "新橋",
+    "lat": "35.667382",
+    "lon": "139.758512",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:109": {
+    "name": "銀座",
+    "lat": "35.6715",
+    "lon": "139.765366",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:110": {
+    "name": "京橋",
+    "lat": "35.676704",
+    "lon": "139.77011",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:111": {
+    "name": "日本橋",
+    "lat": "35.681879",
+    "lon": "139.773335",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:112": {
+    "name": "三越前",
+    "lat": "35.687173",
+    "lon": "139.773582",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:113": {
+    "name": "神田",
+    "lat": "35.693715",
+    "lon": "139.77089",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:114": {
+    "name": "末広町",
+    "lat": "35.70278",
+    "lon": "139.771762",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:115": {
+    "name": "上野広小路",
+    "lat": "35.707765",
+    "lon": "139.773011",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:116": {
+    "name": "上野",
+    "lat": "35.711835",
+    "lon": "139.775625",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:117": {
+    "name": "稲荷町",
+    "lat": "35.711389",
+    "lon": "139.78221",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:118": {
+    "name": "田原町",
+    "lat": "35.709917",
+    "lon": "139.790306",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:119": {
+    "name": "浅草",
+    "lat": "35.710746",
+    "lon": "139.797774",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:201": {
+    "name": "荻窪",
+    "lat": "35.704175",
+    "lon": "139.61976",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:202": {
+    "name": "南阿佐ケ谷",
+    "lat": "35.699455",
+    "lon": "139.635575",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:203": {
+    "name": "新高円寺",
+    "lat": "35.69786",
+    "lon": "139.64851",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:204": {
+    "name": "東高円寺",
+    "lat": "35.697965",
+    "lon": "139.658295",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:205": {
+    "name": "新中野",
+    "lat": "35.697475",
+    "lon": "139.66951",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:206": {
+    "name": "方南町",
+    "lat": "35.683515",
+    "lon": "139.657935",
+    "municipality_code": "13115",
+    "location": "東京都杉並区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:207": {
+    "name": "中野富士見町",
+    "lat": "35.69082",
+    "lon": "139.668155",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:208": {
+    "name": "中野新橋",
+    "lat": "35.691685",
+    "lon": "139.674001",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:209": {
+    "name": "中野坂上",
+    "lat": "35.697085",
+    "lon": "139.682205",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:210": {
+    "name": "西新宿",
+    "lat": "35.694515",
+    "lon": "139.69256",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:211": {
+    "name": "新宿",
+    "lat": "35.692452",
+    "lon": "139.700548",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:212": {
+    "name": "新宿三丁目",
+    "lat": "35.69118",
+    "lon": "139.70421",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:213": {
+    "name": "新宿御苑前",
+    "lat": "35.688525",
+    "lon": "139.710915",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:214": {
+    "name": "四谷三丁目",
+    "lat": "35.687835",
+    "lon": "139.719325",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:215": {
+    "name": "四ツ谷",
+    "lat": "35.684197",
+    "lon": "139.730047",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:216": {
+    "name": "赤坂見附",
+    "lat": "35.676845",
+    "lon": "139.737347",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:217": {
+    "name": "国会議事堂前",
+    "lat": "35.674926",
+    "lon": "139.745473",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:218": {
+    "name": "霞ケ関",
+    "lat": "35.674235",
+    "lon": "139.75268",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:219": {
+    "name": "銀座",
+    "lat": "35.673159",
+    "lon": "139.763876",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:220": {
+    "name": "東京",
+    "lat": "35.681935",
+    "lon": "139.7648",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:221": {
+    "name": "大手町",
+    "lat": "35.686875",
+    "lon": "139.766203",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:222": {
+    "name": "淡路町",
+    "lat": "35.69487",
+    "lon": "139.767455",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:223": {
+    "name": "御茶ノ水",
+    "lat": "35.70043",
+    "lon": "139.764405",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:224": {
+    "name": "本郷三丁目",
+    "lat": "35.706726",
+    "lon": "139.760154",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:225": {
+    "name": "後楽園",
+    "lat": "35.707307",
+    "lon": "139.750861",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:226": {
+    "name": "茗荷谷",
+    "lat": "35.7172",
+    "lon": "139.736895",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:227": {
+    "name": "新大塚",
+    "lat": "35.72613",
+    "lon": "139.729354",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:228": {
+    "name": "池袋",
+    "lat": "35.730345",
+    "lon": "139.71115",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:301": {
+    "name": "中目黒",
+    "lat": "35.644108",
+    "lon": "139.698833",
+    "municipality_code": "13110",
+    "location": "東京都目黒区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:302": {
+    "name": "恵比寿",
+    "lat": "35.64704",
+    "lon": "139.708701",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:303": {
+    "name": "広尾",
+    "lat": "35.651499",
+    "lon": "139.722209",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:304": {
+    "name": "六本木",
+    "lat": "35.6628",
+    "lon": "139.731155",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:305": {
+    "name": "神谷町",
+    "lat": "35.662625",
+    "lon": "139.744725",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:306": {
+    "name": "虎ノ門ヒルズ",
+    "lat": "35.667309",
+    "lon": "139.747738",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:307": {
+    "name": "霞ケ関",
+    "lat": "35.673875",
+    "lon": "139.75106",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:308": {
+    "name": "日比谷",
+    "lat": "35.674271",
+    "lon": "139.7606",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:309": {
+    "name": "銀座",
+    "lat": "35.671983",
+    "lon": "139.764007",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:310": {
+    "name": "東銀座",
+    "lat": "35.669129",
+    "lon": "139.767633",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:311": {
+    "name": "築地",
+    "lat": "35.667928",
+    "lon": "139.772473",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:312": {
+    "name": "八丁堀",
+    "lat": "35.675368",
+    "lon": "139.777334",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:313": {
+    "name": "茅場町",
+    "lat": "35.679078",
+    "lon": "139.779619",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:314": {
+    "name": "人形町",
+    "lat": "35.686259",
+    "lon": "139.782339",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:315": {
+    "name": "小伝馬町",
+    "lat": "35.690423",
+    "lon": "139.778758",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:316": {
+    "name": "秋葉原",
+    "lat": "35.697965",
+    "lon": "139.775529",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:317": {
+    "name": "仲御徒町",
+    "lat": "35.706655",
+    "lon": "139.77619",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:318": {
+    "name": "上野",
+    "lat": "35.711558",
+    "lon": "139.777061",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:319": {
+    "name": "入谷",
+    "lat": "35.720565",
+    "lon": "139.784466",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:320": {
+    "name": "三ノ輪",
+    "lat": "35.729285",
+    "lon": "139.791165",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:321": {
+    "name": "南千住",
+    "lat": "35.73231",
+    "lon": "139.79878",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:322": {
+    "name": "北千住",
+    "lat": "35.749904",
+    "lon": "139.805591",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:401": {
+    "name": "中野",
+    "lat": "35.70574",
+    "lon": "139.665605",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:402": {
+    "name": "落合",
+    "lat": "35.710635",
+    "lon": "139.685965",
+    "municipality_code": "13114",
+    "location": "東京都中野区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:403": {
+    "name": "高田馬場",
+    "lat": "35.71328",
+    "lon": "139.705045",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:404": {
+    "name": "早稲田",
+    "lat": "35.70568",
+    "lon": "139.72219",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:405": {
+    "name": "神楽坂",
+    "lat": "35.703865",
+    "lon": "139.73452",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:406": {
+    "name": "飯田橋",
+    "lat": "35.701403",
+    "lon": "139.746521",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:407": {
+    "name": "九段下",
+    "lat": "35.696091",
+    "lon": "139.751265",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:408": {
+    "name": "竹橋",
+    "lat": "35.69044",
+    "lon": "139.75767",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:409": {
+    "name": "大手町",
+    "lat": "35.684697",
+    "lon": "139.76603",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:410": {
+    "name": "日本橋",
+    "lat": "35.682376",
+    "lon": "139.774101",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:411": {
+    "name": "茅場町",
+    "lat": "35.680346",
+    "lon": "139.77927",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:412": {
+    "name": "門前仲町",
+    "lat": "35.671892",
+    "lon": "139.796099",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:413": {
+    "name": "木場",
+    "lat": "35.669356",
+    "lon": "139.807115",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:414": {
+    "name": "東陽町",
+    "lat": "35.66959",
+    "lon": "139.81768",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:415": {
+    "name": "南砂町",
+    "lat": "35.668415",
+    "lon": "139.831695",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:416": {
+    "name": "西葛西",
+    "lat": "35.664562",
+    "lon": "139.8596",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:417": {
+    "name": "葛西",
+    "lat": "35.663616",
+    "lon": "139.87253",
+    "municipality_code": "13123",
+    "location": "東京都江戸川区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:418": {
+    "name": "浦安",
+    "lat": "35.665903",
+    "lon": "139.893236",
+    "municipality_code": "12227",
+    "location": "千葉県浦安市",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:419": {
+    "name": "南行徳",
+    "lat": "35.672729",
+    "lon": "139.902276",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:420": {
+    "name": "行徳",
+    "lat": "35.68262",
+    "lon": "139.914185",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:421": {
+    "name": "妙典",
+    "lat": "35.691014",
+    "lon": "139.924286",
+    "municipality_code": "12203",
+    "location": "千葉県市川市",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:422": {
+    "name": "原木中山",
+    "lat": "35.7033",
+    "lon": "139.941915",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:423": {
+    "name": "西船橋",
+    "lat": "35.707174",
+    "lon": "139.958767",
+    "municipality_code": "12204",
+    "location": "千葉県船橋市",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:501": {
+    "name": "代々木上原",
+    "lat": "35.669017",
+    "lon": "139.679884",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:502": {
+    "name": "代々木公園",
+    "lat": "35.669104",
+    "lon": "139.689791",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:503": {
+    "name": "明治神宮前〈原宿〉",
+    "lat": "35.669123",
+    "lon": "139.703944",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:504": {
+    "name": "表参道",
+    "lat": "35.665652",
+    "lon": "139.711346",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:505": {
+    "name": "乃木坂",
+    "lat": "35.666592",
+    "lon": "139.726229",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:506": {
+    "name": "赤坂",
+    "lat": "35.672104",
+    "lon": "139.736413",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:507": {
+    "name": "国会議事堂前",
+    "lat": "35.673566",
+    "lon": "139.743188",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:508": {
+    "name": "霞ケ関",
+    "lat": "35.67256",
+    "lon": "139.75177",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:509": {
+    "name": "日比谷",
+    "lat": "35.673955",
+    "lon": "139.758765",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:510": {
+    "name": "二重橋前〈丸の内〉",
+    "lat": "35.680505",
+    "lon": "139.76178",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:511": {
+    "name": "大手町",
+    "lat": "35.68525",
+    "lon": "139.763285",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:512": {
+    "name": "新御茶ノ水",
+    "lat": "35.696925",
+    "lon": "139.76545",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:513": {
+    "name": "湯島",
+    "lat": "35.706805",
+    "lon": "139.769981",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:514": {
+    "name": "根津",
+    "lat": "35.717325",
+    "lon": "139.76575",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:515": {
+    "name": "千駄木",
+    "lat": "35.725746",
+    "lon": "139.763303",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:516": {
+    "name": "西日暮里",
+    "lat": "35.732355",
+    "lon": "139.76689",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:517": {
+    "name": "町屋",
+    "lat": "35.742068",
+    "lon": "139.780047",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:518": {
+    "name": "北千住",
+    "lat": "35.7492",
+    "lon": "139.804403",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:519": {
+    "name": "綾瀬",
+    "lat": "35.762285",
+    "lon": "139.82489",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:520": {
+    "name": "北綾瀬",
+    "lat": "35.77689",
+    "lon": "139.832095",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:601": {
+    "name": "和光市",
+    "lat": "35.78835",
+    "lon": "139.612865",
+    "municipality_code": "11229",
+    "location": "埼玉県和光市",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:602": {
+    "name": "地下鉄成増",
+    "lat": "35.77674",
+    "lon": "139.63117",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:603": {
+    "name": "地下鉄赤塚",
+    "lat": "35.769981",
+    "lon": "139.644",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:604": {
+    "name": "平和台",
+    "lat": "35.757555",
+    "lon": "139.6543",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:605": {
+    "name": "氷川台",
+    "lat": "35.74962",
+    "lon": "139.66547",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:606": {
+    "name": "小竹向原",
+    "lat": "35.743395",
+    "lon": "139.67952",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:607": {
+    "name": "千川",
+    "lat": "35.738175",
+    "lon": "139.6894",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:608": {
+    "name": "要町",
+    "lat": "35.733215",
+    "lon": "139.69848",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:609": {
+    "name": "池袋",
+    "lat": "35.729185",
+    "lon": "139.710885",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:610": {
+    "name": "東池袋",
+    "lat": "35.72595",
+    "lon": "139.718865",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:611": {
+    "name": "護国寺",
+    "lat": "35.71918",
+    "lon": "139.72745",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:612": {
+    "name": "江戸川橋",
+    "lat": "35.709295",
+    "lon": "139.73413",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:613": {
+    "name": "飯田橋",
+    "lat": "35.701342",
+    "lon": "139.743207",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:614": {
+    "name": "市ケ谷",
+    "lat": "35.692576",
+    "lon": "139.736891",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:615": {
+    "name": "麴町",
+    "lat": "35.684785",
+    "lon": "139.73735",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:616": {
+    "name": "永田町",
+    "lat": "35.677895",
+    "lon": "139.741773",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:617": {
+    "name": "桜田門",
+    "lat": "35.677459",
+    "lon": "139.751886",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:618": {
+    "name": "有楽町",
+    "lat": "35.675973",
+    "lon": "139.762286",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:619": {
+    "name": "銀座一丁目",
+    "lat": "35.674519",
+    "lon": "139.766786",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:620": {
+    "name": "新富町",
+    "lat": "35.670529",
+    "lon": "139.773594",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:621": {
+    "name": "月島",
+    "lat": "35.664711",
+    "lon": "139.784405",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:622": {
+    "name": "豊洲",
+    "lat": "35.655153",
+    "lon": "139.795994",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:623": {
+    "name": "辰巳",
+    "lat": "35.645775",
+    "lon": "139.81033",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:624": {
+    "name": "新木場",
+    "lat": "35.64578",
+    "lon": "139.826605",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:701": {
+    "name": "渋谷",
+    "lat": "35.65945",
+    "lon": "139.701035",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:702": {
+    "name": "表参道",
+    "lat": "35.665143",
+    "lon": "139.712383",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:703": {
+    "name": "青山一丁目",
+    "lat": "35.672956",
+    "lon": "139.724075",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:704": {
+    "name": "永田町",
+    "lat": "35.678407",
+    "lon": "139.738865",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:705": {
+    "name": "半蔵門",
+    "lat": "35.68538",
+    "lon": "139.741695",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:706": {
+    "name": "九段下",
+    "lat": "35.695501",
+    "lon": "139.751117",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:707": {
+    "name": "神保町",
+    "lat": "35.696021",
+    "lon": "139.75756",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:708": {
+    "name": "大手町",
+    "lat": "35.686745",
+    "lon": "139.764905",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:709": {
+    "name": "三越前",
+    "lat": "35.684928",
+    "lon": "139.77308",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:710": {
+    "name": "水天宮前",
+    "lat": "35.683",
+    "lon": "139.785171",
+    "municipality_code": "13102",
+    "location": "東京都中央区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:711": {
+    "name": "清澄白河",
+    "lat": "35.682119",
+    "lon": "139.799841",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:712": {
+    "name": "住吉",
+    "lat": "35.688704",
+    "lon": "139.815667",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:713": {
+    "name": "錦糸町",
+    "lat": "35.697441",
+    "lon": "139.814957",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:714": {
+    "name": "押上〈スカイツリー前〉",
+    "lat": "35.708467",
+    "lon": "139.813735",
+    "municipality_code": "13107",
+    "location": "東京都墨田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:801": {
+    "name": "目黒",
+    "lat": "35.632485",
+    "lon": "139.71566",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:802": {
+    "name": "白金台",
+    "lat": "35.63777",
+    "lon": "139.72586",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:803": {
+    "name": "白金高輪",
+    "lat": "35.643145",
+    "lon": "139.734285",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:804": {
+    "name": "麻布十番",
+    "lat": "35.65481",
+    "lon": "139.737045",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:805": {
+    "name": "六本木一丁目",
+    "lat": "35.665075",
+    "lon": "139.7389",
+    "municipality_code": "13103",
+    "location": "東京都港区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:806": {
+    "name": "溜池山王",
+    "lat": "35.673091",
+    "lon": "139.741294",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:807": {
+    "name": "永田町",
+    "lat": "35.678338",
+    "lon": "139.739288",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:808": {
+    "name": "四ツ谷",
+    "lat": "35.686082",
+    "lon": "139.72968",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:809": {
+    "name": "市ケ谷",
+    "lat": "35.692894",
+    "lon": "139.736324",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:810": {
+    "name": "飯田橋",
+    "lat": "35.701532",
+    "lon": "139.743716",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:811": {
+    "name": "後楽園",
+    "lat": "35.70839",
+    "lon": "139.751786",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:812": {
+    "name": "東大前",
+    "lat": "35.718014",
+    "lon": "139.75788",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:813": {
+    "name": "本駒込",
+    "lat": "35.724365",
+    "lon": "139.753812",
+    "municipality_code": "13105",
+    "location": "東京都文京区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:814": {
+    "name": "駒込",
+    "lat": "35.735913",
+    "lon": "139.746909",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:815": {
+    "name": "西ケ原",
+    "lat": "35.745945",
+    "lon": "139.74226",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:816": {
+    "name": "王子",
+    "lat": "35.75447",
+    "lon": "139.737362",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:817": {
+    "name": "王子神谷",
+    "lat": "35.765292",
+    "lon": "139.735641",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:01+09:00"
+  },
+  "tokyometro:818": {
+    "name": "志茂",
+    "lat": "35.778025",
+    "lon": "139.7325",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:819": {
+    "name": "赤羽岩淵",
+    "lat": "35.783355",
+    "lon": "139.72211",
+    "municipality_code": "13117",
+    "location": "東京都北区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:901": {
+    "name": "和光市",
+    "lat": "35.78835",
+    "lon": "139.612865",
+    "municipality_code": "11229",
+    "location": "埼玉県和光市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:902": {
+    "name": "地下鉄成増",
+    "lat": "35.77674",
+    "lon": "139.63117",
+    "municipality_code": "13119",
+    "location": "東京都板橋区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:903": {
+    "name": "地下鉄赤塚",
+    "lat": "35.76998",
+    "lon": "139.644001",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:904": {
+    "name": "平和台",
+    "lat": "35.757555",
+    "lon": "139.6543",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:905": {
+    "name": "氷川台",
+    "lat": "35.74962",
+    "lon": "139.66547",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:906": {
+    "name": "小竹向原",
+    "lat": "35.743395",
+    "lon": "139.67952",
+    "municipality_code": "13120",
+    "location": "東京都練馬区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:907": {
+    "name": "千川",
+    "lat": "35.738175",
+    "lon": "139.6894",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:908": {
+    "name": "要町",
+    "lat": "35.733215",
+    "lon": "139.69848",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:909": {
+    "name": "池袋",
+    "lat": "35.730345",
+    "lon": "139.71115",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:910": {
+    "name": "雑司が谷",
+    "lat": "35.7202",
+    "lon": "139.714715",
+    "municipality_code": "13116",
+    "location": "東京都豊島区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:911": {
+    "name": "西早稲田",
+    "lat": "35.707806",
+    "lon": "139.70912",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:912": {
+    "name": "東新宿",
+    "lat": "35.699829",
+    "lon": "139.707846",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:913": {
+    "name": "新宿三丁目",
+    "lat": "35.690609",
+    "lon": "139.704727",
+    "municipality_code": "13104",
+    "location": "東京都新宿区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:914": {
+    "name": "北参道",
+    "lat": "35.678503",
+    "lon": "139.705469",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:915": {
+    "name": "明治神宮前〈原宿〉",
+    "lat": "35.668205",
+    "lon": "139.70524",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tokyometro:916": {
+    "name": "渋谷",
+    "lat": "35.659092",
+    "lon": "139.70257",
+    "municipality_code": "13113",
+    "location": "東京都渋谷区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:101": {
+    "name": "新木場",
+    "lat": "35.64604",
+    "lon": "139.82678",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:102": {
+    "name": "東雲",
+    "lat": "35.64060",
+    "lon": "139.80328",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:103": {
+    "name": "国際展示場",
+    "lat": "35.63457",
+    "lon": "139.79163",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:104": {
+    "name": "東京テレポート",
+    "lat": "35.62754",
+    "lon": "139.77885",
+    "municipality_code": "13108",
+    "location": "東京都江東区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:105": {
+    "name": "天王洲アイル",
+    "lat": "35.62038",
+    "lon": "139.75084",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:106": {
+    "name": "品川シーサイド",
+    "lat": "35.60897",
+    "lon": "139.74967",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:107": {
+    "name": "大井町",
+    "lat": "35.60741",
+    "lon": "139.73474",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "twr:108": {
+    "name": "大崎",
+    "lat": "35.62002",
+    "lon": "139.72820",
+    "municipality_code": "13109",
+    "location": "東京都品川区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:101": {
+    "name": "秋葉原",
+    "lat": "35.69894",
+    "lon": "139.77428",
+    "municipality_code": "13101",
+    "location": "東京都千代田区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:102": {
+    "name": "新御徒町",
+    "lat": "35.70711",
+    "lon": "139.78194",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:103": {
+    "name": "浅草",
+    "lat": "35.71400",
+    "lon": "139.79239",
+    "municipality_code": "13106",
+    "location": "東京都台東区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:104": {
+    "name": "南千住",
+    "lat": "35.73344",
+    "lon": "139.79911",
+    "municipality_code": "13118",
+    "location": "東京都荒川区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:105": {
+    "name": "北千住",
+    "lat": "35.74975",
+    "lon": "139.80533",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:106": {
+    "name": "青井",
+    "lat": "35.77250",
+    "lon": "139.82033",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:107": {
+    "name": "六町",
+    "lat": "35.78492",
+    "lon": "139.82181",
+    "municipality_code": "13121",
+    "location": "東京都足立区",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:108": {
+    "name": "八潮",
+    "lat": "35.80786",
+    "lon": "139.84483",
+    "municipality_code": "11234",
+    "location": "埼玉県八潮市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:109": {
+    "name": "三郷中央",
+    "lat": "35.82417",
+    "lon": "139.87806",
+    "municipality_code": "11237",
+    "location": "埼玉県三郷市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:110": {
+    "name": "南流山",
+    "lat": "35.83786",
+    "lon": "139.90433",
+    "municipality_code": "12220",
+    "location": "千葉県流山市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:111": {
+    "name": "流山セントラルパーク",
+    "lat": "35.85447",
+    "lon": "139.91522",
+    "municipality_code": "12220",
+    "location": "千葉県流山市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:112": {
+    "name": "流山おおたかの森",
+    "lat": "35.87186",
+    "lon": "139.92506",
+    "municipality_code": "12220",
+    "location": "千葉県流山市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:113": {
+    "name": "柏の葉キャンパス",
+    "lat": "35.89336",
+    "lon": "139.95250",
+    "municipality_code": "12217",
+    "location": "千葉県柏市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "mir:114": {
+    "name": "柏たなか",
+    "lat": "35.91100",
+    "lon": "139.95750",
+    "municipality_code": "12217",
+    "location": "千葉県柏市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:101": {
+    "name": "多摩センター",
+    "lat": "35.6239",
+    "lon": "139.4228",
+    "municipality_code": "13224",
+    "location": "東京都多摩市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:102": {
+    "name": "松が谷",
+    "lat": "35.6318",
+    "lon": "139.4220",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:103": {
+    "name": "大塚・帝京大学",
+    "lat": "35.6369",
+    "lon": "139.4164",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:104": {
+    "name": "中央大学・明星大学",
+    "lat": "35.6419",
+    "lon": "139.4087",
+    "municipality_code": "13201",
+    "location": "東京都八王子市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:105": {
+    "name": "多摩動物公園",
+    "lat": "35.6485",
+    "lon": "139.4038",
+    "municipality_code": "13212",
+    "location": "東京都日野市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:106": {
+    "name": "程久保",
+    "lat": "35.6552",
+    "lon": "139.4108",
+    "municipality_code": "13212",
+    "location": "東京都日野市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:107": {
+    "name": "高幡不動",
+    "lat": "35.6613",
+    "lon": "139.4152",
+    "municipality_code": "13212",
+    "location": "東京都日野市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:108": {
+    "name": "万願寺",
+    "lat": "35.6713",
+    "lon": "139.4199",
+    "municipality_code": "13212",
+    "location": "東京都日野市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:109": {
+    "name": "甲州街道",
+    "lat": "35.6782",
+    "lon": "139.4092",
+    "municipality_code": "13212",
+    "location": "東京都日野市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:110": {
+    "name": "柴崎体育館",
+    "lat": "35.6898",
+    "lon": "139.4093",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:111": {
+    "name": "立川南",
+    "lat": "35.6962",
+    "lon": "139.4126",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:112": {
+    "name": "立川北",
+    "lat": "35.6995",
+    "lon": "139.4127",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:113": {
+    "name": "高松",
+    "lat": "35.7100",
+    "lon": "139.4133",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:114": {
+    "name": "立飛",
+    "lat": "35.7143",
+    "lon": "139.4171",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:115": {
+    "name": "泉体育館",
+    "lat": "35.7188",
+    "lon": "139.4196",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:116": {
+    "name": "砂川七番",
+    "lat": "35.7234",
+    "lon": "139.4181",
+    "municipality_code": "13202",
+    "location": "東京都立川市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:117": {
+    "name": "玉川上水",
+    "lat": "35.7322",
+    "lon": "139.4177",
+    "municipality_code": "13220",
+    "location": "東京都東大和市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:118": {
+    "name": "桜街道",
+    "lat": "35.7390",
+    "lon": "139.4166",
+    "municipality_code": "13220",
+    "location": "東京都東大和市",
+    "updated_at": "2026-07-26T14:02+09:00"
+  },
+  "tamamonorail:119": {
+    "name": "上北台",
+    "lat": "35.7458",
+    "lon": "139.4159",
+    "municipality_code": "13220",
+    "location": "東京都東大和市",
+    "updated_at": "2026-07-26T14:02+09:00"
   }
 }
