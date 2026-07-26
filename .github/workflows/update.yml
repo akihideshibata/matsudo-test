@@ -3,14 +3,30 @@ name: Update routes
 on:
   workflow_dispatch:
     inputs:
+      jr_mode:
+        description: JR東日本の利用設定
+        type: choice
+        options:
+          - repository-setting
+          - on
+          - off
+        default: repository-setting
+
       force_update:
-        description: 全GTFSを強制的に再取得する
+        description: GTFSを強制的に再取得する
         type: boolean
         default: false
+
       force_stats_update:
         description: e-Stat家賃データを強制的に再取得する
         type: boolean
         default: false
+
+      purge_challenge_data:
+        description: JR由来の保存データを完全に削除する
+        type: boolean
+        default: false
+
   schedule:
     # 毎週月曜日03:00（日本時間）
     - cron: "0 18 * * 0"
@@ -25,7 +41,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Checkout
@@ -42,7 +58,8 @@ jobs:
         with:
           path: |
             data/gtfs
-            data/gtfs_sources_state.json
+            data/gtfs_basic_state.json
+            data/gtfs_challenge_state.json
           key: gtfs-${{ runner.os }}-${{ github.run_id }}
           restore-keys: |
             gtfs-${{ runner.os }}-
@@ -50,25 +67,55 @@ jobs:
       - name: Install packages
         run: pip install -r requirements.txt
 
+      - name: Resolve JR setting
+        shell: bash
+        run: |
+          DEFAULT_JR="${{ vars.ENABLE_JR }}"
+
+          if [ -z "$DEFAULT_JR" ]; then
+            DEFAULT_JR="false"
+          fi
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            case "${{ inputs.jr_mode }}" in
+              on)
+                ENABLE_JR="true"
+                ;;
+              off)
+                ENABLE_JR="false"
+                ;;
+              *)
+                ENABLE_JR="$DEFAULT_JR"
+                ;;
+            esac
+          else
+            ENABLE_JR="$DEFAULT_JR"
+          fi
+
+          echo "ENABLE_JR=$ENABLE_JR" >> "$GITHUB_ENV"
+          echo "JR東日本：$ENABLE_JR"
+
       - name: Update data
         env:
           ODPT_API_KEY: ${{ secrets.ODPT_API_KEY }}
+          ODPT_CHALLENGE_API_KEY: ${{ secrets.ODPT_CHALLENGE_API_KEY }}
           ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
-          FORCE_UPDATE: ${{ inputs.force_update || false }}
-          FORCE_STATS_UPDATE: ${{ inputs.force_stats_update || false }}
+          FORCE_UPDATE: ${{ inputs.force_update || 'false' }}
+          FORCE_STATS_UPDATE: ${{ inputs.force_stats_update || 'false' }}
+          PURGE_CHALLENGE_DATA: ${{ inputs.purge_challenge_data || 'false' }}
         run: python update_routes.py
+
+      - name: Remove old output
+        run: rm -f direct_timetable.json
 
       - name: Commit updated files
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
-          git add \
-            direct_timetable.json \
-            station_locations.json \
-            unresolved_stations.json \
-            municipality_stats.json \
-            data/municipality_stats_state.json
+
+          git add -A
+
           git diff --cached --quiet || {
-            git commit -m "Update multi-operator timetable data"
+            git commit -m "Update timetable data"
             git push
           }
