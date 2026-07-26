@@ -10,7 +10,7 @@ import streamlit as st
 # 1. ページ・データ
 # ============================================================
 st.set_page_config(
-    page_title="逆算通勤｜直通版",
+    page_title="通勤時間と家賃で住む駅探し",
     page_icon="🚇",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -35,13 +35,27 @@ service_dates = data.get("service_dates", {
 })
 st.session_state.setdefault("show_nearby", False)
 
+# 路線名に含まれる文字から配色を選ぶ
 LINE_STYLES = {
     "浅草線": ("#e85298", "#fff2f7"),
     "三田線": ("#0079c2", "#edf8ff"),
     "新宿線": ("#6cbb5a", "#f1faef"),
     "大江戸線": ("#b6007a", "#fbf0f8"),
     "荒川線": ("#ee7b1a", "#fff8eb"),
-    "日暮里・舎人ライナー": ("#9caeb7", "#f3f6f7"),
+    "日暮里・舎人": ("#9caeb7", "#f3f6f7"),
+    "銀座線": ("#f39700", "#fff7e9"),
+    "丸ノ内線": ("#e60012", "#fff1f2"),
+    "日比谷線": ("#9caeb7", "#f4f6f7"),
+    "東西線": ("#00a7db", "#edfaff"),
+    "千代田線": ("#009944", "#edfaf2"),
+    "有楽町線": ("#d7c447", "#fffced"),
+    "半蔵門線": ("#9b7cb6", "#f8f3fb"),
+    "南北線": ("#00ada9", "#effafa"),
+    "副都心線": ("#bb641d", "#fff6ef"),
+    "りんかい": ("#00a7e3", "#eefaff"),
+    "つくばエクスプレス": ("#003894", "#eef4ff"),
+    "TX": ("#003894", "#eef4ff"),
+    "多摩モノレール": ("#ff8a00", "#fff7ec"),
 }
 DEFAULT_STYLE = ("#667085", "#f8fafc")
 
@@ -56,12 +70,11 @@ def minute(text):
 
 
 def clock(value):
-    # 分をHH:MMへ変換
+    # 分をHH:MMへ戻す
     return f"{value // 60 % 24:02d}:{value % 60:02d}"
 
 
 def time_band(minutes):
-    # 所要時間の絞り込み区分
     return next(
         (f"{x}分以内" for x in (15, 30, 45, 60) if minutes <= x),
         "60分超",
@@ -69,50 +82,45 @@ def time_band(minutes):
 
 
 def rent_man(value):
-    # 円を万円表示へ変換
     return f"{float(value) / 10000:.1f}万円" if pd.notna(value) else ""
 
 
 def relative_rent(rent, base):
-    # 目的駅を100%とした相対家賃
     if pd.isna(rent) or pd.isna(base) or not base:
         return None
     return round(float(rent) / float(base) * 100)
 
 
 def rent_level(ratio):
-    # 相対家賃を3段階へ分類
+    # 目的駅比90%未満／90～110%／110%超
     if pd.isna(ratio):
         return "不明"
-    if ratio < 90:
-        return "安い"
-    if ratio <= 110:
-        return "同程度"
-    return "高い"
+    return "安い" if ratio < 90 else "同程度" if ratio <= 110 else "高い"
 
 
 def compact_html(text):
-    return " ".join(x.strip() for x in text.splitlines())
+    return " ".join(line.strip() for line in text.splitlines())
 
 
 def line_style(route):
     return next(
-        (value for name, value in LINE_STYLES.items() if name in route),
+        (style for name, style in LINE_STYLES.items() if name in route),
         DEFAULT_STYLE,
     )
 
 
 def station_label(name):
-    return f"{'・'.join(station_info[name]['routes'])}｜{name}"
+    routes = "・".join(station_info[name]["routes"])
+    return f"{routes}｜{name}"
 
 
 def toggle_nearby():
-    # 一覧上のボタンで近距離駅の表示を切り替える
+    # 表示済みウィジェットを直接変更せずコールバックで切替
     st.session_state.show_nearby = not st.session_state.show_nearby
 
 
 def clock_html(text):
-    # PC版のアナログ時計
+    # PC版アナログ時計
     hour, minutes = map(int, text.split(":"))
     numbers = ""
 
@@ -137,7 +145,7 @@ def clock_html(text):
 
 
 def search_routes(trips, destination, target):
-    # 各駅から目的地に間に合う最新の直通列車を選ぶ
+    # 到着時刻までに着く列車のうち、各駅で最も遅く出発できる便を選ぶ
     target_min, latest = minute(target), {}
 
     for trip in trips:
@@ -163,20 +171,32 @@ def search_routes(trips, destination, target):
                     "出発": clock(departure),
                     "到着": clock(arrival),
                     "所要時間": arrival - departure,
-                    "経路": trip["route"],
-                    "行先": trip["destination"],
-                    "路線一覧": info.get("routes", [trip["route"]]),
+                    "経路": trip.get("route", "路線情報なし"),
+                    "事業者": trip.get("operator", ""),
+                    "行先": trip.get("destination", "行先情報なし"),
+                    "路線一覧": info.get("routes", [trip.get("route", "")]),
                     "出発分": departure,
                 }
 
                 if station not in latest or departure > latest[station]["出発分"]:
                     latest[station] = candidate
 
-    return sorted(latest.values(), key=lambda x: x["出発分"], reverse=True)
+    return sorted(
+        latest.values(),
+        key=lambda x: x["出発分"],
+        reverse=True,
+    )
+
+
+def day_text(result):
+    return (
+        f'{result["出発"]}発（{result["到着"]}着・{result["経路"]}）'
+        if result else "該当する直通列車なし"
+    )
 
 
 # ============================================================
-# 3. CSS
+# 3. デザイン
 # ============================================================
 st.markdown("""
 <style>
@@ -184,23 +204,30 @@ st.markdown("""
 .selector-label{color:var(--text-color);opacity:.68;font-size:.72rem;
 font-weight:750;margin-bottom:.16rem}
 .heading-row{display:flex;align-items:baseline;justify-content:space-between;
-gap:1rem;margin:.5rem 0 .5rem}
+gap:1rem;margin:.5rem 0}
 .page-title{color:var(--text-color);font-size:clamp(1.25rem,2.3vw,1.85rem);
 font-weight:900;line-height:1.2;letter-spacing:-.04em}
 .page-note{color:var(--text-color);opacity:.58;font-size:.68rem;
 text-align:right;white-space:nowrap}
 
-/* 近距離駅の表示状態 */
+/* 近距離駅の切替行 */
+.st-key-nearby_toggle [data-testid="stHorizontalBlock"]{
+align-items:center!important}
+.st-key-nearby_toggle [data-testid="stMarkdownContainer"],
+.st-key-nearby_toggle [data-testid="stMarkdownContainer"] p{
+margin:0!important}
 .nearby-row{display:flex;align-items:center;justify-content:space-between;
-height:34px;padding:0 .65rem;color:var(--text-color);
+height:34px;box-sizing:border-box;padding:0 .65rem;color:var(--text-color);
 background:rgba(128,128,128,.08);border:1px solid rgba(128,128,128,.35);
 border-radius:9px;font-size:.7rem}
 .nearby-row strong{font-weight:850}
-.nearby-button div[data-testid="stButton"] button{height:34px!important;
-min-height:34px!important;padding:0 .65rem!important;font-size:.68rem!important;
-white-space:nowrap;border-radius:9px!important}
+.st-key-nearby_toggle div[data-testid="stButton"],
+.st-key-nearby_toggle div[data-testid="stButton"] button{margin:0!important}
+.st-key-nearby_toggle div[data-testid="stButton"] button{
+height:34px!important;min-height:34px!important;padding:0 .6rem!important;
+font-size:.68rem!important;white-space:nowrap;border-radius:9px!important}
 
-/* 駅カード */
+/* カード */
 .station-card{position:relative;display:grid;
 grid-template-columns:minmax(145px,1fr) minmax(190px,1.1fr)
 minmax(180px,1fr) 42px;
@@ -224,7 +251,7 @@ padding-left:58px;white-space:nowrap}
 .rent{grid-area:rent;color:#475467!important;font-size:.72rem;
 font-weight:800;white-space:nowrap}
 
-/* PC時計 */
+/* アナログ時計 */
 .clock{position:relative;width:52px;height:52px;flex:0 0 52px;
 border:2px solid #344054;border-radius:50%;background:#fff}
 .clock-number{position:absolute;width:10px;height:10px;margin:-5px;
@@ -236,19 +263,20 @@ background:#344054;border-radius:4px}
 .clock-center{position:absolute;left:21px;top:21px;width:6px;height:6px;
 border-radius:50%;background:#344054}
 
-/* 詳細 */
+/* 詳細欄 */
 .details-area{grid-area:info;text-align:center}details{font-size:.68rem}
 summary{display:inline-flex;align-items:center;justify-content:center;
 width:28px;height:28px;border:1px solid #98a2b3;border-radius:50%;
 background:#ffffffb8;cursor:pointer;list-style:none;font-family:serif;
 font-size:.8rem;font-weight:900}
 summary::-webkit-details-marker{display:none}
-.details-body{position:absolute;z-index:10;right:.8rem;top:3.2rem;
-width:min(370px,calc(100vw - 3rem));padding:.65rem .75rem;
-border:1px solid #d0d5dd;border-radius:9px;background:#fff;
-text-align:left;line-height:1.65;box-shadow:0 7px 20px #0002}
+.details-body{position:absolute;z-index:20;right:.8rem;top:3.2rem;
+width:min(390px,calc(100vw - 3rem));padding:.65rem .75rem;
+border:1px solid #d0d5dd;border-radius:9px;background:#fff;text-align:left;
+line-height:1.65;box-shadow:0 7px 20px #0002}
 .details-body,.details-body div,.details-body span{color:#283141!important}
 .detail-label{font-weight:850}
+.detail-divider{height:1px;background:#e4e7ec;margin:.35rem 0}
 .empty{color:var(--text-color);padding:2rem;text-align:center;
 border:1px dashed rgba(128,128,128,.6);border-radius:12px}
 div[data-testid="stPopover"] button{min-height:38px!important;padding:.25rem!important}
@@ -256,18 +284,22 @@ div[data-testid="stPopover"] button{min-height:38px!important;padding:.25rem!imp
 @media(max-width:620px){
 .block-container{padding:2.9rem .55rem 2.5rem!important}
 div[data-testid="stHorizontalBlock"]{display:flex!important;
-flex-direction:row!important;flex-wrap:nowrap!important;gap:.3rem!important;
-align-items:flex-end!important}
+flex-direction:row!important;flex-wrap:nowrap!important;gap:.3rem!important}
 div[data-testid="stHorizontalBlock"]>div{min-width:0!important}
 .selector-label{font-size:.59rem;margin-bottom:.08rem}
 .heading-row{display:block;margin:.4rem 0 .42rem}
 .page-title{font-size:1rem}
 .page-note{margin-top:.12rem;font-size:.56rem;text-align:left;white-space:normal}
-.nearby-row{height:31px;padding:0 .45rem;font-size:.59rem}
-.nearby-button div[data-testid="stButton"] button{height:31px!important;
-min-height:31px!important;padding:0 .4rem!important;font-size:.59rem!important}
 
-/* スマホは駅・時刻・家賃の3列 */
+.st-key-nearby_toggle [data-testid="stHorizontalBlock"]{
+align-items:center!important}
+.nearby-row{height:31px;padding:0 .42rem;font-size:.58rem;gap:.3rem}
+.nearby-row span{white-space:nowrap}
+.st-key-nearby_toggle div[data-testid="stButton"] button{
+height:31px!important;min-height:31px!important;padding:0 .35rem!important;
+font-size:.58rem!important}
+
+/* スマホは駅・出発・家賃の3列 */
 .station-card{grid-template-columns:minmax(0,1.2fr) minmax(100px,.88fr)
 minmax(112px,.9fr);grid-template-areas:"station departure rent"
 "location arrival route";gap:.1rem .32rem;border-left-width:5px!important;
@@ -296,17 +328,17 @@ margin-top:.35rem;box-shadow:none}
 # ============================================================
 stations = sorted(
     station_info,
-    key=lambda x: ("・".join(station_info[x]["routes"]), x),
+    key=lambda name: ("・".join(station_info[name]["routes"]), name),
 )
 destination_col, time_col, filter_col = st.columns([2.5, 1.05, .38])
 
 with destination_col:
     st.markdown(
-        '<div class="selector-label">目的駅</div>',
+        '<div class="selector-label">勤務先・目的駅</div>',
         unsafe_allow_html=True,
     )
     selected_destination = st.selectbox(
-        "目的駅",
+        "勤務先・目的駅",
         stations,
         index=None,
         placeholder="神保町（駅名・路線で検索）",
@@ -332,23 +364,32 @@ with time_col:
 
 target = arrival_time.strftime("%H:%M")
 destination_rent = station_info.get(destination, {}).get("rent")
+
 weekday_df = pd.DataFrame(
-    search_routes(timetables["weekday"], destination, target)
+    search_routes(timetables.get("weekday", []), destination, target)
 )
 saturday = {
-    x["駅名"]: x
-    for x in search_routes(timetables.get("saturday", []), destination, target)
+    row["駅名"]: row
+    for row in search_routes(
+        timetables.get("saturday", []),
+        destination,
+        target,
+    )
 }
 sunday = {
-    x["駅名"]: x
-    for x in search_routes(timetables.get("sunday", []), destination, target)
+    row["駅名"]: row
+    for row in search_routes(
+        timetables.get("sunday", []),
+        destination,
+        target,
+    )
 }
 bands = ["15分以内", "30分以内", "45分以内", "60分以内", "60分超"]
 
 if not weekday_df.empty:
     weekday_df["時間圏"] = weekday_df["所要時間"].apply(time_band)
     weekday_df["相対家賃"] = weekday_df["家賃"].apply(
-        lambda x: relative_rent(x, destination_rent)
+        lambda value: relative_rent(value, destination_rent)
     )
     weekday_df["家賃区分"] = weekday_df["相対家賃"].apply(rent_level)
 
@@ -359,10 +400,8 @@ with filter_col:
     )
 
     with st.popover("⚙"):
-        st.checkbox(
-            "10分未満の駅も表示",
-            key="show_nearby",
-        )
+        st.checkbox("10分未満の駅も表示", key="show_nearby")
+
         rent_filter = st.radio(
             "家賃",
             ["すべて", "安い", "同程度", "高い"],
@@ -370,16 +409,23 @@ with filter_col:
         )
 
         route_options = (
-            sorted(weekday_df["経路"].unique())
+            sorted(weekday_df["経路"].dropna().unique())
             if not weekday_df.empty else []
         )
-        route_choice = st.pills(
-            "利用路線",
-            route_options,
-            default=route_options,
-            selection_mode="multi",
-        )
-        selected_routes = route_choice or route_options
+
+        if hasattr(st, "pills"):
+            selected_routes = st.pills(
+                "利用路線",
+                route_options,
+                default=route_options,
+                selection_mode="multi",
+            ) or route_options
+        else:
+            selected_routes = st.multiselect(
+                "利用路線",
+                route_options,
+                default=route_options,
+            )
 
         selected_bands = st.multiselect(
             f"{destination}までの所要時間",
@@ -393,7 +439,7 @@ with filter_col:
 
 
 # ============================================================
-# 5. 絞り込み
+# 5. タイトル・絞り込み
 # ============================================================
 st.markdown(
     compact_html(f"""
@@ -435,41 +481,11 @@ if not st.session_state.show_nearby and not df.empty:
     df = df[df["所要時間"] >= 10].copy()
 
 
-
 # ============================================================
 # 6. 近距離駅の表示切替
 # ============================================================
 if nearby_count or st.session_state.show_nearby:
-    # この行だけ、通知とボタンを縦方向中央に揃える
-    st.markdown("""
-    <style>
-    .st-key-nearby-toggle [data-testid="stHorizontalBlock"]{
-        align-items:center!important;
-    }
-    .st-key-nearby-toggle [data-testid="stMarkdownContainer"],
-    .st-key-nearby-toggle [data-testid="stMarkdownContainer"] p{
-        margin:0!important;
-    }
-    .st-key-nearby-toggle .nearby-row,
-    .st-key-nearby-toggle div[data-testid="stButton"] button{
-        height:34px!important;
-        min-height:34px!important;
-        margin:0!important;
-    }
-    .st-key-nearby-toggle div[data-testid="stButton"]{
-        margin:0!important;
-    }
-    @media(max-width:620px){
-        .st-key-nearby-toggle .nearby-row,
-        .st-key-nearby-toggle div[data-testid="stButton"] button{
-            height:31px!important;
-            min-height:31px!important;
-        }
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    with st.container(key="nearby-toggle"):
+    with st.container(key="nearby_toggle"):
         notice_col, button_col = st.columns(
             [5.4, 1],
             vertical_alignment="center",
@@ -500,6 +516,7 @@ if nearby_count or st.session_state.show_nearby:
                 on_click=toggle_nearby,
             )
 
+
 # ============================================================
 # 7. カード
 # ============================================================
@@ -510,31 +527,26 @@ if df.empty:
     )
 else:
     for _, row in df.iterrows():
-        station = escape(str(row["駅名"]))
+        raw_station = str(row["駅名"])
+        station = escape(raw_station)
         location = escape(str(row["所在地"]))
         route = escape(str(row["経路"]))
-        lines = escape(" ／ ".join(row["路線一覧"]))
+        operator = escape(str(row.get("事業者", "")))
+        train_destination = escape(str(row["行先"]))
+        routes = escape(" ／ ".join(row["路線一覧"]))
         accent, background = line_style(str(row["経路"]))
         rent, ratio = row["家賃"], row["相対家賃"]
-        sat, sun = saturday.get(row["駅名"]), sunday.get(row["駅名"])
+        sat, sun = saturday.get(raw_station), sunday.get(raw_station)
 
+        ratio_text = f"{int(ratio)}%" if pd.notna(ratio) else "算出不可"
         candidate_rent = (
             f"25㎡換算 約{rent_man(rent)}"
             if pd.notna(rent) else "情報なし"
         )
-        base_rent = (
+        destination_rent_text = (
             f"25㎡換算 約{rent_man(destination_rent)}"
             if pd.notna(destination_rent) else "情報なし"
         )
-        ratio_text = (
-            f"{int(ratio)}%" if pd.notna(ratio) else "算出不可"
-        )
-
-        def holiday_text(result):
-            return (
-                f'{result["出発"]}発（{result["到着"]}着）'
-                if result else "該当する直通列車なし"
-            )
 
         card = f"""
         <div class="station-card"
@@ -562,6 +574,17 @@ else:
                             {location}
                         </div>
                         <div>
+                            <span class="detail-label">乗り入れ路線：</span>
+                            {routes}
+                        </div>
+                        <div>
+                            <span class="detail-label">運行事業者：</span>
+                            {operator or "情報なし"}
+                        </div>
+
+                        <div class="detail-divider"></div>
+
+                        <div>
                             <span class="detail-label">家賃評価：</span>
                             {row["家賃区分"]}
                         </div>
@@ -577,35 +600,30 @@ else:
                             <span class="detail-label">
                                 {escape(destination)}の家賃目安：
                             </span>
-                            {base_rent}
+                            {destination_rent_text}
                         </div>
+
+                        <div class="detail-divider"></div>
+
                         <div>
                             <span class="detail-label">平日：</span>
-                            {row["出発"]}発（{row["到着"]}着）
+                            {row["出発"]}発（{row["到着"]}着・{route}）
                         </div>
                         <div>
                             <span class="detail-label">土曜：</span>
-                            {holiday_text(sat)}
+                            {escape(day_text(sat))}
                         </div>
                         <div>
                             <span class="detail-label">日曜：</span>
-                            {holiday_text(sun)}
+                            {escape(day_text(sun))}
                         </div>
                         <div>
                             <span class="detail-label">所要時間：</span>
                             {row["所要時間"]}分
                         </div>
                         <div>
-                            <span class="detail-label">利用経路：</span>
-                            {route}
-                        </div>
-                        <div>
                             <span class="detail-label">列車の行先：</span>
-                            {escape(str(row["行先"]))}
-                        </div>
-                        <div>
-                            <span class="detail-label">乗り入れ：</span>
-                            {lines}
+                            {train_destination}
                         </div>
                     </div>
                 </details>
@@ -620,7 +638,7 @@ else:
 
 
 # ============================================================
-# 8. 表・出典
+# 8. 表・CSV・出典
 # ============================================================
 with st.expander("検索結果を表で確認する"):
     if df.empty:
@@ -636,14 +654,15 @@ with st.expander("検索結果を表で確認する"):
             "到着",
             "所要時間",
             "経路",
+            "事業者",
             "行先",
         ]].copy()
 
         output["相対家賃"] = output["相対家賃"].apply(
-            lambda x: f"{int(x)}%" if pd.notna(x) else ""
+            lambda value: f"{int(value)}%" if pd.notna(value) else ""
         )
         output["家賃"] = output["家賃"].apply(
-            lambda x: rent_man(x) if pd.notna(x) else ""
+            lambda value: rent_man(value) if pd.notna(value) else ""
         )
 
         st.dataframe(
@@ -658,6 +677,12 @@ with st.expander("検索結果を表で確認する"):
             "text/csv",
         )
 
+source_names = "、".join(
+    source.get("name", "")
+    for source in data.get("sources", [])
+    if source.get("name")
+)
+
 st.caption(
     "家賃は、目的駅比90%未満を「安い」、90〜110%を「同程度」、"
     "110%超を「高い」と表示しています。"
@@ -667,7 +692,8 @@ st.caption(
     "25㎡に換算した参考値です。"
 )
 st.caption(
-    "東京都交通局のGTFSデータを加工して利用しています（CC BY 4.0）。"
+    f"公共交通データ提供元：{source_names or '東京都交通局等'}。"
+    "各提供データを加工して利用しています。"
 )
 st.caption(
     "所在地はGTFS座標と国土地理院の情報を基に自治体単位で表示しています。"
