@@ -3,14 +3,10 @@ name: Update routes
 on:
   workflow_dispatch:
     inputs:
-      jr_mode:
-        description: JR東日本の利用設定
-        type: choice
-        options:
-          - repository-setting
-          - on
-          - off
-        default: repository-setting
+      disable_jr:
+        description: JR東日本のデータを使用しない
+        type: boolean
+        default: false
 
       force_update:
         description: GTFSを強制的に再取得する
@@ -72,26 +68,17 @@ jobs:
       - name: Resolve JR setting
         shell: bash
         run: |
-          DEFAULT_JR="${{ vars.ENABLE_JR }}"
-
-          if [ -z "$DEFAULT_JR" ]; then
-            DEFAULT_JR="false"
+          # 原則JRを使用し、チェックした場合だけOFF
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && \
+             [ "${{ inputs.disable_jr }}" = "true" ]; then
+            ENABLE_JR="false"
+          else
+            ENABLE_JR="true"
           fi
 
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            case "${{ inputs.jr_mode }}" in
-              on)
-                ENABLE_JR="true"
-                ;;
-              off)
-                ENABLE_JR="false"
-                ;;
-              *)
-                ENABLE_JR="$DEFAULT_JR"
-                ;;
-            esac
-          else
-            ENABLE_JR="$DEFAULT_JR"
+          # 完全削除を選んだ場合もJRをOFF
+          if [ "${{ inputs.purge_challenge_data }}" = "true" ]; then
+            ENABLE_JR="false"
           fi
 
           echo "ENABLE_JR=$ENABLE_JR" >> "$GITHUB_ENV"
@@ -107,6 +94,26 @@ jobs:
           PURGE_CHALLENGE_DATA: ${{ inputs.purge_challenge_data || 'false' }}
         run: python update_routes.py
 
+      - name: Verify JR data
+        run: |
+          python - <<'PY'
+          import gzip, json
+          from pathlib import Path
+
+          config = json.loads(Path("build_config.json").read_text())
+          path = Path("direct_timetable_challenge.json.gz")
+
+          print("build_config:", config)
+          print("JRファイル存在:", path.exists())
+
+          if path.exists():
+              with gzip.open(path, "rt", encoding="utf-8") as f:
+                  data = json.load(f)
+              print("JR駅数:", len(data.get("stations", [])))
+              print("JR平日列車数:", len(data.get("timetables", {}).get("weekday", [])))
+              print("JR駅の例:", [x["name"] for x in data.get("stations", [])[:20]])
+          PY
+
       - name: Remove old output
         run: rm -f direct_timetable.json
 
@@ -115,7 +122,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
-
           git add -A
 
           if git diff --cached --quiet; then
@@ -124,7 +130,5 @@ jobs:
           fi
 
           git commit -m "Update timetable data"
-
-          # main側の新しい変更を取り込んでから送信
           git pull --rebase origin main
           git push origin HEAD:main
