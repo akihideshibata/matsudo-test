@@ -1,14 +1,14 @@
 from datetime import time
 from html import escape
 from pathlib import Path
-import json
+import json, math
 
 import pandas as pd
 import streamlit as st
 
 
 # ============================================================
-# 1. ページ設定・データ読み込み
+# 1. ページ設定・データ
 # ============================================================
 st.set_page_config(
     page_title="逆算通勤｜直通版",
@@ -21,36 +21,36 @@ data = json.loads(Path("direct_timetable.json").read_text(encoding="utf-8"))
 
 station_info = {
     x["name"]: {
-        "routes": x["routes"],
+        "routes": x.get("routes", []),
         "location": x.get("location", "所在地未登録"),
-        "rent_25sqm": x.get("rent_25sqm"),
+        "rent": x.get("rent_25sqm"),
     }
     for x in data["stations"]
 }
 
 
 # ============================================================
-# 2. 表示・計算用関数
+# 2. 表示・計算
 # ============================================================
-LINE_COLORS = {
-    "浅草線": "#fbf1f2",
-    "三田線": "#edf8fc",
-    "新宿線": "#eff8f5",
-    "大江戸線": "#f8f0fa",
-    "荒川線": "#fff8e9",
-    "日暮里・舎人ライナー": "#f5f7fa",
+LINE_STYLES = {
+    "浅草線": ("#e85298", "#fff2f7"),
+    "三田線": ("#0079c2", "#edf8ff"),
+    "新宿線": ("#6cbb5a", "#f1faef"),
+    "大江戸線": ("#b6007a", "#fbf0f8"),
+    "荒川線": ("#ee7b1a", "#fff8eb"),
+    "日暮里・舎人ライナー": ("#9caeb7", "#f3f6f7"),
 }
-DEFAULT_COLOR = "#f8fafc"
+DEFAULT_STYLE = ("#667085", "#f8fafc")
 
 
 def minute(text):
-    # HH:MMを比較用の分数へ変換
+    # HH:MMを分へ変換
     h, m = map(int, text.split(":"))
     return h * 60 + m
 
 
 def clock(value):
-    # 分数をHH:MMへ戻す
+    # 分をHH:MMへ変換
     return f"{value // 60 % 24:02d}:{value % 60:02d}"
 
 
@@ -63,25 +63,58 @@ def time_band(minutes):
 
 
 def rent_man(value):
-    # 円を万円単位へ変換
+    # 円を万円表示へ変換
     return f"{float(value) / 10000:.1f}万円" if pd.notna(value) else ""
 
 
 def compact_html(text):
-    # Streamlitで余分な空白を作らない
+    # HTML内の余分な改行を除く
     return " ".join(x.strip() for x in text.splitlines())
 
 
-def line_color(route):
-    # 路線ごとの背景色
+def line_style(route):
+    # 路線の強調色と背景色
     return next(
-        (color for name, color in LINE_COLORS.items() if name in route),
-        DEFAULT_COLOR,
+        (style for name, style in LINE_STYLES.items() if name in route),
+        DEFAULT_STYLE,
     )
 
 
+def station_label(name):
+    # 検索候補を「路線｜駅名｜所在地」で表示
+    info = station_info[name]
+    return f"{'・'.join(info['routes'])}｜{name}｜{info['location']}"
+
+
+def clock_html(text):
+    # PC版だけで表示するアナログ時計
+    hour, minutes = map(int, text.split(":"))
+    hour_angle = (hour % 12) * 30 + minutes * .5
+    minute_angle = minutes * 6
+    numbers = ""
+
+    for n in range(1, 13):
+        angle = math.radians(n * 30 - 90)
+        x, y = 26 + 20 * math.cos(angle), 26 + 20 * math.sin(angle)
+        numbers += (
+            f'<span class="clock-number" '
+            f'style="left:{x}px;top:{y}px">{n}</span>'
+        )
+
+    return f"""
+    <div class="clock">
+        {numbers}
+        <div class="hand hour-hand"
+             style="transform:rotate({hour_angle}deg)"></div>
+        <div class="hand minute-hand"
+             style="transform:rotate({minute_angle}deg)"></div>
+        <div class="clock-center"></div>
+    </div>
+    """
+
+
 def search_routes(destination, target):
-    # 指定時刻までに着く最新の直通列車を駅ごとに選ぶ
+    # 各駅から目的地へ間に合う最新の直通列車を選ぶ
     target_min, latest = minute(target), {}
 
     for trip in data["trips"]:
@@ -106,7 +139,7 @@ def search_routes(destination, target):
                 candidate = {
                     "駅名": station,
                     "所在地": info.get("location", "所在地未登録"),
-                    "家賃25㎡": info.get("rent_25sqm"),
+                    "家賃": info.get("rent"),
                     "出発": clock(departure),
                     "到着": clock(arrival),
                     "所要時間": arrival - departure,
@@ -128,67 +161,61 @@ def search_routes(destination, target):
 st.markdown(
     """
     <style>
-    /* 全体 */
     .block-container{
         max-width:1240px;
-        padding:3.4rem 1rem 3rem!important;
+        padding:3.25rem 1rem 3rem!important;
     }
 
-    /* 入力欄 */
+    /* 上部入力 */
     .selector-label{
         color:var(--text-color);
         opacity:.68;
-        font-size:.74rem;
+        font-size:.72rem;
         font-weight:750;
-        margin-bottom:.18rem;
+        margin-bottom:.16rem;
     }
-
-    /* タイトルと注意書き */
     .heading-row{
         display:flex;
         align-items:baseline;
         justify-content:space-between;
         gap:1rem;
-        margin:.55rem 0 .65rem;
+        margin:.5rem 0 .65rem;
     }
     .page-title{
         color:var(--text-color);
-        font-size:clamp(1.35rem,2.7vw,2rem);
+        font-size:clamp(1.25rem,2.3vw,1.85rem);
         font-weight:900;
         line-height:1.2;
         letter-spacing:-.04em;
     }
     .page-note{
         color:var(--text-color);
-        opacity:.62;
-        font-size:.7rem;
+        opacity:.58;
+        font-size:.68rem;
         text-align:right;
         white-space:nowrap;
     }
 
-    /* 駅カード */
+    /* カード */
     .station-card{
-        --card-bg:#f8fafc;
+        position:relative;
         display:grid;
-        grid-template-columns:minmax(150px,1fr) minmax(135px,.85fr)
-            minmax(175px,1.1fr) auto;
+        grid-template-columns:minmax(145px,1fr) minmax(190px,1.1fr)
+            minmax(180px,1fr) 42px;
         grid-template-areas:
-            "station departure route details"
-            "location arrival rent details";
+            "station departure route info"
+            "location arrival rent info";
         align-items:center;
-        column-gap:clamp(.7rem,2vw,1.5rem);
-        row-gap:.08rem;
+        gap:.08rem clamp(.7rem,1.8vw,1.4rem);
         color:#283141!important;
         background:var(--card-bg)!important;
         border:1px solid #98a2b380;
-        border-radius:13px;
-        padding:.72rem 1rem;
-        margin-bottom:.48rem;
+        border-left:6px solid var(--line-color)!important;
+        border-radius:12px;
+        padding:.62rem .85rem;
+        margin-bottom:.42rem;
         box-shadow:0 1px 3px #0000000b;
-        overflow:hidden;
     }
-
-    /* 端末テーマに関係なくカード内は黒系文字 */
     .station-card,
     .station-card div,
     .station-card span,
@@ -198,8 +225,7 @@ st.markdown(
 
     .station-name{
         grid-area:station;
-        min-width:0;
-        font-size:clamp(1.3rem,2.3vw,1.75rem);
+        font-size:clamp(1.25rem,2.2vw,1.7rem);
         font-weight:900;
         line-height:1.05;
         letter-spacing:-.04em;
@@ -208,13 +234,17 @@ st.markdown(
     .location{
         grid-area:location;
         color:#667085!important;
-        font-size:.7rem;
-        margin-top:.15rem;
+        font-size:.68rem;
     }
 
-    .departure{
+    .departure-wrap{
         grid-area:departure;
-        font-size:clamp(1.5rem,2.8vw,2rem);
+        display:flex;
+        align-items:center;
+        gap:.55rem;
+    }
+    .departure{
+        font-size:clamp(1.45rem,2.6vw,1.95rem);
         font-weight:950;
         letter-spacing:-.05em;
         white-space:nowrap;
@@ -222,56 +252,97 @@ st.markdown(
     .arrival{
         grid-area:arrival;
         color:#667085!important;
-        font-size:.7rem;
+        font-size:.68rem;
+        padding-left:58px;
         white-space:nowrap;
     }
 
     .route{
         grid-area:route;
-        font-size:.83rem;
+        font-size:.81rem;
         font-weight:850;
         line-height:1.25;
-        overflow-wrap:anywhere;
     }
     .rent{
         grid-area:rent;
         color:#475467!important;
         font-size:.72rem;
-        font-weight:750;
+        font-weight:800;
     }
 
+    /* PC用時計 */
+    .clock{
+        position:relative;
+        width:52px;
+        height:52px;
+        flex:0 0 52px;
+        border:2px solid #344054;
+        border-radius:50%;
+        background:#fff;
+    }
+    .clock-number{
+        position:absolute;
+        width:10px;
+        height:10px;
+        margin:-5px;
+        text-align:center;
+        line-height:10px;
+        font-size:6px;
+        font-weight:750;
+        color:#475467!important;
+    }
+    .hand{
+        position:absolute;
+        left:24px;
+        bottom:25px;
+        transform-origin:bottom center;
+        background:#344054;
+        border-radius:4px;
+    }
+    .hour-hand{width:4px;height:12px}
+    .minute-hand{width:2px;height:18px}
+    .clock-center{
+        position:absolute;
+        left:21px;
+        top:21px;
+        width:6px;
+        height:6px;
+        border-radius:50%;
+        background:#344054;
+    }
+
+    /* 詳細ボタン */
     .details-area{
-        grid-area:details;
-        min-width:70px;
-        text-align:right;
+        grid-area:info;
+        text-align:center;
     }
-    details{
-        font-size:.7rem;
-    }
+    details{font-size:.68rem}
     summary{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width:28px;
+        height:28px;
+        border:1px solid #98a2b3;
+        border-radius:50%;
+        background:#ffffffb8;
         cursor:pointer;
         list-style:none;
-        font-weight:800;
-        white-space:nowrap;
+        font-family:serif;
+        font-size:.8rem;
+        font-weight:900;
     }
     summary::-webkit-details-marker{display:none}
-    summary:after{
-        content:" ›";
-        color:#667085!important;
-        font-size:.9rem;
-    }
-    details[open] summary:after{content:" −"}
     .details-body{
         position:absolute;
-        z-index:5;
-        right:1rem;
-        width:min(360px,calc(100vw - 3rem));
-        margin-top:.4rem;
+        z-index:10;
+        right:.8rem;
+        top:3.2rem;
+        width:min(340px,calc(100vw - 3rem));
         padding:.65rem .75rem;
         border:1px solid #d0d5dd;
         border-radius:9px;
         background:#fff;
-        color:#283141!important;
         text-align:left;
         line-height:1.65;
         box-shadow:0 7px 20px #0002;
@@ -288,27 +359,27 @@ st.markdown(
         padding:2rem;
         text-align:center;
         border:1px dashed rgba(128,128,128,.6);
-        border-radius:13px;
+        border-radius:12px;
     }
 
-    /* 条件ボタンを小さくする */
+    /* 条件ボタンを正方形に近づける */
     div[data-testid="stPopover"] button{
         min-height:38px!important;
-        padding:.3rem .5rem!important;
+        padding:.25rem!important;
     }
 
     /* スマホ */
     @media(max-width:620px){
         .block-container{
-            padding:3rem .65rem 2.5rem!important;
+            padding:2.9rem .55rem 2.5rem!important;
         }
 
-        /* 目的駅・時刻・条件を横並びのまま維持 */
+        /* 入力欄を横並びに固定 */
         div[data-testid="stHorizontalBlock"]{
             display:flex!important;
             flex-direction:row!important;
             flex-wrap:nowrap!important;
-            gap:.35rem!important;
+            gap:.3rem!important;
             align-items:flex-end!important;
         }
         div[data-testid="stHorizontalBlock"] > div{
@@ -316,73 +387,96 @@ st.markdown(
         }
 
         .selector-label{
-            font-size:.61rem;
-            margin-bottom:.1rem;
+            font-size:.59rem;
+            margin-bottom:.08rem;
         }
-
         .heading-row{
             display:block;
-            margin:.45rem 0 .55rem;
+            margin:.4rem 0 .5rem;
         }
         .page-title{
-            font-size:1.05rem;
-            line-height:1.25;
+            font-size:1rem;
         }
         .page-note{
-            margin-top:.16rem;
-            font-size:.58rem;
+            margin-top:.12rem;
+            font-size:.56rem;
             text-align:left;
             white-space:normal;
         }
 
-        /* スマホは3行・2列 */
+        /* 3列×2段に圧縮 */
         .station-card{
-            grid-template-columns:minmax(0,1fr) auto;
+            grid-template-columns:minmax(0,1.15fr) minmax(92px,.85fr)
+                minmax(90px,.78fr);
             grid-template-areas:
-                "station departure"
-                "location arrival"
-                "route rent"
-                "details details";
-            gap:.18rem .65rem;
-            padding:.62rem .72rem;
-            border-radius:11px;
-            margin-bottom:.42rem;
+                "station departure rent"
+                "location arrival route";
+            gap:.12rem .45rem;
+            min-height:0;
+            border-left-width:5px!important;
+            border-radius:10px;
+            padding:.52rem .55rem;
+            margin-bottom:.36rem;
         }
 
         .station-name{
-            font-size:1.34rem;
+            font-size:1.22rem;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
         }
         .location{
-            font-size:.64rem;
+            font-size:.59rem;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
         }
-        .departure{
-            font-size:1.5rem;
+
+        .departure-wrap{
+            display:block;
             text-align:right;
+        }
+        .clock{display:none}
+        .departure{
+            font-size:1.28rem;
+            line-height:1;
         }
         .arrival{
-            font-size:.62rem;
+            padding:0;
+            font-size:.56rem;
             text-align:right;
         }
-        .route{
-            padding-top:.3rem;
-            border-top:1px solid #98a2b338;
-            font-size:.68rem;
-        }
+
         .rent{
-            padding-top:.3rem;
-            border-top:1px solid #98a2b338;
-            font-size:.66rem;
+            position:relative;
+            padding-right:23px;
+            font-size:.62rem;
             text-align:right;
             white-space:nowrap;
         }
-        .details-area{
-            padding-top:.25rem;
+        .route{
+            font-size:.58rem;
             text-align:right;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
         }
-        details{font-size:.65rem}
+
+        /* iボタンを右上に重ね、専用行を使わない */
+        .details-area{
+            position:absolute;
+            top:.35rem;
+            right:.3rem;
+        }
+        summary{
+            width:20px;
+            height:20px;
+            font-size:.6rem;
+        }
         .details-body{
             position:relative;
             right:auto;
+            top:auto;
             width:auto;
             margin-top:.35rem;
             box-shadow:none;
@@ -395,20 +489,34 @@ st.markdown(
 
 
 # ============================================================
-# 4. 目的駅・到着時刻・絞り込み
+# 4. 目的駅・時刻・条件
 # ============================================================
-stations = sorted(station_info)
-default_station = stations.index("新橋") if "新橋" in stations else 0
-destination_column, time_column, filter_column = st.columns([2.4, 1.05, .42])
+stations = sorted(
+    station_info,
+    key=lambda name: (
+        "・".join(station_info[name]["routes"]),
+        station_info[name]["location"],
+        name,
+    ),
+)
+
+# 選択欄は空の検索状態、未選択時は神保町を使用
+destination_column, time_column, filter_column = st.columns([2.5, 1.05, .38])
 
 with destination_column:
     st.markdown('<div class="selector-label">目的駅</div>', unsafe_allow_html=True)
-    destination = st.selectbox(
+    selected_destination = st.selectbox(
         "目的駅",
         stations,
-        index=default_station,
+        index=None,
+        placeholder="神保町（駅名・路線・所在地で検索）",
+        format_func=station_label,
         label_visibility="collapsed",
     )
+
+destination = selected_destination or (
+    "神保町" if "神保町" in station_info else stations[0]
+)
 
 with time_column:
     st.markdown('<div class="selector-label">到着</div>', unsafe_allow_html=True)
@@ -429,7 +537,7 @@ if not df.empty:
 with filter_column:
     st.markdown('<div class="selector-label">条件</div>', unsafe_allow_html=True)
 
-    with st.popover("⚙️"):
+    with st.popover("⚙"):
         selected_bands = st.multiselect(
             f"{destination}までの所要時間",
             bands,
@@ -445,7 +553,7 @@ with filter_column:
 
 
 # ============================================================
-# 5. タイトル・検索条件
+# 5. タイトル・絞り込み
 # ============================================================
 st.markdown(
     compact_html(f"""
@@ -474,7 +582,7 @@ if not df.empty:
 
 
 # ============================================================
-# 6. カード表示
+# 6. カード
 # ============================================================
 if df.empty:
     st.markdown(
@@ -488,12 +596,13 @@ else:
         route = escape(str(row["経路"]))
         train_destination = escape(str(row["行先"]))
         lines = escape(" ／ ".join(row["路線一覧"]))
-        rent = row["家賃25㎡"]
+        accent, background = line_style(str(row["経路"]))
+        rent = row["家賃"]
 
         rent_text = (
-            f"家賃目安 {escape(rent_man(rent))}"
+            escape(rent_man(rent))
             if pd.notna(rent)
-            else "家賃情報なし"
+            else "家賃不明"
         )
         rent_detail = (
             f"""
@@ -513,21 +622,24 @@ else:
 
         card = f"""
         <div class="station-card"
-             style="--card-bg:{line_color(str(row["経路"]))}">
+             style="--line-color:{accent};--card-bg:{background}">
             <div class="station-name">{station}</div>
             <div class="location">{location}</div>
 
-            <div class="departure">{row["出発"]}発</div>
+            <div class="departure-wrap">
+                {clock_html(str(row["出発"]))}
+                <div class="departure">{row["出発"]}発</div>
+            </div>
             <div class="arrival">
                 {escape(destination)} {row["到着"]}着
             </div>
 
-            <div class="route">{route}・直通</div>
             <div class="rent">{rent_text}</div>
+            <div class="route">{route}・直通</div>
 
             <div class="details-area">
                 <details>
-                    <summary>詳細</summary>
+                    <summary>i</summary>
                     <div class="details-body">
                         <div>
                             <span class="detail-label">所在地：</span>{location}
@@ -576,7 +688,7 @@ with st.expander("検索結果を表で確認する"):
         output = df[[
             "駅名",
             "所在地",
-            "家賃25㎡",
+            "家賃",
             "出発",
             "到着",
             "所要時間",
@@ -584,7 +696,7 @@ with st.expander("検索結果を表で確認する"):
             "行先",
         ]].copy()
 
-        output["家賃25㎡"] = output["家賃25㎡"].apply(
+        output["家賃"] = output["家賃"].apply(
             lambda x: rent_man(x) if pd.notna(x) else ""
         )
 
