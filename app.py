@@ -435,42 +435,70 @@ if not st.session_state.show_nearby and not df.empty:
     df = df[df["所要時間"] >= 10].copy()
 
 
+
 # ============================================================
 # 6. 近距離駅の表示切替
 # ============================================================
 if nearby_count or st.session_state.show_nearby:
-    notice_col, button_col = st.columns([5.4, 1])
+    # この行だけ、通知とボタンを縦方向中央に揃える
+    st.markdown("""
+    <style>
+    .st-key-nearby-toggle [data-testid="stHorizontalBlock"]{
+        align-items:center!important;
+    }
+    .st-key-nearby-toggle [data-testid="stMarkdownContainer"],
+    .st-key-nearby-toggle [data-testid="stMarkdownContainer"] p{
+        margin:0!important;
+    }
+    .st-key-nearby-toggle .nearby-row,
+    .st-key-nearby-toggle div[data-testid="stButton"] button{
+        height:34px!important;
+        min-height:34px!important;
+        margin:0!important;
+    }
+    .st-key-nearby-toggle div[data-testid="stButton"]{
+        margin:0!important;
+    }
+    @media(max-width:620px){
+        .st-key-nearby-toggle .nearby-row,
+        .st-key-nearby-toggle div[data-testid="stButton"] button{
+            height:31px!important;
+            min-height:31px!important;
+        }
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
-    with notice_col:
-        if st.session_state.show_nearby:
-            message = (
-                f"<strong>近距離駅も表示中</strong>"
-                f"<span>10分未満の{nearby_count}駅を含む</span>"
+    with st.container(key="nearby-toggle"):
+        notice_col, button_col = st.columns(
+            [5.4, 1],
+            vertical_alignment="center",
+        )
+
+        with notice_col:
+            if st.session_state.show_nearby:
+                message = (
+                    "<strong>近距離駅も表示中</strong>"
+                    f"<span>10分未満の{nearby_count}駅を含む</span>"
+                )
+            else:
+                message = (
+                    "<strong>少し離れた候補を優先して表示中</strong>"
+                    f"<span>10分未満の{nearby_count}駅を省略</span>"
+                )
+
+            st.markdown(
+                compact_html(f'<div class="nearby-row">{message}</div>'),
+                unsafe_allow_html=True,
             )
-        else:
-            message = (
-                "<strong>少し離れた候補を優先して表示中</strong>"
-                f"<span>10分未満の{nearby_count}駅を省略</span>"
+
+        with button_col:
+            st.button(
+                "隠す" if st.session_state.show_nearby else "表示",
+                key="toggle_nearby_button",
+                use_container_width=True,
+                on_click=toggle_nearby,
             )
-
-        st.markdown(
-            compact_html(f'<div class="nearby-row">{message}</div>'),
-            unsafe_allow_html=True,
-        )
-
-    with button_col:
-        st.markdown(
-            '<div class="nearby-button">',
-            unsafe_allow_html=True,
-        )
-        st.button(
-            "隠す" if st.session_state.show_nearby else "表示",
-            key="toggle_nearby_button",
-            use_container_width=True,
-            on_click=toggle_nearby,
-        )
-        st.markdown("</div>", unsafe_allow_html=True)
-
 
 # ============================================================
 # 7. カード
