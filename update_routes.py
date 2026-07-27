@@ -426,13 +426,15 @@ def get_municipalities(session):
     response.raise_for_status()
     result = {}
 
-    for code, value in re.findall(
+    for _, value in re.findall(
         r'MUNI_ARRAY\["(\d+)"\]\s*=\s*[\'"]([^\'"]+)',
         response.content.decode("utf-8-sig"),
     ):
         parts = value.split(",")
+
         if len(parts) >= 4:
-            result[code] = parts[1] + parts[3]
+            # 配列キーではなく、正式な5桁自治体コードを使用
+            result[parts[2].zfill(5)] = parts[1] + parts[3]
 
     return result
 
