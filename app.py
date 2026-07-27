@@ -19,25 +19,18 @@ st.set_page_config(
 
 def load_json(path):
     path = Path(path)
-
     if not path.exists():
         return {}
-
     if path.suffix == ".gz":
         with gzip.open(path, "rt", encoding="utf-8") as f:
             return json.load(f)
-
     return json.loads(path.read_text(encoding="utf-8"))
 
 
 def merge_data(parts):
-    # 通常5社とJRをアプリ起動時に統合
+    # 通常データとJRデータを駅名単位で統合
     stations = {}
-    timetables = {
-        "weekday": [],
-        "saturday": [],
-        "sunday": [],
-    }
+    timetables = {"weekday": [], "saturday": [], "sunday": []}
     sources = []
 
     for part in parts:
@@ -58,6 +51,9 @@ def merge_data(parts):
                     "municipality_code": "",
                     "rent_per_sqm": None,
                     "rent_25sqm": None,
+                    "lat": None,
+                    "lon": None,
+                    "_coord_count": 0,
                 },
             )
 
@@ -65,27 +61,42 @@ def merge_data(parts):
                 set(current["routes"] + station.get("routes", []))
             )
             current["operators"] = sorted(
-                set(
-                    current["operators"]
-                    + station.get("operators", [])
-                )
+                set(current["operators"] + station.get("operators", []))
             )
 
             if station.get("location") not in ("", "所在地未登録"):
                 current["location"] = station["location"]
                 current["municipality_code"] = station.get(
-                    "municipality_code",
-                    "",
+                    "municipality_code", ""
                 )
 
             for key in ("rent_per_sqm", "rent_25sqm"):
                 if station.get(key) is not None:
                     current[key] = station[key]
 
+            # 通常版とJR版の両方にある駅は代表座標を平均
+            if station.get("lat") is not None and station.get("lon") is not None:
+                count = current["_coord_count"]
+                lat, lon = float(station["lat"]), float(station["lon"])
+                current["lat"] = (
+                    lat
+                    if count == 0
+                    else (current["lat"] * count + lat) / (count + 1)
+                )
+                current["lon"] = (
+                    lon
+                    if count == 0
+                    else (current["lon"] * count + lon) / (count + 1)
+                )
+                current["_coord_count"] = count + 1
+
         for day_type in timetables:
             timetables[day_type].extend(
                 part.get("timetables", {}).get(day_type, [])
             )
+
+    for station in stations.values():
+        station.pop("_coord_count", None)
 
     primary = next((part for part in parts if part), {})
 
@@ -94,13 +105,8 @@ def merge_data(parts):
         "service_dates": primary.get("service_dates", {}),
         "generated_at": primary.get("generated_at", ""),
         "rent_source_year": primary.get("rent_source_year"),
-        "rent_reference_area_sqm": primary.get(
-            "rent_reference_area_sqm"
-        ),
-        "stations": sorted(
-            stations.values(),
-            key=lambda x: x["name"],
-        ),
+        "rent_reference_area_sqm": primary.get("rent_reference_area_sqm"),
+        "stations": sorted(stations.values(), key=lambda x: x["name"]),
         "timetables": timetables,
         "sources": sources,
     }
@@ -116,9 +122,7 @@ challenge = (
 data = merge_data([basic, challenge])
 
 if not data.get("stations"):
-    st.error(
-        "時刻表データがありません。GitHub Actionsを実行してください。"
-    )
+    st.error("時刻表データがありません。GitHub Actionsを実行してください。")
     st.stop()
 
 station_info = {
@@ -127,6 +131,8 @@ station_info = {
         "operators": station.get("operators", []),
         "location": station.get("location", "所在地未登録"),
         "rent": station.get("rent_25sqm"),
+        "lat": station.get("lat"),
+        "lon": station.get("lon"),
     }
     for station in data["stations"]
 }
@@ -158,8 +164,6 @@ LINE_STYLES = {
     "りんかい": ("#00a7e3", "#eefaff"),
     "つくばエクスプレス": ("#003894", "#eef4ff"),
     "多摩モノレール": ("#ff8a00", "#fff7ec"),
-
-    # JR東日本
     "山手線": ("#9acd32", "#f5faec"),
     "京浜東北": ("#00b2e5", "#eefaff"),
     "根岸線": ("#00b2e5", "#eefaff"),
@@ -192,6 +196,62 @@ def clock(value):
     return f"{value // 60 % 24:02d}:{value % 60:02d}"
 
 
+def distance_m(lat1, lon1, lat2, lon2):
+    # 緯度経度から2駅間の直線距離を計算
+    radius = 6_371_000
+    lat1, lat2 = math.radians(float(lat1)), math.radians(float(lat2))
+    dlat = lat2 - lat1
+    dlon = math.radians(float(lon2) - float(lon1))
+    value = (
+        math.sin(dlat / 2) ** 2
+        + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    )
+    return 2 * radius * math.asin(math.sqrt(value))
+
+
+def estimated_walk_minutes(distance):
+    # 直線距離を1.25倍し、歩行速度75m/分で概算
+    return max(1, math.ceil(float(distance) * 1.25 / 75))
+
+
+def nearby_stations(destination, radius):
+    # 目的駅から指定半径内にある別名駅を抽出
+    base = station_info[destination]
+
+    if base["lat"] is None or base["lon"] is None:
+        return []
+
+    result = []
+
+    for name, info in station_info.items():
+        if (
+            name == destination
+            or info["lat"] is None
+            or info["lon"] is None
+        ):
+            continue
+
+        distance = round(
+            distance_m(
+                base["lat"],
+                base["lon"],
+                info["lat"],
+                info["lon"],
+            )
+        )
+
+        if distance <= radius:
+            result.append(
+                {
+                    "name": name,
+                    "distance": distance,
+                    "walk": estimated_walk_minutes(distance),
+                }
+            )
+
+    return sorted(result, key=lambda x: (x["distance"], x["name"]))
+
+
 def time_band(value):
     return next(
         (
@@ -204,11 +264,7 @@ def time_band(value):
 
 
 def rent_man(value):
-    return (
-        f"{float(value) / 10000:.1f}万円"
-        if pd.notna(value)
-        else ""
-    )
+    return f"{float(value) / 10000:.1f}万円" if pd.notna(value) else ""
 
 
 def relative_rent(rent, base):
@@ -248,9 +304,7 @@ def station_label(name):
 
 
 def toggle_nearby():
-    st.session_state.show_nearby = (
-        not st.session_state.show_nearby
-    )
+    st.session_state.show_nearby = not st.session_state.show_nearby
 
 
 def clock_html(text):
@@ -261,7 +315,6 @@ def clock_html(text):
         angle = math.radians(number * 30 - 90)
         x = 26 + 20 * math.cos(angle)
         y = 26 + 20 * math.sin(angle)
-
         numbers += (
             f'<span class="clock-number" '
             f'style="left:{x}px;top:{y}px">{number}</span>'
@@ -280,58 +333,60 @@ def clock_html(text):
     """
 
 
-def search_routes(trips, destination, target):
-    # 各駅から最も遅く出発できる直通列車を選ぶ
-    target_minute = minute(target)
+def search_routes(trips, destinations, target_minute):
+    # 目的駅と選択した近隣駅を検索し、各出発駅の最遅便を選ぶ
     latest = {}
 
     for trip in trips:
         stops = trip.get("stops", [])
 
         for destination_index, destination_stop in enumerate(stops):
-            if destination_stop[0] != destination:
+            destination = destination_stop[0]
+
+            if destination not in destinations:
                 continue
 
+            walk = destinations[destination]
             arrival = minute(destination_stop[1])
 
-            if arrival > target_minute:
+            if arrival + walk > target_minute:
                 continue
 
             for origin in stops[:destination_index]:
                 station = origin[0]
                 departure = minute(origin[2])
 
-                if station == destination or departure >= arrival:
+                if station in destinations or departure >= arrival:
                     continue
 
                 info = station_info.get(station, {})
-
                 candidate = {
                     "駅名": station,
-                    "所在地": info.get(
-                        "location",
-                        "所在地未登録",
-                    ),
+                    "所在地": info.get("location", "所在地未登録"),
                     "家賃": info.get("rent"),
                     "出発": clock(departure),
                     "到着": clock(arrival),
-                    "所要時間": arrival - departure,
-                    "経路": trip.get(
-                        "route",
-                        "路線情報なし",
-                    ),
+                    "到着駅": destination,
+                    "徒歩時間": walk,
+                    "目的地到着": clock(arrival + walk),
+                    "乗車時間": arrival - departure,
+                    "所要時間": arrival + walk - departure,
+                    "経路": trip.get("route", "路線情報なし"),
                     "事業者": trip.get("operator", ""),
-                    "行先": trip.get(
-                        "destination",
-                        "行先情報なし",
-                    ),
+                    "行先": trip.get("destination", "行先情報なし"),
                     "路線一覧": info.get("routes", []),
                     "出発分": departure,
                 }
 
+                current = latest.get(station)
+
                 if (
-                    station not in latest
-                    or departure > latest[station]["出発分"]
+                    current is None
+                    or departure > current["出発分"]
+                    or (
+                        departure == current["出発分"]
+                        and candidate["所要時間"] < current["所要時間"]
+                    )
                 ):
                     latest[station] = candidate
 
@@ -346,9 +401,15 @@ def day_text(result):
     if not result:
         return "該当する直通列車なし"
 
+    walk = (
+        f'＋徒歩{result["徒歩時間"]}分'
+        if result["徒歩時間"]
+        else ""
+    )
+
     return (
         f'{result["出発"]}発'
-        f'（{result["到着"]}着・{result["経路"]}）'
+        f'（{result["到着駅"]} {result["到着"]}着{walk}）'
     )
 
 
@@ -368,6 +429,11 @@ line-height:1.2;letter-spacing:-.04em}
 .challenge-notice{padding:.42rem .65rem;margin:.2rem 0 .55rem;
 border:1px solid #e5a00080;border-radius:9px;background:#fff8df;
 color:#694c00;font-size:.68rem}
+
+.near-destination{padding:.6rem .72rem;margin:.35rem 0 .6rem;
+border:1px solid #98a2b360;border-radius:10px;background:rgba(128,128,128,.05)}
+.near-destination-title{font-size:.76rem;font-weight:850;margin-bottom:.1rem}
+.near-destination-note{font-size:.64rem;opacity:.65;margin-bottom:.35rem}
 
 .st-key-nearby_toggle [data-testid="stHorizontalBlock"]{align-items:center!important}
 .st-key-nearby_toggle [data-testid="stMarkdownContainer"],
@@ -438,6 +504,7 @@ div[data-testid="stHorizontalBlock"]>div{min-width:0!important}
 .page-title{font-size:1rem}
 .page-note{margin-top:.12rem;font-size:.56rem;text-align:left;white-space:normal}
 .challenge-notice{font-size:.57rem;padding:.35rem .45rem}
+.near-destination{padding:.45rem .5rem}
 .nearby-row{height:31px;padding:0 .42rem;font-size:.58rem}
 .st-key-nearby_toggle div[data-testid="stButton"] button{
 height:31px!important;min-height:31px!important;padding:0 .35rem!important;
@@ -512,13 +579,88 @@ with time_col:
     )
 
 target = arrival_time.strftime("%H:%M")
+target_minute = minute(target)
 destination_rent = station_info[destination]["rent"]
+
+# 目的駅の近隣駅も到着候補に含める
+destination_options = {destination: 0}
+nearby_mode = st.toggle(
+    "近隣駅も到着候補に含める",
+    value=False,
+)
+
+if nearby_mode:
+    st.markdown(
+        '<div class="near-destination">',
+        unsafe_allow_html=True,
+    )
+
+    radius = st.select_slider(
+        "近隣駅として探す範囲",
+        options=[300, 400, 500, 600, 800, 1000],
+        value=500,
+        format_func=lambda value: f"{value}m",
+    )
+
+    candidates = nearby_stations(destination, radius)
+
+    if not candidates:
+        st.info(
+            "指定範囲内に、座標を確認できる別の駅はありません。"
+        )
+    else:
+        st.markdown(
+            (
+                f'<div class="near-destination-title">'
+                f"近くの駅を{len(candidates)}駅見つけました"
+                f"</div>"
+                f'<div class="near-destination-note">'
+                f"使用する駅と、そこから目的地までの徒歩時間を"
+                f"調整できます。"
+                f"</div>"
+            ),
+            unsafe_allow_html=True,
+        )
+
+        for candidate in candidates:
+            name = candidate["name"]
+            distance = candidate["distance"]
+            estimated = candidate["walk"]
+            key_base = f"{destination}_{radius}_{name}"
+
+            use_col, walk_col = st.columns(
+                [3.2, 1.2],
+                vertical_alignment="center",
+            )
+
+            with use_col:
+                use_station = st.checkbox(
+                    f"{name}（直線約{distance}m）",
+                    value=True,
+                    key=f"use_{key_base}",
+                )
+
+            with walk_col:
+                walk = st.number_input(
+                    f"{name}から目的地まで",
+                    min_value=1,
+                    max_value=30,
+                    value=estimated,
+                    step=1,
+                    key=f"walk_{key_base}",
+                    label_visibility="collapsed",
+                )
+
+            if use_station:
+                destination_options[name] = int(walk)
+
+    st.markdown("</div>", unsafe_allow_html=True)
 
 weekday_df = pd.DataFrame(
     search_routes(
         timetables.get("weekday", []),
-        destination,
-        target,
+        destination_options,
+        target_minute,
     )
 )
 
@@ -526,8 +668,8 @@ saturday = {
     row["駅名"]: row
     for row in search_routes(
         timetables.get("saturday", []),
-        destination,
-        target,
+        destination_options,
+        target_minute,
     )
 }
 
@@ -535,8 +677,8 @@ sunday = {
     row["駅名"]: row
     for row in search_routes(
         timetables.get("sunday", []),
-        destination,
-        target,
+        destination_options,
+        target_minute,
     )
 }
 
@@ -570,7 +712,7 @@ with filter_col:
 
     with st.popover("⚙"):
         st.checkbox(
-            "10分未満の駅も表示",
+            "10分未満の出発駅も表示",
             key="show_nearby",
         )
 
@@ -624,6 +766,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+if len(destination_options) > 1:
+    st.caption(
+        "到着候補："
+        + "、".join(destination_options)
+        + "。近隣駅は設定した徒歩時間を差し引いて検索しています。"
+    )
+
 if config.get("jr_enabled"):
     st.markdown(
         """
@@ -666,7 +815,7 @@ if not st.session_state.show_nearby and not df.empty:
 
 
 # ============================================================
-# 7. 近距離駅切替
+# 7. 近距離の出発駅切替
 # ============================================================
 if nearby_count or st.session_state.show_nearby:
     with st.container(key="nearby_toggle"):
@@ -677,7 +826,7 @@ if nearby_count or st.session_state.show_nearby:
 
         with notice_col:
             message = (
-                f"<strong>近距離駅も表示中</strong>"
+                f"<strong>近距離の出発駅も表示中</strong>"
                 f"<span>10分未満の{nearby_count}駅を含む</span>"
                 if st.session_state.show_nearby
                 else
@@ -723,6 +872,8 @@ else:
         operator = escape(str(row["事業者"]))
         train_destination = escape(str(row["行先"]))
         routes = escape(" ／ ".join(row["路線一覧"]))
+        arrival_station = escape(str(row["到着駅"]))
+        walk = int(row["徒歩時間"])
 
         accent, background = line_style(row["経路"])
         rent = row["家賃"]
@@ -745,6 +896,13 @@ else:
             if pd.notna(destination_rent)
             else "情報なし"
         )
+        arrival_text = (
+            f'{arrival_station} {row["到着"]}着'
+            f' → 徒歩{walk}分'
+            f' → {escape(destination)} {row["目的地到着"]}'
+            if walk
+            else f'{escape(destination)} {row["到着"]}着'
+        )
 
         card = f"""
         <div class="station-card"
@@ -757,9 +915,7 @@ else:
                 <div class="departure">{row["出発"]}発</div>
             </div>
 
-            <div class="arrival">
-                {escape(destination)} {row["到着"]}着
-            </div>
+            <div class="arrival">{arrival_text}</div>
 
             <div class="rent">家賃：{row["家賃区分"]}</div>
             <div class="route">{route}・直通</div>
@@ -807,7 +963,7 @@ else:
                         <div>
                             <span class="detail-label">平日：</span>
                             {row["出発"]}発
-                            （{row["到着"]}着・{route}）
+                            （{arrival_text}・{route}）
                         </div>
                         <div>
                             <span class="detail-label">土曜：</span>
@@ -818,7 +974,13 @@ else:
                             {escape(day_text(sun))}
                         </div>
                         <div>
-                            <span class="detail-label">所要時間：</span>
+                            <span class="detail-label">乗車時間：</span>
+                            {row["乗車時間"]}分
+                        </div>
+                        <div>
+                            <span class="detail-label">
+                                徒歩を含む所要時間：
+                            </span>
                             {row["所要時間"]}分
                         </div>
                         <div>
@@ -853,7 +1015,11 @@ with st.expander("検索結果を表で確認する"):
                 "相対家賃",
                 "家賃",
                 "出発",
+                "到着駅",
                 "到着",
+                "徒歩時間",
+                "目的地到着",
+                "乗車時間",
                 "所要時間",
                 "経路",
                 "事業者",
@@ -920,6 +1086,7 @@ if challenge_sources:
     )
 
 st.caption(
-    "所在地はGTFS座標と国土地理院の情報を基に"
-    "自治体単位で表示しています。"
+    "所在地と近隣駅の距離はGTFS座標と国土地理院の情報を基に"
+    "算出しています。徒歩時間は直線距離からの概算で、"
+    "実際の経路や駅構内移動は含みません。"
 )
