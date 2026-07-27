@@ -584,77 +584,55 @@ destination_rent = station_info[destination]["rent"]
 
 # 目的駅の近隣駅も到着候補に含める
 destination_options = {destination: 0}
-nearby_mode = st.toggle(
-    "近隣駅も到着候補に含める",
-    value=False,
-)
+nearby_mode = st.toggle("近隣駅も到着候補に含める", value=False)
 
 if nearby_mode:
-    st.markdown(
-        '<div class="near-destination">',
-        unsafe_allow_html=True,
-    )
-
-    radius = st.select_slider(
-        "近隣駅として探す範囲",
-        options=[300, 400, 500, 600, 800, 1000],
-        value=500,
-        format_func=lambda value: f"{value}m",
-    )
-
-    candidates = nearby_stations(destination, radius)
-
-    if not candidates:
-        st.info(
-            "指定範囲内に、座標を確認できる別の駅はありません。"
+    # 詳細設定はポップオーバーへ収納し、スマホの縦幅を抑える
+    with st.popover("近隣駅の詳細設定", use_container_width=True):
+        ranges = {
+            "徒歩2分": 100,
+            "徒歩5分": 300,
+            "徒歩8分": 500,
+            "徒歩12分": 700,
+            "徒歩17分": 1000,
+        }
+        range_label = st.selectbox(
+            "探す範囲",
+            list(ranges),
+            index=2,
         )
-    else:
-        st.markdown(
-            (
-                f'<div class="near-destination-title">'
-                f"近くの駅を{len(candidates)}駅見つけました"
-                f"</div>"
-                f'<div class="near-destination-note">'
-                f"使用する駅と、そこから目的地までの徒歩時間を"
-                f"調整できます。"
-                f"</div>"
-            ),
-            unsafe_allow_html=True,
-        )
+        radius = ranges[range_label]
+        candidates = nearby_stations(destination, radius)
 
-        for candidate in candidates:
-            name = candidate["name"]
-            distance = candidate["distance"]
-            estimated = candidate["walk"]
-            key_base = f"{destination}_{radius}_{name}"
+        if not candidates:
+            st.info("この範囲に別の駅はありません。")
+        else:
+            st.caption("使用する駅と目的地までの徒歩時間を調整できます。")
+            for candidate in candidates:
+                name = candidate["name"]
+                key = f"{destination}_{radius}_{name}"
+                use_col, walk_col = st.columns([3, 1])
+                with use_col:
+                    use_station = st.checkbox(
+                        f'{name}（約{candidate["distance"]}m）',
+                        value=True,
+                        key=f"use_{key}",
+                    )
+                with walk_col:
+                    walk = st.number_input(
+                        "徒歩分",
+                        1,
+                        30,
+                        candidate["walk"],
+                        key=f"walk_{key}",
+                        label_visibility="collapsed",
+                    )
+                if use_station:
+                    destination_options[name] = int(walk)
 
-            use_col, walk_col = st.columns(
-                [3.2, 1.2],
-                vertical_alignment="center",
-            )
-
-            with use_col:
-                use_station = st.checkbox(
-                    f"{name}（直線約{distance}m）",
-                    value=True,
-                    key=f"use_{key_base}",
-                )
-
-            with walk_col:
-                walk = st.number_input(
-                    f"{name}から目的地まで",
-                    min_value=1,
-                    max_value=30,
-                    value=estimated,
-                    step=1,
-                    key=f"walk_{key_base}",
-                    label_visibility="collapsed",
-                )
-
-            if use_station:
-                destination_options[name] = int(walk)
-
-    st.markdown("</div>", unsafe_allow_html=True)
+    added = len(destination_options) - 1
+    if added:
+        st.caption(f"近隣駅を{added}駅追加中")
 
 weekday_df = pd.DataFrame(
     search_routes(
@@ -896,12 +874,12 @@ else:
             if pd.notna(destination_rent)
             else "情報なし"
         )
-        arrival_text = (
-            f'{arrival_station} {row["到着"]}着'
-            f' → 徒歩{walk}分'
-            f' → {escape(destination)} {row["目的地到着"]}'
-            if walk
-            else f'{escape(destination)} {row["到着"]}着'
+        # カード表面は最終目的地への到着予定だけ表示
+        arrival_text = f'{escape(destination)} {row["目的地到着"]}着予定'
+        route_detail = (
+            f'{arrival_station} {row["到着"]}着 → 徒歩{walk}分 → '
+            f'{escape(destination)} {row["目的地到着"]}着予定'
+            if walk else f'{escape(destination)} {row["到着"]}着'
         )
 
         card = f"""
@@ -963,7 +941,7 @@ else:
                         <div>
                             <span class="detail-label">平日：</span>
                             {row["出発"]}発
-                            （{arrival_text}・{route}）
+                            （{route_detail}・{route}）
                         </div>
                         <div>
                             <span class="detail-label">土曜：</span>
@@ -1065,7 +1043,6 @@ challenge_sources = [
     for source in challenge.get("sources", [])
     if source.get("name")
 ]
-
 
 st.caption(
     "家賃は、目的駅比90%未満を「安い」、90〜110%を"
