@@ -1066,6 +1066,7 @@ challenge_sources = [
     if source.get("name")
 ]
 
+
 st.caption(
     "家賃は、目的駅比90%未満を「安い」、90〜110%を"
     "「同程度」、110%超を「高い」と表示しています。"
