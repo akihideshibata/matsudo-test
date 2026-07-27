@@ -9614,5 +9614,805 @@
     "municipality_code": "14201",
     "location": "神奈川県横須賀市",
     "updated_at": "2026-07-26T15:05+09:00"
+  },
+  "mir:115": {
+    "name": "守谷",
+    "lat": "35.95069",
+    "lon": "139.99225",
+    "municipality_code": "08224",
+    "location": "茨城県守谷市",
+    "updated_at": "2026-07-27T15:55+09:00"
+  },
+  "mir:116": {
+    "name": "みらい平",
+    "lat": "35.99475",
+    "lon": "140.03831",
+    "municipality_code": "08235",
+    "location": "茨城県つくばみらい市",
+    "updated_at": "2026-07-27T15:55+09:00"
+  },
+  "mir:117": {
+    "name": "みどりの",
+    "lat": "36.02994",
+    "lon": "140.05625",
+    "municipality_code": "08220",
+    "location": "茨城県つくば市",
+    "updated_at": "2026-07-27T15:55+09:00"
+  },
+  "mir:118": {
+    "name": "万博記念公園",
+    "lat": "36.05847",
+    "lon": "140.05944",
+    "municipality_code": "08220",
+    "location": "茨城県つくば市",
+    "updated_at": "2026-07-27T15:55+09:00"
+  },
+  "mir:119": {
+    "name": "研究学園",
+    "lat": "36.08217",
+    "lon": "140.08239",
+    "municipality_code": "08220",
+    "location": "茨城県つくば市",
+    "updated_at": "2026-07-27T15:55+09:00"
+  },
+  "mir:120": {
+    "name": "つくば",
+    "lat": "36.08256",
+    "lon": "140.11169",
+    "municipality_code": "08220",
+    "location": "茨城県つくば市",
+    "updated_at": "2026-07-27T15:55+09:00"
+  },
+  "jreast:1601": {
+    "name": "取手",
+    "lat": "35.89534",
+    "lon": "140.06285",
+    "municipality_code": "08217",
+    "location": "茨城県取手市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1602": {
+    "name": "藤代",
+    "lat": "35.92056",
+    "lon": "140.11815",
+    "municipality_code": "08217",
+    "location": "茨城県取手市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1603": {
+    "name": "龍ケ崎市",
+    "lat": "35.92994",
+    "lon": "140.13792",
+    "municipality_code": "08208",
+    "location": "茨城県龍ケ崎市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1604": {
+    "name": "牛久",
+    "lat": "35.97518",
+    "lon": "140.14103",
+    "municipality_code": "08219",
+    "location": "茨城県牛久市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1605": {
+    "name": "ひたち野うしく",
+    "lat": "36.00750",
+    "lon": "140.15830",
+    "municipality_code": "08219",
+    "location": "茨城県牛久市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1606": {
+    "name": "荒川沖",
+    "lat": "36.03060",
+    "lon": "140.16598",
+    "municipality_code": "08203",
+    "location": "茨城県土浦市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1607": {
+    "name": "土浦",
+    "lat": "36.07860",
+    "lon": "140.20624",
+    "municipality_code": "08203",
+    "location": "茨城県土浦市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1608": {
+    "name": "神立",
+    "lat": "36.12043",
+    "lon": "140.24861",
+    "municipality_code": "08203",
+    "location": "茨城県土浦市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1609": {
+    "name": "高浜",
+    "lat": "36.16350",
+    "lon": "140.29448",
+    "municipality_code": "08205",
+    "location": "茨城県石岡市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1610": {
+    "name": "石岡",
+    "lat": "36.19150",
+    "lon": "140.27976",
+    "municipality_code": "08205",
+    "location": "茨城県石岡市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1611": {
+    "name": "羽鳥",
+    "lat": "36.24754",
+    "lon": "140.28678",
+    "municipality_code": "08236",
+    "location": "茨城県小美玉市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1612": {
+    "name": "岩間",
+    "lat": "36.29542",
+    "lon": "140.27652",
+    "municipality_code": "08216",
+    "location": "茨城県笠間市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1613": {
+    "name": "友部",
+    "lat": "36.35046",
+    "lon": "140.30602",
+    "municipality_code": "08216",
+    "location": "茨城県笠間市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1614": {
+    "name": "内原",
+    "lat": "36.37004",
+    "lon": "140.35263",
+    "municipality_code": "08201",
+    "location": "茨城県水戸市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1615": {
+    "name": "赤塚",
+    "lat": "36.38176",
+    "lon": "140.41516",
+    "municipality_code": "08201",
+    "location": "茨城県水戸市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1616": {
+    "name": "偕楽園",
+    "lat": "36.37303",
+    "lon": "140.45634",
+    "municipality_code": "08201",
+    "location": "茨城県水戸市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1617": {
+    "name": "水戸",
+    "lat": "36.37086",
+    "lon": "140.47721",
+    "municipality_code": "08201",
+    "location": "茨城県水戸市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1618": {
+    "name": "勝田",
+    "lat": "36.39408",
+    "lon": "140.52422",
+    "municipality_code": "08221",
+    "location": "茨城県ひたちなか市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1619": {
+    "name": "佐和",
+    "lat": "36.43047",
+    "lon": "140.54051",
+    "municipality_code": "08221",
+    "location": "茨城県ひたちなか市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1620": {
+    "name": "東海",
+    "lat": "36.46550",
+    "lon": "140.56604",
+    "municipality_code": "08341",
+    "location": "茨城県東海村",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1621": {
+    "name": "大甕",
+    "lat": "36.51292",
+    "lon": "140.61944",
+    "municipality_code": "08202",
+    "location": "茨城県日立市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1622": {
+    "name": "常陸多賀",
+    "lat": "36.55212",
+    "lon": "140.63272",
+    "municipality_code": "08202",
+    "location": "茨城県日立市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1623": {
+    "name": "日立",
+    "lat": "36.59032",
+    "lon": "140.66180",
+    "municipality_code": "08202",
+    "location": "茨城県日立市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1624": {
+    "name": "小木津",
+    "lat": "36.63664",
+    "lon": "140.67530",
+    "municipality_code": "08202",
+    "location": "茨城県日立市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1625": {
+    "name": "十王",
+    "lat": "36.67138",
+    "lon": "140.68594",
+    "municipality_code": "08202",
+    "location": "茨城県日立市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1626": {
+    "name": "高萩",
+    "lat": "36.71434",
+    "lon": "140.71696",
+    "municipality_code": "08214",
+    "location": "茨城県高萩市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1627": {
+    "name": "南中郷",
+    "lat": "36.75332",
+    "lon": "140.72906",
+    "municipality_code": "08215",
+    "location": "茨城県北茨城市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1628": {
+    "name": "磯原",
+    "lat": "36.79070",
+    "lon": "140.74634",
+    "municipality_code": "08215",
+    "location": "茨城県北茨城市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1629": {
+    "name": "大津港",
+    "lat": "36.84606",
+    "lon": "140.77800",
+    "municipality_code": "08215",
+    "location": "茨城県北茨城市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1630": {
+    "name": "勿来",
+    "lat": "36.88363",
+    "lon": "140.78663",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1631": {
+    "name": "植田",
+    "lat": "36.92049",
+    "lon": "140.79648",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1632": {
+    "name": "泉",
+    "lat": "36.95558",
+    "lon": "140.85408",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1633": {
+    "name": "湯本",
+    "lat": "37.00694",
+    "lon": "140.84984",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1634": {
+    "name": "内郷",
+    "lat": "37.03599",
+    "lon": "140.85494",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1635": {
+    "name": "いわき",
+    "lat": "37.05822",
+    "lon": "140.89236",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1636": {
+    "name": "草野",
+    "lat": "37.07385",
+    "lon": "140.94725",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1637": {
+    "name": "四ツ倉",
+    "lat": "37.10232",
+    "lon": "140.98086",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1638": {
+    "name": "久ノ浜",
+    "lat": "37.14247",
+    "lon": "140.99578",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1639": {
+    "name": "末続",
+    "lat": "37.17214",
+    "lon": "140.99565",
+    "municipality_code": "07204",
+    "location": "福島県いわき市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1640": {
+    "name": "広野",
+    "lat": "37.21155",
+    "lon": "140.99881",
+    "municipality_code": "07541",
+    "location": "福島県広野町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1641": {
+    "name": "Ｊヴィレッジ",
+    "lat": "37.24176",
+    "lon": "141.00757",
+    "municipality_code": "07541",
+    "location": "福島県広野町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1642": {
+    "name": "木戸",
+    "lat": "37.25799",
+    "lon": "141.00253",
+    "municipality_code": "07542",
+    "location": "福島県楢葉町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1643": {
+    "name": "竜田",
+    "lat": "37.28245",
+    "lon": "141.00274",
+    "municipality_code": "07542",
+    "location": "福島県楢葉町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1644": {
+    "name": "富岡",
+    "lat": "37.33405",
+    "lon": "141.02274",
+    "municipality_code": "07543",
+    "location": "福島県富岡町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1645": {
+    "name": "夜ノ森",
+    "lat": "37.36578",
+    "lon": "140.99202",
+    "municipality_code": "07543",
+    "location": "福島県富岡町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1646": {
+    "name": "大野",
+    "lat": "37.40932",
+    "lon": "140.98420",
+    "municipality_code": "07545",
+    "location": "福島県大熊町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1647": {
+    "name": "双葉",
+    "lat": "37.45374",
+    "lon": "141.00586",
+    "municipality_code": "07546",
+    "location": "福島県双葉町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1648": {
+    "name": "浪江",
+    "lat": "37.49222",
+    "lon": "140.98978",
+    "municipality_code": "07547",
+    "location": "福島県浪江町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1649": {
+    "name": "桃内",
+    "lat": "37.52866",
+    "lon": "140.98437",
+    "municipality_code": "07212",
+    "location": "福島県南相馬市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1650": {
+    "name": "小高",
+    "lat": "37.56298",
+    "lon": "140.99636",
+    "municipality_code": "07212",
+    "location": "福島県南相馬市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1651": {
+    "name": "磐城太田",
+    "lat": "37.60507",
+    "lon": "140.99151",
+    "municipality_code": "07212",
+    "location": "福島県南相馬市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1652": {
+    "name": "原ノ町",
+    "lat": "37.63802",
+    "lon": "140.97105",
+    "municipality_code": "07212",
+    "location": "福島県南相馬市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1653": {
+    "name": "鹿島",
+    "lat": "37.70284",
+    "lon": "140.97008",
+    "municipality_code": "07212",
+    "location": "福島県南相馬市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1654": {
+    "name": "日立木",
+    "lat": "37.75613",
+    "lon": "140.93466",
+    "municipality_code": "07209",
+    "location": "福島県相馬市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1655": {
+    "name": "相馬",
+    "lat": "37.80250",
+    "lon": "140.92571",
+    "municipality_code": "07209",
+    "location": "福島県相馬市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1656": {
+    "name": "駒ケ嶺",
+    "lat": "37.84214",
+    "lon": "140.92510",
+    "municipality_code": "07561",
+    "location": "福島県新地町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1657": {
+    "name": "新地",
+    "lat": "37.87922",
+    "lon": "140.92564",
+    "municipality_code": "07561",
+    "location": "福島県新地町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1658": {
+    "name": "坂元",
+    "lat": "37.92408",
+    "lon": "140.90105",
+    "municipality_code": "04362",
+    "location": "宮城県山元町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1659": {
+    "name": "山下",
+    "lat": "37.96632",
+    "lon": "140.88898",
+    "municipality_code": "04362",
+    "location": "宮城県山元町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1660": {
+    "name": "浜吉田",
+    "lat": "38.00222",
+    "lon": "140.89008",
+    "municipality_code": "04361",
+    "location": "宮城県亘理町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1661": {
+    "name": "亘理",
+    "lat": "38.03988",
+    "lon": "140.86129",
+    "municipality_code": "04361",
+    "location": "宮城県亘理町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1662": {
+    "name": "逢隈",
+    "lat": "38.06762",
+    "lon": "140.85475",
+    "municipality_code": "04361",
+    "location": "宮城県亘理町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1663": {
+    "name": "岩沼",
+    "lat": "38.11186",
+    "lon": "140.86366",
+    "municipality_code": "04211",
+    "location": "宮城県岩沼市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1664": {
+    "name": "館腰",
+    "lat": "38.14308",
+    "lon": "140.88016",
+    "municipality_code": "04207",
+    "location": "宮城県名取市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1665": {
+    "name": "名取",
+    "lat": "38.17310",
+    "lon": "140.88275",
+    "municipality_code": "04207",
+    "location": "宮城県名取市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1666": {
+    "name": "南仙台",
+    "lat": "38.19722",
+    "lon": "140.88330",
+    "municipality_code": "04104",
+    "location": "宮城県仙台市　太白区",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1667": {
+    "name": "太子堂",
+    "lat": "38.21774",
+    "lon": "140.88373",
+    "municipality_code": "04104",
+    "location": "宮城県仙台市　太白区",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1668": {
+    "name": "長町",
+    "lat": "38.22696",
+    "lon": "140.88616",
+    "municipality_code": "04104",
+    "location": "宮城県仙台市　太白区",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1669": {
+    "name": "仙台",
+    "lat": "38.25974",
+    "lon": "140.88250",
+    "municipality_code": "04101",
+    "location": "宮城県仙台市　青葉区",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1714": {
+    "name": "取手",
+    "lat": "35.89534",
+    "lon": "140.06285",
+    "municipality_code": "08217",
+    "location": "茨城県取手市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:1813": {
+    "name": "取手",
+    "lat": "35.89534",
+    "lon": "140.06285",
+    "municipality_code": "08217",
+    "location": "茨城県取手市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:2004": {
+    "name": "潮来",
+    "lat": "35.93746",
+    "lon": "140.54969",
+    "municipality_code": "08223",
+    "location": "茨城県潮来市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:2005": {
+    "name": "延方",
+    "lat": "35.95810",
+    "lon": "140.58880",
+    "municipality_code": "08223",
+    "location": "茨城県潮来市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:2006": {
+    "name": "鹿島神宮",
+    "lat": "35.97070",
+    "lon": "140.62593",
+    "municipality_code": "08222",
+    "location": "茨城県鹿嶋市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:2007": {
+    "name": "鹿島サッカースタジアム",
+    "lat": "35.99306",
+    "lon": "140.63591",
+    "municipality_code": "08222",
+    "location": "茨城県鹿嶋市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4116": {
+    "name": "古河",
+    "lat": "36.19442",
+    "lon": "139.70972",
+    "municipality_code": "08204",
+    "location": "茨城県古河市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4117": {
+    "name": "野木",
+    "lat": "36.22990",
+    "lon": "139.73480",
+    "municipality_code": "09364",
+    "location": "栃木県野木町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4118": {
+    "name": "間々田",
+    "lat": "36.25790",
+    "lon": "139.76110",
+    "municipality_code": "09208",
+    "location": "栃木県小山市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4119": {
+    "name": "小山",
+    "lat": "36.31344",
+    "lon": "139.80663",
+    "municipality_code": "09208",
+    "location": "栃木県小山市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4120": {
+    "name": "小金井",
+    "lat": "36.37448",
+    "lon": "139.84228",
+    "municipality_code": "09216",
+    "location": "栃木県下野市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4121": {
+    "name": "自治医大",
+    "lat": "36.39538",
+    "lon": "139.85452",
+    "municipality_code": "09216",
+    "location": "栃木県下野市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4122": {
+    "name": "石橋",
+    "lat": "36.43624",
+    "lon": "139.86651",
+    "municipality_code": "09216",
+    "location": "栃木県下野市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4123": {
+    "name": "雀宮",
+    "lat": "36.49390",
+    "lon": "139.87708",
+    "municipality_code": "09201",
+    "location": "栃木県宇都宮市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4124": {
+    "name": "宇都宮",
+    "lat": "36.55975",
+    "lon": "139.89872",
+    "municipality_code": "09201",
+    "location": "栃木県宇都宮市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4125": {
+    "name": "岡本",
+    "lat": "36.59826",
+    "lon": "139.94425",
+    "municipality_code": "09201",
+    "location": "栃木県宇都宮市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4126": {
+    "name": "宝積寺",
+    "lat": "36.63162",
+    "lon": "139.97952",
+    "municipality_code": "09386",
+    "location": "栃木県高根沢町",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4127": {
+    "name": "氏家",
+    "lat": "36.68169",
+    "lon": "139.96210",
+    "municipality_code": "09214",
+    "location": "栃木県さくら市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4128": {
+    "name": "蒲須坂",
+    "lat": "36.72074",
+    "lon": "139.95040",
+    "municipality_code": "09214",
+    "location": "栃木県さくら市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4129": {
+    "name": "片岡",
+    "lat": "36.75468",
+    "lon": "139.94554",
+    "municipality_code": "09211",
+    "location": "栃木県矢板市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4130": {
+    "name": "矢板",
+    "lat": "36.80662",
+    "lon": "139.93298",
+    "municipality_code": "09211",
+    "location": "栃木県矢板市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4131": {
+    "name": "野崎",
+    "lat": "36.84381",
+    "lon": "139.95810",
+    "municipality_code": "09210",
+    "location": "栃木県大田原市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4132": {
+    "name": "西那須野",
+    "lat": "36.88374",
+    "lon": "139.98639",
+    "municipality_code": "09213",
+    "location": "栃木県那須塩原市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4133": {
+    "name": "那須塩原",
+    "lat": "36.93154",
+    "lon": "140.02106",
+    "municipality_code": "09213",
+    "location": "栃木県那須塩原市",
+    "updated_at": "2026-07-27T15:56+09:00"
+  },
+  "jreast:4134": {
+    "name": "黒磯",
+    "lat": "36.97012",
+    "lon": "140.06015",
+    "municipality_code": "09213",
+    "location": "栃木県那須塩原市",
+    "updated_at": "2026-07-27T15:56+09:00"
   }
 }
