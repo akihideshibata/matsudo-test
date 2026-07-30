@@ -465,40 +465,28 @@ def life_access(home, origins, major_count, start, transfer=False, buffer=5):
 
 
 def map_positions(home, access):
-    # 表示数を絞り、点は正確な時間半径、ラベルだけを周囲へ逃がす
+    # 半径を時間、角度を実際の方角として配置
     base = station_info[home]
     if base["lat"] is None or base["lon"] is None:
         return []
     placed = []
-    items = sorted(access.items(), key=lambda x: (x[1]["minutes"], x[0]))[:32]
-    for name, row in items:
+    for name, row in sorted(access.items(), key=lambda x: (x[1]["minutes"], x[0])):
         info = station_info[name]
         if info["lat"] is None or info["lon"] is None:
             continue
         lat0 = math.radians(base["lat"])
         dx = (info["lon"] - base["lon"]) * math.cos(lat0)
         dy = info["lat"] - base["lat"]
-        bearing = math.atan2(dx, dy)
-        radius = 5 + row["minutes"] / 60 * 43
-        ax, ay = 50 + math.sin(bearing) * radius, 50 - math.cos(bearing) * radius
-        width = min(7.2, 3.2 + len(name) * .42)
-        candidates = []
-        for angle_shift in (0, 8, -8, 16, -16, 25, -25, 35, -35):
-            for radial_shift in (0, 1.8, -1.8, 3.6, -3.6):
-                angle = bearing + math.radians(angle_shift)
-                label_radius = max(7, min(48, radius + radial_shift))
-                x, y = 50 + math.sin(angle) * label_radius, 50 - math.cos(angle) * label_radius
-                collisions = sum(
-                    max(0, (width + old["width"]) / 2 + .7 - abs(x - old["x"]))
-                    * max(0, 6.2 - abs(y - old["y"]))
-                    for old in placed
-                )
-                # 方角と時間半径を極力保ちつつ、重なりだけを避ける
-                penalty = abs(angle_shift) * .02 + abs(radial_shift) * .8
-                candidates.append((collisions * 15 + penalty, x, y))
-        _, x, y = min(candidates)
-        placed.append({"name": name, "x": x, "y": y, "ax": ax, "ay": ay,
-                       "width": width, **row})
+        angle = math.atan2(dx, dy)
+        radius = 8 + row["minutes"] / 60 * 38
+        x, y = 50 + math.sin(angle) * radius, 50 - math.cos(angle) * radius
+        # 駅名の重なりを軽減しつつ方角は維持
+        for old in placed:
+            if abs(x - old["x"]) < 9 and abs(y - old["y"]) < 5:
+                angle += math.radians(7)
+                radius = min(47, radius + 2)
+                x, y = 50 + math.sin(angle) * radius, 50 - math.cos(angle) * radius
+        placed.append({"name": name, "x": x, "y": y, **row})
     return placed
 
 
@@ -542,24 +530,18 @@ def render_life_screen(home):
     major_count = st.session_state.get("主要駅の基準", 3)
     route_mode = st.session_state.get("表示する経路", "直通のみ")
     buffer = int(st.session_state.get("乗換時間", 5))
-    with st.spinner("主要駅へのアクセスを計算中…"):
-        access = life_access(home, origins, major_count, start, route_mode == "乗換1回まで", buffer)
+    access = life_access(home, origins, major_count, start, route_mode == "乗換1回まで", buffer)
     points = map_positions(home, access)
     rings = ''.join(f'<div class="life-ring r{n}"><span>{n}分</span></div>' for n in (15, 30, 45, 60))
-    labels, lines = '', ''
+    labels = ''
     for point in points:
         name = escape(point["name"]); routes = " → ".join(map(escape, point["routes"]))
         via = f'／{escape(point["via"])}で乗換' if point["via"] else ''
         start_station = escape(point["from"])
-        accent, background = line_style(point["routes"][-1] if point["routes"] else "")
-        moved = math.hypot(point["x"] - point["ax"], point["y"] - point["ay"])
-        lines += f'<line x1="{point["ax"]:.1f}" y1="{point["ay"]:.1f}" x2="{point["x"]:.1f}" y2="{point["y"]:.1f}" stroke="{accent}" opacity="{.42 if moved > 1 else 0}"/>'
-        labels += f'''<span class="map-anchor" style="left:{point['ax']:.1f}%;top:{point['ay']:.1f}%;background:{accent}"></span>
-        <details class="map-point" style="left:{point['x']:.1f}%;top:{point['y']:.1f}%;--point-line:{accent};--point-bg:{background}">
-        <summary><span>{name}</span><b>{point['minutes']}分</b></summary><div class="map-detail">
-        {start_station}から{routes}{via}<br>徒歩{point['walk']}分を含む・{point['changes']}回乗換</div></details>'''
-    overlay = f'<svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none">{lines}</svg>'
-    st.markdown(compact_html(f'<div class="life-map">{rings}{overlay}<div class="life-home">{escape(home)}</div>{labels}</div>'), unsafe_allow_html=True)
+        labels += f"""<details class="map-point" style="left:{point['x']:.1f}%;top:{point['y']:.1f}%">
+        <summary>{name} <b>{point['minutes']}分</b></summary><div class="map-detail">
+        {start_station}から{routes}{via}<br>徒歩{point['walk']}分を含む・{point['changes']}回乗換</div></details>"""
+    st.markdown(compact_html(f'<div class="life-map">{rings}<div class="life-home">{escape(home)}</div>{labels}</div>'), unsafe_allow_html=True)
     if not points:
         st.info("条件に合う主要駅がありません。近隣駅・路線数・乗換条件を調整してください。")
     st.caption("円の半径は所要時間、駅の方向は緯度経度に基づきます。表示駅をタップすると経路を確認できます。")
@@ -649,13 +631,11 @@ border-radius:12px}
 .life-map{position:relative;width:min(760px,94vw);aspect-ratio:1;margin:1rem auto 1.3rem;border-radius:50%;background:radial-gradient(circle,#ffffff 0,#f8fafc 100%);overflow:visible}
 .life-ring{position:absolute;left:50%;top:50%;border:1px solid #98a2b380;border-radius:50%;transform:translate(-50%,-50%)}
 .life-ring span{position:absolute;left:50%;top:-.7rem;transform:translateX(-50%);font-size:.62rem;color:#667085;background:#fff;padding:0 .2rem}
-.life-ring.r15{width:31.5%;height:31.5%}.life-ring.r30{width:53%;height:53%}.life-ring.r45{width:74.5%;height:74.5%}.life-ring.r60{width:96%;height:96%}
+.life-ring.r15{width:25%;height:25%}.life-ring.r30{width:50%;height:50%}.life-ring.r45{width:75%;height:75%}.life-ring.r60{width:100%;height:100%}
 .life-home{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;padding:.35rem .55rem;border-radius:9px;background:#344054;color:#fff;font-size:.76rem;font-weight:900}
-.map-lines{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:visible;pointer-events:none}.map-lines line{vector-effect:non-scaling-stroke;stroke-width:1}
-.map-anchor{position:absolute;z-index:7;width:7px;height:7px;border:2px solid #fff;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 1px #98a2b3}
-.map-point{position:absolute;z-index:8;transform:translate(-50%,-50%)}
-.map-point summary{width:auto;height:auto;min-width:0;padding:.2rem .4rem;border:1px solid #98a2b380;border-left:5px solid var(--point-line);border-radius:8px;background:var(--point-bg);box-shadow:0 1px 4px #0002;font-family:inherit;font-size:.6rem;white-space:nowrap;flex-direction:column;line-height:1.12;text-align:center}
-.map-point summary span{display:block;max-width:7.5rem;overflow:hidden;text-overflow:ellipsis}.map-point summary b{display:block;font-size:.64rem;margin-top:.1rem}.map-point .map-detail{position:absolute;z-index:30;left:50%;top:1.8rem;transform:translateX(-50%);width:max-content;max-width:240px;padding:.45rem .55rem;border:1px solid #d0d5dd;border-radius:8px;background:#fff;font-size:.6rem;line-height:1.45;box-shadow:0 5px 15px #0002}
+.map-point{position:absolute;z-index:6;transform:translate(-50%,-50%)}
+.map-point summary{width:auto;height:auto;min-width:0;padding:.22rem .38rem;border-radius:8px;background:#fff;box-shadow:0 1px 4px #0002;font-family:inherit;font-size:.62rem;white-space:nowrap}
+.map-point summary b{font-size:.66rem}.map-point .map-detail{position:absolute;z-index:30;left:50%;top:1.8rem;transform:translateX(-50%);width:max-content;max-width:240px;padding:.45rem .55rem;border:1px solid #d0d5dd;border-radius:8px;background:#fff;font-size:.6rem;line-height:1.45;box-shadow:0 5px 15px #0002}
 
 @media(max-width:620px){
 .block-container{padding:2.9rem .55rem 2.5rem!important}
@@ -690,7 +670,7 @@ text-overflow:ellipsis}
 summary{width:20px;height:20px;font-size:.6rem}
 .details-body{position:relative;right:auto;top:auto;width:auto;
 margin-top:.35rem;box-shadow:none}
-.life-map{width:92vw}.map-point summary{font-size:.5rem;padding:.14rem .24rem}.map-point summary b{font-size:.53rem}.life-home{font-size:.64rem}
+.life-map{width:92vw}.map-point summary{font-size:.52rem;padding:.16rem .25rem}.map-point summary b{font-size:.55rem}.life-home{font-size:.64rem}
 }
 </style>
 """,
