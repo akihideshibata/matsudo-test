@@ -465,12 +465,13 @@ def life_access(home, origins, major_count, start, transfer=False, buffer=5):
 
 
 def map_positions(home, access):
-    # 点は所要時間どおりの半径に固定し、ラベルだけを周囲へ逃がす
+    # 表示数を絞り、点は正確な時間半径、ラベルだけを周囲へ逃がす
     base = station_info[home]
     if base["lat"] is None or base["lon"] is None:
         return []
     placed = []
-    for name, row in sorted(access.items(), key=lambda x: (x[1]["minutes"], x[0])):
+    items = sorted(access.items(), key=lambda x: (x[1]["minutes"], x[0]))[:32]
+    for name, row in items:
         info = station_info[name]
         if info["lat"] is None or info["lon"] is None:
             continue
@@ -480,20 +481,20 @@ def map_positions(home, access):
         bearing = math.atan2(dx, dy)
         radius = 5 + row["minutes"] / 60 * 43
         ax, ay = 50 + math.sin(bearing) * radius, 50 - math.cos(bearing) * radius
-        width = min(8.2, 3.8 + len(name) * .5)
+        width = min(7.2, 3.2 + len(name) * .42)
         candidates = []
-        for angle_shift in (0, 7, -7, 14, -14, 21, -21, 30, -30, 40, -40):
-            for radial_shift in (0, 2.3, -2.3, 4.5, -4.5):
+        for angle_shift in (0, 8, -8, 16, -16, 25, -25, 35, -35):
+            for radial_shift in (0, 1.8, -1.8, 3.6, -3.6):
                 angle = bearing + math.radians(angle_shift)
                 label_radius = max(7, min(48, radius + radial_shift))
                 x, y = 50 + math.sin(angle) * label_radius, 50 - math.cos(angle) * label_radius
                 collisions = sum(
                     max(0, (width + old["width"]) / 2 + .7 - abs(x - old["x"]))
-                    * max(0, 5.1 - abs(y - old["y"]))
+                    * max(0, 6.2 - abs(y - old["y"]))
                     for old in placed
                 )
                 # 方角と時間半径を極力保ちつつ、重なりだけを避ける
-                penalty = abs(angle_shift) * .018 + abs(radial_shift) * .5
+                penalty = abs(angle_shift) * .02 + abs(radial_shift) * .8
                 candidates.append((collisions * 15 + penalty, x, y))
         _, x, y = min(candidates)
         placed.append({"name": name, "x": x, "y": y, "ax": ax, "ay": ay,
@@ -541,7 +542,8 @@ def render_life_screen(home):
     major_count = st.session_state.get("主要駅の基準", 3)
     route_mode = st.session_state.get("表示する経路", "直通のみ")
     buffer = int(st.session_state.get("乗換時間", 5))
-    access = life_access(home, origins, major_count, start, route_mode == "乗換1回まで", buffer)
+    with st.spinner("主要駅へのアクセスを計算中…"):
+        access = life_access(home, origins, major_count, start, route_mode == "乗換1回まで", buffer)
     points = map_positions(home, access)
     rings = ''.join(f'<div class="life-ring r{n}"><span>{n}分</span></div>' for n in (15, 30, 45, 60))
     labels, lines = '', ''
@@ -1260,4 +1262,3 @@ st.caption(
     "算出しています。徒歩時間は直線距離からの概算で、"
     "実際の経路や駅構内移動は含みません。"
 )
-
