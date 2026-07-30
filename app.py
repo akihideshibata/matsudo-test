@@ -2,6 +2,7 @@ import gzip, json, math
 from datetime import time
 from html import escape
 from pathlib import Path
+from urllib.parse import quote
 
 import pandas as pd
 import streamlit as st
@@ -413,6 +414,138 @@ def day_text(result):
     )
 
 
+
+# ============================================================
+# 4. 「住む」画面の計算・描画
+# ============================================================
+def life_access(home, origins, major_count, start, transfer=False, buffer=5):
+    # 選択した駅群から、主要駅への平日最早到着を検索
+    major = {name for name, info in station_info.items() if len(info["routes"]) >= major_count}
+    first = {}
+    for trip in timetables.get("weekday", []):
+        stops = trip.get("stops", [])
+        for i, stop in enumerate(stops[:-1]):
+            name = stop[0]
+            if name not in origins:
+                continue
+            dep, ready = minute(stop[2]), start + origins[name]
+            if dep < ready:
+                continue
+            for later in stops[i + 1:]:
+                arr = minute(later[1])
+                if arr - start > 60:
+                    break
+                target = later[0]
+                candidate = {"arrival": arr, "from": name, "walk": origins[name],
+                             "routes": [trip.get("route", "路線情報なし")], "via": "", "changes": 0}
+                if target not in first or arr < first[target]["arrival"]:
+                    first[target] = candidate
+    best = {name: row for name, row in first.items() if name in major}
+    if transfer:
+        for trip in timetables.get("weekday", []):
+            stops = trip.get("stops", [])
+            for i, stop in enumerate(stops[:-1]):
+                via = stop[0]
+                if via not in first or minute(stop[2]) < first[via]["arrival"] + buffer:
+                    continue
+                for later in stops[i + 1:]:
+                    arr, target = minute(later[1]), later[0]
+                    if arr - start > 60:
+                        break
+                    if target not in major:
+                        continue
+                    candidate = {"arrival": arr, "from": first[via]["from"], "walk": first[via]["walk"],
+                                 "routes": first[via]["routes"] + [trip.get("route", "路線情報なし")],
+                                 "via": via, "changes": 1}
+                    if target not in best or arr < best[target]["arrival"]:
+                        best[target] = candidate
+    excluded = set(origins)
+    return {name: {**row, "minutes": row["arrival"] - start}
+            for name, row in best.items() if name not in excluded and 0 < row["arrival"] - start <= 60}
+
+
+def map_positions(home, access):
+    # 半径を時間、角度を実際の方角として配置
+    base = station_info[home]
+    if base["lat"] is None or base["lon"] is None:
+        return []
+    placed = []
+    for name, row in sorted(access.items(), key=lambda x: (x[1]["minutes"], x[0])):
+        info = station_info[name]
+        if info["lat"] is None or info["lon"] is None:
+            continue
+        lat0 = math.radians(base["lat"])
+        dx = (info["lon"] - base["lon"]) * math.cos(lat0)
+        dy = info["lat"] - base["lat"]
+        angle = math.atan2(dx, dy)
+        radius = 8 + row["minutes"] / 60 * 38
+        x, y = 50 + math.sin(angle) * radius, 50 - math.cos(angle) * radius
+        # 駅名の重なりを軽減しつつ方角は維持
+        for old in placed:
+            if abs(x - old["x"]) < 9 and abs(y - old["y"]) < 5:
+                angle += math.radians(7)
+                radius = min(47, radius + 2)
+                x, y = 50 + math.sin(angle) * radius, 50 - math.cos(angle) * radius
+        placed.append({"name": name, "x": x, "y": y, **row})
+    return placed
+
+
+def render_life_screen(home):
+    if st.button("← 検索結果に戻る"):
+        st.query_params.clear(); st.rerun()
+    st.markdown(f'<div class="page-title">{escape(home)}に住んだら</div>', unsafe_allow_html=True)
+    st.caption("主要駅への所要時間を、実際の方角に合わせて表示します。")
+
+    settings, note = st.columns([1, 2.2])
+    with settings:
+        with st.popover("⚙ 詳細設定", use_container_width=True):
+            ranges = {"徒歩2分": 100, "徒歩5分": 300, "徒歩8分": 500, "徒歩12分": 700, "徒歩17分": 1000}
+            radius_label = st.selectbox("利用可能な近隣駅を探す範囲", list(ranges), index=2, key=f"life_radius_{home}")
+            candidates = nearby_stations(home, ranges[radius_label])
+            origins = {home: 0}
+            st.caption("利用する駅と、そこまでの徒歩時間を調整できます。")
+            for candidate in candidates:
+                name = candidate["name"]
+                c1, c2 = st.columns([3, 1])
+                use = c1.checkbox(name, value=candidate["distance"] <= 500, key=f"life_use_{home}_{name}")
+                walk = c2.number_input("分", 1, 30, candidate["walk"], key=f"life_walk_{home}_{name}", label_visibility="collapsed")
+                if use:
+                    origins[name] = int(walk)
+            major_count = st.radio("主要駅の基準", [3, 2], format_func=lambda x: f"{x}路線以上", horizontal=True)
+            route_mode = st.radio("表示する経路", ["直通のみ", "乗換1回まで"], horizontal=True)
+            transfer_buffer = st.number_input("乗換時間", 1, 15, 5, disabled=route_mode == "直通のみ")
+            start_time = st.time_input("出発時刻（平日）", value=time(10), step=300, key=f"life_time_{home}")
+    # ポップオーバーを閉じても設定値から同じ条件を再現
+    ranges = {"徒歩2分": 100, "徒歩5分": 300, "徒歩8分": 500, "徒歩12分": 700, "徒歩17分": 1000}
+    radius_label = st.session_state.get(f"life_radius_{home}", "徒歩8分")
+    origins = {home: 0}
+    for candidate in nearby_stations(home, ranges[radius_label]):
+        name = candidate["name"]
+        if st.session_state.get(f"life_use_{home}_{name}", candidate["distance"] <= 500):
+            origins[name] = int(st.session_state.get(f"life_walk_{home}_{name}", candidate["walk"]))
+    with note:
+        st.caption("利用駅：" + "、".join(f"{name}{f'（徒歩{walk}分）' if walk else ''}" for name, walk in origins.items()))
+
+    start = minute(st.session_state.get(f"life_time_{home}", time(10)).strftime("%H:%M"))
+    major_count = st.session_state.get("主要駅の基準", 3)
+    route_mode = st.session_state.get("表示する経路", "直通のみ")
+    buffer = int(st.session_state.get("乗換時間", 5))
+    access = life_access(home, origins, major_count, start, route_mode == "乗換1回まで", buffer)
+    points = map_positions(home, access)
+    rings = ''.join(f'<div class="life-ring r{n}"><span>{n}分</span></div>' for n in (15, 30, 45, 60))
+    labels = ''
+    for point in points:
+        name = escape(point["name"]); routes = " → ".join(map(escape, point["routes"]))
+        via = f'／{escape(point["via"])}で乗換' if point["via"] else ''
+        start_station = escape(point["from"])
+        labels += f"""<details class="map-point" style="left:{point['x']:.1f}%;top:{point['y']:.1f}%">
+        <summary>{name} <b>{point['minutes']}分</b></summary><div class="map-detail">
+        {start_station}から{routes}{via}<br>徒歩{point['walk']}分を含む・{point['changes']}回乗換</div></details>"""
+    st.markdown(compact_html(f'<div class="life-map">{rings}<div class="life-home">{escape(home)}</div>{labels}</div>'), unsafe_allow_html=True)
+    if not points:
+        st.info("条件に合う主要駅がありません。近隣駅・路線数・乗換条件を調整してください。")
+    st.caption("円の半径は所要時間、駅の方向は緯度経度に基づきます。表示駅をタップすると経路を確認できます。")
+
 # ============================================================
 # 4. CSS
 # ============================================================
@@ -447,9 +580,9 @@ font-size:.68rem!important;white-space:nowrap;border-radius:9px!important}
 
 .station-card{position:relative;display:grid;
 grid-template-columns:minmax(145px,1fr) minmax(190px,1.1fr)
-minmax(180px,1fr) 42px;
-grid-template-areas:"station departure route info"
-"location arrival rent info";
+minmax(180px,1fr) 78px;
+grid-template-areas:"station departure route actions"
+"location arrival rent actions";
 align-items:center;gap:.08rem clamp(.7rem,1.8vw,1.4rem);
 color:#283141!important;background:var(--card-bg)!important;
 border:1px solid #98a2b380;border-left:6px solid var(--line-color)!important;
@@ -478,7 +611,9 @@ background:#344054;border-radius:4px}
 .clock-center{position:absolute;left:21px;top:21px;width:6px;height:6px;
 border-radius:50%;background:#344054}
 
-.details-area{grid-area:info;text-align:center}
+.actions-area{grid-area:actions;display:flex;align-items:center;justify-content:center;gap:.28rem}
+.details-area{text-align:center}
+.live-link{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 .45rem;border:1px solid #98a2b3;border-radius:8px;background:#fff;color:#344054!important;text-decoration:none;font-size:.66rem;font-weight:850;white-space:nowrap}
 details{font-size:.68rem}
 summary{display:inline-flex;align-items:center;justify-content:center;
 width:28px;height:28px;border:1px solid #98a2b3;border-radius:50%;
@@ -493,6 +628,14 @@ line-height:1.65;box-shadow:0 7px 20px #0002}
 .detail-divider{height:1px;background:#e4e7ec;margin:.35rem 0}
 .empty{padding:2rem;text-align:center;border:1px dashed rgba(128,128,128,.6);
 border-radius:12px}
+.life-map{position:relative;width:min(760px,94vw);aspect-ratio:1;margin:1rem auto 1.3rem;border-radius:50%;background:radial-gradient(circle,#ffffff 0,#f8fafc 100%);overflow:visible}
+.life-ring{position:absolute;left:50%;top:50%;border:1px solid #98a2b380;border-radius:50%;transform:translate(-50%,-50%)}
+.life-ring span{position:absolute;left:50%;top:-.7rem;transform:translateX(-50%);font-size:.62rem;color:#667085;background:#fff;padding:0 .2rem}
+.life-ring.r15{width:25%;height:25%}.life-ring.r30{width:50%;height:50%}.life-ring.r45{width:75%;height:75%}.life-ring.r60{width:100%;height:100%}
+.life-home{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;padding:.35rem .55rem;border-radius:9px;background:#344054;color:#fff;font-size:.76rem;font-weight:900}
+.map-point{position:absolute;z-index:6;transform:translate(-50%,-50%)}
+.map-point summary{width:auto;height:auto;min-width:0;padding:.22rem .38rem;border-radius:8px;background:#fff;box-shadow:0 1px 4px #0002;font-family:inherit;font-size:.62rem;white-space:nowrap}
+.map-point summary b{font-size:.66rem}.map-point .map-detail{position:absolute;z-index:30;left:50%;top:1.8rem;transform:translateX(-50%);width:max-content;max-width:240px;padding:.45rem .55rem;border:1px solid #d0d5dd;border-radius:8px;background:#fff;font-size:.6rem;line-height:1.45;box-shadow:0 5px 15px #0002}
 
 @media(max-width:620px){
 .block-container{padding:2.9rem .55rem 2.5rem!important}
@@ -522,16 +665,24 @@ text-overflow:ellipsis}
 .arrival{padding:0;font-size:.54rem}
 .rent{position:relative;padding-right:22px;font-size:.58rem}
 .route{font-size:.57rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.details-area{position:absolute;top:.31rem;right:.3rem}
+.actions-area{position:absolute;top:.31rem;right:.3rem}
+.live-link{height:20px;padding:0 .32rem;font-size:.55rem}
 summary{width:20px;height:20px;font-size:.6rem}
 .details-body{position:relative;right:auto;top:auto;width:auto;
 margin-top:.35rem;box-shadow:none}
+.life-map{width:92vw}.map-point summary{font-size:.52rem;padding:.16rem .25rem}.map-point summary b{font-size:.55rem}.life-home{font-size:.64rem}
 }
 </style>
 """,
     unsafe_allow_html=True,
 )
 
+
+# 「住む」ボタンから主要駅アクセス画面へ切替
+live_station = st.query_params.get("live_station")
+if live_station in station_info:
+    render_life_screen(live_station)
+    st.stop()
 
 # ============================================================
 # 5. 検索条件
@@ -920,8 +1071,8 @@ else:
             <div class="rent">家賃：{row["家賃区分"]}</div>
             <div class="route">{route}・直通</div>
 
-            <div class="details-area">
-                <details>
+            <div class="actions-area">
+                <div class="details-area"><details>
                     <summary>i</summary>
                     <div class="details-body">
                         <div>
@@ -988,7 +1139,8 @@ else:
                             {train_destination}
                         </div>
                     </div>
-                </details>
+                </details></div>
+                <a class="live-link" href="?live_station={quote(raw_station)}">住む</a>
             </div>
         </div>
         """
