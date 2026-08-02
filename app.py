@@ -204,7 +204,19 @@ def direct_access(home):
             departure = minute(start[2])
         except (ValueError, TypeError, IndexError):
             continue
-        for stop in stops[start_no + 1:]:
+        # direction_idがないデータでも、出発直後の地理的な進行方向で内回り・外回りを分ける。
+        direction = trip.get("direction_id")
+        if direction in (None, ""):
+            direction = None
+            for next_stop in stops[start_no + 1:]:
+                if next_stop[0] in station_info:
+                    angle = bearing(home, next_stop[0])
+                    if angle is not None:
+                        direction = f"sector_{round((math.degrees(angle) % 360) / 45) % 8}"
+                        break
+        direction = str(direction if direction is not None else trip.get("destination", "方向不明"))
+
+        for later_no, stop in enumerate(stops[start_no + 1:], 1):
             try:
                 arrival = minute(stop[1])
             except (ValueError, TypeError, IndexError):
@@ -218,27 +230,43 @@ def direct_access(home):
             if destination == home or destination not in station_info:
                 continue
             # 同じ駅・路線・実乗車時間の列車は1枚へ統合する。
-            key = (destination, route, minutes)
+            key = (destination, route, direction, minutes)
             found.setdefault(key, {"name": destination, "route": route,
                 "minutes": minutes, "operator": trip.get("operator", ""),
-                "train_destination": trip.get("destination", "")})
+                "train_destination": trip.get("destination", ""),
+                "direction": direction, "stop_count": later_no})
     rows = list(found.values())
-    # 同駅に複数時間があるとき、最短だけを（速）、最長を通常名にする。
-    groups = defaultdict(list)
+
+    # 環状路線では同じ駅へ反対回りでも着けるため、駅・路線ごとに短い方向だけを採用する。
+    corridor_groups = defaultdict(list)
     for row in rows:
-        groups[row["name"]].append(row)
-    for same_station in groups.values():
-        times = sorted(set(row["minutes"] for row in same_station))
+        corridor_groups[(row["name"], row["route"])].append(row)
+    filtered = []
+    for corridor in corridor_groups.values():
+        direction_best = {}
+        for row in corridor:
+            current = direction_best.get(row["direction"])
+            if current is None or (row["minutes"], row["stop_count"]) < \
+                    (current["minutes"], current["stop_count"]):
+                direction_best[row["direction"]] = row
+        chosen_direction = min(direction_best.values(),
+                               key=lambda row: (row["minutes"], row["stop_count"]))["direction"]
+        filtered.extend(row for row in corridor if row["direction"] == chosen_direction)
+    rows = filtered
+
+    # 「速」は同じ駅・路線・進行方向の中に複数の実乗車時間がある場合だけ付ける。
+    service_groups, station_groups = defaultdict(list), defaultdict(list)
+    for row in rows:
+        service_groups[(row["name"], row["route"], row["direction"])].append(row)
+        station_groups[row["name"]].append(row)
+    for service_rows in service_groups.values():
+        times = sorted(set(row["minutes"] for row in service_rows))
+        for row in service_rows:
+            row["fast"] = len(times) > 1 and row["minutes"] == times[0]
+    for same_station in station_groups.values():
         access_routes = len(set(row["route"] for row in same_station))
         for row in same_station:
-            if len(times) == 1:
-                label = row["name"]
-            elif row["minutes"] == times[0]:
-                label = f'{row["name"]}（速）'
-            else:
-                label = row["name"]
-            # カード名は駅名か駅名（速）だけとし、分数便・路線名は付けない。
-            row["label"] = label
+            row["label"] = f'{row["name"]}（速）' if row["fast"] else row["name"]
             row["majority"] = len(station_info[row["name"]].get("routes", []))
             row["access_routes"] = access_routes
     return rows
@@ -632,7 +660,8 @@ def open_life_station(name):
 
 def render_reverse_commute():
     """正常版の逆算通勤画面を、その構造と機能を保って描画する。"""
-    stations = sorted(station_info, key=lambda name: ("・".join(station_info[name]["routes"]), name))
+    # 検索文字は路線名ではなく駅名だけに一致させる。
+    stations = sorted(station_info)
     # 生活圏から戻った新しいセッションでも、勤務先と到着時刻を復元する。
     return_destination = st.query_params.get("return_destination")
     return_time = st.query_params.get("return_time")
@@ -647,9 +676,12 @@ def render_reverse_commute():
     with destination_col:
         st.markdown('<div class="selector-label">勤務先・目的駅</div>', unsafe_allow_html=True)
         selected_destination = st.selectbox("勤務先・目的駅", stations, index=None,
-            placeholder="神保町（駅名・路線で検索）", format_func=station_label,
+            placeholder="神保町（駅名で検索）", format_func=lambda name: name,
             label_visibility="collapsed", key="commute_destination")
     destination = selected_destination or ("神保町" if "神保町" in station_info else stations[0])
+    destination_routes = "・".join(station_info[destination]["routes"])
+    if destination_routes:
+        destination_col.caption("乗り入れ路線：" + destination_routes)
     with time_col:
         st.markdown('<div class="selector-label">到着</div>', unsafe_allow_html=True)
         arrival_time = st.time_input("到着時刻", value=time(8), step=60,
@@ -697,7 +729,12 @@ def render_reverse_commute():
             rent_filter = st.radio("家賃", ["すべて", "安い", "同程度", "高い"], horizontal=True,
                                    key="commute_rent")
             route_options = sorted(weekday_df["経路"].dropna().unique()) if not weekday_df.empty else []
-            if "commute_routes" in st.session_state:
+            destination_changed = st.session_state.get("_commute_routes_destination") != destination
+            if destination_changed:
+                # 目的駅を変えた直後は、新しい検索結果の路線をすべて選択する。
+                st.session_state.commute_routes = list(route_options)
+                st.session_state._commute_routes_destination = destination
+            elif "commute_routes" in st.session_state:
                 st.session_state.commute_routes = [route for route in st.session_state.commute_routes
                                                    if route in route_options]
             selected_routes = st.multiselect("利用路線", route_options, default=route_options,
