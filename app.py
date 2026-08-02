@@ -11,7 +11,7 @@ import pandas as pd
 # ============================================================
 # 1. ページ・データ読込
 # ============================================================
-st.set_page_config(page_title="生活圏同心円", page_icon="🚇", layout="wide",
+st.set_page_config(page_title="通勤時間と家賃で住む駅探し", page_icon="🚇", layout="wide",
                    initial_sidebar_state="collapsed")
 
 
@@ -63,6 +63,7 @@ basic = load_json("direct_timetable_basic.json.gz")
 challenge = load_json("direct_timetable_challenge.json.gz") if config.get("jr_enabled") else {}
 station_info, timetables, service_dates, sources = merge_data([basic, challenge])
 weekday_trips = timetables["weekday"]
+st.session_state.setdefault("show_nearby", False)
 if not station_info:
     st.error("時刻表データがありません。GitHub Actionsを実行してください。")
     st.stop()
@@ -96,6 +97,77 @@ def line_style(route):
     """路線名の部分一致でカード色を返す。"""
     return next((style for name, style in LINE_STYLES.items() if name in str(route)),
                 ("#667085", "#f8fafc"))
+
+
+def distance_m(lat1, lon1, lat2, lon2):
+    """緯度経度から2駅間の直線距離を計算する。"""
+    radius = 6_371_000
+    lat1, lat2 = math.radians(float(lat1)), math.radians(float(lat2))
+    dlat, dlon = lat2 - lat1, math.radians(float(lon2) - float(lon1))
+    value = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    return 2 * radius * math.asin(math.sqrt(value))
+
+
+def estimated_walk_minutes(distance):
+    """直線距離を経路距離へ補正し、徒歩分数を概算する。"""
+    return max(1, math.ceil(float(distance) * 1.25 / 75))
+
+
+def nearby_stations(destination, radius):
+    """目的駅から指定半径内にある別名駅を抽出する。"""
+    base = station_info[destination]
+    if base["lat"] is None or base["lon"] is None:
+        return []
+    result = []
+    for name, info in station_info.items():
+        if name == destination or info["lat"] is None or info["lon"] is None:
+            continue
+        distance = round(distance_m(base["lat"], base["lon"], info["lat"], info["lon"]))
+        if distance <= radius:
+            result.append({"name": name, "distance": distance,
+                           "walk": estimated_walk_minutes(distance)})
+    return sorted(result, key=lambda row: (row["distance"], row["name"]))
+
+
+def relative_rent(rent, base):
+    if pd.isna(rent) or pd.isna(base) or not base:
+        return None
+    return round(float(rent) / float(base) * 100)
+
+
+def rent_level(ratio):
+    if pd.isna(ratio):
+        return "不明"
+    if ratio < 90:
+        return "安い"
+    return "同程度" if ratio <= 110 else "高い"
+
+
+def compact_html(text):
+    return " ".join(line.strip() for line in text.splitlines())
+
+
+def station_label(name):
+    routes = "・".join(station_info[name]["routes"])
+    return f"{routes}｜{name}" if routes else name
+
+
+def toggle_nearby():
+    st.session_state.show_nearby = not st.session_state.show_nearby
+
+
+def clock_html(text):
+    """逆算通勤カード用の小さなアナログ時計を描画する。"""
+    hour, minutes = map(int, text.split(":"))
+    numbers = ""
+    for number in range(1, 13):
+        angle = math.radians(number * 30 - 90)
+        x, y = 26 + 20 * math.cos(angle), 26 + 20 * math.sin(angle)
+        numbers += f'<span class="clock-number" style="left:{x}px;top:{y}px">{number}</span>'
+    return f'''<div class="clock">{numbers}<div class="hand hour-hand"
+    style="transform:rotate({(hour % 12) * 30 + minutes * .5}deg)"></div>
+    <div class="hand minute-hand" style="transform:rotate({minutes * 6}deg)"></div>
+    <div class="clock-center"></div></div>'''
 
 
 # ============================================================
@@ -218,6 +290,33 @@ def reverse_commute(day, destinations, target_minute):
                         departure == current["departure"] and row["minutes"] < current["minutes"]):
                     latest[name] = row
     return sorted(latest.values(), key=lambda row: row["departure"], reverse=True)
+
+
+@st.cache_data(show_spinner=False)
+def search_routes(day, destinations, target_minute):
+    """正常版と同じ列名で、各出発駅の最遅直通便を検索する。"""
+    latest = {}
+    for row in reverse_commute(day, destinations, target_minute):
+        info = station_info.get(row["name"], {})
+        candidate = {
+            "駅名": row["name"], "所在地": row["location"], "家賃": row["rent"],
+            "出発": clock(row["departure"]), "到着": clock(row["arrival"]),
+            "到着駅": row["arrival_station"], "徒歩時間": row["walk"],
+            "目的地到着": clock(row["arrival"] + row["walk"]),
+            "乗車時間": row["ride"], "所要時間": row["minutes"],
+            "経路": row["route"], "事業者": row["operator"],
+            "行先": row["train_destination"], "路線一覧": info.get("routes", []),
+            "出発分": row["departure"],
+        }
+        latest[row["name"]] = candidate
+    return sorted(latest.values(), key=lambda row: row["出発分"], reverse=True)
+
+
+def day_text(result):
+    if not result:
+        return "該当する直通列車なし"
+    walk = f'＋徒歩{result["徒歩時間"]}分' if result["徒歩時間"] else ""
+    return f'{result["出発"]}発（{result["到着駅"]} {result["到着"]}着{walk}）'
 
 
 def bearing(home, destination):
@@ -393,9 +492,13 @@ def render_life_screen(home):
                     for n in (15, 30, 45, 60))
     labels = []
     base_query = f"life_station={quote(home)}"
+    for key in ("return_destination", "return_time"):
+        value = st.query_params.get(key)
+        if value:
+            base_query += f"&amp;{key}={quote(value)}"
     for point in points:
         dark, pale = line_style(point["route"])
-        href = f'?{base_query}&life_pick={quote(card_id(point))}'
+        href = f'?{base_query}&amp;life_pick={quote(card_id(point))}'
         labels.append(f'''<a class="map-card" href="{href}"
           data-route="{escape(point['route'], quote=True)}"
           style="left:{point['x']:.3f}%;top:{point['y']:.3f}%;--line:{dark};--pale:{pale}">
@@ -427,6 +530,51 @@ def render_life_screen(home):
 st.markdown("""
 <style>
 .block-container{max-width:1240px;padding:2.5rem 1rem 3rem!important}
+.selector-label{opacity:.68;font-size:.72rem;font-weight:750;margin-bottom:.16rem}
+.heading-row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:.5rem 0}
+.page-note{opacity:.58;font-size:.68rem;text-align:right;white-space:nowrap}
+.challenge-notice{padding:.42rem .65rem;margin:.2rem 0 .55rem;border:1px solid #e5a00080;
+ border-radius:9px;background:#fff8df;color:#694c00;font-size:.68rem}
+.near-destination{padding:.6rem .72rem;margin:.35rem 0 .6rem;border:1px solid #98a2b360;
+ border-radius:10px;background:rgba(128,128,128,.05)}
+.near-destination-title{font-size:.76rem;font-weight:850;margin-bottom:.1rem}
+.near-destination-note{font-size:.64rem;opacity:.65;margin-bottom:.35rem}
+.st-key-nearby_toggle [data-testid="stHorizontalBlock"]{align-items:center!important}
+.st-key-nearby_toggle [data-testid="stMarkdownContainer"],
+.st-key-nearby_toggle [data-testid="stMarkdownContainer"] p{margin:0!important}
+.nearby-row{display:flex;align-items:center;justify-content:space-between;height:34px;padding:0 .65rem;
+ background:rgba(128,128,128,.08);border:1px solid rgba(128,128,128,.35);border-radius:9px;font-size:.7rem}
+.st-key-nearby_toggle div[data-testid="stButton"] button{height:34px!important;min-height:34px!important;
+ padding:0 .6rem!important;font-size:.68rem!important;white-space:nowrap;border-radius:9px!important}
+.station-card{position:relative;display:grid;grid-template-columns:minmax(145px,1fr) minmax(190px,1.1fr)
+ minmax(180px,1fr) 42px;grid-template-areas:"station departure route actions" "location arrival rent actions";
+ align-items:center;gap:.08rem clamp(.7rem,1.8vw,1.4rem);color:#283141!important;background:var(--card-bg)!important;
+ border:1px solid #98a2b380;border-left:6px solid var(--line-color)!important;border-radius:12px;
+ padding:.62rem .85rem;margin-bottom:.42rem;box-shadow:0 1px 3px #0000000b}
+.station-card div,.station-card span,.station-card summary{color:#283141!important}
+.station-name{grid-area:station;color:#283141!important;text-decoration:none!important;font-size:clamp(1.25rem,2.2vw,1.7rem);
+ font-weight:900;line-height:1.05;letter-spacing:-.04em;overflow-wrap:anywhere}
+.station-name:hover{text-decoration:underline!important;text-underline-offset:3px}
+.location{grid-area:location;color:#667085!important;font-size:.68rem}
+.departure-wrap{grid-area:departure;display:flex;align-items:center;gap:.55rem}
+.departure{font-size:clamp(1.45rem,2.6vw,1.95rem);font-weight:950;letter-spacing:-.05em;white-space:nowrap}
+.arrival{grid-area:arrival;color:#667085!important;font-size:.68rem;padding-left:58px;white-space:nowrap}
+.route{grid-area:route;font-size:.81rem;font-weight:850;line-height:1.25}
+.rent{grid-area:rent;color:#475467!important;font-size:.72rem;font-weight:800;white-space:nowrap}
+.clock{position:relative;width:52px;height:52px;flex:0 0 52px;border:2px solid #344054;border-radius:50%;background:#fff}
+.clock-number{position:absolute;width:10px;height:10px;margin:-5px;text-align:center;line-height:10px;font-size:6px;font-weight:750}
+.hand{position:absolute;left:24px;bottom:25px;transform-origin:bottom center;background:#344054;border-radius:4px}
+.hour-hand{width:4px;height:12px}.minute-hand{width:2px;height:18px}
+.clock-center{position:absolute;left:21px;top:21px;width:6px;height:6px;border-radius:50%;background:#344054}
+.actions-area{grid-area:actions;display:flex;align-items:center;justify-content:center}.details-area{text-align:center}
+.station-card details{font-size:.68rem}.station-card summary{display:inline-flex;align-items:center;justify-content:center;
+ width:28px;height:28px;border:1px solid #98a2b3;border-radius:50%;background:#ffffffb8;cursor:pointer;
+ list-style:none;font-family:serif;font-size:.8rem;font-weight:900}.station-card summary::-webkit-details-marker{display:none}
+.details-body{position:absolute;z-index:30;right:.8rem;top:3.2rem;width:min(390px,calc(100vw - 3rem));
+ padding:.65rem .75rem;border:1px solid #d0d5dd;border-radius:9px;background:#fff;text-align:left;
+ line-height:1.65;box-shadow:0 7px 20px #0002}.detail-label{font-weight:850}
+.detail-divider{height:1px;background:#e4e7ec;margin:.35rem 0}.empty{padding:2rem;text-align:center;
+ border:1px dashed rgba(128,128,128,.6);border-radius:12px}
 .page-title{font-size:clamp(1.35rem,2.5vw,2rem);font-weight:900;letter-spacing:-.04em;margin:.2rem 0}
 .life-map{position:relative;width:min(92vw,920px);height:min(92vw,920px);margin:1rem auto 2rem;
  overflow:visible;border-radius:24px;background:radial-gradient(circle,#fff 0,#fafcff 72%,#f5f8fc 100%)}
@@ -456,7 +604,17 @@ st.markdown("""
  font-size:.8rem;font-weight:850;line-height:1.35}.reverse-route small{font-weight:650;opacity:.72}
 @media(max-width:700px){.life-map{width:96vw;height:96vw;margin-left:calc(50% - 48vw)}
  .map-card{min-width:54px;max-width:105px;padding:.25rem .3rem .23rem .42rem;border-left-width:4px}
- .map-card strong{max-width:94px;font-size:.57rem}.map-card span{font-size:.52rem}.life-home{font-size:.62rem}}
+ .map-card strong{max-width:94px;font-size:.57rem}.map-card span{font-size:.52rem}.life-home{font-size:.62rem}
+ .block-container{padding:2.9rem .55rem 2.5rem!important}.selector-label{font-size:.59rem}
+ .heading-row{display:block}.page-note{text-align:left;white-space:normal}.challenge-notice{font-size:.57rem}
+ .station-card{grid-template-columns:minmax(0,1.2fr) minmax(100px,.88fr) minmax(112px,.9fr);
+  grid-template-areas:"station departure rent" "location arrival route";gap:.1rem .32rem;border-left-width:5px!important;
+  padding:.48rem .5rem}.station-name{font-size:1.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .location{font-size:.57rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.departure-wrap{display:block}
+ .clock{display:none}.departure{font-size:1.25rem}.arrival{padding:0;font-size:.54rem}.rent{padding-right:22px;font-size:.58rem}
+ .route{font-size:.57rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.actions-area{position:absolute;top:.31rem;right:.3rem}
+ .station-card summary{width:20px;height:20px;font-size:.6rem}.details-body{position:relative;right:auto;top:auto;
+  width:auto;margin-top:.35rem;box-shadow:none}}
 </style>
 """, unsafe_allow_html=True)
 
@@ -473,71 +631,175 @@ def open_life_station(name):
 
 
 def render_reverse_commute():
-    """元の入口である、到着時刻から逆算する直通通勤検索を描画する。"""
+    """正常版の逆算通勤画面を、その構造と機能を保って描画する。"""
     stations = sorted(station_info, key=lambda name: ("・".join(station_info[name]["routes"]), name))
-    destination_col, time_col, filter_col = st.columns([2.5, 1.05, .55])
+    # 生活圏から戻った新しいセッションでも、勤務先と到着時刻を復元する。
+    return_destination = st.query_params.get("return_destination")
+    return_time = st.query_params.get("return_time")
+    if "commute_destination" not in st.session_state and return_destination in station_info:
+        st.session_state.commute_destination = return_destination
+    if "commute_arrival" not in st.session_state and return_time:
+        try:
+            st.session_state.commute_arrival = time.fromisoformat(return_time)
+        except ValueError:
+            pass
+    destination_col, time_col, filter_col = st.columns([2.5, 1.05, .38])
     with destination_col:
-        destination = st.selectbox("勤務先・目的駅", stations, index=None,
-            placeholder="神保町（駅名・路線で検索）",
-            format_func=lambda name: f'{"・".join(station_info[name]["routes"])}｜{name}')
-    destination = destination or ("神保町" if "神保町" in station_info else stations[0])
+        st.markdown('<div class="selector-label">勤務先・目的駅</div>', unsafe_allow_html=True)
+        selected_destination = st.selectbox("勤務先・目的駅", stations, index=None,
+            placeholder="神保町（駅名・路線で検索）", format_func=station_label,
+            label_visibility="collapsed", key="commute_destination")
+    destination = selected_destination or ("神保町" if "神保町" in station_info else stations[0])
     with time_col:
-        arrival_time = st.time_input("到着時刻", value=time(8), step=60)
+        st.markdown('<div class="selector-label">到着</div>', unsafe_allow_html=True)
+        arrival_time = st.time_input("到着時刻", value=time(8), step=60,
+                                     label_visibility="collapsed", key="commute_arrival")
     target, target_minute = arrival_time.strftime("%H:%M"), minute(arrival_time.strftime("%H:%M"))
-    destination_options = {destination: 0}
-    with filter_col:
-        with st.popover("⚙ 条件", width="stretch"):
-            show_under_10 = st.checkbox("10分未満も表示", value=False)
-            selected_bands = st.multiselect("所要時間", ["15分以内", "30分以内", "45分以内", "60分以内", "60分超"],
-                                            default=["15分以内", "30分以内", "45分以内", "60分以内"])
-            keyword = st.text_input("駅名検索")
+    destination_rent, destination_options = station_info[destination]["rent"], {destination: 0}
 
-    st.markdown(f'<div class="page-title">{escape(destination)}に{target}までに着くには？</div>',
+    nearby_mode = st.toggle("近隣駅も到着候補に含める", value=False, key="commute_nearby")
+    if nearby_mode:
+        st.markdown('<div class="near-destination">', unsafe_allow_html=True)
+        radius = st.select_slider("近隣駅として探す範囲", options=[300, 400, 500, 600, 800, 1000],
+                                  value=500, format_func=lambda value: f"{value}m", key="commute_radius")
+        candidates = nearby_stations(destination, radius)
+        if not candidates:
+            st.info("指定範囲内に、座標を確認できる別の駅はありません。")
+        else:
+            st.markdown(f'<div class="near-destination-title">近くの駅を{len(candidates)}駅見つけました</div>'
+                '<div class="near-destination-note">使用する駅と、そこから目的地までの徒歩時間を調整できます。</div>',
                 unsafe_allow_html=True)
-    st.caption(f'平日・直通のみ｜対象 {escape(service_dates.get("weekday", ""))}')
+            for candidate in candidates:
+                name, distance, estimated = candidate["name"], candidate["distance"], candidate["walk"]
+                key_base = f"{destination}_{radius}_{name}"
+                use_col, walk_col = st.columns([3.2, 1.2], vertical_alignment="center")
+                use_station = use_col.checkbox(f"{name}（直線約{distance}m）", value=True,
+                                               key=f"use_{key_base}")
+                walk = walk_col.number_input(f"{name}から目的地まで", 1, 30, estimated,
+                    key=f"walk_{key_base}", label_visibility="collapsed")
+                if use_station:
+                    destination_options[name] = int(walk)
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    weekday_df = pd.DataFrame(search_routes("weekday", destination_options, target_minute))
+    saturday = {row["駅名"]: row for row in search_routes("saturday", destination_options, target_minute)}
+    sunday = {row["駅名"]: row for row in search_routes("sunday", destination_options, target_minute)}
+    bands = ["15分以内", "30分以内", "45分以内", "60分以内", "60分超"]
+    if not weekday_df.empty:
+        weekday_df["時間圏"] = weekday_df["所要時間"].apply(time_band)
+        weekday_df["相対家賃"] = weekday_df["家賃"].apply(lambda value: relative_rent(value, destination_rent))
+        weekday_df["家賃区分"] = weekday_df["相対家賃"].apply(rent_level)
+
+    with filter_col:
+        st.markdown('<div class="selector-label">条件</div>', unsafe_allow_html=True)
+        with st.popover("⚙"):
+            st.checkbox("10分未満の出発駅も表示", key="show_nearby")
+            rent_filter = st.radio("家賃", ["すべて", "安い", "同程度", "高い"], horizontal=True,
+                                   key="commute_rent")
+            route_options = sorted(weekday_df["経路"].dropna().unique()) if not weekday_df.empty else []
+            if "commute_routes" in st.session_state:
+                st.session_state.commute_routes = [route for route in st.session_state.commute_routes
+                                                   if route in route_options]
+            selected_routes = st.multiselect("利用路線", route_options, default=route_options,
+                                             key="commute_routes")
+            selected_bands = st.multiselect(f"{destination}までの所要時間", bands, default=bands,
+                                            key="commute_bands")
+            keyword = st.text_input("駅名検索", placeholder="例：浅草、新宿", key="commute_keyword")
+
+    st.markdown(compact_html(f'''<div class="heading-row"><div class="page-title">{escape(destination)}に
+        {target}までに着くには？</div><div class="page-note">平日・直通のみ｜対象
+        {escape(service_dates.get("weekday", ""))}</div></div>'''), unsafe_allow_html=True)
+    if len(destination_options) > 1:
+        st.caption("到着候補：" + "、".join(destination_options) +
+                   "。近隣駅は設定した徒歩時間を差し引いて検索しています。")
     if config.get("jr_enabled"):
-        st.info("JR東日本の公共交通オープンデータチャレンジ2026限定データを利用しています。")
+        st.markdown('<div class="challenge-notice">JR東日本の公共交通オープンデータチャレンジ2026限定データを利用しています。</div>',
+                    unsafe_allow_html=True)
 
-    rows = reverse_commute("weekday", destination_options, target_minute)
-    rows = [row for row in rows if time_band(row["minutes"]) in selected_bands and
-            (show_under_10 or row["minutes"] >= 10) and
-            (not keyword.strip() or keyword.strip() in row["name"])]
-    if not rows:
-        st.info("条件に一致する直通列車がありません。")
-        return
+    df = weekday_df.copy()
+    if not df.empty:
+        df = df[df["時間圏"].isin(selected_bands) & df["経路"].isin(selected_routes)]
+        if rent_filter != "すべて":
+            df = df[df["家賃区分"] == rent_filter]
+        if keyword.strip():
+            df = df[df["駅名"].str.contains(keyword.strip(), na=False, regex=False)]
+    nearby_count = len(df[df["所要時間"] < 10]) if not df.empty else 0
+    if not st.session_state.show_nearby and not df.empty:
+        df = df[df["所要時間"] >= 10].copy()
 
-    for no, row in enumerate(rows):
-        accent, background = line_style(row["route"])
-        cols = st.columns([2.1, 1.35, 2.25, 1.05, .7], vertical_alignment="center")
-        with cols[0]:
-            # 駅名自体を押すと生活圏へ移動する。
-            if st.button(row["name"], key=f'live_{no}_{row["name"]}', width="stretch"):
-                open_life_station(row["name"])
-            st.caption(row["location"])
-        cols[1].markdown(f'<div class="reverse-time">{clock(row["departure"])}発</div>', unsafe_allow_html=True)
-        cols[2].markdown(f'<div class="reverse-route" style="--line:{accent};--pale:{background}">'
-                         f'{escape(row["route"])}・直通<br><small>{escape(row["arrival_station"])} '
-                         f'{clock(row["arrival"])}着</small></div>', unsafe_allow_html=True)
-        cols[3].markdown(f'家賃<br>**{rent_man(row["rent"])}**')
-        with cols[4]:
-            with st.popover("i"):
-                st.write(f'乗車時間：{row["ride"]}分')
-                st.write(f'徒歩を含む所要時間：{row["minutes"]}分')
-                st.write(f'運行事業者：{row["operator"] or "情報なし"}')
-                st.write(f'列車の行先：{row["train_destination"] or "情報なし"}')
-        st.divider()
+    if nearby_count or st.session_state.show_nearby:
+        with st.container(key="nearby_toggle"):
+            notice_col, button_col = st.columns([5.4, 1], vertical_alignment="center")
+            message = (f"<strong>近距離の出発駅も表示中</strong><span>10分未満の{nearby_count}駅を含む</span>"
+                if st.session_state.show_nearby else
+                f"<strong>少し離れた候補を優先して表示中</strong><span>10分未満の{nearby_count}駅を省略</span>")
+            notice_col.markdown(compact_html(f'<div class="nearby-row">{message}</div>'),
+                                unsafe_allow_html=True)
+            button_col.button("隠す" if st.session_state.show_nearby else "表示",
+                key="toggle_nearby_button", width="stretch", on_click=toggle_nearby)
+
+    if df.empty:
+        st.markdown('<div class="empty">条件に一致する直通列車がありません。</div>', unsafe_allow_html=True)
+    else:
+        for _, row in df.iterrows():
+            raw_station = str(row["駅名"])
+            station, location, route = map(escape, (raw_station, str(row["所在地"]), str(row["経路"])))
+            operator, train_destination = escape(str(row["事業者"])), escape(str(row["行先"]))
+            routes = escape(" ／ ".join(row["路線一覧"]))
+            arrival_station, walk = escape(str(row["到着駅"])), int(row["徒歩時間"])
+            accent, background = line_style(row["経路"])
+            rent, ratio = row["家賃"], row["相対家賃"]
+            sat, sun = saturday.get(raw_station), sunday.get(raw_station)
+            ratio_text = f"{int(ratio)}%" if pd.notna(ratio) else "算出不可"
+            candidate_rent = f"25㎡換算 約{rent_man(rent)}" if pd.notna(rent) else "情報なし"
+            destination_rent_text = f"25㎡換算 約{rent_man(destination_rent)}" if pd.notna(destination_rent) else "情報なし"
+            arrival_text = (f'{arrival_station} {row["到着"]}着 → 徒歩{walk}分 → '
+                f'{escape(destination)} {row["目的地到着"]}' if walk else
+                f'{escape(destination)} {row["到着"]}着')
+            life_href = (f'?life_station={quote(raw_station)}&amp;return_destination={quote(destination)}'
+                         f'&amp;return_time={quote(target)}')
+            card = f'''<div class="station-card" style="--line-color:{accent};--card-bg:{background}">
+            <a class="station-name" href="{life_href}" title="{station}の生活圏を見る">{station}</a>
+            <div class="location">{location}</div><div class="departure-wrap">{clock_html(str(row["出発"]))}
+            <div class="departure">{row["出発"]}発</div></div><div class="arrival">{arrival_text}</div>
+            <div class="rent">家賃：{row["家賃区分"]}</div><div class="route">{route}・直通</div>
+            <div class="actions-area"><div class="details-area"><details><summary>i</summary><div class="details-body">
+            <div><span class="detail-label">所在地：</span>{location}</div>
+            <div><span class="detail-label">乗り入れ路線：</span>{routes}</div>
+            <div><span class="detail-label">運行事業者：</span>{operator or "情報なし"}</div><div class="detail-divider"></div>
+            <div><span class="detail-label">家賃評価：</span>{row["家賃区分"]}</div>
+            <div><span class="detail-label">相対家賃：</span>{ratio_text}</div>
+            <div><span class="detail-label">{station}：</span>{candidate_rent}</div>
+            <div><span class="detail-label">{escape(destination)}：</span>{destination_rent_text}</div>
+            <div class="detail-divider"></div><div><span class="detail-label">平日：</span>{row["出発"]}発
+            （{arrival_text}・{route}）</div><div><span class="detail-label">土曜：</span>{escape(day_text(sat))}</div>
+            <div><span class="detail-label">日曜：</span>{escape(day_text(sun))}</div>
+            <div><span class="detail-label">乗車時間：</span>{row["乗車時間"]}分</div>
+            <div><span class="detail-label">徒歩を含む所要時間：</span>{row["所要時間"]}分</div>
+            <div><span class="detail-label">列車の行先：</span>{train_destination}</div>
+            </div></details></div></div></div>'''
+            st.markdown(compact_html(card), unsafe_allow_html=True)
 
     with st.expander("検索結果を表で確認する"):
-        output = pd.DataFrame([{"駅名": r["name"], "所在地": r["location"],
-            "出発": clock(r["departure"]), "到着駅": r["arrival_station"],
-            "到着": clock(r["arrival"]), "乗車時間": r["ride"],
-            "所要時間": r["minutes"], "経路": r["route"]} for r in rows])
-        st.dataframe(output, width="stretch", hide_index=True)
-        st.download_button("CSVで保存", output.to_csv(index=False).encode("utf-8-sig"),
-                           f"{destination}_{target.replace(':', '')}_direct.csv", "text/csv")
-    if sources:
-        st.caption("データ提供元：" + "、".join(dict.fromkeys(
-            source.get("name", "") for source in sources if source.get("name"))))
+        if df.empty:
+            st.info("表示できる検索結果がありません。")
+        else:
+            columns = ["駅名", "所在地", "家賃区分", "相対家賃", "家賃", "出発", "到着駅", "到着",
+                       "徒歩時間", "目的地到着", "乗車時間", "所要時間", "経路", "事業者", "行先"]
+            output = df[columns].copy()
+            output["相対家賃"] = output["相対家賃"].apply(lambda value: f"{int(value)}%" if pd.notna(value) else "")
+            output["家賃"] = output["家賃"].apply(lambda value: rent_man(value) if pd.notna(value) else "")
+            st.dataframe(output, width="stretch", hide_index=True)
+            st.download_button("CSVで保存", output.to_csv(index=False).encode("utf-8-sig"),
+                               f"{destination}_{target.replace(':', '')}_direct.csv", "text/csv")
+
+    basic_sources = [source["name"] for source in basic.get("sources", []) if source.get("name")]
+    challenge_sources = [source["name"] for source in challenge.get("sources", []) if source.get("name")]
+    st.caption("家賃は、目的駅比90%未満を「安い」、90〜110%を「同程度」、110%超を「高い」と表示しています。")
+    st.caption("家賃目安は住宅・土地統計調査の市区町村別1㎡当たり家賃を25㎡に換算した参考値です。")
+    st.caption(f'通常データ提供元：{"、".join(basic_sources)}。各提供データを加工して利用しています。')
+    if challenge_sources:
+        st.caption(f'チャレンジ限定データ提供元：{"、".join(challenge_sources)}。')
 
 
 # クエリに中心駅がある場合だけ生活圏を表示し、それ以外は逆算通勤を表示する。
