@@ -158,21 +158,14 @@ def direct_access(home):
     for same_station in groups.values():
         times = sorted(set(row["minutes"] for row in same_station))
         access_routes = len(set(row["route"] for row in same_station))
-        route_counts = defaultdict(int)
-        for row in same_station:
-            route_counts[(row["minutes"], row["route"])] += 1
         for row in same_station:
             if len(times) == 1:
                 label = row["name"]
             elif row["minutes"] == times[0]:
                 label = f'{row["name"]}（速）'
-            elif row["minutes"] == times[-1]:
-                label = row["name"]
             else:
-                label = f'{row["name"]}（{row["minutes"]}分便）'
-            # 同じ分数を複数路線が結ぶ場合もカード名を一意にする。
-            if sum(x["minutes"] == row["minutes"] for x in same_station) > 1:
-                label += f'・{row["route"]}'
+                label = row["name"]
+            # カード名は駅名か駅名（速）だけとし、分数便・路線名は付けない。
             row["label"] = label
             row["majority"] = len(station_info[row["name"]].get("routes", []))
             row["access_routes"] = access_routes
@@ -403,7 +396,8 @@ def render_life_screen(home):
     for point in points:
         dark, pale = line_style(point["route"])
         href = f'?{base_query}&life_pick={quote(card_id(point))}'
-        labels.append(f'''<a class="map-card" href="{href}" title="{escape(point['route'])}"
+        labels.append(f'''<a class="map-card" href="{href}"
+          data-route="{escape(point['route'], quote=True)}"
           style="left:{point['x']:.3f}%;top:{point['y']:.3f}%;--line:{dark};--pale:{pale}">
           <strong>{escape(point['label'])}</strong><span>{point['minutes']}分</span></a>''')
     html = f'<div class="life-map">{rings}<div class="life-home">{escape(home)}</div>{"".join(labels)}</div>'
@@ -435,7 +429,7 @@ st.markdown("""
 .block-container{max-width:1240px;padding:2.5rem 1rem 3rem!important}
 .page-title{font-size:clamp(1.35rem,2.5vw,2rem);font-weight:900;letter-spacing:-.04em;margin:.2rem 0}
 .life-map{position:relative;width:min(92vw,920px);height:min(92vw,920px);margin:1rem auto 2rem;
- overflow:hidden;border-radius:24px;background:radial-gradient(circle,#fff 0,#fafcff 72%,#f5f8fc 100%)}
+ overflow:visible;border-radius:24px;background:radial-gradient(circle,#fff 0,#fafcff 72%,#f5f8fc 100%)}
 .life-ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #98a2b355;
  border-radius:50%;pointer-events:none}.life-ring span{position:absolute;left:50%;top:-.65rem;transform:translateX(-50%);
  color:#667085;background:#fff;padding:0 .28rem;font-size:.68rem;font-weight:750;white-space:nowrap}
@@ -449,6 +443,12 @@ st.markdown("""
  color:#1d2939!important;text-decoration:none!important;line-height:1.12;text-align:center;white-space:nowrap;
  box-shadow:0 2px 8px #1018281c;transition:transform .12s,box-shadow .12s}
 .map-card:hover{z-index:20;transform:translate(-50%,-50%) scale(1.06);box-shadow:0 6px 18px #10182830}
+.map-card:hover::after{content:attr(data-route);position:absolute;left:50%;bottom:calc(100% + 7px);
+ transform:translateX(-50%);z-index:40;width:max-content;max-width:230px;padding:.34rem .48rem;
+ border-radius:7px;background:#101828;color:#fff;font-size:.61rem;font-weight:700;line-height:1.3;
+ white-space:normal;box-shadow:0 4px 12px #10182838;pointer-events:none}
+.map-card:hover::before{content:"";position:absolute;left:50%;bottom:calc(100% + 2px);transform:translateX(-50%);
+ border:5px solid transparent;border-top-color:#101828;pointer-events:none}
 .map-card strong{display:block;max-width:140px;overflow:hidden;text-overflow:ellipsis;font-size:.7rem}
 .map-card span{font-size:.63rem;font-weight:750;opacity:.72;margin-top:.13rem}
 .reverse-time{font-size:clamp(1.25rem,2.3vw,1.8rem);font-weight:950;white-space:nowrap}
