@@ -228,14 +228,20 @@ def run_streamlit():
     st.caption(f"block_idあり：{block_count:,}列車 ／ direction_idあり：{direction_count:,}列車")
     routes = sorted(set(trip["route"] for trip in trips))
     default_route = next((route for route in routes if "山手線" in route), routes[0])
-    route = st.selectbox("路線", routes, index=routes.index(default_route))
+    route = st.selectbox("路線", routes, index=routes.index(default_route), key="test_route")
     route_stations = sorted({stop["name"] for trip in trips if trip["route"] == route
                              for stop in trip["stops"]})
+    # 路線変更時に前の路線の駅が選択欄へ残らないよう、駅の状態だけを初期化する。
+    if st.session_state.get("_station_list_route") != route:
+        st.session_state.pop("test_origin", None)
+        st.session_state.pop("test_destination", None)
+        st.session_state._station_list_route = route
     origin_default = route_stations.index("浜松町") if "浜松町" in route_stations else 0
     destination_default = route_stations.index("恵比寿") if "恵比寿" in route_stations else min(1, len(route_stations) - 1)
     left, right = st.columns(2)
-    origin = left.selectbox("出発駅", route_stations, index=origin_default)
-    destination = right.selectbox("到着駅", route_stations, index=destination_default)
+    origin = left.selectbox("出発駅", route_stations, index=origin_default, key="test_origin")
+    destination = right.selectbox("到着駅", route_stations, index=destination_default,
+                                  key="test_destination")
 
     if origin == destination:
         st.warning("異なる駅を選択してください。")
