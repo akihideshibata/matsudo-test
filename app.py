@@ -1,4 +1,4 @@
-import gzip, json, math
+import gzip, json, math, shutil, sqlite3, tempfile
 from collections import defaultdict
 from datetime import time
 from html import escape
@@ -58,15 +58,51 @@ def merge_data(parts):
     return stations, timetables, service_dates, sources
 
 
+ACCESS_DB = Path("direct_access.sqlite")
+ACCESS_ARCHIVE, ACCESS_METADATA = Path("direct_access.sqlite.gz"), Path("access_metadata.json.gz")
+
+
+@st.cache_resource(show_spinner="事前索引を準備しています…")
+def prepare_access_db(archive_stamp=0):
+    """GitHub保存用の圧縮索引を一度だけ一時領域へ展開する。"""
+    del archive_stamp
+    if ACCESS_DB.exists():
+        return ACCESS_DB
+    if not ACCESS_ARCHIVE.exists():
+        return ACCESS_DB
+    stat = ACCESS_ARCHIVE.stat()
+    target = Path(tempfile.gettempdir()) / f"direct_access_{stat.st_mtime_ns}_{stat.st_size}.sqlite"
+    if not target.exists():
+        with gzip.open(ACCESS_ARCHIVE, "rb") as source, target.open("wb") as destination:
+            shutil.copyfileobj(source, destination)
+    return target
+
+
+ACTIVE_ACCESS_DB = prepare_access_db(
+    ACCESS_ARCHIVE.stat().st_mtime_ns if ACCESS_ARCHIVE.exists() else 0)
 config = load_json("build_config.json")
-basic = load_json("direct_timetable_basic.json.gz")
-challenge = load_json("direct_timetable_challenge.json.gz") if config.get("jr_enabled") else {}
+metadata = load_json(ACCESS_METADATA) if ACTIVE_ACCESS_DB.exists() and ACCESS_METADATA.exists() else {}
+if metadata.get("parts"):
+    basic = metadata["parts"][0]
+    challenge = metadata["parts"][1] if len(metadata["parts"]) > 1 else {}
+else:
+    basic = load_json("direct_timetable_basic.json.gz")
+    challenge = load_json("direct_timetable_challenge.json.gz") if config.get("jr_enabled") else {}
 station_info, timetables, service_dates, sources = merge_data([basic, challenge])
 weekday_trips = timetables["weekday"]
 st.session_state.setdefault("show_nearby", False)
 if not station_info:
     st.error("時刻表データがありません。GitHub Actionsを実行してください。")
     st.stop()
+
+
+@st.cache_data(show_spinner="従来時刻表を読み込んでいます…")
+def load_full_timetables(jr_enabled):
+    """索引異常時だけ巨大JSONを読み、従来計算へ戻せるようにする。"""
+    parts = [load_json("direct_timetable_basic.json.gz")]
+    if jr_enabled:
+        parts.append(load_json("direct_timetable_challenge.json.gz"))
+    return merge_data(parts)[1]
 
 
 # ============================================================
@@ -190,15 +226,14 @@ def build_station_trip_index(trips):
     return dict(index)
 
 
-trip_index = build_station_trip_index(weekday_trips)
-
-
 @st.cache_data(show_spinner=False)
-def direct_access(home):
+def direct_access_fallback(home):
     """待ち時間・発車時刻・運行間隔を使わず、直通の実乗車時間を列挙する。"""
+    fallback_trips = weekday_trips or load_full_timetables(config.get("jr_enabled"))["weekday"]
+    fallback_index = build_station_trip_index(fallback_trips)
     found = {}
-    for trip_no, start_no in trip_index.get(home, []):
-        trip, stops = weekday_trips[trip_no], weekday_trips[trip_no].get("stops", [])
+    for trip_no, start_no in fallback_index.get(home, []):
+        trip, stops = fallback_trips[trip_no], fallback_trips[trip_no].get("stops", [])
         start = stops[start_no]
         try:
             departure = minute(start[2])
@@ -272,6 +307,51 @@ def direct_access(home):
     return rows
 
 
+def decorate_indexed_life(rows):
+    """事前索引の行へ、カード表示用の速達・主要度情報を加える。"""
+    service_groups, station_groups = defaultdict(list), defaultdict(list)
+    for row in rows:
+        service_groups[(row["name"], row["route"])].append(row)
+        station_groups[row["name"]].append(row)
+    for service_rows in service_groups.values():
+        times = sorted(set(row["minutes"] for row in service_rows))
+        for row in service_rows:
+            row["fast"] = len(times) > 1 and row["minutes"] == times[0]
+    for same_station in station_groups.values():
+        access_routes = len(set(row["route"] for row in same_station))
+        for row in same_station:
+            row["label"] = f'{row["name"]}（速）' if row["fast"] else row["name"]
+            row["majority"] = len(station_info.get(row["name"], {}).get("routes", []))
+            row["access_routes"] = access_routes
+    return rows
+
+
+@st.cache_data(show_spinner=False)
+def direct_access_indexed(home, database_stamp):
+    """生活圏の候補を事前生成SQLiteから駅単位で取得する。"""
+    del database_stamp
+    with sqlite3.connect(f"file:{ACTIVE_ACCESS_DB}?mode=ro", uri=True) as db:
+        rows = [{"name": name, "route": route, "minutes": minutes,
+                 "operator": "", "train_destination": "", "confidence": confidence}
+                for name, route, minutes, confidence in db.execute(
+                    "SELECT destination,route,minutes,confidence FROM life_access "
+                    "WHERE origin=? AND minutes BETWEEN 1 AND 60", (home,))]
+    return decorate_indexed_life(rows)
+
+
+def direct_access(home):
+    """索引を優先し、利用できない場合だけ従来計算へ戻る。"""
+    if ACTIVE_ACCESS_DB.exists():
+        try:
+            rows = direct_access_indexed(home, ACTIVE_ACCESS_DB.stat().st_mtime_ns)
+            st.session_state["calculation_mode"] = "事前索引"
+            return rows
+        except (sqlite3.Error, OSError) as error:
+            st.session_state["index_error"] = str(error)
+    st.session_state["calculation_mode"] = "従来計算"
+    return direct_access_fallback(home)
+
+
 def clock(value):
     """分を24時間表記へ戻す。"""
     return f"{value // 60 % 24:02d}:{value % 60:02d}"
@@ -287,10 +367,13 @@ def rent_man(value):
 
 
 @st.cache_data(show_spinner=False)
-def reverse_commute(day, destinations, target_minute):
+def reverse_commute_fallback(day, destinations, target_minute):
     """到着時刻から逆算し、各駅から乗れる最も遅い直通列車を選ぶ。"""
     latest = {}
-    for trip in timetables.get(day, []):
+    # 軽量メタデータ使用時は、索引異常時に限って元の巨大時刻表を読む。
+    fallback_timetables = timetables if timetables.get(day) else \
+        load_full_timetables(config.get("jr_enabled"))
+    for trip in fallback_timetables.get(day, []):
         stops = trip.get("stops", [])
         for destination_no, destination_stop in enumerate(stops):
             if len(destination_stop) < 2 or destination_stop[0] not in destinations or not destination_stop[1]:
@@ -321,6 +404,48 @@ def reverse_commute(day, destinations, target_minute):
 
 
 @st.cache_data(show_spinner=False)
+def reverse_commute_indexed(day, destinations, target_minute, database_stamp):
+    """目的駅と到着時刻に合う同一trip列車だけをSQLiteで検索する。"""
+    del database_stamp
+    latest = {}
+    sql = """SELECT origin.station,origin.departure,destination.arrival,
+      origin.route,origin.operator,origin.headsign
+      FROM trip_stops destination JOIN trip_stops origin
+      ON origin.trip_key=destination.trip_key AND origin.seq<destination.seq
+      WHERE destination.day=? AND destination.station=? AND destination.arrival<=?"""
+    with sqlite3.connect(f"file:{ACTIVE_ACCESS_DB}?mode=ro", uri=True) as db:
+        for destination, walk in destinations.items():
+            for name, departure, arrival, route, operator, headsign in db.execute(
+                    sql, (day, destination, target_minute - walk)):
+                if name in destinations or departure >= arrival:
+                    continue
+                info = station_info.get(name, {})
+                row = {"name": name, "location": info.get("location", "所在地未登録"),
+                    "rent": info.get("rent"), "departure": departure, "arrival": arrival,
+                    "arrival_station": destination, "walk": walk, "ride": arrival - departure,
+                    "minutes": arrival + walk - departure, "route": route,
+                    "operator": operator, "train_destination": headsign}
+                current = latest.get(name)
+                if current is None or departure > current["departure"] or (
+                        departure == current["departure"] and row["minutes"] < current["minutes"]):
+                    latest[name] = row
+    return sorted(latest.values(), key=lambda row: row["departure"], reverse=True)
+
+
+def reverse_commute(day, destinations, target_minute):
+    """逆算通勤も索引を優先し、異常時は従来計算へ戻す。"""
+    if ACTIVE_ACCESS_DB.exists():
+        try:
+            rows = reverse_commute_indexed(day, destinations, target_minute,
+                                            ACTIVE_ACCESS_DB.stat().st_mtime_ns)
+            st.session_state["calculation_mode"] = "事前索引"
+            return rows
+        except (sqlite3.Error, OSError) as error:
+            st.session_state["index_error"] = str(error)
+    st.session_state["calculation_mode"] = "従来計算"
+    return reverse_commute_fallback(day, destinations, target_minute)
+
+
 def search_routes(day, destinations, target_minute):
     """正常版と同じ列名で、各出発駅の最遅直通便を検索する。"""
     latest = {}
@@ -507,6 +632,8 @@ def render_life_screen(home):
     st.markdown(f'<div class="page-title">{escape(home)}から広がる生活圏</div>',
                 unsafe_allow_html=True)
     st.caption("直通列車に乗っている時間を、実際の方角と時間半径で表示します。")
+    st.caption("計算方式：" + st.session_state.get(
+        "calculation_mode", "事前索引" if ACTIVE_ACCESS_DB.exists() else "従来計算"))
 
     if hidden_count and not expanded:
         if st.button(f"ほか{hidden_count}件も表示", key=f"expand_{home}", width="content"):
@@ -746,6 +873,8 @@ def render_reverse_commute():
     st.markdown(compact_html(f'''<div class="heading-row"><div class="page-title">{escape(destination)}に
         {target}までに着くには？</div><div class="page-note">平日・直通のみ｜対象
         {escape(service_dates.get("weekday", ""))}</div></div>'''), unsafe_allow_html=True)
+    st.caption("計算方式：" + st.session_state.get(
+        "calculation_mode", "事前索引" if ACTIVE_ACCESS_DB.exists() else "従来計算"))
     if len(destination_options) > 1:
         st.caption("到着候補：" + "、".join(destination_options) +
                    "。近隣駅は設定した徒歩時間を差し引いて検索しています。")
