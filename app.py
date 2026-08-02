@@ -1,10 +1,12 @@
 import gzip, json, math
 from collections import defaultdict
+from datetime import time
 from html import escape
 from pathlib import Path
 from urllib.parse import quote
 
 import streamlit as st
+import pandas as pd
 
 # ============================================================
 # 1. ページ・データ読込
@@ -27,9 +29,14 @@ def load_json(path):
 
 def merge_data(parts):
     """通常データとJRデータを駅名単位で統合する。"""
-    stations, trips = {}, []
+    stations = {}
+    timetables = {"weekday": [], "saturday": [], "sunday": []}
+    service_dates, sources = {}, []
     for part in filter(None, parts):
-        trips.extend(part.get("timetables", {}).get("weekday", []))
+        sources.extend(part.get("sources", []))
+        service_dates.update(part.get("service_dates", {}))
+        for day in timetables:
+            timetables[day].extend(part.get("timetables", {}).get(day, []))
         for row in part.get("stations", []):
             name = row["name"]
             current = stations.setdefault(name, {"name": name, "routes": [],
@@ -48,13 +55,14 @@ def merge_data(parts):
             row["lat"] = sum(x[0] for x in row["_coords"]) / len(row["_coords"])
             row["lon"] = sum(x[1] for x in row["_coords"]) / len(row["_coords"])
         row.pop("_coords")
-    return stations, trips
+    return stations, timetables, service_dates, sources
 
 
 config = load_json("build_config.json")
 basic = load_json("direct_timetable_basic.json.gz")
 challenge = load_json("direct_timetable_challenge.json.gz") if config.get("jr_enabled") else {}
-station_info, weekday_trips = merge_data([basic, challenge])
+station_info, timetables, service_dates, sources = merge_data([basic, challenge])
+weekday_trips = timetables["weekday"]
 if not station_info:
     st.error("時刻表データがありません。GitHub Actionsを実行してください。")
     st.stop()
@@ -169,13 +177,64 @@ def direct_access(home):
     return rows
 
 
+def clock(value):
+    """分を24時間表記へ戻す。"""
+    return f"{value // 60 % 24:02d}:{value % 60:02d}"
+
+
+def time_band(value):
+    """逆算通勤の所要時間帯を返す。"""
+    return next((f"{limit}分以内" for limit in (15, 30, 45, 60) if value <= limit), "60分超")
+
+
+def rent_man(value):
+    return f"{float(value) / 10000:.1f}万円" if pd.notna(value) else "情報なし"
+
+
+@st.cache_data(show_spinner=False)
+def reverse_commute(day, destinations, target_minute):
+    """到着時刻から逆算し、各駅から乗れる最も遅い直通列車を選ぶ。"""
+    latest = {}
+    for trip in timetables.get(day, []):
+        stops = trip.get("stops", [])
+        for destination_no, destination_stop in enumerate(stops):
+            if len(destination_stop) < 2 or destination_stop[0] not in destinations or not destination_stop[1]:
+                continue
+            walk = destinations[destination_stop[0]]
+            arrival = minute(destination_stop[1])
+            if arrival + walk > target_minute:
+                continue
+            for origin in stops[:destination_no]:
+                if len(origin) < 3 or not origin[2] or origin[0] in destinations:
+                    continue
+                departure = minute(origin[2])
+                if departure >= arrival:
+                    continue
+                info, name = station_info.get(origin[0], {}), origin[0]
+                row = {"name": name, "location": info.get("location", "所在地未登録"),
+                    "rent": info.get("rent"), "departure": departure, "arrival": arrival,
+                    "arrival_station": destination_stop[0], "walk": walk,
+                    "ride": arrival - departure, "minutes": arrival + walk - departure,
+                    "route": trip.get("route", "路線情報なし"),
+                    "operator": trip.get("operator", ""),
+                    "train_destination": trip.get("destination", "")}
+                current = latest.get(name)
+                if current is None or departure > current["departure"] or (
+                        departure == current["departure"] and row["minutes"] < current["minutes"]):
+                    latest[name] = row
+    return sorted(latest.values(), key=lambda row: row["departure"], reverse=True)
+
+
 def bearing(home, destination):
-    """地理上の方角を、上が北のラジアン角で返す。"""
+    """球面上の初期方位を、上が北・右が東のラジアン角で返す。"""
     base, target = station_info[home], station_info[destination]
     if None in (base["lat"], base["lon"], target["lat"], target["lon"]):
         return None
-    dx = (target["lon"] - base["lon"]) * math.cos(math.radians(base["lat"]))
-    return math.atan2(dx, target["lat"] - base["lat"])
+    lat1, lat2 = map(math.radians, (base["lat"], target["lat"]))
+    dlon = math.radians(target["lon"] - base["lon"])
+    return math.atan2(math.sin(dlon) * math.cos(lat2),
+                      math.cos(lat1) * math.sin(lat2) -
+                      math.sin(lat1) * math.cos(lat2) * math.cos(dlon))
 
 
 def select_initial(rows, expanded):
@@ -210,7 +269,8 @@ def place_cards(home, rows, expanded=False):
     # 同じ方角は主要駅・短時間を先に置き、後続を左右交互に開く。
     candidates.sort(key=lambda r: (r["sector"], -r["majority"], r["minutes"], r["label"]))
     sector_count, placed, overflow = defaultdict(int), [], []
-    offsets = [0] + [sign * degree for degree in range(4, 33, 4) for sign in (1, -1)]
+    # 実方位を壊さないよう、衝突回避は最大12度までに限定する。
+    offsets = [0] + [sign * degree for degree in range(4, 13, 4) for sign in (1, -1)]
     for row in candidates:
         fan = sector_count[row["sector"]]
         sector_count[row["sector"]] += 1
@@ -256,7 +316,7 @@ def move_to_station(name):
 
 
 def go_back():
-    """一つ前の中心駅へ戻る。"""
+    """履歴があれば前駅へ、なければ逆算通勤画面へ戻る。"""
     if st.session_state.life_history:
         st.query_params["life_station"] = st.session_state.life_history.pop()
     else:
@@ -297,7 +357,7 @@ def render_life_screen(home):
     hidden_count = len(hidden_by_limit) + len(hidden_by_collision)
 
     top1, top2 = st.columns([1, 5])
-    if top1.button("← 戻る", width="stretch", disabled=not st.session_state.life_history):
+    if top1.button("← 前の画面へ", width="stretch"):
         go_back()
     trail = st.session_state.life_history + [home]
     top2.caption(" ＞ ".join(trail[-6:]))
@@ -368,6 +428,9 @@ st.markdown("""
 .map-card:hover{z-index:20;transform:translate(-50%,-50%) scale(1.06);box-shadow:0 6px 18px #10182830}
 .map-card strong{display:block;max-width:140px;overflow:hidden;text-overflow:ellipsis;font-size:.7rem}
 .map-card span{font-size:.63rem;font-weight:750;opacity:.72;margin-top:.13rem}
+.reverse-time{font-size:clamp(1.25rem,2.3vw,1.8rem);font-weight:950;white-space:nowrap}
+.reverse-route{padding:.55rem .7rem;border-left:6px solid var(--line);border-radius:9px;background:var(--pale);
+ font-size:.8rem;font-weight:850;line-height:1.35}.reverse-route small{font-weight:650;opacity:.72}
 @media(max-width:700px){.life-map{width:96vw;height:96vw;margin-left:calc(50% - 48vw)}
  .map-card{min-width:54px;max-width:105px;padding:.25rem .3rem .23rem .42rem;border-left-width:4px}
  .map-card strong{max-width:94px;font-size:.57rem}.map-card span{font-size:.52rem}.life-home{font-size:.62rem}}
@@ -376,17 +439,87 @@ st.markdown("""
 
 
 # ============================================================
-# 7. 入口
+# 7. 逆算通勤画面（生活圏への入口）
 # ============================================================
+def open_life_station(name):
+    """逆算通勤から生活圏へ入り、生活圏内の履歴を初期化する。"""
+    st.session_state.life_history = []
+    st.query_params["life_station"] = name
+    st.query_params.pop("life_pick", None)
+    st.rerun()
+
+
+def render_reverse_commute():
+    """元の入口である、到着時刻から逆算する直通通勤検索を描画する。"""
+    stations = sorted(station_info, key=lambda name: ("・".join(station_info[name]["routes"]), name))
+    destination_col, time_col, filter_col = st.columns([2.5, 1.05, .55])
+    with destination_col:
+        destination = st.selectbox("勤務先・目的駅", stations, index=None,
+            placeholder="神保町（駅名・路線で検索）",
+            format_func=lambda name: f'{"・".join(station_info[name]["routes"])}｜{name}')
+    destination = destination or ("神保町" if "神保町" in station_info else stations[0])
+    with time_col:
+        arrival_time = st.time_input("到着時刻", value=time(8), step=60)
+    target, target_minute = arrival_time.strftime("%H:%M"), minute(arrival_time.strftime("%H:%M"))
+    destination_options = {destination: 0}
+    with filter_col:
+        with st.popover("⚙ 条件", width="stretch"):
+            show_under_10 = st.checkbox("10分未満も表示", value=False)
+            selected_bands = st.multiselect("所要時間", ["15分以内", "30分以内", "45分以内", "60分以内", "60分超"],
+                                            default=["15分以内", "30分以内", "45分以内", "60分以内"])
+            keyword = st.text_input("駅名検索")
+
+    st.markdown(f'<div class="page-title">{escape(destination)}に{target}までに着くには？</div>',
+                unsafe_allow_html=True)
+    st.caption(f'平日・直通のみ｜対象 {escape(service_dates.get("weekday", ""))}')
+    if config.get("jr_enabled"):
+        st.info("JR東日本の公共交通オープンデータチャレンジ2026限定データを利用しています。")
+
+    rows = reverse_commute("weekday", destination_options, target_minute)
+    rows = [row for row in rows if time_band(row["minutes"]) in selected_bands and
+            (show_under_10 or row["minutes"] >= 10) and
+            (not keyword.strip() or keyword.strip() in row["name"])]
+    if not rows:
+        st.info("条件に一致する直通列車がありません。")
+        return
+
+    for no, row in enumerate(rows):
+        accent, background = line_style(row["route"])
+        cols = st.columns([2.1, 1.35, 2.25, 1.05, .7], vertical_alignment="center")
+        with cols[0]:
+            # 駅名自体を押すと生活圏へ移動する。
+            if st.button(row["name"], key=f'live_{no}_{row["name"]}', width="stretch"):
+                open_life_station(row["name"])
+            st.caption(row["location"])
+        cols[1].markdown(f'<div class="reverse-time">{clock(row["departure"])}発</div>', unsafe_allow_html=True)
+        cols[2].markdown(f'<div class="reverse-route" style="--line:{accent};--pale:{background}">'
+                         f'{escape(row["route"])}・直通<br><small>{escape(row["arrival_station"])} '
+                         f'{clock(row["arrival"])}着</small></div>', unsafe_allow_html=True)
+        cols[3].markdown(f'家賃<br>**{rent_man(row["rent"])}**')
+        with cols[4]:
+            with st.popover("i"):
+                st.write(f'乗車時間：{row["ride"]}分')
+                st.write(f'徒歩を含む所要時間：{row["minutes"]}分')
+                st.write(f'運行事業者：{row["operator"] or "情報なし"}')
+                st.write(f'列車の行先：{row["train_destination"] or "情報なし"}')
+        st.divider()
+
+    with st.expander("検索結果を表で確認する"):
+        output = pd.DataFrame([{"駅名": r["name"], "所在地": r["location"],
+            "出発": clock(r["departure"]), "到着駅": r["arrival_station"],
+            "到着": clock(r["arrival"]), "乗車時間": r["ride"],
+            "所要時間": r["minutes"], "経路": r["route"]} for r in rows])
+        st.dataframe(output, width="stretch", hide_index=True)
+        st.download_button("CSVで保存", output.to_csv(index=False).encode("utf-8-sig"),
+                           f"{destination}_{target.replace(':', '')}_direct.csv", "text/csv")
+    if sources:
+        st.caption("データ提供元：" + "、".join(dict.fromkeys(
+            source.get("name", "") for source in sources if source.get("name"))))
+
+
+# クエリに中心駅がある場合だけ生活圏を表示し、それ以外は逆算通勤を表示する。
 home = st.query_params.get("life_station")
-if home not in station_info:
-    st.title("生活圏同心円")
-    st.caption("中心駅を選ぶと、直通で行ける駅を実乗車時間の半径上に表示します。")
-    initial = st.selectbox("中心駅", sorted(station_info), index=None,
-                           placeholder="駅名を選択してください")
-    if st.button("生活圏を見る", type="primary", width="stretch", disabled=not initial):
-        st.session_state.life_history = []
-        st.query_params["life_station"] = initial
-        st.rerun()
-else:
+if home in station_info:
     render_life_screen(home)
+else:
+    render_reverse_commute()
