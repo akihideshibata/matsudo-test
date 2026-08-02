@@ -157,6 +157,7 @@ def direct_access(home):
         groups[row["name"]].append(row)
     for same_station in groups.values():
         times = sorted(set(row["minutes"] for row in same_station))
+        access_routes = len(set(row["route"] for row in same_station))
         route_counts = defaultdict(int)
         for row in same_station:
             route_counts[(row["minutes"], row["route"])] += 1
@@ -174,6 +175,7 @@ def direct_access(home):
                 label += f'・{row["route"]}'
             row["label"] = label
             row["majority"] = len(station_info[row["name"]].get("routes", []))
+            row["access_routes"] = access_routes
     return rows
 
 
@@ -238,17 +240,37 @@ def bearing(home, destination):
 
 
 def select_initial(rows, expanded):
-    """時間帯ごとの上限を設け、15分圏は乗入路線数の多い駅を優先する。"""
+    """主要駅を駅単位で先に確保し、残り枠へ別時間カードを追加する。"""
     bands = ((0, 15, 10), (15, 30, 12), (30, 45, 10), (45, 60, 8))
     shown, hidden = [], []
     for low, high, limit in bands:
         band = [r for r in rows if low < r["minutes"] <= high]
-        if high == 15:
-            band.sort(key=lambda r: (-r["majority"], r["minutes"], r["name"], r["route"]))
-        else:
-            band.sort(key=lambda r: (r["minutes"], -r["majority"], r["name"], r["route"]))
-        shown.extend(band if expanded else band[:limit])
-        hidden.extend([] if expanded else band[limit:])
+        if expanded:
+            shown.extend(band)
+            continue
+
+        # 同じ駅の時間違いが表示枠を独占しないよう、まず各駅から1枚ずつ選ぶ。
+        by_station = defaultdict(list)
+        for row in band:
+            by_station[row["name"]].append(row)
+        representatives = []
+        for station_rows in by_station.values():
+            # 通常名のカードを優先し、なければ最短の実在時間を代表にする。
+            representatives.append(min(station_rows, key=lambda r: (
+                "（" in r["label"], r["minutes"], -r["access_routes"], r["route"])))
+
+        # 乗入路線数、直通で利用できる路線数、所要時間の順で主要駅を決める。
+        priority = lambda r: (-r["majority"], -r["access_routes"], r["minutes"], r["name"])
+        representatives.sort(key=priority)
+        selected = representatives[:limit]
+
+        # 全主要駅の代表を確保した後、空き枠へ「速」など別時間カードを追加する。
+        selected_ids = {id(row) for row in selected}
+        variants = sorted((r for r in band if id(r) not in selected_ids), key=priority)
+        selected.extend(variants[:max(0, limit - len(selected))])
+        selected_ids = {id(row) for row in selected}
+        shown.extend(selected)
+        hidden.extend(r for r in band if id(r) not in selected_ids)
     return shown, hidden
 
 
@@ -266,8 +288,9 @@ def place_cards(home, rows, expanded=False):
             candidates.append({**row, "angle": angle,
                 "sector": round(math.degrees(angle) / 8),
                 "w": min(15.5, max(7.0, 4.5 + len(row["label"]) * 1.05))})
-    # 同じ方角は主要駅・短時間を先に置き、後続を左右交互に開く。
-    candidates.sort(key=lambda r: (r["sector"], -r["majority"], r["minutes"], r["label"]))
+    # 主要駅から配置し、衝突時に東京・横浜などが後発カードへ負けないようにする。
+    candidates.sort(key=lambda r: (-r["majority"], -r["access_routes"],
+                                   r["minutes"], r["sector"], r["label"]))
     sector_count, placed, overflow = defaultdict(int), [], []
     # 実方位を壊さないよう、衝突回避は最大12度までに限定する。
     offsets = [0] + [sign * degree for degree in range(4, 13, 4) for sign in (1, -1)]
@@ -354,7 +377,7 @@ def render_life_screen(home):
     expanded = home in st.session_state.expanded_homes
     selected, hidden_by_limit = select_initial(rows, expanded)
     points, hidden_by_collision = place_cards(home, selected, expanded)
-    hidden_count = len(hidden_by_limit) + len(hidden_by_collision)
+    hidden_count = len(hidden_by_limit)
 
     top1, top2 = st.columns([1, 5])
     if top1.button("← 前の画面へ", width="stretch"):
@@ -365,7 +388,7 @@ def render_life_screen(home):
                 unsafe_allow_html=True)
     st.caption("直通列車に乗っている時間を、実際の方角と時間半径で表示します。")
 
-    if hidden_count:
+    if hidden_count and not expanded:
         if st.button(f"ほか{hidden_count}件も表示", key=f"expand_{home}", width="content"):
             st.session_state.expanded_homes.add(home)
             st.rerun()
